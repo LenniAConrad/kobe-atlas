@@ -1,4 +1,4 @@
-import {getLanguage} from './language.js?v=20261009o';
+import {getLanguage} from './language.js?v=20261009p';
 export function renderRisk(app){
  document.querySelector('#risk-switcher')?.remove();if(app.page!=='disaster')return;
  const lang=getLanguage(),w=(en,jp,cn)=>({EN:en,JP:jp,CN:cn}[lang]);

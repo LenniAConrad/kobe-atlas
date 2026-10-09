@@ -1,4 +1,4 @@
-import {AwajiIntroduction} from './awaji-intro.js?v=20261009o';
+import {AwajiIntroduction} from './awaji-intro.js?v=20261009p';
 // Opt-in chapter entrances. Ordinary chapters never move the visitor's camera.
 export class ChapterCamera {
   constructor(map,settings){

@@ -1,5 +1,5 @@
-import {getLanguage,localize,contentFields,translateText,translateDOM} from './language.js?v=20261009o';
-import {$,esc,icon,toast} from './ui.js?v=20261009o';
+import {getLanguage,localize,contentFields,translateText,translateDOM} from './language.js?v=20261009p';
+import {$,esc,icon,toast} from './ui.js?v=20261009p';
 const clone=x=>JSON.parse(JSON.stringify(x));
 const groups=['chapters','features','layers','pages','settings'];
 const titles={chapters:'Chapters',features:'Points & regions',layers:'Layers',pages:'Subject pages',settings:'Appearance & map'};

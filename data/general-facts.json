@@ -1,0 +1,483 @@
+{
+  "updatedAt": "2026-10-09",
+  "city": {
+    "name": "Kobe",
+    "region": "Hyōgo, Kansai, Japan",
+    "summary": "Kobe is a port city in Hyōgo, western Japan. Its centre faces Osaka Bay, with the Rokkō mountains behind it. The city also includes inland towns, farms and nine wards.",
+    "translations": {
+      "JP": {
+        "name": "神戸",
+        "region": "日本・関西・兵庫県",
+        "summary": "神戸は兵庫県の港町です。中心部は大阪湾に面し、背後に六甲山地があります。山の向こうの町や農地も含む、9区からなる市です。"
+      },
+      "CN": {
+        "name": "神户",
+        "region": "日本关西地区・兵库县",
+        "summary": "神户是兵库县的港口城市。市中心面向大阪湾，背靠六甲山地。市域也包括内陆城镇和农田，下辖9个区。"
+      }
+    },
+    "sourceIds": [
+      "geography",
+      "port"
+    ],
+    "coordinates": {
+      "latitude": 34.69,
+      "longitude": 135.19555556,
+      "label": "City Hall",
+      "sourceId": "coordinates"
+    }
+  },
+  "population": {
+    "value": 1492418,
+    "date": "2026-09-01",
+    "unit": "people",
+    "sourceId": "population-area",
+    "method": "Monthly estimate",
+    "provisional": true,
+    "note": "September 2026 estimate; it will be revised using final 2025 census results.",
+    "translations": {
+      "JP": {
+        "note": "2026年9月の推計値。今後、2025年国勢調査の確報に基づき改定されます。",
+        "method": "毎月推計人口"
+      },
+      "CN": {
+        "note": "2026年9月估计值，之后将根据2025年人口普查最终结果修订。",
+        "method": "月度人口估计"
+      }
+    }
+  },
+  "census": {
+    "value": 1494997,
+    "date": "2025-10-01",
+    "publishedDate": "2026-09-29",
+    "sourceId": "census",
+    "label": "2025 census: final count",
+    "translations": {
+      "JP": {
+        "label": "2025年国勢調査：確報"
+      },
+      "CN": {
+        "label": "2025年人口普查最终结果"
+      }
+    }
+  },
+  "area": {
+    "value": 556.93,
+    "unit": "km²",
+    "date": "2026-04-01",
+    "sourceId": "population-area",
+    "note": "Areas include reclaimed land. Kita’s area is a reference value because part of its boundary is unsettled. Rounded ward areas differ from the city total by 0.01 km².",
+    "translations": {
+      "JP": {
+        "note": "面積には埋立地を含みます。北区は一部境界未定のため参考値です。各区の丸めた面積の合計は、市全体の面積と0.01 km²の差があります。"
+      },
+      "CN": {
+        "note": "面积包括填海土地。北区部分边界尚未确定，面积为参考值。各区面积经四舍五入后，其总和与全市面积相差0.01 km²。"
+      }
+    }
+  },
+  "households": {
+    "value": 771194,
+    "date": "2026-09-01",
+    "sourceId": "population-area"
+  },
+  "density": {
+    "value": 2680,
+    "unit": "people/km²",
+    "date": "2026-09-01",
+    "sourceId": "population-area",
+    "derived": true
+  },
+  "timeZone": {
+    "name": "JST",
+    "iana": "Asia/Tokyo",
+    "offset": "UTC+9",
+    "daylightSaving": false,
+    "sourceId": "time-zone",
+    "sourceIds": [
+      "time-zone",
+      "travel-basics"
+    ],
+    "note": "No daylight saving time.",
+    "translations": {
+      "JP": {
+        "note": "夏時間はありません。"
+      },
+      "CN": {
+        "note": "不采用夏令时。"
+      }
+    }
+  },
+  "climate": {
+    "meanTemperature": 17.0,
+    "annualRainfall": 1277.8,
+    "januaryTemperature": 6.2,
+    "augustTemperature": 28.6,
+    "temperatureUnit": "°C",
+    "rainfallUnit": "mm",
+    "period": "1991–2020",
+    "station": "Kobe",
+    "sourceId": "climate-normals",
+    "sourceIds": [
+      "climate-normals",
+      "climate-context"
+    ],
+    "summary": "Hot summers and mild, fairly dry winters. June and July bring the rainy season; heavy rain can build up against the mountains. These normals describe the Kobe station, not every part of the city.",
+    "translations": {
+      "JP": {
+        "summary": "夏は暑く、冬は比較的温暖で雨が少なめです。6～7月は梅雨で、山地の影響で大雨になることもあります。数値は神戸観測所の平年値で、市域全体の平均ではありません。",
+        "station": "神戸"
+      },
+      "CN": {
+        "summary": "夏季炎热，冬季较温和、少雨。6～7月进入梅雨季，山地地形有时会加剧降雨。数值为神户气象站的常年值，并非全市平均。",
+        "station": "神户"
+      }
+    }
+  },
+  "wards": [
+    {
+      "id": "28101",
+      "name": "Higashinada",
+      "translations": {
+        "JP": {
+          "name": "東灘区"
+        },
+        "CN": {
+          "name": "东滩区"
+        }
+      },
+      "area": 34.03,
+      "unit": "km²",
+      "population": 211485,
+      "populationDate": "2026-09-01",
+      "areaDate": "2026-04-01",
+      "sourceId": "population-area"
+    },
+    {
+      "id": "28102",
+      "name": "Nada",
+      "translations": {
+        "JP": {
+          "name": "灘区"
+        },
+        "CN": {
+          "name": "滩区"
+        }
+      },
+      "area": 32.65,
+      "unit": "km²",
+      "population": 137388,
+      "populationDate": "2026-09-01",
+      "areaDate": "2026-04-01",
+      "sourceId": "population-area"
+    },
+    {
+      "id": "28110",
+      "name": "Chūō",
+      "translations": {
+        "JP": {
+          "name": "中央区"
+        },
+        "CN": {
+          "name": "中央区"
+        }
+      },
+      "area": 28.98,
+      "unit": "km²",
+      "population": 153363,
+      "populationDate": "2026-09-01",
+      "areaDate": "2026-04-01",
+      "sourceId": "population-area"
+    },
+    {
+      "id": "28105",
+      "name": "Hyōgo",
+      "translations": {
+        "JP": {
+          "name": "兵庫区"
+        },
+        "CN": {
+          "name": "兵库区"
+        }
+      },
+      "area": 14.64,
+      "unit": "km²",
+      "population": 112920,
+      "populationDate": "2026-09-01",
+      "areaDate": "2026-04-01",
+      "sourceId": "population-area"
+    },
+    {
+      "id": "28109",
+      "name": "Kita",
+      "translations": {
+        "JP": {
+          "name": "北区"
+        },
+        "CN": {
+          "name": "北区"
+        }
+      },
+      "area": 240.29,
+      "unit": "km²",
+      "population": 201360,
+      "populationDate": "2026-09-01",
+      "areaDate": "2026-04-01",
+      "sourceId": "population-area"
+    },
+    {
+      "id": "28106",
+      "name": "Nagata",
+      "translations": {
+        "JP": {
+          "name": "長田区"
+        },
+        "CN": {
+          "name": "长田区"
+        }
+      },
+      "area": 11.34,
+      "unit": "km²",
+      "population": 92878,
+      "populationDate": "2026-09-01",
+      "areaDate": "2026-04-01",
+      "sourceId": "population-area"
+    },
+    {
+      "id": "28107",
+      "name": "Suma",
+      "translations": {
+        "JP": {
+          "name": "須磨区"
+        },
+        "CN": {
+          "name": "须磨区"
+        }
+      },
+      "area": 28.93,
+      "unit": "km²",
+      "population": 151708,
+      "populationDate": "2026-09-01",
+      "areaDate": "2026-04-01",
+      "sourceId": "population-area"
+    },
+    {
+      "id": "28108",
+      "name": "Tarumi",
+      "translations": {
+        "JP": {
+          "name": "垂水区"
+        },
+        "CN": {
+          "name": "垂水区"
+        }
+      },
+      "area": 28.07,
+      "unit": "km²",
+      "population": 205360,
+      "populationDate": "2026-09-01",
+      "areaDate": "2026-04-01",
+      "sourceId": "population-area"
+    },
+    {
+      "id": "28111",
+      "name": "Nishi",
+      "translations": {
+        "JP": {
+          "name": "西区"
+        },
+        "CN": {
+          "name": "西区"
+        }
+      },
+      "area": 138.01,
+      "unit": "km²",
+      "population": 225956,
+      "populationDate": "2026-09-01",
+      "areaDate": "2026-04-01",
+      "sourceId": "population-area"
+    }
+  ],
+  "reclamation": {
+    "note": "Selected artificial-island projects. Their areas are already included in the city and ward totals. Older shoreline reclamation is not included in this list.",
+    "translations": {
+      "JP": {
+        "note": "主な人工島の事業面積です。市・区の面積に含まれており、加算しません。以前からある海岸沿いの埋立地は、この一覧には含みません。",
+        "subtotalNote": "この4事業の合計。神戸市全体の埋立面積ではありません。"
+      },
+      "CN": {
+        "note": "以下列出主要人工岛项目的面积，已计入市和区的总面积。此表未包括较早的沿岸填海地。",
+        "subtotalNote": "仅为这4项工程之和，并非神户全市填海面积。"
+      }
+    },
+    "areas": [
+      {
+        "id": "port-island-1",
+        "name": "Port Island · phase 1",
+        "translations": {
+          "JP": {
+            "name": "ポートアイランド 第1期"
+          },
+          "CN": {
+            "name": "港湾人工岛一期"
+          }
+        },
+        "area": 4.43,
+        "unit": "km²",
+        "dates": "1966–1981",
+        "sourceId": "islands",
+        "wardId": "28110"
+      },
+      {
+        "id": "port-island-2",
+        "name": "Port Island · phase 2",
+        "translations": {
+          "JP": {
+            "name": "ポートアイランド 第2期"
+          },
+          "CN": {
+            "name": "港湾人工岛二期"
+          }
+        },
+        "area": 3.9,
+        "unit": "km²",
+        "dates": "1986–2009",
+        "sourceId": "islands",
+        "wardId": "28110"
+      },
+      {
+        "id": "rokko-island",
+        "name": "Rokkō Island",
+        "translations": {
+          "JP": {
+            "name": "六甲アイランド"
+          },
+          "CN": {
+            "name": "六甲人工岛"
+          }
+        },
+        "area": 5.95,
+        "unit": "km²",
+        "dates": "1972–1992",
+        "sourceId": "islands",
+        "wardId": "28101"
+      },
+      {
+        "id": "airport-island",
+        "name": "Kobe Airport Island",
+        "translations": {
+          "JP": {
+            "name": "神戸空港島",
+            "dates": "2006年 開港"
+          },
+          "CN": {
+            "name": "神户机场岛",
+            "dates": "2006年机场启用"
+          }
+        },
+        "area": 2.72,
+        "unit": "km²",
+        "dates": "Airport opened 2006",
+        "sourceId": "airport-area",
+        "wardId": "28110"
+      }
+    ],
+    "subtotal": 17.0,
+    "unit": "km²",
+    "subtotalNote": "These four projects only; not Kobe’s total reclaimed area.",
+    "landfill": {
+      "name": "Kobe offshore waste landfill",
+      "area": 0.88,
+      "unit": "km²",
+      "date": "2026-04-23",
+      "sourceId": "waste-landfill",
+      "note": "A separate waste disposal site south of Rokkō Island; not part of the four-project subtotal. Its stated area is the full project site, not the portion already filled.",
+      "translations": {
+        "JP": {
+          "name": "神戸沖埋立処分場",
+          "note": "六甲アイランド沖の廃棄物処分場です。上記4事業の合計には含みません。面積は事業区域全体で、埋立済み部分の面積ではありません。"
+        },
+        "CN": {
+          "name": "神户近海垃圾填埋场",
+          "note": "位于六甲人工岛南侧，未计入上述4项工程总和。数值为整个项目用地，并非已填埋部分面积。"
+        }
+      }
+    }
+  },
+  "sources": [
+    {
+      "id": "population-area",
+      "title": "Kobe City · September 2026 estimated population and ward areas",
+      "url": "https://www.city.kobe.lg.jp/a47946/shise/toke/toukei/jinkou/suikeijinkou.html",
+      "dataUrl": "https://www.city.kobe.lg.jp/documents/13491/jinkou2026_sokuho.xlsx",
+      "sheet": "202609",
+      "sourceUpdatedAt": "2026-09-15",
+      "areaBasis": "GSI 2026-04-01",
+      "downloadSha256": "447ee0ee5809826ce5d7c0160ca7cef7897297da516f083f809d60ebeadf71ec"
+    },
+    {
+      "id": "census",
+      "title": "Kobe City · 2025 census final results",
+      "url": "https://www.city.kobe.lg.jp/a47946/shise/toke/toukei/kokutyou/2025/2025.html",
+      "sourceUpdatedAt": "2026-09-29"
+    },
+    {
+      "id": "climate-normals",
+      "title": "Japan Meteorological Agency · Kobe 1991–2020 climate normals",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/nml_sfc_ym.php?prec_no=63&block_no=47770&year=&month=&day=&view="
+    },
+    {
+      "id": "climate-context",
+      "title": "Kobe Local Meteorological Office · Hyōgo climate",
+      "url": "https://www.jma-net.go.jp/kobe-c/climate/kiko/kiko.html"
+    },
+    {
+      "id": "time-zone",
+      "title": "NICT · Japan Standard Time",
+      "url": "https://www.nict.go.jp/en/sts/jst.html"
+    },
+    {
+      "id": "travel-basics",
+      "title": "Japan National Tourism Organization · time zone and travel basics",
+      "url": "https://www.japan.travel/en/plan/?qa_id=34"
+    },
+    {
+      "id": "islands",
+      "title": "Kobe City Archives · Port Island and Rokkō Island",
+      "url": "https://www.kobe-city-archives.jp/modern_history/archive/history_25/"
+    },
+    {
+      "id": "airport-area",
+      "title": "Kobe City · port plan, May 2017: airport district area",
+      "url": "https://www.city.kobe.lg.jp/documents/21714/28keikaku_keikaku_1.pdf",
+      "sourceType": "PDF",
+      "page": 9,
+      "sourceDate": "2017-05",
+      "note": "Airport district total272ha; project area rather than runway/airfield area."
+    },
+    {
+      "id": "waste-landfill",
+      "title": "Osaka Bay Phoenix Center · Kobe offshore disposal site",
+      "url": "https://www.osakawan-center.or.jp/index.php/business-summary/final-disposal-site",
+      "sourceUpdatedAt": "2026-04-23"
+    },
+    {
+      "id": "geography",
+      "title": "Kobe City · natural and geographic setting",
+      "url": "https://www.city.kobe.lg.jp/documents/55175/chapter02.pdf",
+      "sourceType": "PDF"
+    },
+    {
+      "id": "coordinates",
+      "title": "Kobe City · 2024 statistical yearbook, land and climate",
+      "url": "https://www.city.kobe.lg.jp/documents/61499/2_tochi_kisyou_2024_2.pdf",
+      "sourceType": "PDF",
+      "note": "City Hall coordinate 34°41′24″ N, 135°11′44″ E; decimal conversion."
+    },
+    {
+      "id": "port",
+      "title": "MLIT Kobe Port Office · Kobe port and artificial islands",
+      "url": "https://www.pa.kkr.mlit.go.jp/kobeport/_know/kobe_intro.html"
+    }
+  ]
+}

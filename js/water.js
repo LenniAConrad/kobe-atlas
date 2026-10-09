@@ -1,5 +1,5 @@
-import {esc} from './ui.js?v=20261009o';
-import {getLanguage} from './language.js?v=20261009o';
+import {esc} from './ui.js?v=20261009p';
+import {getLanguage} from './language.js?v=20261009p';
 export function waterLayer(data,layer,pane){
  const lang=getLanguage(),w=(en,jp,cn)=>({EN:en,JP:jp,CN:cn}[lang]);
  const number=v=>v===null||v===undefined||Number(v)<0?w('Not supplied','記載なし','未提供'):Number(v).toLocaleString();
