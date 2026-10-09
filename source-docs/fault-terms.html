@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang='ja'> <!-- individual -->
+    <head>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+    <meta charset='UTF-8'>
+    <title>産総研:活断層データベース</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    <meta name='csrf-param' content='authenticity_token'>
+    <meta name='csrf-token' content=''>
+
+    <link rel='icon' href='https://gbank.gsj.jp/favicon.ico'>
+
+    <script>
+      var Context = {
+        'name' : 'individual',
+        'root' : 'https://gbank.gsj.jp/activefault/',
+        'lang' : 'ja',
+        'mode' : 'cyber'
+      };
+    </script>
+
+    
+    <script src='https://gbank.gsj.jp/activefault/js/Polyfill/es6-promise.auto.min.js?v=20180202073850'></script>
+    <script src='https://gbank.gsj.jp/activefault/js/Polyfill/fetch.js?v=20180202073850'></script>
+    <script src='https://gbank.gsj.jp/activefault/js/Polyfill/setImmediate.js?v=20180202073850'></script>
+
+    <script src='https://gbank.gsj.jp/activefault/js/console_log.js'></script>
+
+    
+    <link rel='stylesheet' href='https://gbank.gsj.jp/activefault/js/Leaflet/leaflet.css?v=20180827054055'>
+<link rel='stylesheet' href='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/L.Grid.css?v=20180202073850'>
+<link rel='stylesheet' href='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/leaflet-sidebar.css?v=20190709014347' />
+<link rel='stylesheet' href='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/Leaflet.Dialog.css?v=20180726020921' />
+<link rel='stylesheet' href='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/leaflet.rangeSelector.css?v=20210217051712' />
+<link rel='stylesheet' href='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/leaflet.legend.css?v=20240411025345' />
+<link rel='stylesheet' href='https://gbank.gsj.jp/activefault/css/font/css/font-awesome.min.css?v=20180427065009' />
+
+    <link rel='stylesheet' href='https://gbank.gsj.jp/activefault/css/style_Disp_AF.css?v=20240411025311' media='screen,tv' >
+    <link rel='stylesheet' href='https://gbank.gsj.jp/activefault/css/style_Print_AF.css?v=20180730092437' media='print' >
+
+    
+    <link rel="stylesheet" href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css' type="text/css" media="screen,tv">
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/i18n/jquery-ui-i18n.min.js'></script>
+<script src='https://gbank.gsj.jp/activefault/CYBER/jquery.zclip.min.js?v=20180717072210'></script>
+    <script src='https://gbank.gsj.jp/activefault/js/ja/header.js'></script>
+
+          
+        <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-40321869-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript';
+    ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+      '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+  </head>
+
+      <body onload='onLoadSubMenu(event,menuitem6);' onmousemove='closesubnav(event);' >
+  
+        <div id='masthead' class='{{ $sClass); ?>'>
+
+            <table class='Heading'>
+        <tr>
+
+          <td class='HeadingImageArea'>
+            <div class='HeadingImage'>
+              <h1 id='siteName'>
+                <a href='https://gbank.gsj.jp/activefault/ja'>活断層データベース</a>
+              </h1>
+            </div>
+          </td>
+
+          <td class='HeadingLogo'>
+            <div id='utility'>
+              <a href='https://www.aist.go.jp/' target='new'><img alt='AIST logo' border='0' src='https://gbank.gsj.jp/activefault/image/AISTLOGOmini.gif?v=20180202073850'></a>
+            </div>
+          </td>
+
+        </tr>
+      </table> 
+            <div id='globalNav'>
+        <div id='globalLink' class='Cyber_J'>
+          <a href="https://gbank.gsj.jp/activefault/" id="gl1"  class="glink" onmouseover="ehandler(event,menuitem1);"  >トップ</a>
+<a href="https://gbank.gsj.jp/activefault/search_route_chart.html" id="gl2"  class="glink" onmouseover="ehandler(event,menuitem2);"  >検索入口</a>
+<a href="https://gbank.gsj.jp/activefault/earthquake.html" id="gl3"  class="glink" onmouseover="ehandler(event,menuitem3);"  >最近の地震</a>
+<a href="https://gbank.gsj.jp/activefault/database.html" id="gl4"  class="glink" onmouseover="ehandler(event,menuitem4);"  >このデータベースについて</a>
+<a href="https://gbank.gsj.jp/activefault/yougo.html" id="gl5"  class="glink" onmouseover="ehandler(event,menuitem5);"  >用語解説</a>
+<a href="https://gbank.gsj.jp/activefault/attention.html" id="gl6"  class="glink" onmouseover="ehandler(event,menuitem6);"  >ご利用にあたって</a>
+<a href="https://gbank.gsj.jp/activefault/question.html" id="gl11" class="glink" onmouseover="ehandler(event,menuitem11);" >よくある質問</a>
+<a href="https://gbank.gsj.jp/activefault/mail_contact.html" id="gl7"  class="glink" onmouseover="ehandler(event,menuitem7);"  >ご意見・ご感想</a>
+<a href="https://gbank.gsj.jp/activefault/cgi/search_archive" id="gl12" class="glink" onmouseover="ehandler(event,menuitem12);" >アーカイブ</a>
+<a href="https://gbank.gsj.jp/activefault/sitemap.html" id="gl10" class="glink" onmouseover="ehandler(event,menuitem10);" >サイトマップ</a>
+<a href="https://gbank.gsj.jp/activefault/en" id="gl8"  class="glink" onmouseover="ehandler(event,menuitem8);"  >English</a>
+        </div>
+      </div>       <div id='subGlobalNav'>
+        <div id="subglobal" class="subglobalNav">
+  <a href="https://gbank.gsj.jp/activefault/attention">ご利用上の注意（免責事項）</a> |
+  <a href="https://gbank.gsj.jp/activefault/link">著作権・リンク</a> |
+  <a href="https://gbank.gsj.jp/activefault/individual">個人情報保護</a> |
+  <a href="https://gbank.gsj.jp/activefault/person">責任者・担当者</a> |
+  <a href="https://gbank.gsj.jp/activefault/bunken">文献</a>
+</div>
+      </div>
+    </div> 
+     
+    <div id='pagecell1'>
+
+      <script>
+  function GoBackWindows(id,num){
+    var lines = "";
+    var myData = lines.split(",");
+
+    var newline ="";
+    for( i = 0 ; i < num ; i++){
+      if ( i > 0 ){
+        newline = newline + ",";
+      }
+      newline = newline + myData[i];
+    }
+
+    document.LinkList.topic_list.value=newline;
+
+    var targets = {"0":"bunken_search","1":"search_result_kis","2":"search_result_seg","3":"kishindan_segment_list","4":"segment_param","5":"tyousati_list","6":"henni_list","7":"event_list","8":"bunken_list","9":"c14nendai_list","10":"henni_detail","11":"henni_kizyun_nendai","12":"bunken_info","13":"image_info","14":"suihon_kekka","15":"bunken_search_info","16":"bunken_search_image_info","17":"bunken_search","18":"tyousati_list_from_bunken","19":"tyousati","20":"search","21":"search_archive","22":"aist_activefault","23":"photos","default":"search"};
+
+    if ( ! targets[ id ] ) {
+      targets[ id ] = targets.default;
+    }
+
+    document.LinkList.action = 'https://gbank.gsj.jp/activefault/cgi/' + targets[ id ];
+    document.LinkList.submit();
+  }
+
+  function changeMap(i){
+    document.LinkList.search_mode.value= i;
+    document.LinkList.action='https://gbank.gsj.jp/activefault/cgi/individual.html';
+    document.LinkList.submit();
+  }
+  
+  // bunken_listへのリンク
+  function linkBunkenList( tyousatiId ){
+    document.LinkList.tyousati_id.value = tyousatiId;
+    document.LinkList.action = 'https://gbank.gsj.jp/activefault/cgi/bunken_list';
+    document.LinkList.submit();
+  }
+</script>
+
+<form name="LinkList" target="_self" action='https://gbank.gsj.jp/activefault/cgi/individual.html' method="get">
+  <input type="hidden" name="_token" value="G0DAjvCjocvI48zUNXQcF6f8TLl6GHrNbOqq5h9j">
+  <input type="hidden" name="topic_list" value="" />
+  <input type="hidden" name="search_mode" value="1" />
+  <input type="hidden" name="HasLineCheckBox" value="" />
+
+  <input type="hidden" name="zuhyou_tyousati_ids" value="" />
+  <input type="hidden" name="syashin_tyousati_ids" value="" />
+  <input type="hidden" name="limit" value="" />
+
+
+</form>
+
+
+
+                  
+      
+            <div id='pageNav'><div id='sectionLinks' class='{{ $sClass); ?>'>
+        <h3>
+  <a style="color:red;"
+    href='https://gbank.gsj.jp/activefault/question'>■よくある質問</a><br/>
+  <a style="color:red;"
+    href='https://gbank.gsj.jp/activefault/usage'>■使い方</a>
+</h3>
+
+<h3>■検索入口</h3>
+
+<a class="LinkImageItem"
+  href='https://gbank.gsj.jp/activefault/search'>起震断層・活動セグメント検索<br/>
+<img
+  src='https://gbank.gsj.jp/activefault/image/Earthquake_Fault.gif?v=20180202073850' border="0" alt="" class="SearchImage"></a>
+
+<a class="LinkImageItem"
+  href='https://gbank.gsj.jp/activefault/cgi/bunken_search'>活断層関連文献検索<br/>
+<img
+  src='https://gbank.gsj.jp/activefault/image/Literature.gif?v=20180202073850' border="0" alt="" class="SearchImage"></a>
+
+<a class="LinkImageItem"
+  href='https://gbank.gsj.jp/activefault/cgi/tyousati'>調査地検索<br/>
+<img
+  src='https://gbank.gsj.jp/activefault/image/Land_Survey.gif?v=20180202073850' border="0" alt="" class="SearchImage"></a>
+
+<a class="LinkImageItem"
+   href='https://gbank.gsj.jp/activefault/cgi/aist_activefault'>産総研による<br/>
+  活断層・津波堆積物調査<br/>
+<img
+  src='https://gbank.gsj.jp/activefault/image/AIST_Activefault.png?v=20180202073850' border="0" alt="" class="SearchImage"></a>
+
+<h3>■オプション機能</h3>
+<center>活断層の地下構造閲覧</center>
+<a class="LinkImageItem"
+  href="https://gbank.gsj.jp/subsurface/index.html" >地下構造可視化システム<br/>
+<img
+  src='https://gbank.gsj.jp/activefault/image/subsur_banner.gif' border="0" alt="" class="SearchImage"></a>
+      </div></div>
+
+            <div id='MainContents'>
+        
+        <div id="breadCrumb">
+  
+                    <span>個人情報保護</span>
+            
+  </div>
+
+
+        
+        <a name='checkpoint'></a>
+
+              <div id="SubContents">
+
+  <p>
+    本ホームページは、皆様ご自身の氏名や住所、メールアドレスのような個人情報を開示することなくご覧になることができます。 　<br />
+    <br />
+    ホームページでは、インターネットドメイン名、ＩＰアドレス、閲覧ページ等の情報を自動的に収集しますが、これらには個人情報が含まれることはありません。なおこれらの自動的に収集した情報は、どのページの利用率が高いのかといった統計的な傾向を分析することに使用することがあります。 <br />
+    <br />
+    　「メール送信フォーム」においては、発信者の情報は、書き込まない限り自動的には識別できないようになっています。<br />
+    もし個人情報を提供していただいた場合には、問い合わせに関して返信する目的に限って利用します。また、提供していただいた個人情報は適切に管理し、漏えい、紛失等のないように努めます。 <br />
+    <br />
+    　皆様からお知らせいただきました個人情報は、下記の場合を除いては、第三者に開示しません。<br />
+    　・お知らせいただいた方の同意がある場合。<br />
+    　・法的な命令等により個人情報の開示が求められた場合。
+  </p>
+
+</div>
+  
+      </div> 
+      
+            <div id='footer'>
+        <center>
+          <div id="siteInfo">
+            <table class="layout">
+              <tr>
+                <td>
+                  <table class='banner'>
+  <tr>
+
+        <td>
+      <a href='https://www.gsj.jp/HomePageJP.html' target='new'>
+        <img alt='GSJ' border='0' src='https://gbank.gsj.jp/activefault/image/gsj.jpg?v=20180202073850'><br />
+        地質調査総合センター
+      </a>
+    </td>
+
+        <td>
+      <a href='http://www.aist.go.jp/' target='new'>
+        <img alt='AIST' border='0' src='https://gbank.gsj.jp/activefault/image/AISTLOGOmini-BK.gif?v=20180202073850' height='22'><br/>
+        産業技術総合研究所
+      </a>
+    </td>
+
+        <td>
+      <a href='https://unit.aist.go.jp/ievg/' target='new'>
+        <img alt='IEVG' border='0' src='https://gbank.gsj.jp/activefault/image/ievg4_LOGO.png?v=20180202073850' height='50'>
+      </a>
+    </td>
+
+        <td>
+      <a href='https://gbank.gsj.jp/activefault/person.html'>責任者・担当者</a> |
+      <a href='https://gbank.gsj.jp/activefault/individual.html'>個人情報保護</a> |
+      <a href='https://gbank.gsj.jp/activefault/mail_contact.html'>ご意見・ご感想</a>
+    </td>
+
+  </tr>
+</table>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </center>
+      </div>
+
+    </div> 
+    
+    
+    <script src='https://gbank.gsj.jp/activefault/js/menu.js'></script>
+
+    
+    
+        <script src='https://maps.google.com/maps/api/js?sensor=false&amp;region=jp&amp;language=ja&amp;client=gme-nationalinstitute1&amp;channel=activefault&amp;key=AIzaSyBzV0szsFSc8WOh3yVoRDBM-_RU_jSOzDQ'></script>
+
+
+
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/leaflet.js?v=20180202073850'></script>
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/Leaflet.GoogleMutant.js?v=20180202073850'></script>
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/L.Grid.js?v=20180202073850'></script>
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/layer/vector/KML.js?v=20210301062859'></script>
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/leaflet-sidebar.js?v=20180202073850'></script>
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/Leaflet.Dialog.js?v=20180706083320'></script>
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/leaflet.latlng-graticule.js?v=20180706083320'></script>
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/leaflet.zoomViewer.js?v=20180730054959'></script>
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/leaflet.rangeSelector.js?v=20210219082641'></script>
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/leaflet.legend.js?v=20240411025345'></script>
+
+
+<script src='https://gbank.gsj.jp/activefault/js/cRectangle.js'></script>
+<script src='https://gbank.gsj.jp/activefault/js/cLonLat.js'></script>
+<script src='https://gbank.gsj.jp/activefault/js/cDegMinSec.js'></script>
+
+<script src='https://gbank.gsj.jp/activefault/js/mapInfos.js'></script>
+<script src='https://gbank.gsj.jp/activefault/js/cMap.js'></script>
+
+    <script>
+      
+      
+    </script>
+    <script src='https://gbank.gsj.jp/activefault/js/ja/attention/individual/13/afmap.js'></script>
+
+    
+      
+  <script>
+    glinked(6);
+  </script>
+  </body>
+
+</html>

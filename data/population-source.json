@@ -1,0 +1,101 @@
+{
+  "dataset": "MLIT A16 census densely inhabited districts (DID)",
+  "source": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A16-2020.html",
+  "retrieved": "2026-10-09",
+  "method": "A16_005 persons divided by A16_006 district area in km². No interpolation. Full intersecting districts retained, not clipped, so statistics are never misrepresented as clipped-area totals. Same density classes for all years.",
+  "limitations": "District-average density within census DID areas, not a complete population grid. Blank areas have no DID observation, not zero population. Boundaries and municipality names change. Rail overlay is N02 2025, not historical railway coverage.",
+  "license": "MLIT: 1995 onward permits commercial use under source conditions; 1990 and earlier designated noncommercial. Original attribution and terms retained.",
+  "editions": [
+    {
+      "year": 1960,
+      "archive": "A16-60_28_GML.zip",
+      "member": "A16-60_28_DID.shp",
+      "encoding": "cp932",
+      "features": 24
+    },
+    {
+      "year": 1965,
+      "archive": "A16-65_28_GML.zip",
+      "member": "A16-65_28_DID.shp",
+      "encoding": "cp932",
+      "features": 25
+    },
+    {
+      "year": 1970,
+      "archive": "A16-70_28_GML.zip",
+      "member": "A16-70_28_DID.shp",
+      "encoding": "cp932",
+      "features": 30
+    },
+    {
+      "year": 1975,
+      "archive": "A16-75_28_GML.zip",
+      "member": "A16-75_28_DID.shp",
+      "encoding": "cp932",
+      "features": 41
+    },
+    {
+      "year": 1980,
+      "archive": "A16-80_28_GML.zip",
+      "member": "A16-80_28_DID.shp",
+      "encoding": "cp932",
+      "features": 44
+    },
+    {
+      "year": 1985,
+      "archive": "A16-85_28_GML.zip",
+      "member": "A16-85_28_DID.shp",
+      "encoding": "cp932",
+      "features": 46
+    },
+    {
+      "year": 1990,
+      "archive": "A16-90_28_GML.zip",
+      "member": "A16-90_28_DID.shp",
+      "encoding": "cp932",
+      "features": 64
+    },
+    {
+      "year": 1995,
+      "archive": "A16-95_28_GML.zip",
+      "member": "A16-95_28_DID.shp",
+      "encoding": "cp932",
+      "features": 70
+    },
+    {
+      "year": 2000,
+      "archive": "A16-00_28_GML.zip",
+      "member": "A16-00_28_DID.shp",
+      "encoding": "cp932",
+      "features": 69
+    },
+    {
+      "year": 2005,
+      "archive": "A16-05_28_GML.zip",
+      "member": "A16-05_28_DID.shp",
+      "encoding": "cp932",
+      "features": 62
+    },
+    {
+      "year": 2010,
+      "archive": "A16-10_28_GML.zip",
+      "member": "A16-10_28_DID.shp",
+      "encoding": "cp932",
+      "features": 75
+    },
+    {
+      "year": 2015,
+      "archive": "A16-15_28_GML.zip",
+      "member": "A16-15_28_GML/A16-15_28_DID.shp",
+      "encoding": "cp932",
+      "features": 66
+    },
+    {
+      "year": 2020,
+      "archive": "A16-20_28_GML.zip",
+      "member": "A16-20_28_DID.shp",
+      "encoding": "utf-8",
+      "features": 55
+    }
+  ]
+}

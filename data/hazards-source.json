@@ -1,0 +1,39 @@
+{
+  "provider": "MLIT / prefectural authorities via GSI Hazard Map Portal",
+  "source": "https://disaportal.gsi.go.jp/hazardmap/copyright/opendata.html",
+  "retrieved": "2026-10-09",
+  "layers": [
+    {
+      "id": "hazard-flood",
+      "url": "https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_data/{z}/{x}/{y}.png",
+      "name": "River flooding · maximum scenario"
+    },
+    {
+      "id": "hazard-surge",
+      "url": "https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_data/{z}/{x}/{y}.png",
+      "name": "Storm surge inundation"
+    },
+    {
+      "id": "hazard-tsunami",
+      "url": "https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_data/{z}/{x}/{y}.png",
+      "name": "Tsunami inundation"
+    },
+    {
+      "id": "hazard-debris",
+      "url": "https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki/{z}/{x}/{y}.png",
+      "name": "Debris-flow warning areas"
+    },
+    {
+      "id": "hazard-steep",
+      "url": "https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki/{z}/{x}/{y}.png",
+      "name": "Steep-slope collapse warning areas"
+    },
+    {
+      "id": "hazard-slide",
+      "url": "https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki/{z}/{x}/{y}.png",
+      "name": "Landslide warning areas"
+    }
+  ],
+  "coverage": "Provider coverage varies. Offline: z11–12 Kobe region and z13 central Kobe; parent tiles used beyond packaged detail. 352 tiles available, 248 provider-unavailable in explicit 600 tile sample.",
+  "limitations": "Maximum-scale flood scenarios, storm surge and tsunami inundation, and statutory landslide warning zones are separate datasets, not a combined risk score. No colour does not mean safety. Source dates and assumptions differ. Official source legends bundled."
+}

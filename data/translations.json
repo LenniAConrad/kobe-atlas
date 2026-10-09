@@ -1,0 +1,1207 @@
+[
+  [
+    "Kobe",
+    "神戸",
+    "神户"
+  ],
+  [
+    "Kobe atlas",
+    "神戸アトラス",
+    "神户地图集"
+  ],
+  [
+    "Spatial atlas",
+    "空間アトラス",
+    "空间地图集"
+  ],
+  [
+    "Land & sea",
+    "陸と海",
+    "陆地与海洋"
+  ],
+  [
+    "Geological context",
+    "地質的背景",
+    "地质背景"
+  ],
+  [
+    "The shape of the land",
+    "大地のかたち",
+    "地貌的形成"
+  ],
+  [
+    "This chapter is reserved for the geological formation of the Kobe region. Its chronology and explanatory material are still being researched. The present-day elevation layer provides orientation, not a reconstruction of an ancient coastline.",
+    "神戸地域の地質的な成り立ちを扱う章です。年代と解説資料は現在調査中です。現在の標高図を位置の参考として表示しており、古代の海岸線を復元したものではありません。",
+    "本章将介绍神户地区的地质形成过程。相关年代与说明资料仍在研究中。目前的高程图层仅用于辨识地理位置，并非古代海岸线的复原。"
+  ],
+  [
+    "Early settlement",
+    "初期の集落",
+    "早期聚落"
+  ],
+  [
+    "Prehistoric context",
+    "先史時代の背景",
+    "史前背景"
+  ],
+  [
+    "Before the written city",
+    "記録以前の暮らし",
+    "文字记载之前"
+  ],
+  [
+    "A space for prehistoric settlement and the landscapes before Kobe-mura. Dates, archaeological sites, and supporting sources will be added during our review.",
+    "神戸村以前の先史集落と景観を扱います。年代、遺跡、裏付けとなる出典は、今後の検討に合わせて追加します。",
+    "本章用于介绍神户村形成之前的史前聚落与景观。年代、考古遗址和依据资料将在后续讨论中补充。"
+  ],
+  [
+    "Traditions",
+    "伝承",
+    "传说"
+  ],
+  [
+    "Mythological context",
+    "神話・伝承の背景",
+    "神话背景"
+  ],
+  [
+    "Stories of place",
+    "土地に伝わる物語",
+    "地方的故事"
+  ],
+  [
+    "This chapter will hold mythological and legendary accounts. These will be identified as traditions and will not be assigned invented calendar dates.",
+    "神話や伝説を収録する章です。これらは伝承として明示し、根拠のない年代を割り当てることはしません。",
+    "本章将收录神话与传说，并明确标注其传说性质，不会为其编造具体年代。"
+  ],
+  [
+    "Kobe-mura",
+    "神戸村",
+    "神户村"
+  ],
+  [
+    "Origins · date to confirm",
+    "起源・年代要確認",
+    "起源 · 年代待考"
+  ],
+  [
+    "The village before the city",
+    "都市になる前の村",
+    "城市之前的村落"
+  ],
+  [
+    "The timeline begins here. The establishment date and extent of Kobe-mura still need a documented source. The 1888 map is shown as a later reference image, not as a map of the village at its founding.",
+    "タイムラインはここから始まります。神戸村の成立年代と範囲は、文献による確認が必要です。1888年の地図は後世の参考図として表示しており、村の成立時の姿を示すものではありません。",
+    "时间轴从这里开始。神户村的建立年代和范围仍需文献依据。所展示的1888年地图是后世参考图，并非村落建立时的地图。"
+  ],
+  [
+    "The points and region in this first version are labelled interaction examples, ready to replace with researched material.",
+    "この初期版の点と領域は操作例と明記しています。調査に基づく資料に置き換える予定です。",
+    "初版中的点位和区域已标注为交互示例，后续将以研究资料替换。"
+  ],
+  [
+    "Port & city",
+    "港と都市",
+    "港口与城市"
+  ],
+  [
+    "Reading the changing city",
+    "変わりゆく都市を読む",
+    "解读城市变迁"
+  ],
+  [
+    "Compare the street fabric and coastline on the historical map. This chapter uses the 1892–1910 map series. The date range describes the chapter; the background image has its own source date.",
+    "歴史地図で街路構成と海岸線を比較できます。この章では1892〜1910年の地図群を使用しています。章の年代範囲と背景地図の作成年代は別に記録されています。",
+    "可在历史地图上比较街道布局和海岸线。本章使用1892—1910年的地图系列。时段范围用于描述本章，背景地图有其独立的资料年代。"
+  ],
+  [
+    "Chapter text, dates, and annotations can all be edited independently.",
+    "章の文章、年代、注記は、それぞれ個別に編集できます。",
+    "章节文字、年代和标注均可独立编辑。"
+  ],
+  [
+    "Between wars",
+    "戦間期",
+    "两次大战之间"
+  ],
+  [
+    "A city taking shape",
+    "形成される都市",
+    "逐渐成形的城市"
+  ],
+  [
+    "The map shown comes from the 1922–1923 series. The layer checklist also includes the 1927–1935 series for comparison. Historical events and interpretations will be added with sources.",
+    "表示中の地図は1922〜1923年の地図群です。レイヤー一覧には比較用の1927〜1935年の地図群も含まれています。歴史的出来事と解釈は、出典とともに追加します。",
+    "当前地图来自1922—1923年系列。图层列表也包含1927—1935年系列，可用于比较。历史事件及解读将在附有出处后补充。"
+  ],
+  [
+    "Postwar",
+    "戦後",
+    "战后"
+  ],
+  [
+    "A view from above",
+    "空から見る都市",
+    "从空中观察"
+  ],
+  [
+    "Aerial imagery introduces another way to read the city. This chapter uses the 1945–1950 aerial-photo collection. Images may have gaps where the source has no coverage.",
+    "航空写真は都市を読み解く別の視点を提供します。この章では1945〜1950年の航空写真群を使用しています。原資料の撮影範囲外では画像が欠ける場合があります。",
+    "航空影像提供了另一种解读城市的方式。本章使用1945—1950年的航空照片集。原始资料未覆盖的地方可能存在影像空缺。"
+  ],
+  [
+    "Urban expansion",
+    "都市の拡大",
+    "城市扩张"
+  ],
+  [
+    "Edges of the city",
+    "都市の縁辺",
+    "城市边缘"
+  ],
+  [
+    "Explore the 1974–1978 aerial-photo layer. Other available aerial collections can be selected for comparison. The viewport remains yours to move as the chapter plays.",
+    "1974〜1978年の航空写真を探索できます。ほかの航空写真群を選んで比較することも可能です。章の再生中も、地図の表示範囲は自由に動かせます。",
+    "探索1974—1978年的航空照片图层，也可选择其他航空影像进行比较。章节播放期间，您仍可自由移动地图视野。"
+  ],
+  [
+    "Kobe today",
+    "今日の神戸",
+    "今日神户"
+  ],
+  [
+    "The city today",
+    "現在の都市",
+    "当今的城市"
+  ],
+  [
+    "This chapter uses the latest seamless aerial imagery, whose capture dates vary by location. The Transport page adds the 2025 railway dataset. Water Systems is ready for the next stage of data selection.",
+    "この章では最新のシームレス航空写真を使用しています。撮影日は場所によって異なります。交通ページには2025年の鉄道データを掲載しています。水系ページは次のデータ選定に向けた準備段階です。",
+    "本章使用最新的无缝航空影像，不同位置的拍摄日期各异。交通页面提供2025年的铁路数据。水系统页面已准备进入下一阶段的数据筛选。"
+  ],
+  [
+    "Kobe through time",
+    "時をたどる神戸",
+    "神户的历史变迁"
+  ],
+  [
+    "Railways across Kobe",
+    "神戸の鉄道網",
+    "神户铁路网络"
+  ],
+  [
+    "Explore the 2025 railway network by operator category. These groups come from MLIT field N02_002. Click a line or station to read its attributes. Historical railway data will be added after we review its coverage.",
+    "2025年の鉄道網を運営主体の区分ごとに探索できます。区分は国土交通省の項目N02_002に基づきます。路線や駅をクリックすると属性を確認できます。過去の鉄道データは収録範囲を検討した後に追加します。",
+    "按运营主体类别探索2025年的铁路网络。分类依据国土交通省的N02_002字段。点击线路或车站可查看属性。历史铁路数据将在核查覆盖范围后添加。"
+  ],
+  [
+    "Water and the city",
+    "水と都市",
+    "水与城市"
+  ],
+  [
+    "This page is ready for reservoirs, rivers and water-supply areas. No water facilities have been invented for this first version. We will review MLIT P21 and W01 before choosing the layers and how to label their dates.",
+    "貯水池、河川、給水区域を掲載するためのページです。この初期版では、架空の水道施設は掲載していません。国土交通省のP21とW01を確認し、採用するレイヤーと年代の表示方法を決めます。",
+    "本页将展示水库、河流和供水区域。初版未虚构任何水务设施。我们将先审查国土交通省P21和W01数据，再决定图层及其年代的标注方式。"
+  ],
+  [
+    "Example point · replace in editor",
+    "サンプル地点・編集画面で置換",
+    "示例点位 · 请在编辑器中替换"
+  ],
+  [
+    "Example region · not a historical boundary",
+    "サンプル領域・歴史的境界ではありません",
+    "示例区域 · 并非历史边界"
+  ],
+  [
+    "An interaction example near central Kobe. Its reveal timing is illustrative, not a historical construction date.",
+    "神戸中心部付近の操作例です。表示タイミングは実演用であり、歴史的な建設年代を示すものではありません。",
+    "这是神户中心附近的交互示例。出现时机仅用于演示，并非历史建造年代。"
+  ],
+  [
+    "This editable polygon demonstrates how a chapter can reveal a region. Replace the shape and explanation with sourced material.",
+    "この編集可能な多角形は、章の進行に伴う領域表示の例です。形状と解説を出典のある資料に置き換えてください。",
+    "这个可编辑多边形演示了区域如何随章节进度出现。请以有出处的资料替换其形状和说明。"
+  ],
+  [
+    "Illustrative editor example",
+    "編集機能の実演例",
+    "编辑功能示例"
+  ],
+  [
+    "Geospatial Information Authority of Japan",
+    "国土地理院",
+    "日本国土地理院"
+  ],
+  [
+    "Japanese Map Warper · map 47",
+    "Japanese Map Warper・地図47",
+    "Japanese Map Warper · 地图47"
+  ],
+  [
+    "今昔マップ on the web",
+    "今昔マップ on the web",
+    "今昔地图网页版"
+  ],
+  [
+    "Map images",
+    "地図画像",
+    "地图影像"
+  ],
+  [
+    "GSI pale map",
+    "地理院淡色地図",
+    "地理院浅色地图"
+  ],
+  [
+    "Blank map",
+    "白地図",
+    "空白底图"
+  ],
+  [
+    "Slope",
+    "傾斜量図",
+    "坡度图"
+  ],
+  [
+    "GSI standard",
+    "地理院標準地図",
+    "地理院标准地图"
+  ],
+  [
+    "Latest aerial imagery",
+    "最新航空写真",
+    "最新航空影像"
+  ],
+  [
+    "Elevation",
+    "標高",
+    "高程"
+  ],
+  [
+    "Hillshade",
+    "陰影起伏図",
+    "地形晕渲图"
+  ],
+  [
+    "Red relief",
+    "赤色立体地図",
+    "红色立体地形图"
+  ],
+  [
+    "Orthophoto · 2007 onward",
+    "オルソ画像・2007年以降",
+    "正射影像 · 2007年起"
+  ],
+  [
+    "Inō map · south (date unconfirmed)",
+    "伊能図・南部（年代未確認）",
+    "伊能图 · 南部（年代未确认）"
+  ],
+  [
+    "Owner-provided image; date to verify",
+    "所有者提供画像・年代要確認",
+    "用户提供的影像；年代待核实"
+  ],
+  [
+    "JR Shinkansen",
+    "JR新幹線",
+    "JR新干线"
+  ],
+  [
+    "JR conventional lines",
+    "JR在来線",
+    "JR常规铁路"
+  ],
+  [
+    "Public railways",
+    "公営鉄道",
+    "公营铁路"
+  ],
+  [
+    "Private railways",
+    "民営鉄道",
+    "民营铁路"
+  ],
+  [
+    "Third-sector railways",
+    "第三セクター鉄道",
+    "第三部门铁路"
+  ],
+  [
+    "Stations",
+    "駅",
+    "车站"
+  ],
+  [
+    "Railways · 2025",
+    "鉄道・2025年",
+    "铁路 · 2025年"
+  ],
+  [
+    "MLIT National Land Numerical Information · 2025",
+    "国土交通省 国土数値情報・2025年",
+    "国土交通省国土数值信息 · 2025年"
+  ],
+  [
+    "MLIT · 2025",
+    "国土交通省・2025年",
+    "国土交通省 · 2025年"
+  ],
+  [
+    "Chapter points & regions",
+    "章の地点と領域",
+    "章节点位与区域"
+  ],
+  [
+    "Chapter features",
+    "章の地物",
+    "章节要素"
+  ],
+  [
+    "MAP FEATURE",
+    "地図上の地物",
+    "地图要素"
+  ],
+  [
+    "Line",
+    "路線",
+    "线路"
+  ],
+  [
+    "Operator",
+    "運営主体",
+    "运营主体"
+  ],
+  [
+    "Category",
+    "区分",
+    "类别"
+  ],
+  [
+    "Source code",
+    "原資料コード",
+    "原始代码"
+  ],
+  [
+    "YOUR WORKSPACE",
+    "編集ワークスペース",
+    "编辑工作区"
+  ],
+  [
+    "Chapters",
+    "時代区分",
+    "时段"
+  ],
+  [
+    "Points & regions",
+    "地点と領域",
+    "点位与区域"
+  ],
+  [
+    "Subject pages",
+    "テーマ別ページ",
+    "专题页面"
+  ],
+  [
+    "Appearance & map",
+    "全体設定",
+    "全局设置"
+  ],
+  [
+    "Add",
+    "追加",
+    "添加"
+  ],
+  [
+    "Delete",
+    "削除",
+    "删除"
+  ],
+  [
+    "Move up",
+    "上へ",
+    "上移"
+  ],
+  [
+    "Move down",
+    "下へ",
+    "下移"
+  ],
+  [
+    "Import GeoJSON",
+    "GeoJSONを読み込む",
+    "导入GeoJSON"
+  ],
+  [
+    "Save draft",
+    "下書きを保存",
+    "保存草稿"
+  ],
+  [
+    "Publish locally",
+    "ローカルで公開",
+    "本地发布"
+  ],
+  [
+    "Export visitor copy",
+    "閲覧用を出力",
+    "导出浏览版"
+  ],
+  [
+    "Unsaved changes",
+    "未保存の変更",
+    "未保存的更改"
+  ],
+  [
+    "Close editor",
+    "編集画面を閉じる",
+    "关闭编辑器"
+  ],
+  [
+    "Map limits and visual settings apply across the atlas.",
+    "地図範囲、再生時間、表示設定はアトラス全体に適用されます。",
+    "地图范围、播放时长和外观设置适用于整个地图集。"
+  ],
+  [
+    "Timeline label",
+    "タイムラインの名称",
+    "时间轴名称"
+  ],
+  [
+    "Displayed period",
+    "表示する年代",
+    "显示时段"
+  ],
+  [
+    "Start year (blank for undated)",
+    "開始年（未確定の場合は空欄）",
+    "起始年份（无年代时留空）"
+  ],
+  [
+    "End year",
+    "終了年",
+    "结束年份"
+  ],
+  [
+    "Chapter map",
+    "章の地図",
+    "时段地图"
+  ],
+  [
+    "Information heading",
+    "解説の見出し",
+    "介绍标题"
+  ],
+  [
+    "Information text",
+    "解説文",
+    "介绍正文"
+  ],
+  [
+    "Hold seconds",
+    "待機時間（秒）",
+    "停留时间（秒）"
+  ],
+  [
+    "Fade seconds",
+    "切替時間（秒）",
+    "淡入淡出时间（秒）"
+  ],
+  [
+    "Source / date note",
+    "出典・年代の注記",
+    "来源／年代说明"
+  ],
+  [
+    "Feature title",
+    "地物の名称",
+    "要素标题"
+  ],
+  [
+    "Page",
+    "ページ",
+    "页面"
+  ],
+  [
+    "Chapter (for Timeline)",
+    "章（タイムライン用）",
+    "时段（用于时间轴）"
+  ],
+  [
+    "Event year (optional)",
+    "出来事の年（任意）",
+    "事件年份（可选）"
+  ],
+  [
+    "Reveal position 0–1 (when undated)",
+    "表示位置0〜1（年代未確定の場合）",
+    "出现位置0—1（无年代时）"
+  ],
+  [
+    "Colour",
+    "色",
+    "颜色"
+  ],
+  [
+    "Feature description",
+    "地物の解説",
+    "要素说明"
+  ],
+  [
+    "Source / evidence",
+    "出典・根拠",
+    "来源／依据"
+  ],
+  [
+    "Place point",
+    "地点を配置",
+    "放置点位"
+  ],
+  [
+    "Draw region",
+    "領域を描く",
+    "绘制区域"
+  ],
+  [
+    "Draw line",
+    "線を描く",
+    "绘制线条"
+  ],
+  [
+    "Edit shape",
+    "形状を編集",
+    "编辑形状"
+  ],
+  [
+    "Geometry (longitude, latitude)",
+    "形状（経度、緯度）",
+    "几何形状（经度、纬度）"
+  ],
+  [
+    "Layer name",
+    "レイヤー名",
+    "图层名称"
+  ],
+  [
+    "Layer type",
+    "レイヤーの種類",
+    "图层类型"
+  ],
+  [
+    "Online map tiles",
+    "オンライン地図タイル",
+    "在线地图瓦片"
+  ],
+  [
+    "Local map image",
+    "ローカル地図画像",
+    "本地地图影像"
+  ],
+  [
+    "Geographic features",
+    "地理的地物",
+    "地理要素"
+  ],
+  [
+    "Chapter annotations",
+    "章の注記",
+    "时段标注"
+  ],
+  [
+    "Checklist group",
+    "一覧のグループ",
+    "列表分组"
+  ],
+  [
+    "Show in these pages",
+    "表示するページ",
+    "显示于这些页面"
+  ],
+  [
+    "Source URL or local data path",
+    "出典URL・ローカルデータのパス",
+    "来源网址或本地数据路径"
+  ],
+  [
+    "Default opacity 0–1",
+    "初期不透明度0〜1",
+    "默认不透明度0—1"
+  ],
+  [
+    "Feature colour",
+    "地物の色",
+    "要素颜色"
+  ],
+  [
+    "Line width",
+    "線の太さ",
+    "线宽"
+  ],
+  [
+    "Filter field (optional)",
+    "絞り込み項目（任意）",
+    "筛选字段（可选）"
+  ],
+  [
+    "Filter value",
+    "絞り込み値",
+    "筛选值"
+  ],
+  [
+    "Source minimum zoom",
+    "資料の最小ズーム",
+    "来源最小缩放级别"
+  ],
+  [
+    "Source maximum zoom",
+    "資料の最大ズーム",
+    "来源最大缩放级别"
+  ],
+  [
+    "Source identifier",
+    "出典識別子",
+    "来源标识符"
+  ],
+  [
+    "Source credit / date",
+    "出典表記・年代",
+    "来源署名／年代"
+  ],
+  [
+    "Image bounds [[south,west],[north,east]]",
+    "画像範囲 [[南,西],[北,東]]",
+    "影像范围 [[南,西],[北,东]]"
+  ],
+  [
+    "Page name",
+    "ページ名",
+    "页面名称"
+  ],
+  [
+    "Sidebar icon",
+    "サイドバーのアイコン",
+    "侧栏图标"
+  ],
+  [
+    "Page heading",
+    "ページ見出し",
+    "页面标题"
+  ],
+  [
+    "Page introduction",
+    "ページの紹介文",
+    "页面简介"
+  ],
+  [
+    "Hide from navigation",
+    "メニューに表示しない",
+    "从导航中隐藏"
+  ],
+  [
+    "Visible layers when opened",
+    "開いたときに表示するレイヤー",
+    "打开时显示的图层"
+  ],
+  [
+    "Atlas title",
+    "アトラスの名称",
+    "地图集标题"
+  ],
+  [
+    "Subtitle",
+    "副題",
+    "副标题"
+  ],
+  [
+    "Starting chapter",
+    "開始する章",
+    "起始时段"
+  ],
+  [
+    "Accent colour",
+    "アクセントカラー",
+    "强调色"
+  ],
+  [
+    "Playback seconds for every chapter",
+    "全章共通の再生時間（秒）",
+    "所有时段的统一播放时长（秒）"
+  ],
+  [
+    "Glass solidity 0.5–1",
+    "ガラスの濃さ0.5〜1",
+    "玻璃浓度0.5—1"
+  ],
+  [
+    "Panel corner radius",
+    "パネルの角丸半径",
+    "面板圆角半径"
+  ],
+  [
+    "Text scale 0.8–1.5",
+    "文字倍率0.8〜1.5",
+    "文字缩放0.8—1.5"
+  ],
+  [
+    "Use downloaded maps by default",
+    "ダウンロード済み地図を標準使用",
+    "默认使用已下载的地图"
+  ],
+  [
+    "Opening zoom",
+    "初期ズーム",
+    "初始缩放级别"
+  ],
+  [
+    "Minimum zoom",
+    "最小ズーム",
+    "最小缩放级别"
+  ],
+  [
+    "Maximum zoom",
+    "最大ズーム",
+    "最大缩放级别"
+  ],
+  [
+    "Detail outside study area",
+    "対象地域外の詳細度",
+    "研究区外的细节级别"
+  ],
+  [
+    "Opening map centre [latitude,longitude]",
+    "初期中心 [緯度,経度]",
+    "初始地图中心 [纬度,经度]"
+  ],
+  [
+    "Detailed study area [[south,west],[north,east]]",
+    "詳細対象地域 [[南,西],[北,東]]",
+    "详细研究区域 [[南,西],[北,东]]"
+  ],
+  [
+    "Outer navigation bounds",
+    "移動可能な外側の範囲",
+    "外部浏览边界"
+  ],
+  [
+    "Use current view as detailed area",
+    "現在の表示範囲を詳細対象に設定",
+    "将当前视野设为详细区域"
+  ],
+  [
+    "Content language",
+    "文章の編集言語",
+    "内容编辑语言"
+  ],
+  [
+    "Add the first item to get started.",
+    "最初の項目を追加してください。",
+    "请添加第一个条目。"
+  ],
+  [
+    "New chapter",
+    "新しい章",
+    "新时段"
+  ],
+  [
+    "Date range to set",
+    "年代を設定",
+    "待设定时段"
+  ],
+  [
+    "New feature",
+    "新しい地物",
+    "新要素"
+  ],
+  [
+    "New layer",
+    "新しいレイヤー",
+    "新图层"
+  ],
+  [
+    "New group",
+    "新しいグループ",
+    "新分组"
+  ],
+  [
+    "New subject",
+    "新しいテーマ",
+    "新专题"
+  ],
+  [
+    "Use shape",
+    "この形状を使用",
+    "使用此形状"
+  ],
+  [
+    "Cancel",
+    "キャンセル",
+    "取消"
+  ],
+  [
+    "Close without saving these draft changes?",
+    "変更を保存せずに閉じますか？",
+    "不保存草稿更改并关闭吗？"
+  ],
+  [
+    "Draft saved. The map now previews your changes.",
+    "下書きを保存しました。地図に変更を反映しています。",
+    "草稿已保存。地图现已预览您的更改。"
+  ],
+  [
+    "Published locally. Open Visitor edition to view the saved release.",
+    "ローカルで公開しました。閲覧用から保存版を確認できます。",
+    "已在本地发布。打开浏览版可查看保存的版本。"
+  ],
+  [
+    "Drag the handles, then choose Use shape.",
+    "ハンドルを動かし、「この形状を使用」を選んでください。",
+    "拖动控制点，然后选择“使用此形状”。"
+  ],
+  [
+    "Click the map to draw. Complete a region by clicking its first point.",
+    "地図をクリックして描画します。最初の点をクリックすると領域が完成します。",
+    "点击地图进行绘制。点击起始点可完成区域。"
+  ],
+  [
+    "Home is the permanent timeline page.",
+    "ホームは常設のタイムラインページです。",
+    "主页是固定的时间轴页面。"
+  ],
+  [
+    "Keep at least one chapter.",
+    "少なくとも1章は残してください。",
+    "请至少保留一个时段。"
+  ],
+  [
+    "Choose another map for the chapters using this layer before deleting it.",
+    "削除前に、このレイヤーを使う章の地図を変更してください。",
+    "删除前，请为使用此图层的时段选择其他地图。"
+  ],
+  [
+    "Import supports points, lines and polygons. Split multi-geometries before importing.",
+    "点、線、多角形を読み込めます。複合形状は読み込み前に分割してください。",
+    "支持导入点、线和多边形。请在导入前拆分多重几何形状。"
+  ],
+  [
+    "ATLAS NOTES",
+    "アトラスの資料",
+    "地图集说明"
+  ],
+  [
+    "Close sources",
+    "出典画面を閉じる",
+    "关闭来源"
+  ],
+  [
+    "Map dates and data dates are kept with each layer. Unresearched chapter content and example features are labelled in this working edition.",
+    "各レイヤーに地図とデータの年代を記録しています。この編集版では、未調査の章の内容やサンプル地物を明示しています。",
+    "各图层保留地图和数据的年代。本编辑版已标注尚未研究的章节内容与示例要素。"
+  ],
+  [
+    "Local reference documents",
+    "ローカル参考資料",
+    "本地参考文档"
+  ],
+  [
+    "Railway attribute definitions",
+    "鉄道属性の定義",
+    "铁路属性定义"
+  ],
+  [
+    "Railway operator codes",
+    "鉄道運営主体コード",
+    "铁路运营主体代码"
+  ],
+  [
+    "Railway type codes",
+    "鉄道種別コード",
+    "铁路类型代码"
+  ],
+  [
+    "The originals and full source catalog are retained in the project’s sources folder.",
+    "原資料と出典一覧はプロジェクトのsourcesフォルダーに保存されています。",
+    "原始文件与完整来源目录保存在项目的sources文件夹中。"
+  ],
+  [
+    "Local visitor edition",
+    "ローカル閲覧版",
+    "本地浏览版"
+  ],
+  [
+    "Publishing from the editor saves a separate visitor version on this computer.",
+    "編集画面から公開すると、このコンピューターに独立した閲覧版を保存します。",
+    "从编辑器发布会在本机保存独立的浏览版本。"
+  ],
+  [
+    "Open visitor edition",
+    "閲覧版を開く",
+    "打开浏览版"
+  ],
+  [
+    "Restore a draft",
+    "下書きを復元",
+    "恢复草稿"
+  ],
+  [
+    "Every save keeps a backup. Restoring one creates a new draft revision.",
+    "保存ごとにバックアップを作成します。復元すると新しい下書き版になります。",
+    "每次保存都会保留备份。恢复备份将创建新的草稿版本。"
+  ],
+  [
+    "Choose a saved backup",
+    "保存済みバックアップを選択",
+    "选择已保存的备份"
+  ],
+  [
+    "Choose backup",
+    "バックアップを選択",
+    "选择备份"
+  ],
+  [
+    "Restore selected backup",
+    "選択したバックアップを復元",
+    "恢复所选备份"
+  ],
+  [
+    "Restore this backup into the draft? The current draft will be backed up first.",
+    "このバックアップを下書きに復元しますか？現在の下書きは先にバックアップされます。",
+    "将此备份恢复到草稿吗？当前草稿将先行备份。"
+  ],
+  [
+    "Draft restored.",
+    "下書きを復元しました。",
+    "草稿已恢复。"
+  ],
+  [
+    "Timeline",
+    "タイムライン",
+    "时间轴"
+  ],
+  [
+    "Transport",
+    "交通",
+    "交通"
+  ],
+  [
+    "Water Systems",
+    "水系",
+    "水系统"
+  ],
+  [
+    "Layers",
+    "レイヤー",
+    "图层"
+  ],
+  [
+    "Edit atlas",
+    "アトラスを編集",
+    "编辑地图集"
+  ],
+  [
+    "Sources & versions",
+    "出典とバージョン",
+    "来源与版本"
+  ],
+  [
+    "Expand navigation",
+    "メニューを開く",
+    "展开菜单"
+  ],
+  [
+    "Collapse layers",
+    "レイヤー一覧を折りたたむ",
+    "折叠图层列表"
+  ],
+  [
+    "Historical timeline",
+    "歴史タイムライン",
+    "历史时间轴"
+  ],
+  [
+    "Interactive map of Kobe",
+    "神戸のインタラクティブ地図",
+    "神户互动地图"
+  ],
+  [
+    "Current chapter information",
+    "現在の章の解説",
+    "当前时段介绍"
+  ],
+  [
+    "Map layers",
+    "地図レイヤー",
+    "地图图层"
+  ],
+  [
+    "Atlas pages",
+    "アトラスのページ",
+    "地图集页面"
+  ],
+  [
+    "history",
+    "歴史",
+    "历史"
+  ],
+  [
+    "train",
+    "鉄道",
+    "铁路"
+  ],
+  [
+    "water",
+    "水",
+    "水"
+  ],
+  [
+    "map",
+    "地図",
+    "地图"
+  ],
+  [
+    "land",
+    "地形",
+    "地形"
+  ],
+  [
+    "building",
+    "建物",
+    "建筑"
+  ],
+  [
+    "pin",
+    "地点",
+    "点位"
+  ],
+  [
+    "Chapter entrance camera (optional)",
+    "章の開始時のカメラ設定（任意）",
+    "章节开场视角（可选）"
+  ],
+  [
+    "Introduction animation (planned)",
+    "導入アニメーション（計画）",
+    "开场动画（待设计）"
+  ],
+  [
+    "Railways · Japan, 2025",
+    "鉄道・日本、2025年",
+    "铁路 · 日本，2025年"
+  ],
+  [
+    "Kobe spatial atlas",
+    "神戸空間アトラス",
+    "神户空间地图集"
+  ],
+  [
+    "Playback duration must be between 1 and 3600 seconds.",
+    "再生時間は1〜3600秒に設定してください。",
+    "播放时长必须在1至3600秒之间。"
+  ],
+  [
+    "Another editor saved a newer draft. Reload before saving.",
+    "別の編集画面で新しい下書きが保存されています。再読み込みしてから保存してください。",
+    "另一编辑窗口保存了较新的草稿。请刷新后再保存。"
+  ],
+  [
+    "Click to start drawing shape.",
+    "クリックして形状の描画を開始します。",
+    "点击开始绘制形状。"
+  ],
+  [
+    "Click to continue drawing shape.",
+    "クリックして形状の描画を続けます。",
+    "点击继续绘制形状。"
+  ],
+  [
+    "Click first point to close this shape.",
+    "最初の点をクリックして形状を閉じます。",
+    "点击起始点闭合形状。"
+  ],
+  [
+    "Click to start drawing line.",
+    "クリックして線の描画を開始します。",
+    "点击开始绘制线条。"
+  ],
+  [
+    "Click to continue drawing line.",
+    "クリックして線の描画を続けます。",
+    "点击继续绘制线条。"
+  ],
+  [
+    "Click last point to finish line.",
+    "最後の点をクリックして線を完成します。",
+    "点击最后一点完成线条。"
+  ],
+  [
+    "Click map to place marker.",
+    "地図をクリックして地点を配置します。",
+    "点击地图放置标记。"
+  ],
+  [
+    "Drag handles or markers to edit features.",
+    "ハンドルやマーカーを動かして地物を編集します。",
+    "拖动控制点或标记以编辑要素。"
+  ],
+  [
+    "Click cancel to undo changes.",
+    "キャンセルで変更を取り消します。",
+    "点击取消以撤销更改。"
+  ],
+  [
+    "Error:",
+    "エラー：",
+    "错误："
+  ],
+  [
+    "shape edges cannot cross!",
+    "辺同士を交差させることはできません。",
+    "形状的边不能交叉！"
+  ],
+  [
+    "Administrative boundaries",
+    "行政界",
+    "行政边界"
+  ],
+  [
+    "Kobe city and ward boundaries",
+    "神戸市界・区界",
+    "神户市界与区界"
+  ],
+  [
+    "Modern administrative boundaries dated 1 January 2025. Nine wards, with a dissolved city outline; not historical boundaries. Processed from MLIT N03, CC BY 4.0.",
+    "2025年1月1日現在の行政界。9区と統合した市の外周を表示します。歴史的境界ではありません。国土数値情報N03を加工（CC BY 4.0）。",
+    "2025年1月1日行政边界，显示9个区及合并后的市界，并非历史边界。由MLIT N03加工，CC BY 4.0。"
+  ],
+  [
+    "Boundary provenance and processing record",
+    "行政界の出典・処理記録",
+    "边界来源与处理记录"
+  ],
+  [
+    "Archived boundary definitions",
+    "行政界の定義（保存資料）",
+    "边界定义存档"
+  ],
+  [
+    "Highways",
+    "高速道路",
+    "高速公路"
+  ],
+  [
+    "Airports & ferries",
+    "空港・フェリー",
+    "机场与渡轮"
+  ],
+  [
+    "Show airports & Bay Shuttle",
+    "空港・ベイシャトル全体図",
+    "显示机场与跨湾渡轮"
+  ],
+  [
+    "Land-use zones · FY2024",
+    "用途地域・2024年度",
+    "用地分区·2024年度"
+  ]
+]

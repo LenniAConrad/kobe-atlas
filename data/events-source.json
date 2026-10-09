@@ -1,0 +1,131 @@
+{
+  "title": "Kobe historical events",
+  "researched": "2026-10-09",
+  "mappingNote": "Geometry is illustrative and is not a surveyed boundary or disaster footprint. Undated periods use explicitly labelled representative years. Pre-1873 calendar dates are not silently converted.",
+  "sources": {
+    "A": {
+      "title": "Kobe City: prehistoric history",
+      "url": "https://kobe-rekishiisan.city.kobe.lg.jp/history/genshi/"
+    },
+    "B": {
+      "title": "Ikuta Shrine: shrine history",
+      "url": "https://ikutajinja.or.jp/history"
+    },
+    "C": {
+      "title": "Kobe City: burial mounds",
+      "url": "https://kobe-rekishiisan.city.kobe.lg.jp/about/kofun/"
+    },
+    "D": {
+      "title": "Kobe City: port chronology",
+      "url": "https://www.city.kobe.lg.jp/a74134/kurashi/access/harbor/rekishi.html"
+    },
+    "E": {
+      "title": "Kobe City: medieval history, Nishi Ward",
+      "url": "https://www.city.kobe.lg.jp/k25836/kuyakusho/nishiku/shokai/introduction/history/03_chusei.html"
+    },
+    "F": {
+      "title": "Kobe City: medieval heritage",
+      "url": "https://kobe-rekishiisan.city.kobe.lg.jp/history/chusei/"
+    },
+    "G": {
+      "title": "Kobe City: Takauji and Masashige",
+      "url": "https://www.city.kobe.lg.jp/e90232/kuyakusho/hyogoku/shoukai/rekishi/history_4.html"
+    },
+    "H": {
+      "title": "Kobe City: early modern heritage",
+      "url": "https://kobe-rekishiisan.city.kobe.lg.jp/history/kinsei/"
+    },
+    "I": {
+      "title": "Kobe City: port opening",
+      "url": "https://www.city.kobe.lg.jp/culture/modern_history/archive/history_01.html"
+    },
+    "J": {
+      "title": "Kobe City: Kobe Incident",
+      "url": "https://www.city.kobe.lg.jp/culture/modern_history/archive/detail/history_02.html"
+    },
+    "K": {
+      "title": "Kobe City: Ikuta River",
+      "url": "https://www.city.kobe.lg.jp/a43553/kurashi/machizukuri/river/ikuta.html"
+    },
+    "L": {
+      "title": "Kobe City: modern heritage",
+      "url": "https://kobe-rekishiisan.city.kobe.lg.jp/history/kindai/"
+    },
+    "M": {
+      "title": "Kobe City: Minatogawa tunnel",
+      "url": "https://www.city.kobe.lg.jp/a83166/kanko/bunka/bunkazai/history/isan/minatogawazuidou.html"
+    },
+    "N": {
+      "title": "Kobe City: Suzuki Shoten",
+      "url": "https://www.city.kobe.lg.jp/culture/modern_history/archive/detail/history_07.html"
+    },
+    "O": {
+      "title": "Kobe City: flood history",
+      "url": "https://www.city.kobe.lg.jp/a44881/bosai/disaster/flood01/flood02.html"
+    },
+    "P": {
+      "title": "Kobe City: flood background",
+      "url": "https://www.city.kobe.lg.jp/a43553/kurashi/machizukuri/river/suigaisonae/02kako_01.html"
+    },
+    "Q": {
+      "title": "Kobe City: air raids",
+      "url": "https://www.city.kobe.lg.jp/a44881/bosai/disaster/war01/war02.html"
+    },
+    "R": {
+      "title": "Kobe City: earthquake chronology",
+      "url": "https://www.city.kobe.lg.jp/a46152/bosai/hanshinawaji/data/nenpyo/07nen.html"
+    },
+    "S": {
+      "title": "Kobe City: Suma New Town and mountain-to-sea development",
+      "url": "https://www.city.kobe.lg.jp/i73375/kuyakusho/sumaku/syokaitorikumi/sumanewtown/nthistory.html"
+    },
+    "Z": {
+      "title": "Kobe City: zoning review",
+      "url": "https://www.city.kobe.lg.jp/a84931/shise/kekaku/jutakutoshikyoku/youtominaoshi/index.html"
+    },
+    "W": {
+      "title": "Kobe City: building and planning rules",
+      "url": "https://www.city.kobe.lg.jp/a81042/kurashi/sumai/jutaku/chishiki/taterutoki/1-4/horesegen.html"
+    },
+    "T": {
+      "title": "Tadao Ando Architect & Associates: Rokko Housing",
+      "url": "https://artsandculture.google.com/story/UQWB16Scu7JNUQ?hl=ja"
+    }
+  },
+  "candidateCoverage": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38
+  ]
+}

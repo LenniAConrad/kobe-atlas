@@ -1,0 +1,55 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bay-shuttle",
+        "name": "Kobe Airport ↔ KIX · Bay Shuttle",
+        "kind": "route",
+        "body": "About 30 minutes by boat. Dashed line is a schematic connection across Osaka Bay, not a measured sailing track. Use terminal shuttle buses to reach the piers.",
+        "sourceUrl": "https://www.kobe-access.jp/eng/howto.php",
+        "reviewed": "2026-10-09",
+        "translations": {
+          "JP": {
+            "name": "神戸空港 ↔ 関空 · ベイ・シャトル",
+            "body": "船で約30分。破線は大阪湾を横断する模式図であり、実測航跡ではありません。乗り場へは空港連絡バスをご利用ください。"
+          },
+          "CN": {
+            "name": "神户机场 ↔ 关西机场 · 海上高速船",
+            "body": "航程约30分钟。虚线为跨越大阪湾的示意连线，并非实测航迹。请乘机场接驳巴士前往码头。"
+          }
+        }
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.2287923,
+            34.6397529
+          ],
+          [
+            135.25,
+            34.644
+          ],
+          [
+            135.266,
+            34.62
+          ],
+          [
+            135.275,
+            34.48
+          ],
+          [
+            135.265,
+            34.45
+          ],
+          [
+            135.2544137,
+            34.4436747
+          ]
+        ]
+      }
+    }
+  ]
+}

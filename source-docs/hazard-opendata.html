@@ -1,0 +1,3039 @@
+﻿
+<!-- 202607ボタン設置およびスムーズスクロール改良 -->
+<style>
+html {
+    scroll-behavior: smooth;
+}
+</style>
+
+<a href="javascript:void(0);" id="backToTop">▲ データ一覧へ</a>
+<script>
+document.getElementById("backToTop").onclick = function() {
+    document.getElementById("dataList").scrollIntoView({
+        behavior: "smooth"
+    });
+};
+</script>
+
+<style>
+#backToTop {
+    position: fixed;
+    right: 60px;
+    bottom: 20px;
+    background: #0078d4;
+    color: white;
+    padding: 10px 15px;
+	font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 9999;
+}
+</style>
+<!-- 202607ボタン設置およびスムーズスクロール改良以上 -->
+
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no" />
+    <meta name="author" content="River Bureau Ministry of Land, Infrastructure and Transport and Tourism, Japan." />
+    <meta name="keywords" content="国土交通省, ハザードマップ, ポータルサイト, 上乗せデータ,仕様書, 地理院地図, タイル" />
+
+    <link href="../bootstrap-3.3.5/css/bootstrap.css" rel="stylesheet" />
+    <script src="../jquery/jquery-3.7.1.min.js"></script>
+    <script src="../bootstrap-3.3.5/js/bootstrap.js"></script>
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="../common/css/header.css" rel="stylesheet" />
+    <script src="../common/header.js"></script>
+    <script src="../js/counter.js"></script>
+    <script src="copyright.js"></script>
+    <!-- JCT Add STA (2024/09/18) -->
+    <script src="../js/opendata.js"></script>
+    <!-- JCT Add END (2024/09/18) -->
+	<!-- JCT Add STA (2023/03/20) -->
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+	<!-- JCT Add END (2023/03/20) -->
+    <title> ハザードマップポータルサイト　</title>
+</head>
+
+<!-- 20221031追加 -->
+<body>
+	<div id="header"></div>
+	<!-- JCT Add STA (2023/03/20) -->
+	<!--<div class="container">-->
+	<div class="container" style="padding-top:100px;">
+	<!-- JCT Add END (2023/03/20) -->
+		<div id="BODY" class="clearfix slider">
+			<div id="container">
+				<h1 class="h1_normal" style="margin-top:150px; padding-top:10px; padding-bottom:10px; text-align:center; background-color:black;font-weight:bold; font-size:x-large; color:white;">
+					<span>オープンデータ配信</span>
+				</h1>
+
+				<div  style="border:solid 2px #FF0000;font-size:1em;padding:10px;">
+					<p style="padding-top:5px; padding-bottom:5px;text-align:center;font-size:1.5em;color:#FF0000;">※お知らせ</p>
+					<ul style="margin: 1em 0 1em 2em;">
+						<li>
+							<p><span style="color:red;">2025年10月3日</span>　2023年10月3日から掲載していた<span style="color:red;">大阪府　淀川水系　寝屋川流域</span>（寝屋川・第二寝屋川・恩智川・平野川・平野川分水路・古川・楠根川・城北川）の<span style="color:red;">浸水継続時間（想定最大規模）に誤りがあり、データを修正中のため、掲載を一時停止しています。</span></br>
+                				寝屋川流域の浸水継続時間（想定最大規模）については<a href="https://www.pref.osaka.lg.jp/documents/2645/neyagawakeizokujikan1_1.pdf#page=2" target="_blank">大阪府のページ</a>をご確認ください。
+							</p>							
+						</li>
+						<li>
+							<p style="color:#FF0000;"><strong style="background-color:#FFFFAA;">2024年12月9日&emsp;<a href="./copyright.html">利用規約</a>を更新しました</strong>。ご利用の際は、新しい利用規約のご確認をお願いいたします。
+							</p>
+						</li>
+						<li>
+							<p>その他過去のデータ更新や凡例の修正等は<a href="../update/update.html">更新情報のページ</a>をご確認ください。		   
+							</p>
+						</li>
+
+					</ul>
+				</div>
+			
+				<div  class="rowline">
+				<p style="padding-top:10px; padding-bottom:10px;"><strong>目次</strong></p>
+			</div>
+
+			<div class="container">
+				<h3 style="font-size:1.2em;">1. <a href="#gaiyou">オープンデータ配信の概要</a></h3>
+				<!--2022/11/21 JCT Mod STA-->
+				<!--<p>重ねるハザードマップ」のデータ配信及び「わがまちハザードマップ」のリンク先のダウンロード提供を行っております。また、活用事例集や利活用パンフレットをご覧いただくことができます。</p>-->
+				<p>「重ねるハザードマップ」のデータ配信及び「わがまちハザードマップ」のリンク先のダウンロード提供を行っております。また、利活用パンフレットや活用事例集をご覧いただくことができます。</p>
+				<!--2022/11/21 JCT Mod END-->
+			</div>
+			<br>
+
+			<div class="container">
+				<h3 style="font-size:1.2em;">2. <a href="#kasaneru">「重ねるハザードマップ」のオープンデータ配信について</a></h3>	
+				<p>「重ねるハザードマップ」に掲載しているデータをURLからリアルタイムに読み込み、ウェブサイトやソフトウェア、アプリケーションに商用非商用問わずご利用いただけます。</p>
+			</div>
+			<br>
+
+			<div class="container" style="border-bottom: 1px solid black;">
+				<h3 style="font-size:1.2em;">3. <a href="#wagamachi">「わがまちハザードマップ」リンク先のダウンロード提供について</a></h3>	
+				<p>「わがまちハザードマップ」のリンク先情報をCSV形式でダウンロードいただけます。</p><br>
+			</div>
+			<br>
+			
+
+
+			<div id="gaiyou" class="rowline">
+				<p class="projectsubname"><span style="font-size:1.2em; font-weight:bold;">1. オープンデータ配信の概要</span></p>
+			</div>
+			<div class="container">
+			<!--2022/11/21 JCT Mod STA-->
+				<!--<p class="subname">「重ねるハザードマップ」のオープンデータデータ配信及び「わがまちハザードマップ」のリンク先のダウンロード提供を行っております。また、活用事例集や利活用パンフレットをご覧いただくことができます。</p>-->
+				<br><p class="subname">「重ねるハザードマップ」のオープンデータデータ配信及び「わがまちハザードマップ」のリンク先のダウンロード提供を行っております。また、利活用パンフレットや活用事例集をご覧いただくことができます。</p>
+			<!--2022/11/21 JCT Mod END-->
+			</div>
+			<br>
+		
+			<h4>【活用事例】</h4>
+			<div class="container" style="border-bottom: 1px solid black;">
+				<ul style="margin: 1em 0 1em 2em;">
+					<!--2022/11/21 JCT Mod STA-->
+					<!--<li class="subname">オープンデータ利用パンフレット</li>-->
+					<li class="subname" style="font-size:20px;">オープンデータ利活用パンフレット</li>
+					<!--2022/11/21 JCT Mod END-->
+				</ul>
+				<p class="subname" style="padding-left:3%;">オープンデータ利活用パンフレットは<a href="pamphlet_opendata.pdf" target="_blank">こちら</a>からご覧いただくことができます。</p><br>
+				<img id="image_pamphlet" src="img/pamphlet.png" style="max-width: 100%; height: auto;" alt="">
+
+				<ul style="margin: 1em 0 1em 2em;">
+					<!--2022/11/21 JCT Mod STA-->
+					<!--<li class="subname">活用事例集</li>-->
+					<li class="subname" style="font-size:20px;">活用事例集</li>
+					<!--2022/11/21 JCT Mod END-->
+				</ul>
+				<p class="subname"style="padding-left:3%;">活用事例集は<a href="katsuyoujireisyuu.pdf" target="_blank">こちら</a>からご覧いただくことができます。</p><br>
+			</div>
+			<br>
+
+
+           	<div id="kasaneru" class="rowline">
+           		<p class="projectsubname"><span style="font-size:1.2em; font-weight:bold;">2.「重ねるハザードマップ」のオープンデータ配信について</span></p>
+			</div>
+			<div class="container">
+				<p class="subname"><br>
+				「重ねるハザードマップ」に掲載している以下のデータは、記載のURLからリアルタイムに取得し、ウェブサイトやソフトウェア、アプリケーション等でご利用いただけます。
+				データの仕様は、国土地理院の地理院タイルに準じています。<br>
+				出典の記載方法は、<a href="https://disaportal.gsi.go.jp/hazardmapportal/hazardmap/copyright/copyright.html#shutten"> こちら</a>を参照してください。<br><br></p>
+				
+				<h4>【参考情報】</h4><br>
+				<p>
+				・<a href="https://maps.gsi.go.jp/development/siyou.html" target="_blank">地理院タイルの仕様</a><br>
+				・<a href="metadata.xml" target="_blank">配信しているタイルのWMTSメタデータ（XML形式、全体版）</a><br>
+				・<a href="metadata_light.xml" target="_blank">配信しているタイルのWMTSメタデータ（XML形式、軽量版）</a><br>
+				・<a href="https://nlftp.mlit.go.jp/ksj/" target="_blank">国土数値情報 ダウンロードサイト</a><br><div id="dataList"></div>
+				</p>
+			</div>
+			<br/>
+
+<!-- ここまで -->
+
+<div class="rowtable">
+【データ一覧】
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20% rowspan="15">洪水</td>
+			<td width=80%><a href="#l2shinsuishin">洪水浸水想定区域（想定最大規模）</a></td>
+		</tr>
+		<tr>
+			<td><a href="#l2shinsuishin_kuni">洪水浸水想定区域（想定最大規模）_国管理河川</a></td>
+		</tr>
+		<tr>
+			<td><a href="#l2shinsuishin_pref">洪水浸水想定区域（想定最大規模）_都道府県管理河川</a></td>
+		</tr>
+		<tr>
+			<td><a href="#newl1">洪水浸水想定区域（計画規模（現在の凡例））</a></td>
+		</tr>
+		<tr>
+			<td><a href="#newl1_kuni">洪水浸水想定区域（計画規模（現在の凡例））_国管理河川</a></td>
+		</tr>
+		<tr>
+			<td><a href="#newl1_pref">洪水浸水想定区域（計画規模（現在の凡例））_都道府県管理河川</a></td>
+		</tr>
+		<tr>
+			<td><a href="#l2shinsuikeizoku">浸水継続時間（想定最大規模）</a></td>
+		</tr>
+		<tr>
+			<td><a href="#l2shinsuikeizoku_kuni">浸水継続時間（想定最大規模）_国管理河川</a></td>
+		</tr>
+		<tr>
+			<td><a href="#l2shinsuikeizoku_pref">浸水継続時間（想定最大規模）_都道府県管理河川</a></td>
+		</tr>
+		<tr>
+			<td><a href="#l2kaokuhanran">家屋倒壊等氾濫想定区域（氾濫流）</a></td>
+		</tr>
+		<tr>
+			<td><a href="#l2kaokuhanran_kuni">家屋倒壊等氾濫想定区域（氾濫流）_国管理河川</a></td>
+		</tr>
+		<tr>
+			<td><a href="#l2kaokuhanran_pref">家屋倒壊等氾濫想定区域（氾濫流）_都道府県管理河川</a></td>
+		</tr>
+		<tr>
+			<td><a href="#l2kaokukagan">家屋倒壊等氾濫想定区域（河岸侵食）</a></td>
+		</tr>
+		<tr>
+			<td><a href="#l2kaokukagan_kuni">家屋倒壊等氾濫想定区域（河岸侵食）_国管理河川</a></td>
+		</tr>
+		<tr>
+			<td><a href="#l2kaokukagan_pref">家屋倒壊等氾濫想定区域（河岸侵食）_都道府県管理河川</a></td>
+		</tr>
+		<tr>
+			<td>内水（雨水出水）</td>
+			<td><a href="#naisui">内水（雨水出水）浸水想定区域</a></td>
+		</tr>	
+		<tr>
+			<td>高潮</td>
+			<td><a href="#takashio">高潮浸水想定区域</a></td>
+		</tr>
+		<tr>
+			<td>津波</td>
+			<td><a href="#tsunami">津波浸水想定</a></td>
+		</tr>
+		<tr>
+			<td rowspan="7">土砂災害</td>
+			<td><a href="#kyukeisyatikeikaikuiki">土砂災害警戒区域（土石流）</a></td>
+		</tr>
+		<tr>
+			<td><a href="#dosekiryukeikaikuiki">土砂災害警戒区域（急傾斜地の崩壊）</td>
+		</tr>
+		<tr>
+			<td><a href="#jisuberikeikaikuiki">土砂災害警戒区域（地すべり）</td>
+		</tr>
+		<tr>
+			<td><a href="#nadarekikenkasyo">雪崩危険箇所</td>
+		</tr>
+	</tbody>
+</table>
+
+【詳細情報】
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20%>データの種類</td>
+			<td width=80% id="l2shinsuishin"><strong>洪水浸水想定区域（想定最大規模）</strong></td>
+		</tr>
+		<tr>
+			<td>URL</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_data/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>ズームレベル</td>
+			<td>２～１７</td>
+		</tr>
+		<tr>
+			<td>凡例</td>
+			<td><img style="width:170px" src="img/shinsui_legend3.png" alt="凡例"></td>
+		</tr>
+		<tr>
+			<td>提供開始</td>
+			<td>令和2年3月17日</td>
+		</tr>
+		<tr>
+			<td>出典のデータの名称／作成者等</td>
+			<td>国土交通省各地方整備局等<br>都道府県</td>
+		</tr>
+		<tr>
+			<td>備考</td>
+			<td>本データは、「洪水浸水想定区域（想定最大規模）_国管理河川」と「洪水浸水想定区域（想定最大規模）_都道府県管理河川」のデータを統合したものです。<br>都道府県管理河川につきましては、都道府県の許諾を得てタイルデータの配信を行っているため、一部の都道府県のデータ配信のみとなっております。<br>
+			なお、東京都の公表図面では浸水深0.1m未満の区域は着色されていないため、本サイトにおいても同様の表現としております。</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20%>データの種類</td>
+			<td width=80% id="l2shinsuishin_kuni"><strong>洪水浸水想定区域（想定最大規模）_国管理河川</strong></td>
+		</tr>
+		<tr>
+			<td>URL</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_kuni_data/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>ズームレベル</td>
+			<td>２～１７</td>
+		</tr>
+		<tr>
+			<td>凡例</td>
+			<td><img style="width:170px" src="img/shinsui_legend3.png" alt="凡例"></td>
+		</tr>
+		<tr>
+			<td>提供開始</td>
+			<td>平成30年10月3日</td>
+		</tr>
+		<tr>
+			<td>出典のデータの名称／作成者等</td>
+			<td>国土交通省各地方整備局等</td>
+		</tr>
+		<tr>
+			<td>備考</td>
+			<td><a href="kasen_kuni_sinsuiL2.html">国管理河川448河川</a>を掲載</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20% colspan="2">データの種類</td>
+			<td width=80% id="l2shinsuishin_pref"><strong>洪水浸水想定区域（想定最大規模）_都道府県管理河川</strong></td>
+		</tr>
+		<tr>
+			<td rowspan="47">URL</td>
+			<td>北海道</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/01/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>	
+			<td>青森県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/02/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>岩手県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/03/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>宮城県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/04/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>秋田県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/05/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>山形県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/06/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>福島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/07/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>茨城県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/08/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>栃木県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/09/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>群馬県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/10/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>埼玉県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/11/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>千葉県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/12/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>東京都</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/13/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>神奈川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/14/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>新潟県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/15/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>富山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/16/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>石川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/17/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>福井県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/18/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>山梨県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/19/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>長野県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/20/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>岐阜県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/21/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>静岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/22/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>愛知県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/23/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>三重県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/24/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>滋賀県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/25/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>京都府</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/26/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>大阪府</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/27/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>兵庫県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/28/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>奈良県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/29/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>和歌山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/30/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>鳥取県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/31/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>島根県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/32/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>岡山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/33/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>広島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/34/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>山口県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/35/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>徳島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/36/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>香川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/37/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>愛媛県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/38/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>高知県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/39/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>福岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/40/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>佐賀県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/41/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>長崎県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/42/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>熊本県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/43/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>大分県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/44/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>宮崎県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/45/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>鹿児島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/46/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>沖縄県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_pref_data/47/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>
+			<td colspan="2">ズームレベル</td>
+			<td>２～１７</td>
+		</tr>
+		<tr>
+			<td colspan="2">凡例</td>
+			<td><img style="width:170px" src="img/shinsui_legend3.png" alt="凡例">
+		</tr>
+		<tr>
+			<td colspan="2">提供開始</td>
+			<td>令和元年6月10日</td>
+		</tr>
+		<tr>
+			<td colspan="2">出典のデータの名称／作成者等</td>
+			<td>都道府県・市町村等</td>
+		</tr>
+		<tr>
+			<td colspan="2">備考</td>
+			<td colspan="2"><a href="kasen_pref_sinsuiL2.html">都道府県管理河川1718河川</a>・<a href="kasen_sonota_sinsuiL2.html">その他河川8860河川</a>を掲載<br>洪水浸水想定区域図を作成している段階の都道府県もあるため、現在、一部の都道府県のデータ配信のみとなっております。データ配信を行う都道府県については今後も増加していく見込みです。</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20%>データの種類</td>
+			<td width=80% id="newl1"><strong>洪水浸水想定区域（計画規模（現在の凡例））</strong></td>
+		</tr>
+		<tr>
+			<td>URL</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_data/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>ズームレベル</td>
+			<td>２～１７</td>
+		</tr>
+		<tr>
+			<td>凡例</td>
+			<td><img style="width:170px" src="img/shinsui_legend3.png" alt="凡例"></td>
+		</tr>
+		<tr>
+			<td>提供開始</td>
+			<td>令和2年7月29日</td>
+		</tr>
+		<tr>
+			<td>出典のデータの名称／作成者等</td>
+			<td>国土交通省各地方整備局等<br>都道府県</td>
+		</tr>
+		<tr>
+			<td>備考</td>
+			<td>本データは、「洪水浸水想定区域（計画規模（現在の凡例））_国管理河川」と「洪水浸水想定区域（計画規模（現在の凡例））_都道府県管理河川」のデータを統合したものです。<br>都道府県管理河川につきましては、都道府県の許諾を得てタイルデータの配信を行っているため、一部の都道府県のデータ配信のみとなっております。</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20%>データの種類</td>
+			<td width=80% id="newl1_kuni"><strong>洪水浸水想定区域（計画規模（現在の凡例））_国管理河川</strong></td>
+		</tr>
+		<tr>
+			<td>URL</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_kuni_data/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>ズームレベル</td>
+			<td>２～１７</td>
+		</tr>
+		<tr>
+			<td>凡例</td>
+			<td><img style="width:170px" src="img/shinsui_legend3.png" alt="凡例"></td>
+		</tr>
+		<tr>
+			<td>提供開始</td>
+			<td>令和2年7月29日</td>
+		</tr>
+		<tr>
+			<td>出典のデータの名称／作成者等</td>
+			<td>国土交通省各地方整備局等</td>
+		</tr>
+		<tr>
+			<td>備考</td>
+			<td><a href="kasen_kuni_newL1.html">国管理河川446河川</a>を掲載</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20% colspan="2">データの種類</td>
+			<td width=80% id="newl1_pref"><strong>洪水浸水想定区域（計画規模（現在の凡例））_都道府県管理河川</strong></td>
+		</tr>
+		<tr>
+			<td rowspan="45">URL</td>
+			<td>北海道</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/01/{z}/{x}/{y}.png</td>
+		</tr>
+				<tr>	
+			<td>青森県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/02/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>岩手県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/03/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>宮城県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/04/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>秋田県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/05/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>山形県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/06/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>福島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/07/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>茨城県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/08/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>栃木県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/09/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>群馬県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/10/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>埼玉県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/11/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>千葉県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/12/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>東京都</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/13/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>神奈川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/14/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>新潟県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/15/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>富山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/16/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>石川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/17/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>福井県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/18/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>山梨県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/19/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>長野県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/20/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>岐阜県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/21/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>静岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/22/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>愛知県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/23/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>三重県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/24/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>滋賀県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/25/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>大阪府</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/27/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>兵庫県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/28/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>奈良県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/29/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>和歌山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/30/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>鳥取県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/31/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>島根県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/32/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>岡山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/33/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>広島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/34/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>山口県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/35/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>徳島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/36/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>香川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/37/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>愛媛県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/38/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>福岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/40/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>佐賀県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/41/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>長崎県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/42/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>熊本県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/43/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>大分県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/44/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>宮崎県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/45/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>鹿児島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/46/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>沖縄県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_pref_data/47/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>
+			<td colspan="2">ズームレベル</td>
+			<td>２～１７</td>
+		</tr>
+		<tr>
+			<td colspan="2">凡例</td>
+			<td><img style="width:170px" src="img/shinsui_legend3.png" alt="凡例">
+		</tr>
+		<tr>
+			<td colspan="2">提供開始</td>
+			<td>令和元年7月29日</td>
+		</tr>
+		<tr>
+			<td colspan="2">出典のデータの名称／作成者等</td>
+			<td>都道府県・市町村等</td>
+		</tr>
+		<tr>
+			<td colspan="2">備考</td>
+			<td colspan="2"><a href="kasen_pref_newL1.html">都道府県管理河川1631河川</a>・<a href="kasen_sonota_newL1.html">その他河川4385河川</a>を掲載<br>洪水浸水想定区域図を作成している段階の都道府県もあるため、現在、一部の都道府県のデータ配信のみとなっております。データ配信を行う都道府県については今後も増加していく見込みです。</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20%>データの種類</td>
+			<td width=80% id="l2shinsuikeizoku"><strong>浸水継続時間（想定最大規模）</strong></td>
+		</tr>
+		<tr>
+			<td>URL</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_data/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>ズームレベル</td>
+			<td>２～１７</td>
+		</tr>
+		<tr>
+			<td>凡例</td>
+			<td><img style="width:170px" src="img/shinsui_legend_l2_keizoku.png" alt="凡例"></td>
+		</tr>
+		<tr>
+			<td>提供開始</td>
+			<td>令和3年5月28日</td>
+		</tr>
+		<tr>
+			<td>出典のデータの名称／作成者等</td>
+			<td>国土交通省各地方整備局等<br>都道府県</td>
+		</tr>
+		<tr>
+			<td>備考</td>
+			<td>本データは、「洪水浸水想定区域（浸水継続時間）_国管理河川」と「洪水浸水想定区域（浸水継続時間）_都道府県管理河川」のデータを統合したものです。<br>都道府県管理河川につきましては、都道府県の許諾を得てタイルデータの配信を行っているため、一部の都道府県のデータ配信のみとなっております。</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20%>データの種類</td>
+			<td width=80% id="l2shinsuikeizoku_kuni"><strong>浸水継続時間（想定最大規模）_国管理河川</strong></td>
+		</tr>
+		<tr>
+			<td>URL</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_kuni_data/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>ズームレベル</td>
+			<td>２～１７</td>
+		</tr>
+		<tr>
+			<td>凡例</td>
+			<td><img style="width:170px" src="img/shinsui_legend_l2_keizoku.png" alt="凡例"></td>
+		</tr>
+		<tr>
+			<td>提供開始</td>
+			<td>令和2年7月20日</td>
+		</tr>
+		<tr>
+			<td>出典のデータの名称／作成者等</td>
+			<td>国土交通省各地方整備局等</td>
+		</tr>
+		<tr>
+			<td>備考</td>
+			<td><a href="kasen_kuni_keizoku.html">国管理河川445河川</a>を掲載</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20% colspan="2">データの種類</td>
+			<td width=80% id="l2shinsuikeizoku_pref"><strong>洪水浸水想定区域（浸水継続時間）_都道府県管理河川</strong></td>
+		</tr>
+		<tr>	
+			<td rowspan="46">URL</td>
+			<td>北海道</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/01/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>青森県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/02/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>岩手県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/03/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>宮城県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/04/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>秋田県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/05/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>山形県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/06/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>福島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/07/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>茨城県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/08/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>栃木県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/09/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>群馬県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/10/{z}/{x}/{y}.png</td>
+		</tr>	
+			<tr>	
+			<td>埼玉県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/11/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>千葉県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/12/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>東京都</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/13/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>神奈川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/14/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>新潟県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/15/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>富山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/16/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>石川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/17/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>福井県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/18/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>山梨県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/19/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>長野県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/20/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>岐阜県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/21/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>静岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/22/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>愛知県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/23/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>三重県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/24/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>滋賀県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/25/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>京都府</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/26/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>大阪府</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/27/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>奈良県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/29/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>和歌山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/30/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>鳥取県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/31/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>島根県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/32/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>岡山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/33/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>広島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/34/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>山口県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/35/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>徳島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/36/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>香川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/37/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>愛媛県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/38/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>	
+			<td>高知県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/39/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>福岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/40/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>佐賀県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/41/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>長崎県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/42/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>熊本県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/43/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>大分県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/44/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>宮崎県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/45/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>鹿児島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/46/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>沖縄県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_pref_data/47/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>
+			<td colspan="2">ズームレベル</td>
+			<td>２～１７</td>
+		</tr>
+		<tr>
+			<td colspan="2">凡例</td>
+			<td><img style="width:170px" src="img/shinsui_legend_l2_keizoku.png" alt="凡例">
+		</tr>
+		<tr>
+			<td colspan="2">提供開始</td>
+			<td>令和3年5月28日</td>
+		</tr>
+		<tr>
+			<td colspan="2">出典のデータの名称／作成者等</td>
+			<td>都道府県・市町村等</td>
+		</tr>
+		<tr>
+			<td colspan="2">備考</td>
+			<td colspan="2"><a href="kasen_pref_keizoku.html">都道府県管理河川1618河川</a>・<a href="kasen_sonota_keizoku.html">その他河川4052河川</a>を掲載<br>洪水浸水想定区域図を作成している段階の都道府県もあるため、現在、一部の都道府県のデータ配信のみとなっております。データ配信を行う都道府県については今後も増加していく見込みです。</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20%>データの種類</td>
+			<td width=80% id="l2kaokuhanran"><strong>家屋倒壊等氾濫想定区域（氾濫流）</strong></td>
+		</tr>
+		<tr>
+			<td>URL</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_data/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>ズームレベル</td>
+			<td>４～１７</td>
+		</tr>
+		<tr>
+			<td>凡例</td>
+			<td><img style="width:170px" src="img/kaokutoukai_hanran.png" alt="凡例"></td>
+		</tr>
+		<tr>
+			<td>提供開始</td>
+			<td>令和2年7月20日</td>
+		</tr>
+		<tr>
+			<td>出典のデータの名称／作成者等</td>
+			<td>国土交通省各地方整備局等<br>都道府県</td>
+		</tr>
+		<tr>
+			<td>備考</td>
+			<td>本データは、「家屋倒壊等氾濫想定区域（氾濫流）_国管理河川」と「家屋倒壊等氾濫想定区域（氾濫流）_都道府県管理河川」のデータを統合したものです。<br>都道府県管理河川につきましては、都道府県の許諾を得てタイルデータの配信を行っているため、一部の都道府県のデータ配信のみとなっております。</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20%>データの種類</td>
+			<td width=80% id="l2kaokuhanran_kuni"><strong>家屋倒壊等氾濫想定区域（氾濫流）_国管理河川</strong></td>
+		</tr>
+		<tr>
+			<td>URL</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_kuni_data/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>ズームレベル</td>
+			<td>４～１７</td>
+		</tr>
+		<tr>
+			<td>凡例</td>
+			<td><img style="width:170px" src="img/kaokutoukai_hanran.png" alt="凡例"></td>
+		</tr>
+		<tr>
+			<td>提供開始</td>
+			<td>令和2年7月20日</td>
+		</tr>
+		<tr>
+			<td>出典のデータの名称／作成者等</td>
+			<td>国土交通省各地方整備局等</td>
+		</tr>
+		<tr>
+			<td>備考</td>
+			<td><a href="kasen_kuni_hanranryu.html">国管理河川447河川</a>を掲載</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20% colspan="2">データの種類</td>
+			<td width=80% id="l2kaokuhanran_pref"><strong>家屋倒壊等氾濫想定区域（氾濫流）_都道府県管理河川</strong></td>
+		</tr>
+		<tr>		
+			<td rowspan="47">URL</td>	
+			<td>北海道</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/01/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>青森県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/02/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>岩手県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/03/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>宮城県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/04/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>秋田県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/05/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>山形県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/06/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>福島県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/07/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>茨城県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/08/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>栃木県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/09/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>群馬県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/10/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>埼玉県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/11/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>千葉県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/12/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>東京都</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/13/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>神奈川県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/14/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>新潟県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/15/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>富山県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/16/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>石川県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/17/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>福井県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/18/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>山梨県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/19/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>長野県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/20/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>岐阜県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/21/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>静岡県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/22/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>愛知県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/23/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>三重県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/24/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>滋賀県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/25/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>京都府</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/26/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>大阪府</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/27/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>兵庫県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/28/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>奈良県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/29/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>和歌山県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/30/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>鳥取県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/31/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>島根県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/32/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>岡山県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/33/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>広島県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/34/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>山口県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/35/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>徳島県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/36/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>香川県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/37/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>愛媛県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/38/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>高知県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/39/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>	
+			<td>福岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/40/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>		
+			<td>佐賀県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/41/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>長崎県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/42/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>熊本県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/43/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>大分県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/44/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>宮崎県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/45/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>鹿児島県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/46/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>沖縄県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_hanran_pref_data/47/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>
+			<td colspan="2">ズームレベル</td>
+			<td>４～１７</td>
+		</tr>
+		<tr>
+			<td colspan="2">凡例</td>
+			<td><img style="width:170px" src="img/kaokutoukai_hanran.png" alt="凡例">
+		</tr>
+		<tr>
+			<td colspan="2">提供開始</td>
+			<td>令和2年7月20日</td>
+		</tr>
+		<tr>
+			<td colspan="2">出典のデータの名称／作成者等</td>
+			<td>都道府県・市町村等</td>
+		</tr>
+		<tr>
+			<td colspan="2">備考</td>
+			<td colspan="2"><a href="kasen_pref_hanranryu.html">都道府県管理河川1686河川</a>・<a href="kasen_sonota_hanranryu.html">その他河川3740河川</a>を掲載<br>洪水浸水想定区域図を作成している段階の都道府県もあるため、現在、一部の都道府県のデータ配信のみとなっております。データ配信を行う都道府県については今後も増加していく見込みです。</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20%>データの種類</td>
+			<td width=80% id="l2kaokukagan"><strong>家屋倒壊等氾濫想定区域（河岸侵食）</strong></td>
+		</tr>
+		<tr>
+			<td>URL</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_data/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>ズームレベル</td>
+			<td>４～１７</td>
+		</tr>
+		<tr>
+			<td>凡例</td>
+			<td><img style="width:170px" src="img/kaokutoukai_kagan.png" alt="凡例"></td>
+		</tr>
+		<tr>
+			<td>提供開始</td>
+			<td>令和2年7月20日</td>
+		</tr>
+		<tr>
+			<td>出典のデータの名称／作成者等</td>
+			<td>国土交通省各地方整備局等<br>都道府県</td>
+		</tr>
+		<tr>
+			<td>備考</td>
+			<td>本データは、「家屋倒壊等氾濫想定区域（河岸侵食）_国管理河川」と「家屋倒壊等氾濫想定区域（河岸侵食）_都道府県管理河川」のデータを統合したものです。<br>都道府県管理河川につきましては、都道府県の許諾を得てタイルデータの配信を行っているため、一部の都道府県のデータ配信のみとなっております。</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20%>データの種類</td>
+			<td width=80% id="l2kaokukagan_kuni"><strong>家屋倒壊等氾濫想定区域（河岸侵食）_国管理河川</strong></td>
+		</tr>
+		<tr>
+			<td>URL</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_kuni_data/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>ズームレベル</td>
+			<td>４～１７</td>
+		</tr>
+		<tr>
+			<td>凡例</td>
+			<td><img style="width:170px" src="img/kaokutoukai_kagan.png" alt="凡例"></td>
+		</tr>
+		<tr>
+			<td>提供開始</td>
+			<td>令和2年7月20日</td>
+		</tr>
+		<tr>
+			<td>出典のデータの名称／作成者等</td>
+			<td>国土交通省各地方整備局等</td>
+		</tr>
+		<tr>
+			<td>備考</td>
+			<td><a href="kasen_kuni_kagan.html">国管理河川445河川</a>を掲載</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20% colspan="2">データの種類</td>
+			<td width=80% id="l2kaokukagan_pref"><strong>家屋倒壊等氾濫想定区域（河岸侵食）_都道府県管理河川</strong></td>
+		</tr>
+		<tr>	
+			<td rowspan="47">URL</td>
+			<td>北海道</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/01/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>青森県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/02/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>岩手県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/03/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>宮城県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/04/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>秋田県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/05/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>山形県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/06/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>福島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/07/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>茨城県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/08/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>栃木県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/09/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>群馬県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/10/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>埼玉県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/11/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>千葉県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/12/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>東京都</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/13/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>神奈川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/14/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>新潟県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/15/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>富山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/16/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>石川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/17/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>福井県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/18/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>山梨県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/19/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>		
+			<td>長野県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/20/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>	
+			<td>岐阜県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/21/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>静岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/22/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>		
+			<td>愛知県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/23/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>	
+			<td>三重県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/24/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>滋賀県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/25/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>京都府</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/26/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>		
+			<td>大阪府</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/27/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>		
+			<td>兵庫県</td>	
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/28/{z}/{x}/{y}.png</td>	
+		</tr>		
+		<tr>	
+			<td>奈良県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/29/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>和歌山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/30/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>鳥取県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/31/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>島根県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/32/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>岡山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/33/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>広島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/34/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>山口県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/35/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>徳島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/36/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>香川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/37/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>愛媛県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/38/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>高知県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/39/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>福岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/40/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>佐賀県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/41/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>長崎県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/42/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>熊本県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/43/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>大分県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/44/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>宮崎県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/45/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>鹿児島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/46/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>	
+			<td>沖縄県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/01_flood_l2_kaokutoukai_kagan_pref_data/47/{z}/{x}/{y}.png</td>
+		</tr>	
+		<tr>
+			<td colspan="2">ズームレベル</td>
+			<td>４～１７</td>
+		</tr>
+		<tr>
+			<td colspan="2">凡例</td>
+			<td><img style="width:170px" src="img/kaokutoukai_kagan.png" alt="凡例">
+		</tr>
+		<tr>
+			<td colspan="2">提供開始</td>
+			<td>令和2年6月5日</td>
+		</tr>
+		<tr>
+			<td colspan="2">出典のデータの名称／作成者等</td>
+			<td>都道府県・市町村等</td>
+		</tr>
+		<tr>
+			<td colspan="2">備考</td>
+			<td colspan="2"><a href="kasen_pref_kagan.html">都道府県管理河川1690河川</a>・<a href="kasen_sonota_kagan.html">その他河川3728河川</a>を掲載<br>洪水浸水想定区域図を作成している段階の都道府県もあるため、現在、一部の都道府県のデータ配信のみとなっております。データ配信を行う都道府県については今後も増加していく見込みです。</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable">
+	<table class="table table-bordered">
+		<tbody>
+			<tr>
+				<td width=20% colspan="2">データの種類</td>
+				<td width=80% colspan="2" id="naisui"><strong>内水（雨水出水）浸水想定区域</strong></td>
+			</tr>
+			<tr>
+				<td rowspan="34">URL</td>
+				<td>統合版</td>
+				<td style="word-break: break-all;" colspan="2">https://disaportaldata.gsi.go.jp/raster/02_naisui_data/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>北海道</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/01/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>青森県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/02/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>宮城県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/04/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>山形県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/06/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>茨城県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/08/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>群馬県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/10/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>埼玉県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/11/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>千葉県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/12/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>東京都</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/13/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>神奈川県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/14/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>富山県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/16/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>石川県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/17/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>福井県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/18/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>山梨県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/19/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>長野県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/20/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>岐阜県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/21/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>静岡県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/22/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>愛知県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/23/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>滋賀県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/25/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>京都府</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/26/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>大阪府</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/27/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>兵庫県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/28/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>鳥取県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/31/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>島根県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/32/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>岡山県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/33/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>広島県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/34/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>山口県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/35/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>徳島県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/36/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>香川県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/37/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>愛媛県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/38/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>福岡県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/40/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>熊本県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/43/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td>鹿児島県</td>
+				<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/02_naisui_pref_data/46/{z}/{x}/{y}.png</td>
+			</tr>
+			<tr>
+				<td colspan="2">ズームレベル</td>
+				<td>２～１７</td>
+			</tr>
+			<tr>
+				<td colspan="2">凡例</td>
+				<td><img style="width:170px" src="img/naisui_legend.png" alt="凡例">
+			</tr>
+			<tr>
+				<td colspan="2">提供開始</td>
+				<td>令和５年12月20日</td>
+			</tr>
+			<tr>
+				<td colspan="2">出典のデータの名称／作成者等</td>
+				<td>市町村（流域下水道、一部事務組合を含む）<br></td>
+			</tr>
+			<tr>
+				<td colspan="2">備考</td>
+				<td colspan="2"><a href="naisui.html">65市町村</a>を掲載<br>内水（雨水出水）浸水想定区域図を作成している段階の市町村（流域下水道、一部事務組合を含む）もあるため、現在、一部の市町村（流域下水道、一部事務組合を含む）のデータ配信のみとなっております。また、本URLはオープンデータ化を許可する市町村のデータのみを配信しています。<br>このシミュレーションにあたっては、河川の氾濫による浸水及び高潮等による浸水は考慮していません。想定される水深が実際の浸水深と異なる場合があります。なお、重ねるハザードマップでは、全国の自治体の内水浸水想定区域データを統一的な基準で表示するため、<strong>「浸水深0m - 浸水深0.1mの範囲」は表示しておりません。</strong></td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20% colspan="2">データの種類</td>
+			<td width=80% id="takashio"><strong>高潮浸水想定区域</strong></td>
+		</tr>
+		<tr>
+			<td rowspan="19">URL</td>
+			<td>統合版</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_data/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>青森県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_pref_data/02/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>千葉県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_pref_data/12/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>東京都</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_pref_data/13/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>神奈川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_pref_data/14/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>静岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_pref_data/22/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>愛知県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_pref_data/23/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>三重県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_pref_data/24/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>大阪府</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_pref_data/27/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>兵庫県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_pref_data/28/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>広島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_pref_data/34/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>山口県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_pref_data/35/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>徳島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_pref_data/36/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>香川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_pref_data/37/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>福岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_pref_data/40/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>佐賀県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_pref_data/41/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>熊本県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_pref_data/43/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>大分県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_pref_data/44/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>宮崎県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_pref_data/45/{z}/{x}/{y}.png</td>
+		</tr>		
+		<tr>
+			<td colspan="2">ズームレベル</td>
+			<td>２～１７</td>
+		</tr>
+		<tr>
+			<td colspan="2">凡例</td>
+			<td><img style="width:170px" src="img/shinsui_legend3.png" alt="凡例">
+		</tr>
+		<tr>
+			<td colspan="2">提供開始</td>
+			<td>令和2年10月8日</td>
+		</tr>
+		<tr>
+			<td colspan="2">出典のデータの名称／作成者等</td>
+			<td>都道府県<br></td>
+		</tr>
+		<tr>
+			<td colspan="2">備考</td>
+			<td colspan="2"><a href="takashio_sinsui.html">18都道府県（26沿岸）</a>を掲載<br>高潮浸水想定区域図を作成している段階の都道府県もあるため、現在、一部の都道府県のデータ配信のみとなっております。</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20% colspan="2">データの種類</td>
+			<td width=80% id="tsunami"><strong>津波浸水想定</strong></td>
+		</tr>
+		<tr>
+			<td rowspan="41">URL</td>
+			<td>統合版</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_data/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>北海道</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/01/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>青森県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/02/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>岩手県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/03/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>宮城県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/04/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>秋田県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/05/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>山形県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/06/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>福島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/07/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>茨城県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/08/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>千葉県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/12/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>東京都</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/13/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>神奈川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/14/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>新潟県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/15/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>富山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/16/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>石川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/17/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>福井県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/18/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>岐阜県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/21/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>静岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/22/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>愛知県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/23/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>三重県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/24/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>京都府</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/26/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>大阪府</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/27/{z}/{x}/{y}.png</td>
+		<tr>
+			<td>兵庫県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/28/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>和歌山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/30/{z}/{x}/{y}.png</td></td>
+		</tr>
+		<tr>
+			<td>鳥取県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/31/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>島根県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/32/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>岡山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/33/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>広島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/34/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>山口県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/35/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>徳島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/36/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>香川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/37/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>愛媛県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/38/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>高知県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/39/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>福岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/40/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>佐賀県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/41/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>長崎県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/42/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>熊本県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/43/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>大分県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/44/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>宮崎県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/45/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>鹿児島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/46/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>沖縄県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/47/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td colspan="2">ズームレベル</td>
+			<td>２～１７</td>
+		</tr>
+		<tr>
+			<td colspan="2">凡例</td>
+			<td><img style="width:170px" src="img/shinsui_legend3.png" alt="凡例">
+		</tr>
+		<tr>
+			<td colspan="2">提供開始</td>
+			<td>令和2年4月10日</td>
+		</tr>
+		<tr>
+			<td colspan="2">出典のデータの名称／作成者等</td>
+			<td>都道府県<br></td>
+		</tr>
+		<tr>
+			<td colspan="2">備考</td>
+			<td colspan="2"><a href="tsunami_sinsui.html">40都道府県</a>を掲載<br>都道府県の許諾を得てタイルデータの配信を行っているため、一部の都道府県のデータ配信のみとなっております。</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20% colspan="2">データの種類</td>
+			<td width=80% id="kyukeisyatikeikaikuiki"><strong>土砂災害警戒区域（土石流）</strong></td>
+		</tr>
+		<tr>	
+			<td rowspan="48">URL</td>
+			<td>全国</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>北海道</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/01/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>青森県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/02/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>岩手県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/03/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>宮城県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/04/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>秋田県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/05/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>山形県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/06/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>福島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/07/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>茨城県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/08/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>栃木県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/09/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>群馬県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/10/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>埼玉県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/11/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>千葉県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/12/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>東京都</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/13/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>神奈川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/14/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>新潟県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/15/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>富山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/16/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>石川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/17/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>福井県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/18/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>山梨県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/19/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>長野県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/20/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>岐阜県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/21/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>静岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/22/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>愛知県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/23/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>三重県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/24/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>滋賀県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/25/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>京都府</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/26/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>大阪府</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/27/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>兵庫県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/28/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>奈良県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/29/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>和歌山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/30/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>鳥取県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/31/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>島根県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/32/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>岡山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/33/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>広島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/34/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>山口県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/35/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>徳島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/36/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>香川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/37/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>愛媛県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/38/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>高知県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/39/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>福岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/40/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>佐賀県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/41/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>長崎県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/42/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>熊本県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/43/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>大分県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/44/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>宮崎県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/45/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>鹿児島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/46/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>沖縄県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/47/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td colspan="2">ズームレベル</td>
+			<td>２～１７</td>
+		</tr>
+		<tr>
+			<td colspan="2">凡例</td>
+			<td><img style="width:170px" src="img/keikai_dosekiryu.png" alt="凡例"><br>※点線で囲まれた区域は、警戒区域もしくは特別警戒区域として指定予定であることを示す。</td>
+		</tr>
+		<tr>
+			<td colspan="2">提供開始</td>
+			<td>令和8年8月6日</td>
+		</tr>
+		<tr>
+			<td colspan="2">出典のデータの名称／作成者等</td>
+			<td><a href="https://nlftp.mlit.go.jp/ksj/index.html" target="_blank">国土数値情報</a>　<a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A33-2025.html" target="_blank">令和７年度土砂災害警戒区域</a>／国土交通省政策統括官付地理空間情報課「国土数値情報（令和７年度土砂災害警戒区域）」をもとに国土地理院が加工</td>
+		</tr>
+		<tr>
+			<td colspan="2">備考</td>
+			<td colspan="2">データの内容は以下をご確認ください。
+			<ul style="padding-left: 2em;">
+				<li><a href="https://www.mlit.go.jp/mizukokudo/sabo/dosekiryuu_taisaku.html" target="_blank">土石流の詳細はこちら</a></li>
+				<li><a href='https://www.mlit.go.jp/river/sabo/sinpoupdf/gaiyou.pdf' target='_blank'>土砂災害警戒区域の詳細はこちら</a></li><br>
+			</ul>なお、土砂災害警戒区域（急傾斜地の崩壊、土石流、地すべり）は、「国土数値情報　土砂災害警戒区域データ（令和７年度）」を基に作成しています。<br>データの利用にあたっては、国土交通省の「<a href="https://nlftp.mlit.go.jp/ksj/other/agreement.html" target="_blank">国土数値情報ダウンロードサイトコンテンツ利用規約</a>」及び<a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A33-2025.html" target="_blank">国土数値情報ダウンロードサイト</a>「このデータの使用許諾条件」に記載の各都道府県が定める利用条件に同意の上ご利用ください。</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20% colspan="2">データの種類</td>
+			<td width=80% id="dosekiryukeikaikuiki"><strong>土砂災害警戒区域（急傾斜地の崩壊）</strong></td>
+		</tr>
+		<tr>
+			<td rowspan="48">URL</td>
+			<td>全国</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>北海道</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/01/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>青森県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/02/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>岩手県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/03/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>宮城県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/04/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>秋田県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/05/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>山形県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/06/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>福島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/07/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>茨城県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/08/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>栃木県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/09/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>群馬県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/10/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>埼玉県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki_data/11/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>千葉県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/12/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>東京都</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/13/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>神奈川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/14/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>新潟県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/15/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>富山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/16/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>石川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/17/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>福井県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/18/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>山梨県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/19/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>長野県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/20/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>岐阜県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/21/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>静岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/22/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>愛知県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/23/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>三重県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/24/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>滋賀県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/25/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>京都府</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/26/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>大阪府</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/27/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>兵庫県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/28/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>奈良県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/29/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>和歌山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/30/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>鳥取県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/31/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>島根県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/32/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>岡山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/33/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>広島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/34/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>山口県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/35/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>徳島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/36/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>香川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/37/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>愛媛県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/38/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>高知県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/39/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>福岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/40/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>佐賀県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/41/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>長崎県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/42/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>熊本県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/43/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>大分県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/44/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>宮崎県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/45/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>鹿児島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/46/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>沖縄県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki_data/47/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td colspan="2">ズームレベル</td>
+			<td>２～１７</td>
+		</tr>
+		<tr>
+			<td colspan="2">凡例</td>
+			<td><img style="width:170px" src="img/keikai_kyukeisya.png" alt="凡例"><br>※点線で囲まれた区域は、警戒区域もしくは特別警戒区域として指定予定であることを示す。</td>
+		</tr>
+		<tr>
+			<td colspan="2">提供開始</td>
+			<td>令和8年8月6日</td>
+		</tr>
+		<tr>
+			<td colspan="2">出典のデータの名称／作成者等</td>
+			<td><a href="https://nlftp.mlit.go.jp/ksj/index.html" target="_blank">国土数値情報</a>　<a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A33-2025.html" target="_blank">令和７年度土砂災害警戒区域</a>／国土交通省政策統括官付地理空間情報課「国土数値情報（令和７年度土砂災害警戒区域）」をもとに国土地理院が加工</td>
+		</tr>
+		<tr>
+			<td colspan="2">備考</td>
+			<td colspan="2">データの内容は以下をご確認ください。
+			<ul style="padding-left: 2em;">
+				<li><a href="https://www.mlit.go.jp/mizukokudo/sabo/gakekuzure_taisaku.html" target="_blank">急傾斜地の崩壊（がけ崩れ）の詳細はこちら</a></li>
+				<li><a href='https://www.mlit.go.jp/river/sabo/sinpoupdf/gaiyou.pdf' target='_blank'>土砂災害警戒区域の詳細はこちら</a></li><br>
+			</ul>なお、土砂災害警戒区域（急傾斜地の崩壊、土石流、地すべり）は、「国土数値情報　土砂災害警戒区域データ（令和７年度）」を基に作成しています。<br>データの利用にあたっては、国土交通省の「<a href="https://nlftp.mlit.go.jp/ksj/other/agreement.html" target="_blank">国土数値情報ダウンロードサイトコンテンツ利用規約</a>」及び<a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A33-2025.html" target="_blank">国土数値情報ダウンロードサイト</a>「このデータの使用許諾条件」に記載の各都道府県が定める利用条件に同意の上ご利用ください。</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20% colspan="2">データの種類</td>
+			<td width=80% id="jisuberikeikaikuiki"><strong>土砂災害警戒区域（地すべり）</strong></td>
+		</tr>
+		<tr>
+			<td rowspan="48">URL</td>
+			<td>全国</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>北海道</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/01/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>青森県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/02/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>岩手県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/03/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>宮城県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/04/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>秋田県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/05/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>山形県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/06/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>福島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/07/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>茨城県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/08/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>栃木県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/09/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>群馬県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/10/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>埼玉県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/11/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>千葉県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/12/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>東京都</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/13/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>神奈川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/14/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>新潟県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/15/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>富山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/16/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>石川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/17/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>福井県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/18/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>山梨県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/19/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>長野県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/20/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>岐阜県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/21/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>静岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/22/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>愛知県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/23/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>三重県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/24/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>滋賀県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/25/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>京都府</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/26/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>大阪府</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/27/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>兵庫県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/28/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>奈良県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/29/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>和歌山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/30/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>鳥取県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/31/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>島根県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/32/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>岡山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/33/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>広島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/34/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>山口県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/35/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>徳島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/36/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>香川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/37/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>愛媛県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/38/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>高知県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/39/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>福岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/40/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>佐賀県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/41/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>長崎県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/42/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>熊本県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/43/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>大分県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/44/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>宮崎県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/45/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>鹿児島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/46/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>沖縄県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki_data/47/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td colspan="2">ズームレベル</td>
+			<td>２～１７</td>
+		</tr>
+		<tr>
+			<td colspan="2">凡例</td>
+			<td><img style="width:170px" src="img/keikai_jisuberi.png" alt="凡例"><br>※点線で囲まれた区域は、警戒区域もしくは特別警戒区域として指定予定であることを示す。</td>
+		</tr>
+		<tr>
+			<td colspan="2">提供開始</td>
+			<td>令和8年8月6日</td>
+		</tr>
+		<tr>
+			<td colspan="2">出典のデータの名称／作成者等</td>
+			<td><a href="https://nlftp.mlit.go.jp/ksj/index.html" target="_blank">国土数値情報</a>　<a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A33-2025.html" target="_blank">令和７年度土砂災害警戒区域</a>／国土交通省政策統括官付地理空間情報課「国土数値情報（令和７年度土砂災害警戒区域）」をもとに国土地理院が加工</td>
+		</tr>
+		<tr>
+			<td colspan="2">備考</td>
+			<td colspan="2">データの内容は以下をご確認ください。
+			<ul style="padding-left: 2em;">
+				<li><a href="https://www.mlit.go.jp/mizukokudo/sabo/jisuberi_taisaku.html" target="_blank">地すべりの詳細はこちら</a></li>
+				<li><a href='https://www.mlit.go.jp/river/sabo/sinpoupdf/gaiyou.pdf' target='_blank'>土砂災害警戒区域の詳細はこちら</a></li><br>
+			</ul>なお、土砂災害警戒区域（急傾斜地の崩壊、土石流、地すべり）は、「国土数値情報　土砂災害警戒区域データ（令和７年度）」を基に作成しています。<br>データの利用にあたっては、国土交通省の「<a href="https://nlftp.mlit.go.jp/ksj/other/agreement.html" target="_blank">国土数値情報ダウンロードサイトコンテンツ利用規約</a>」及び<a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A33-2025.html" target="_blank">国土数値情報ダウンロードサイト</a>「このデータの使用許諾条件」に記載の各都道府県が定める利用条件に同意の上ご利用ください。</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="rowtable"  style="border-bottom: 1px solid black;">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=20% colspan="2">データの種類</td>
+			<td width=80% id="nadarekikenkasyo"><strong>雪崩危険箇所</strong></td>
+		</tr>
+		<tr>
+			<td rowspan="17">URL</td>
+			<td>全国</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>青森県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo_data/02/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>岩手県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo_data/03/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>秋田県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo_data/05/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>山形県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo_data/06/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>栃木県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo_data/09/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>新潟県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo_data/15/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>富山県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo_data/16/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>石川県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo_data/17/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>福井県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo_data/18/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>山梨県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo_data/19/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>岐阜県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo_data/21/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>静岡県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo_data/22/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>滋賀県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo_data/25/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>兵庫県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo_data/28/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>島根県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo_data/32/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td>広島県</td>
+			<td style="word-break: break-all;">https://disaportaldata.gsi.go.jp/raster/05_nadarekikenkasyo_data/34/{z}/{x}/{y}.png</td>
+		</tr>
+		<tr>
+			<td colspan="2">ズームレベル</td>
+			<td>２～１７</td>
+		</tr>
+		<tr>
+			<td colspan="2">凡例</td>
+			<td><img style="width:300px" src="img/dosha_kiken.png" alt="凡例"></td>
+		</tr>
+		<tr>
+			<td colspan="2">提供開始</td>
+			<td>平成30年12月13日</td>
+		</tr>
+		<tr>
+			<td colspan="2">出典のデータの名称／作成者等</td>
+			<td>（青森県及び広島県以外）<br><a href="https://nlftp.mlit.go.jp/ksj/index.html" target="_blank">国土数値情報</a>　<a href="http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A26.html" target="_blank">平成22年度土砂災害危険箇所</a>／国土交通省国土政策局(現政策統括官付地理空間情報課)「国土数値情報（平成22年度土砂災害危険箇所）」をもとに国土地理院が加工<br>（青森県及び広島県）<br>都道府県データ</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<!-- 20221031追加 -->
+
+			<br>
+
+
+			<div id="wagamachi" class="rowline">
+				<p class="projectsubname"><span style="font-size:1.2em; font-weight:bold;">3. 「わがまちハザードマップ」のリンク先のダウンロード提供について</span></p>
+			</div><br>
+			   <p class="subname">
+				   「わがまちハザードマップ」のリンク先情報をCSV形式でダウンロードいただけます。<br>
+				 本一覧内の日付は本サイトにおいてリンク先を更新した日であり、各市町村が更新した日とは異なりますのでご注意ください。<br>
+				 リンク先のハザードマップ等の著作権は作成機関（各市町村等）に帰属します。各情報の引用・利用方法については、各機関の規約等をご参照ください。<br><br>
+				リンク切れ等を見つけた場合は、<span style="color:#005AFF; font-weight:bold;">gsi-wagamachi_hazardmap■gxb.mlit.go.jp（■は@にしてください）</span>までご連絡をお願いします。その際、ハザードマップの種類（洪水、土砂等）及び当該市町村名をご教示ください。なお、ハザードマップを作成している市町村の担当者におかれましては、”<a href="../portal.html">こちらのページ</a>”よりリンク修正の申請をお願いします。
+				
+			</p>
+			<br>	
+<!-- ここまで -->
+				
+</div>
+<div class="rowtable">
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<td width=40%><b>種類</b></td>
+			<td width=30%><b>最終更新日</b></td>
+			<td width=30%><b>CSVファイル</b></td>
+		</tr>
+		<tr>
+			<td>洪水ハザードマップ</td>
+			<td>2026年10月8日</td>
+			<td><a href="../uty/hminfo/1.csv"><img src="img/download.png" alt="ダウンロード" width="80pt"/></a></td>
+		</tr>
+		<tr>
+			<td>内水ハザードマップ</td>
+			<td>2026年10月8日</td>
+			<td><a href="../uty/hminfo/2.csv"><img src="img/download.png" alt="ダウンロード" width="80pt"/></a></td>
+		</tr>
+		<tr>
+			<td>ため池ハザードマップ</td>
+			<td>2026年10月8日</td>
+			<td><a href="../uty/hminfo/7.csv"><img src="img/download.png" alt="ダウンロード" width="80pt"/></a></td>
+		</tr>
+		<tr>
+			<td>高潮ハザードマップ</td>
+			<td>2026年10月8日</td>
+			<td><a href="../uty/hminfo/3.csv"><img src="img/download.png" alt="ダウンロード" width="80pt"/></a></td>
+		</tr>
+		<tr>
+			<td>津波ハザードマップ</td>
+			<td>2026年10月8日</td>
+			<td><a href="../uty/hminfo/4.csv"><img src="img/download.png" alt="ダウンロード" width="80pt"/></a></td>
+		</tr>
+		<tr>
+			<td>土砂災害ハザードマップ</td>
+			<td>2026年10月8日</td>
+			<td><a href="../uty/hminfo/5.csv"><img src="img/download.png" alt="ダウンロード" width="80pt"/></a></td>
+		</tr>
+		<tr>
+			<td>火山ハザードマップ</td>
+			<td>2026年10月8日</td>
+			<td><a href="../uty/hminfo/6.csv"><img src="img/download.png" alt="ダウンロード" width="80pt"/></a></td>
+		</tr>
+		<tr>
+			<td>震度被害マップ</td>
+			<td>2026年10月8日</td>
+			<td><a href="../uty/bsinfo/1.csv"><img src="img/download.png" alt="ダウンロード" width="80pt"/></a></td>
+		</tr>
+		<tr>
+			<td>地盤被害マップ</td>
+			<td>2026年08月28日</td>
+			<td><a href="../uty/bsinfo/2.csv"><img src="img/download.png" alt="ダウンロード" width="80pt"/></a></td>
+		</tr>
+		<tr>
+			<td>地盤被害（液状化）マップ</td>
+			<td>2026年10月8日</td>
+			<td><a href="../uty/bsinfo/3.csv"><img src="img/download.png" alt="ダウンロード" width="80pt"/></a></td>
+		</tr>
+		<tr>
+			<td>建物被害マップ</td>
+			<td>2026年10月8日</td>
+			<td><a href="../uty/bsinfo/4.csv"><img src="img/download.png" alt="ダウンロード" width="80pt"/></a></td>
+		</tr>
+		<tr>
+			<td>火災被害マップ</td>
+			<td>2026年08月28日</td>
+			<td><a href="../uty/bsinfo/5.csv"><img src="img/download.png" alt="ダウンロード" width="80pt"/></a></td>
+		</tr>
+		<tr>
+			<td>避難被害マップ</td>
+			<td>2026年07月27日</td>
+			<td><a href="../uty/bsinfo/6.csv"><img src="img/download.png" alt="ダウンロード" width="80pt"/></a></td>
+		</tr>
+		<tr>
+			<td>その他被害マップ</td>
+			<td>2026年10月8日</td>
+			<td><a href="../uty/bsinfo/7.csv"><img src="img/download.png" alt="ダウンロード" width="80pt"/></a></td>
+		</tr>
+		<tr>
+			<td>総合被害マップ</td>
+			<td>2025年07月02日</td>
+			<td><a href="../uty/bsinfo/8.csv"><img src="img/download.png" alt="ダウンロード" width="80pt"/></a></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+		<div class="copyright">
+            <dl>
+                <dt><em class="reader">〔お問い合わせ窓口〕</em></dt>
+                <dd>
+			<div>国土交通省 国土地理院 応用地理部 地理情報処理課</div>
+			<div>お問い合わせは<a href="../faq/faq.html">「よくある質問」</a>のお問い合わせフォームよりお願いします。<br/><br/></div>
+                </dd>
+			</dl>
+		</div>
+	</div>
+</body>
+</html>

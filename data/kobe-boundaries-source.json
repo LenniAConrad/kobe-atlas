@@ -1,0 +1,14 @@
+{
+  "name": "Kobe city and ward boundaries",
+  "provider": "MLIT National Land Numerical Information (N03)",
+  "date": "2025-01-01",
+  "source": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2025.html",
+  "download": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2025/N03-20250101_28_GML.zip",
+  "license": "CC BY 4.0",
+  "sourceSHA256": "3ff660682980d4b9f8b938341a6bc7e159c2636a0f1212f14b7c1767fbaf4c72",
+  "outputSHA256": "55f627c0be4080d87fa122f4e536dbaf98643642579deb643be5fc9003f356de",
+  "filter": "N03_004 == 神戸市",
+  "inputFeatures": 63,
+  "wards": 9,
+  "processing": "Dissolve by N03_007 without simplification; union wards for city outline; labels at representative interior points of largest polygon. Source JGD2011 geographic coordinates displayed as longitude/latitude on web map. Modern reference, not historical boundaries."
+}

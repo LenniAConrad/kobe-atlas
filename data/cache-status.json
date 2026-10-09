@@ -1,0 +1,114 @@
+{
+  "pale": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "blank": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "historic-00": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "gazo3": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "ort_old10": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "slopemap": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "std": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "historic-02": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "ort": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "seamlessphoto": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "historic-2man": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "relief": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "historic-1888": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "historic-01": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "ort_USA10": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "hillshademap": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "gazo2": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "gazo1": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "sekishoku": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "hazard-flood": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "hazard-surge": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "hazard-tsunami": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "hazard-debris": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "hazard-steep": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "hazard-slide": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "historic-03": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "historic-04": {
+    "count": 0,
+    "maxZoom": null
+  },
+  "historic-07": {
+    "count": 0,
+    "maxZoom": null
+  }
+}

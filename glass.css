@@ -1,0 +1,102 @@
+/* Visual theme only. Layout and map behavior remain in styles.css / js/.
+   Panel solidity scales material tint; text always remains fully opaque. */
+@font-face { font-family: "Inter Local"; src: url("vendor/inter/InterVariable.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter Local", "Segoe UI Variable", "Segoe UI", "Yu Gothic", system-ui, sans-serif;
+  --ink: #172e36;
+  --muted: #4c626b;
+  --glass-tint: calc(var(--surface-alpha) * .18);
+  --glass-reading-tint: calc(var(--surface-alpha) * .36);
+  --glass-blur: 10px;
+  --line: rgba(40, 65, 76, .14);
+  --shadow: inset 0 1px 0 rgba(255,255,255,.85), inset 0 -1px 0 rgba(255,255,255,.3), 0 12px 36px rgba(23,47,60,.15), 0 2px 6px rgba(23,47,60,.07);
+}
+.panel, #sidebar, .map-heading, dialog, .leaflet-popup-content-wrapper {
+  background: linear-gradient(135deg, rgba(255,255,255,.10), rgba(255,255,255,0) 48%, rgba(255,255,255,.04)), rgba(244,249,251,var(--glass-tint));
+  border: 1px solid rgba(255,255,255,.72);
+  box-shadow: var(--shadow);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(145%);
+  backdrop-filter: blur(var(--glass-blur)) saturate(145%);
+}
+#sidebar { border-block: 0; border-left: 0; }
+.info-panel, .subject-panel, dialog, .leaflet-popup-content-wrapper {
+  background-color: rgba(248,251,252,var(--glass-reading-tint));
+}
+.map-heading h1, .panel-heading h2, .info-panel h2, .subject-panel h2, .editor-header h2 {
+  font-weight: 650;
+  letter-spacing: -.035em;
+}
+.eyebrow { letter-spacing: .12em; }
+.control-button, .icon-button, .button, .editor-tabs button, .nav-item, .brand-mark {
+  border-radius: 999px;
+  transition: background-color .16s ease, box-shadow .16s ease, transform .16s ease;
+}
+.control-button {
+  background: rgba(255,255,255,.38);
+  border: 1px solid rgba(255,255,255,.85);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.7), 0 2px 6px rgba(25,53,65,.08);
+}
+.control-button.primary, .button:not(.secondary), .brand-mark {
+  background: linear-gradient(150deg,rgba(255,255,255,.2),transparent 65%), var(--accent);
+  color: white;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 3px 8px rgba(20,70,75,.17);
+}
+.brand-mark {
+  background: transparent;
+  box-shadow: none;
+}
+.brand-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 2px rgba(6, 42, 19, .27)) drop-shadow(0 5px 7px rgba(6, 42, 19, .16));
+  transition: transform .2s ease, filter .2s ease;
+}
+.brand-button:hover .brand-mark img { transform: translateY(-1px); filter: drop-shadow(0 3px 3px rgba(6, 42, 19, .3)) drop-shadow(0 7px 9px rgba(6, 42, 19, .18)); }
+.control-button.active, .nav-item.selected, .editor-tabs button[aria-selected=true], .record.selected {
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb,var(--accent) 23%,transparent);
+}
+.control-button.direction-active { border-color: var(--accent); }
+.nav-item { color: var(--muted); }
+.nav-item:hover, .icon-button:hover, .control-button:hover, .record:hover {
+  background-color: rgba(255,255,255,.65);
+  filter: none;
+}
+.control-button.primary:hover { background-color: var(--accent); }
+.control-button:active, .icon-button:active, .button:active { transform: scale(.96); }
+.button.secondary { background: rgba(255,255,255,.55); }
+.layer-actions, .layer-footer { background: rgba(255,255,255,.15); }
+.layer-row.enabled { background: color-mix(in srgb,var(--accent) 7%,transparent); }
+.chapter-date { color: var(--muted); }
+.chapter-dot { background: #f8fbfc; }
+.chapter-stop.active .chapter-dot { box-shadow: 0 0 0 4px color-mix(in srgb,var(--accent) 15%,transparent); }
+.map-tools { border-radius: 24px; }
+dialog { border-radius: 26px; }
+dialog::backdrop { background: rgba(20,37,48,.23); backdrop-filter: blur(5px); }
+.editor-tabs, .editor-items { background: rgba(255,255,255,.18); }
+input:not([type=checkbox]):not([type=range]), select, textarea {
+  background: rgba(255,255,255,.78);
+  border-color: rgba(65,90,102,.22);
+  box-shadow: inset 0 1px 2px rgba(25,50,65,.025);
+}
+.layer-list, .info-scroll, .editor-form-wrap, .editor-items, .sources-content {
+  scrollbar-color: rgba(50,78,88,.36) transparent;
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .panel, #sidebar, .map-heading, dialog, .leaflet-popup-content-wrapper { background: #f3f7f8; }
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .panel, #sidebar, .map-heading, dialog, .leaflet-popup-content-wrapper {
+    background: #f7fafb;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border-color: #81969f;
+  }
+  :root { --muted: #344e59; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .control-button:active, .icon-button:active, .button:active { transform: none; }
+}

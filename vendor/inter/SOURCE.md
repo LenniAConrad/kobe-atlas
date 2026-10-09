@@ -1,0 +1,1 @@
+Inter variable upright font, downloaded 2026-10-09 from https://raw.githubusercontent.com/rsms/inter/master/docs/font-files/InterVariable.woff2. License: SIL Open Font License 1.1, archived alongside the font. Apple system fonts remain first in the font stack.

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>地質図データを使う</title>
+<meta name="description" content="20万分の1日本シームレス地質図は、これまで出版されてきた地質図幅の図郭における境界線の不連続を，日本全国の統一凡例を用いることによって解消した新しい地質図です">
+<meta name="keywords" content="シームレス地質図,20万分の1地質図,ダウンロード,v2,gis">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+</head>
+
+<body>
+	<header id="header">
+	  <div id="header-top" class="wrapper">
+		<div class="header-left">
+			<ul>
+				<li><a href="https://www.aist.go.jp/" target="_blank"><img src="img/aist_image80.png" alt="産総研のホームページ"></a></li>
+				<li><a href="https://www.gsj.jp/" target="_blank"><img src="img/gsj_image_80.png" alt="地質情報センターのホームページ"></a></li>
+			</ul>		  
+		 </div>
+	    <h1 class="site-logo">
+	  		<a href="index.html"><img src="img/seamless_logo.png" alt="20万分の1日本シームレス地質図"/></a>
+  		</h1>
+		<div class="header-right">
+			<ul>
+				<li class="en_icon"><a href="index_en.html"><img src="img/en_icon.png" alt=""/>English</a></li>
+				<li class="contact"><a href="https://www.gsj.jp/inquiries/index.html"><img src="img/contact_icon.png" alt=""/>お問い合わせ</a></li>
+			</ul>			  
+		 </div>
+	  </div>
+		  
+  	<nav id="navi">
+		<ul class="wrapper menu">
+			<li class="dd-menu"><a href="index.html">ホーム</a></li>
+			
+			<li class="dd-menu"><a href="about.html">シームレス地質図とは</a>
+				<ul class="menu-second">
+					<li><a href="about.html">20万分の1日本シームレス地質図とは</a></li>
+					<li><a href="suggestion.html">おすすめ機能のご紹介</a></li>
+					<li><a href="legend.html">シームレス地質図 V2の凡例</a></li>
+					<li><a href="process.html">シームレス地質図の編集</a></li>
+      	         	<li><a href="correction.html">地質図更新情報</a></li>
+					<li><a href="about_v1.html">シームレス地質図 V1（旧版）について</a></li>
+					
+				</ul>
+			</li>
+			<li class="dd-menu"><a href="agreement.html">ご利用にあたって</a></li>
+			<li class="dd-menu"><a href="view.html">地質図を見る</a></li>
+			<li class="dd-menu mnav-here"><a href="use.html">地質図データを使う</a></li>
+			<li class="dd-menu"><a href="contents.html">関連コンテンツ</a></li>
+		</ul>
+		
+	</nav>
+   </header>
+	
+	
+	<div class="wrapper">
+		<ul class="bread">
+            <li><a href="index.html">ホーム</a></li>
+            <li>地質図データを使う</li>
+      </ul>
+	</div>
+	
+	<div id="article-container" class="wrapper">
+		<aside class="side-nav">
+			<h4>シームレス地質図データを使う</h4>
+            <ul>
+               	<li class="snav-sub snav-here">
+					<a href="#use-vec">ベクトル形式データのダウンロード</a>
+					<a href="#use-ras">ラスター形式データのダウンロード</a>
+					<a href="#use-webapi">Web APIの利用</a>
+				</li>
+				
+			</ul>
+ 		</aside>
+		
+	<main class="article">
+		<h2 class="article-title">シームレス地質図データを使う</h2>
+		<div id="use-vec" class="article-inner">
+			<h3 class="article-title-sub">ベクトル形式データのダウンロード</h3>
+			<div class="article-text">
+			  <p>20万分の1日本シームレス地質図V2のベクトル形式の地質図データをダウンロードしてご利用いただけます．利用規約等につきましては<a class="info-link" href="agreement.html">「ご利用にあたって」</a>のページをご確認ください．</p>
+		  	</div>
+			<div class="article-link">
+			  	<ul class="article-use-inner">
+					<li>
+							<div>
+								<p><span>凡例はこちら</span></p>
+							 	<p><a href="./legend.html">シームレス地質図V2の凡例</a></p>
+							</div>
+					</li>				
+				</ul>
+			
+			<div class="article-link">
+			  	<ul class="article-use-inner">
+					<li>
+			 			<div class="dl">				
+							<div>
+								<p><span>全国一括ダウンロード（シェープファイル）</span></p>
+							 	<p><a href="./download/seamlessV2.zip">seamlessV2.zip（ZIP形式, 238MB, 地質図更新日：2025年7月18日）</a></p>
+							</div>
+						 
+						</div>
+					</li>
+				
+				</ul>
+			
+			
+			<div class="article-link">
+			  <ul class="article-use-inner">
+					<li>
+			 			<div class="dl">				
+							<div>				
+								<p><span>20万分の1地図区画毎のダウンロード（シェープファイル, KMLファイル）</span></p>
+								<div class="iframe-wrap">
+						  			<p><iframe class="dl-mesh" src="./download/index.html" scrolling="no"></iframe></p>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+		
+			</div>
+			
+			</div>
+			
+	  </div>
+			
+			
+	  	<div id="use-ras" class="article-inner"><h3 class="article-title-sub">ラスター形式データのダウンロード</h3>
+			<div class="article-text">
+			  <p>シームレス地質図V2のラスター形式ファイルにつきましては<a class="info-link" href="https://gbank.gsj.jp/seamless/v2/viewer">シームレス地質図V2 ビューア</a>でファイル（PNG，KMZ，HTML）に出力する機能を提供しております．ビューアの左上に表示されているツールボタンの［その他の操作］→［表示画面の保存］からご利用ください．</p>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		<div id="use-webapi" class="article-inner"><h3 class="article-title-sub">Web APIの利用</h3>
+			<div class="article-text">
+			  <p>皆様のWebサイトやアプリケーションから自由にアクセスし，地質図や凡例が利用できるWeb APIを公開しています．</p>
+			</div>
+			<div class="article-link">
+			  <ul class="article-use-inner">
+					<li>
+						<p><span>Web APIのご利用はこちら：</span></p>
+			 			<p><a href="./v2/api/1.3.1/"> 20万分の1日本シームレス地質図V2 Web API （ver 1.3.1, 2023/10/6）</a></p>
+					</li>
+				</ul>
+				<ul>
+					<li>［更新内容］typeパラメータで指定可能な値にlevel4(凡例数 約400)を追加</li>
+				 	<li>［旧バージョン］</li>
+					<li>
+				 		<ul class="api-ver-list">
+							 <li><a href="./v2/api/1.3/">ver 1.3（2022/9/9）</a> typeパラメータを追加，地質図取得サービスにbase, opacity, lang, downloadパラメータを追加</li>
+							 <li><a href="./v2/api/1.2.1/">ver 1.2.1（2020/6/9）</a> 凡例取得サービスjsonフォーマットにtitleとvalueを追加</li>
+							 <li><a href="./v2/api/1.2.1/">ver 1.2（2018/5/18）</a>地質図取得サービスにlayerパラメータを追加</li>
+							 <li><a href="./v2/api/1.1/">ver 1.1（2018/4/27）</a>凡例取得サービスの出力ファイルフォーマットにhtml形式を追加</li>
+							 <li><a href="./v2/api/1.0/">ver 1.0（2018/3/11）</a></li>
+				 		</ul>
+					</li>
+			 	</ul>
+			</div>
+		</div>  
+		</div>  
+	  </main>
+	</div>		
+	
+	<footer id="footer">
+		<a id="page-top" href="#"><div class="pagetop-arrow"></div></a>
+			<div class="wrapper">
+				<p class="groupHp-link">国立研究開発法人 産業技術総合研究所 地質情報研究部門 <a href="https://unit.aist.go.jp/igg/igi2-rg/">シームレス地質情報研究グループ</a></p>
+				<p>&copy;The Research Institute of Geology and Geoinformation (AIST)  All Rights Reserved.</p>
+			</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,237 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ukb",
+        "kind": "airport",
+        "name": "Kobe Airport (UKB)",
+        "body": "Selected destinations: Tokyo Haneda, Sapporo New Chitose, Okinawa Naha.",
+        "sourceUrl": "https://www.kairport.co.jp/en/search/flight",
+        "locationSource": "https://www.openstreetmap.org/way/772669000",
+        "reviewed": "2026-10-09",
+        "translations": {
+          "JP": {
+            "name": "神戸空港 (UKB)",
+            "body": "主な行先の例：東京（羽田）、札幌（新千歳）、沖縄（那覇）。"
+          },
+          "CN": {
+            "name": "神户机场 (UKB)",
+            "body": "主要目的地示例：东京羽田、札幌新千岁、冲绳那霸。"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.224672,
+          34.6340995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "kix",
+        "kind": "airport",
+        "name": "Kansai International Airport (KIX)",
+        "body": "Selected destinations: Seoul Incheon, Taipei, Shanghai, Tokyo Haneda. Bay Shuttle connects to Kobe Airport.",
+        "sourceUrl": "https://www.kansai-airport.or.jp/en/flight/search",
+        "locationSource": "https://www.openstreetmap.org/relation/9436735",
+        "reviewed": "2026-10-09",
+        "translations": {
+          "JP": {
+            "name": "関西国際空港 (KIX)",
+            "body": "主な行先の例：ソウル（仁川）、台北、上海、東京（羽田）。ベイ・シャトルで神戸空港へ。"
+          },
+          "CN": {
+            "name": "关西国际机场 (KIX)",
+            "body": "主要目的地示例：首尔仁川、台北、上海、东京羽田。海上高速船连接神户机场。"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.2330812,
+          34.4344098
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "itm",
+        "kind": "airport",
+        "name": "Osaka Itami Airport (ITM)",
+        "body": "Selected domestic destinations: Tokyo Haneda, Fukuoka, Sendai.",
+        "sourceUrl": "https://www.osaka-airport.co.jp/en/flight/search",
+        "locationSource": "https://www.openstreetmap.org/relation/18159861",
+        "reviewed": "2026-10-09",
+        "translations": {
+          "JP": {
+            "name": "大阪国際空港・伊丹 (ITM)",
+            "body": "国内線の主な行先の例：東京（羽田）、福岡、仙台。"
+          },
+          "CN": {
+            "name": "大阪伊丹机场 (ITM)",
+            "body": "主要国内目的地示例：东京羽田、福冈、仙台。"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.4403567,
+          34.7841935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sannomiya-ferry",
+        "kind": "ferry",
+        "name": "Kobe Sannomiya Ferry Terminal",
+        "body": "Jumbo Ferry: Shodoshima and Takamatsu. Miyazaki Car Ferry: Miyazaki.",
+        "sourceUrl": "https://www.city.kobe.lg.jp/a45623/kurashi/access/harbor/ferryterminal.html",
+        "locationSource": "https://www.openstreetmap.org/way/1281957445",
+        "reviewed": "2026-10-09",
+        "translations": {
+          "JP": {
+            "name": "神戸三宮フェリーターミナル",
+            "body": "ジャンボフェリー：小豆島・高松。宮崎カーフェリー：宮崎。"
+          },
+          "CN": {
+            "name": "神户三宫渡轮码头",
+            "body": "Jumbo Ferry：小豆岛、高松。宫崎渡轮：宫崎。"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.198921,
+          34.6824778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "rokko-ferry",
+        "kind": "ferry",
+        "name": "Rokko Island Ferry Terminals",
+        "body": "MOL Sunflower: Oita. Hankyu Ferry: Shinmoji (Kitakyushu). Orange Ferry: Niihama. Marker represents the terminal complex; check the operator for the exact berth.",
+        "sourceUrl": "https://www.city.kobe.lg.jp/a45623/kurashi/access/harbor/ferryterminal.html",
+        "locationSource": "https://www.openstreetmap.org/node/12541373624",
+        "reviewed": "2026-10-09",
+        "translations": {
+          "JP": {
+            "name": "六甲アイランドフェリーターミナル",
+            "body": "さんふらわあ：大分。阪九フェリー：新門司（北九州）。オレンジフェリー：新居浜。代表位置です。乗り場は各社で確認してください。"
+          },
+          "CN": {
+            "name": "六甲岛渡轮码头",
+            "body": "商船三井向日葵：大分。阪九渡轮：新门司（北九州）。橙色渡轮：新居滨。标记为码头群代表位置，具体泊位请咨询运营商。"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.2841639,
+          34.696384
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "port-terminal",
+        "kind": "ferry",
+        "name": "Kobe Port Terminal",
+        "body": "International ferry connection: Shanghai (Japan-China International Ferry). Confirm sailing dates with the operator.",
+        "sourceUrl": "https://www.city.kobe.lg.jp/a45623/kurashi/access/harbor/ferryterminal.html",
+        "locationSource": "https://www.openstreetmap.org/way/182495496",
+        "reviewed": "2026-10-09",
+        "translations": {
+          "JP": {
+            "name": "神戸ポートターミナル",
+            "body": "国際フェリー航路：上海（日中国際フェリー）。運航日は運航会社で確認してください。"
+          },
+          "CN": {
+            "name": "神户港国际客运码头",
+            "body": "国际渡轮航线：上海（日中国际渡轮）。航行日期请向运营商确认。"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.2028947,
+          34.6804578
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ukb-pier",
+        "kind": "ferry",
+        "name": "Kobe Airport Bay Shuttle Terminal",
+        "body": "Bay Shuttle to Kansai Airport: about 30 minutes by boat. Connecting bus from Kobe Airport passenger terminal.",
+        "sourceUrl": "https://www.kobe-access.jp/eng/howto.php",
+        "locationSource": "https://www.openstreetmap.org/way/298018269",
+        "reviewed": "2026-10-09",
+        "translations": {
+          "JP": {
+            "name": "神戸空港 海上アクセスターミナル",
+            "body": "ベイ・シャトルで関西空港へ、船で約30分。神戸空港旅客ターミナルから連絡バスがあります。"
+          },
+          "CN": {
+            "name": "神户机场海上客运码头",
+            "body": "海上高速船前往关西机场，航程约30分钟。神户机场航站楼有接驳巴士。"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.2287923,
+          34.6397529
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "kix-pier",
+        "kind": "ferry",
+        "name": "Kansai Airport Bay Shuttle Pier",
+        "body": "Bay Shuttle to Kobe Airport: about 30 minutes by boat. Use the connecting bus from KIX terminals; the pier is not accessible on foot or by taxi.",
+        "sourceUrl": "https://www.kobe-access.jp/eng/howto.php",
+        "locationSource": "https://www.openstreetmap.org/way/159323949",
+        "reviewed": "2026-10-09",
+        "translations": {
+          "JP": {
+            "name": "関西空港 ベイ・シャトル乗り場",
+            "body": "ベイ・シャトルで神戸空港へ、船で約30分。関空旅客ターミナルから連絡バスを利用。徒歩・タクシーで桟橋へは行けません。"
+          },
+          "CN": {
+            "name": "关西机场海上高速船码头",
+            "body": "海上高速船前往神户机场，航程约30分钟。请乘航站楼接驳巴士；不可步行或乘出租车进入码头。"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.2544137,
+          34.4436747
+        ]
+      }
+    }
+  ]
+}

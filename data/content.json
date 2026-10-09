@@ -1,0 +1,5753 @@
+{
+  "schemaVersion": 1,
+  "revision": 34,
+  "settings": {
+    "title": "Kobe",
+    "subtitle": "Spatial atlas",
+    "center": [
+      34.688,
+      135.187
+    ],
+    "zoom": 13,
+    "minZoom": 11,
+    "maxZoom": 18,
+    "contextMaxZoom": 13,
+    "bounds": [
+      [
+        34.45,
+        134.8
+      ],
+      [
+        35,
+        135.6
+      ]
+    ],
+    "aoi": [
+      [
+        34.58,
+        134.96
+      ],
+      [
+        34.84,
+        135.43
+      ]
+    ],
+    "startChapter": "kobe-mura",
+    "accent": "#356b43",
+    "panelOpacity": 0.94,
+    "panelRadius": 18,
+    "fontScale": 1,
+    "offlineOnly": false,
+    "autoCamera": false,
+    "playbackDuration": 10,
+    "translations": {
+      "JP": {
+        "title": "神戸",
+        "subtitle": "空間アトラス"
+      },
+      "CN": {
+        "title": "神户",
+        "subtitle": "空间地图集"
+      }
+    }
+  },
+  "chapters": [
+    {
+      "id": "traditions",
+      "title": "Kuniumi",
+      "label": "Mythological context",
+      "startYear": null,
+      "endYear": null,
+      "layerId": "pale",
+      "heading": "Kuniumi · Awaji Island",
+      "body": "In the Kuniumi myth, Izanagi and Izanami stir the sea with a spear. Drops form Onogoro Island; from there they give birth to Japan’s islands, beginning with Awaji. This is a creation story, without a historical date.\n\nToday, Awaji is Kobe’s neighbour across the Akashi Strait. The bridge opened in 1998, linking Kobe to the island and the road to Shikoku. Planning also crosses the water: Akashi Kaikyo National Government Park has districts in both Kobe and Awaji, pairing conserved rural landscapes with seaside recreation. Kobe and Awaji’s three cities cooperate on tourism, food and regional exchange.\n\nDrag to explore. The painting is an illustration, not a historical map.",
+      "duration": 10,
+      "hold": 2,
+      "fade": 2,
+      "sourceNote": "Awaji Island Tourist Association; Honshu–Shikoku Bridge Expressway; MLIT; City of Kobe. Artwork generated for this atlas.",
+      "camera": {
+        "bounds": [
+          [
+            34.17,
+            134.65
+          ],
+          [
+            34.63,
+            135.04
+          ]
+        ],
+        "navigationBounds": [
+          [
+            33.8,
+            133.9
+          ],
+          [
+            35.0,
+            135.8
+          ]
+        ],
+        "minZoom": 9,
+        "maxZoom": 11,
+        "duration": 2.4
+      },
+      "translations": {
+        "JP": {
+          "title": "国生み",
+          "label": "神話の背景",
+          "heading": "国生み・淡路島",
+          "body": "国生み神話では、イザナギとイザナミが矛で海をかき混ぜ、滴からおのころ島が生まれます。二神はそこで国生みを始め、淡路島を最初に日本の島々を生みました。歴史上の年代を持たない創世の物語です。\n\n現在の淡路島は、明石海峡を挟む神戸の隣人です。1998年開通の明石海峡大橋が、神戸から淡路島、四国への道路をつないでいます。国営明石海峡公園は神戸と淡路の2地区からなり、里山の保全と海辺のレクリエーションを組み合わせています。神戸市と淡路島の3市は、観光・食・地域交流でも連携しています。\n\nドラッグして周辺を見られます。この絵は神話をイメージした図で、史料の地図ではありません。",
+          "sourceNote": "淡路島観光協会・本州四国連絡高速道路・国土交通省・神戸市。絵は本アトラス用に生成。"
+        },
+        "CN": {
+          "title": "国生",
+          "label": "神话背景",
+          "heading": "国生 · 淡路岛",
+          "body": "在国生神话中，伊邪那岐与伊邪那美用矛搅动海水，滴落的水凝成淤能碁吕岛。二神从那里开始创造日本列岛，首先诞生的是淡路岛。这是没有历史年代的创世故事。\n\n今天，淡路岛是神户隔着明石海峡的邻居。1998年开通的明石海峡大桥把神户、淡路岛与通往四国的公路连起来。规划也跨越海峡：国营明石海峡公园设有神户和淡路两个地区，把乡村景观保护与海滨休闲结合起来。神户与淡路岛的三个城市还合作发展旅游、美食和区域交流。\n\n拖动即可探索。这幅画是神话主题示意图，并非历史地图。",
+          "sourceNote": "淡路岛观光协会、本州四国联络高速道路、国土交通省、神户市。插图为本图集生成。"
+        }
+      },
+      "introAnimation": {
+        "status": "ready",
+        "asset": "art/awaji-kuniumi.webp",
+        "type": "parting-clouds",
+        "illustrative": true
+      }
+    },
+    {
+      "id": "formation",
+      "title": "Land & sea",
+      "label": "Geological context",
+      "startYear": null,
+      "endYear": null,
+      "layerId": "relief",
+      "heading": "How the mountains and bay formed",
+      "body": "Drag the map to explore the mountains and bay. It shows today’s terrain. Dates below are approximate.\n\n70 million years ago — Magma cooled underground, forming much of Rokko’s granite.\n\n37–31 million years ago — Mud, sand and volcanic ash formed the Kobe Group rocks north of the mountains.\n\n3.5–3 million years ago — The Osaka basin began sinking and collecting sediment. This low area would later hold the bay.\n\nAbout 1 million years ago — Fault movement pushed Rokko upward while the Osaka basin sank. Low hills became mountains.\n\nAbout 20,000 years ago — Ice-age sea levels were much lower. Osaka Bay was largely dry land.\n\nAbout 10,000 years ago — Rising seas flooded the low basin again as the climate warmed.\n\nAbout 6,000 years ago — Seas reached a high point, spreading farther inland than today.\n\nOngoing — Weathering breaks down granite; streams carry sand and gravel downhill, shaping valleys and the coast.",
+      "duration": 10,
+      "hold": 2,
+      "fade": 2,
+      "sourceNote": "Kobe City · MLIT Rokko Sabo · Geological Survey of Japan · Masuda & Itomoto (2013). Sources & versions has the full references.",
+      "camera": null,
+      "translations": {
+        "JP": {
+          "title": "陸と海",
+          "label": "地質的背景",
+          "heading": "山と湾のでき方",
+          "body": "地図をドラッグして山や湾を見られます。背景は現在の地形です。以下の年代はおおよその値です。\n\n約7000万年前 — 地下のマグマが冷え、六甲山の花崗岩の多くができました。\n\n約3700万〜3100万年前 — 泥・砂・火山灰が堆積し、山地の北に神戸層群ができました。\n\n約350万〜300万年前 — 大阪盆地が沈み、土砂がたまり始めました。この低地が後に湾となります。\n\n約100万年前 — 断層の動きで六甲が隆起し、大阪盆地が沈みました。低い丘が山地へと変わりました。\n\n約2万年前 — 氷期で海面が低く、大阪湾の多くは陸地でした。\n\n約1万年前 — 温暖化で海面が上がり、低地に再び海が入りました。\n\n約6000年前 — 海面が高くなり、今より内陸まで海が広がりました。\n\n現在も続く変化 — 花崗岩が風化し、川が砂や礫を下流へ運び、谷や海岸を形づくっています。",
+          "sourceNote": "神戸市・国土交通省六甲砂防・産総研地質調査総合センター・増田・糸本（2013）。出典は「出典とバージョン」で確認できます。"
+        },
+        "CN": {
+          "title": "陆地与海洋",
+          "label": "地质背景",
+          "heading": "山地与海湾的形成",
+          "body": "拖动地图查看山地和海湾。背景显示今天的地形，以下年代均为约数。\n\n约7000万年前 — 地下岩浆冷却，形成六甲山的大部分花岗岩。\n\n约3700万至3100万年前 — 泥、砂和火山灰沉积，在山地北侧形成神户群地层。\n\n约350万至300万年前 — 大阪盆地开始下沉并积累泥沙。这片低地后来成为海湾所在的区域。\n\n约100万年前 — 断层运动抬升六甲山，大阪盆地继续下沉，低丘逐渐变成山地。\n\n约2万年前 — 冰期海面较低，大阪湾大部分区域是陆地。\n\n约1万年前 — 气候变暖，海面上升，海水重新进入低地。\n\n约6000年前 — 海面达到较高水平，海岸线比今天更靠内陆。\n\n持续至今 — 花岗岩风化，河流将砂石带向下游，不断塑造山谷与海岸。",
+          "sourceNote": "神户市、日本国土交通省六甲砂防、地质调查综合中心、增田与糸本（2013）。完整来源见“来源与版本”。"
+        }
+      }
+    },
+    {
+      "id": "kobe-mura",
+      "title": "Ikuta",
+      "label": "201 (trad.)–1868",
+      "startYear": 201,
+      "endYear": 1868,
+      "layerId": "ino-south",
+      "heading": "Ikuta · before the open port",
+      "body": "Before Kobe became a city, shrines, tombs and the harbour tied this coast to Japan’s political centres. Hyogo-tsu traded by sea; Fukuhara briefly housed the court, and battles brought national conflict here. In the Edo period, coastal shipping and Nada’s sake industry grew.\n\nThe opening date, 201, is Ikuta Shrine’s founding tradition. It is not a verified settlement date.",
+      "duration": 10,
+      "hold": 2,
+      "fade": 2,
+      "sourceNote": "Ikuta Shrine: ikutajinja.or.jp/history · Kobe City: port opening history · Inō scan supplied with project",
+      "camera": null,
+      "translations": {
+        "JP": {
+          "title": "生田",
+          "label": "201（社伝）–1868",
+          "heading": "生田・開港以前",
+          "body": "神戸市の成立以前から、神社・古墳・港を通じてこの海岸は日本の政治の中心とつながっていました。兵庫津は海上交易の拠点となり、福原への都の移転や戦いもありました。江戸時代には海運と灘の酒造が発展しました。\n\n201年は生田神社の創建伝承で、集落成立の確定年代ではありません。",
+          "sourceNote": "生田神社の由緒・神戸市の開港史・提供された伊能図"
+        },
+        "CN": {
+          "title": "生田",
+          "label": "201（传说）–1868",
+          "heading": "生田·开港以前",
+          "body": "神户成为城市之前，神社、古坟与港口已将海岸联系到日本政治中心。兵库津经营海上贸易，福原短暂成为都城，战争也将全国政治冲突带到这里。江户时期，海运和滩的酿酒业发展。\n\n201年是生田神社的创建传说，并非聚落起源的考证年代。",
+          "sourceNote": "生田神社沿革·神户市开港史·项目提供的伊能图"
+        }
+      }
+    },
+    {
+      "id": "port-opening",
+      "title": "Port opens",
+      "label": "1868–1888",
+      "startYear": 1868,
+      "endYear": 1888,
+      "layerId": "historic-1888",
+      "heading": "Port opens",
+      "body": "Kobe opened to foreign trade in 1868 as Japan entered the Meiji era. Trading firms and the foreign settlement made it an international gateway. New streets, the Ikuta River diversion and rail to Osaka reshaped a growing port town.",
+      "duration": 10,
+      "hold": 2,
+      "fade": 2,
+      "sourceNote": "Japanese Map Warper · map 47",
+      "camera": null,
+      "translations": {
+        "JP": {
+          "title": "開港",
+          "label": "1868–1888",
+          "heading": "開港",
+          "body": "1868年の開港は明治への転換期と重なります。商館と外国人居留地が国際的な窓口をつくりました。街路、生田川の付け替え、大阪への鉄道が港町を変えました。",
+          "sourceNote": "Japanese Map Warper · map 47"
+        },
+        "CN": {
+          "title": "港口开放",
+          "label": "1868–1888",
+          "heading": "港口开放",
+          "body": "1868年开港恰逢日本进入明治时代。商行与外国人居留地使神户成为国际门户。新街道、生田川改道和通往大阪的铁路重塑发展中的港口城镇。",
+          "sourceNote": "Japanese Map Warper · map 47"
+        }
+      }
+    },
+    {
+      "id": "early-city",
+      "title": "Port & city",
+      "label": "1888–1908",
+      "startYear": 1888,
+      "endYear": 1908,
+      "layerId": "historic-2man",
+      "heading": "Port & city",
+      "body": "Kobe became a municipality in 1889 while Japan industrialised. Port works, canals and river engineering supported a larger city. The old Minatogawa channel became urban land, and Shinkaichi grew into a busy entertainment district.",
+      "duration": 10,
+      "hold": 2,
+      "fade": 2,
+      "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html",
+      "camera": null,
+      "translations": {
+        "JP": {
+          "title": "港と都市",
+          "label": "1888–1908",
+          "heading": "港と都市",
+          "body": "日本の工業化が進む中、1889年に神戸市が成立。港、運河、河川改修が市街地の拡大を支えました。旧湊川は都市用地となり、新開地は繁華街へ成長しました。",
+          "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html"
+        },
+        "CN": {
+          "title": "港口与城市",
+          "label": "1888–1908",
+          "heading": "港口与城市",
+          "body": "日本工业化过程中，神户于1889年建立市政。港口、运河和河道工程支持更大的城市。旧凑川河道改为城市用地，新开地发展为繁忙的娱乐区。",
+          "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html"
+        }
+      }
+    },
+    {
+      "id": "city-growth",
+      "title": "City growth",
+      "label": "1908–1928",
+      "startYear": 1908,
+      "endYear": 1928,
+      "layerId": "historic-00",
+      "heading": "City growth",
+      "body": "Kobe linked Japan to overseas trade and migration. Shipbuilding and other industries expanded, especially around the First World War. Growth also exposed social tensions: the 1918 rice riots brought unrest to the trading city.",
+      "duration": 10,
+      "hold": 2,
+      "fade": 2,
+      "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html",
+      "camera": null,
+      "translations": {
+        "JP": {
+          "title": "市街地の成長",
+          "label": "1908–1928",
+          "heading": "市街地の成長",
+          "body": "神戸は海外貿易と移住の窓口でした。第一次世界大戦前後には造船などの産業が拡大。一方、成長の裏で社会的不安が高まり、1918年の米騒動が商業都市を揺さぶりました。",
+          "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html"
+        },
+        "CN": {
+          "title": "城市成长",
+          "label": "1908–1928",
+          "heading": "城市成长",
+          "body": "神户连接日本与海外贸易和移民。造船等产业在第一次世界大战前后扩张。增长也暴露社会矛盾，1918年米骚动影响这座贸易城市。",
+          "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html"
+        }
+      }
+    },
+    {
+      "id": "interwar",
+      "title": "Between wars",
+      "label": "1928–1945",
+      "startYear": 1928,
+      "endYear": 1945,
+      "layerId": "historic-01",
+      "heading": "Between wars",
+      "body": "Kobe remained an industrial and trading city through economic instability and Japan’s move toward war. Homes and factories filled the narrow coastal plain. The 1938 flood showed the danger of rivers descending from Rokko; wartime bombing followed in 1945.",
+      "duration": 10,
+      "hold": 2,
+      "fade": 2,
+      "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html",
+      "camera": null,
+      "translations": {
+        "JP": {
+          "title": "戦間期",
+          "label": "1928–1945",
+          "heading": "戦間期",
+          "body": "経済不安と戦争への動きの中でも、神戸は工業・貿易都市でした。狭い海岸平野に住宅と工場が集まり、1938年の水害で六甲から下る川の危険が表れました。1945年には空襲を受けました。",
+          "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html"
+        },
+        "CN": {
+          "title": "两次大战之间",
+          "label": "1928–1945",
+          "heading": "两次大战之间",
+          "body": "经济不稳与日本走向战争的时期，神户仍是工业贸易城市。住宅和工厂集中在狭窄沿海平原，1938年洪水揭示六甲山溪流的风险，1945年又遭空袭。",
+          "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html"
+        }
+      }
+    },
+    {
+      "id": "postwar",
+      "title": "Postwar",
+      "label": "1945–1965",
+      "startYear": 1945,
+      "endYear": 1965,
+      "layerId": "ort_old10",
+      "heading": "Postwar",
+      "body": "After devastating air raids, Kobe rebuilt homes, factories and its port. Japan’s rapid growth then increased demand for housing and waterfront industry. The 1961 floods exposed hillside risks. In 1964, the Suma conveyor began moving excavated soil to a loading pier, with barges carrying it onward to reclamation sites.\n\nThe aerial basemap was photographed in 1961–1969; it does not show the whole period.",
+      "duration": 10,
+      "hold": 2,
+      "fade": 2,
+      "sourceNote": "Geospatial Information Authority of Japan",
+      "camera": null,
+      "translations": {
+        "JP": {
+          "title": "戦後",
+          "label": "1945–1965",
+          "heading": "戦後",
+          "body": "空襲後、住宅・工場・港の復旧が進みました。高度成長で住宅と臨海工業用地の需要が増え、1961年の豪雨は山麓の危険を示しました。1964年に須磨コンベヤが稼働し、掘削土を船積み桟橋へ運び、船で埋立地へ送りました。\n\n背景の航空写真は1961〜1969年撮影で、この時代全体の姿ではありません。",
+          "sourceNote": "Geospatial Information Authority of Japan"
+        },
+        "CN": {
+          "title": "战后",
+          "label": "1945–1965",
+          "heading": "战后",
+          "body": "空袭之后，神户重建住宅、工厂和港口。日本高速增长增加住房和海岸工业用地需求。1961年洪水暴露山坡风险。1964年须磨输送带运转，将挖土运到装船码头，再由驳船送至填海区。\n\n背景航拍摄于1961至1969年，并非整个时期的景象。",
+          "sourceNote": "Geospatial Information Authority of Japan"
+        }
+      }
+    },
+    {
+      "id": "metropolitan",
+      "title": "Metropolitan growth",
+      "label": "1965–1974",
+      "startYear": 1965,
+      "endYear": 1974,
+      "layerId": "historic-04",
+      "heading": "Metropolitan growth",
+      "body": "Kobe answered Japan’s rapid urban and trade growth by creating land on both sides of the city. Cutting hills made housing sites; soil travelled by conveyor to the shore and then by barge to reclamation areas. Port Island began in 1966 and Rokko Island in 1972. The landscape itself became part of the city’s development plan.",
+      "duration": 10,
+      "hold": 2,
+      "fade": 2,
+      "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html",
+      "camera": null,
+      "translations": {
+        "JP": {
+          "title": "都市圏の拡大",
+          "label": "1965–1974",
+          "heading": "都市圏の拡大",
+          "body": "都市と貿易の急成長に対応し、神戸は山と海の両側で土地をつくりました。掘削跡を住宅地にし、土砂はコンベヤで海岸へ、船で埋立地へ。1966年にポートアイランド、1972年に六甲アイランドが着工し、地形そのものを都市計画に組み込みました。",
+          "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html"
+        },
+        "CN": {
+          "title": "都市圈扩张",
+          "label": "1965–1974",
+          "heading": "都市圈扩张",
+          "body": "为应对日本城市与贸易高速增长，神户在山与海两端创造土地。挖山后建住宅，土方由输送带运至海岸，再由驳船运往填海区。港湾人工岛1966年开工，六甲人工岛1972年开工，地形本身成为城市发展计划的一部分。",
+          "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html"
+        }
+      }
+    },
+    {
+      "id": "expansion",
+      "title": "Urban expansion",
+      "label": "1974–1984",
+      "startYear": 1974,
+      "endYear": 1984,
+      "layerId": "gazo1",
+      "heading": "Urban expansion",
+      "body": "Port Island made Kobe’s mountain-to-sea development visible at a city scale: housing on excavated hills, new port and city land offshore. Its first phase was completed in 1981. Portopia ’81 presented this new island city to visitors, while the Port Liner connected it to Sannomiya. Kobe promoted itself as more than a cargo port.",
+      "duration": 10,
+      "hold": 2,
+      "fade": 2,
+      "sourceNote": "Geospatial Information Authority of Japan",
+      "camera": null,
+      "translations": {
+        "JP": {
+          "title": "市街地の拡大",
+          "label": "1974–1984",
+          "heading": "市街地の拡大",
+          "body": "ポートアイランドは「山、海へ行く」を都市の規模で実現しました。山の跡に住宅、海に港と街。第1期は1981年に完成し、ポートピア’81で紹介されました。ポートライナーが三宮と島を結び、神戸は貨物港を超える都市像を示しました。",
+          "sourceNote": "Geospatial Information Authority of Japan"
+        },
+        "CN": {
+          "title": "城区扩张",
+          "label": "1974–1984",
+          "heading": "城区扩张",
+          "body": "港湾人工岛以城市尺度展现“山走向海洋”：挖山后建设住宅，海上形成港口与城市土地。一期于1981年完成，Portopia ’81向游客展示新岛城，Port Liner将其连接三宫。神户展现超越货运港口的城市形象。",
+          "sourceNote": "Geospatial Information Authority of Japan"
+        }
+      }
+    },
+    {
+      "id": "late-expansion",
+      "title": "Changing waterfront",
+      "label": "1984–1995",
+      "startYear": 1984,
+      "endYear": 1995,
+      "layerId": "gazo3",
+      "heading": "Changing waterfront",
+      "body": "As Japan’s economy shifted toward services and consumption, Kobe opened more of its waterfront to public life. Meriken Park and Harborland added culture, shopping and leisure. Port Island’s second phase began, and Rokko Island’s reclamation finished in 1992. Industry, housing and recreation now shared the expanded coast.",
+      "duration": 10,
+      "hold": 2,
+      "fade": 2,
+      "sourceNote": "Geospatial Information Authority of Japan",
+      "camera": null,
+      "translations": {
+        "JP": {
+          "title": "変わる水際",
+          "label": "1984–1995",
+          "heading": "変わる水際",
+          "body": "日本経済がサービスや消費へ広がる中、神戸の海岸も市民の場所へ変化しました。メリケンパークとハーバーランドに文化・商業・余暇が加わり、ポートアイランド第2期が着工、1992年には六甲アイランドの埋立が完了。産業・住宅・余暇が海岸を共有しました。",
+          "sourceNote": "Geospatial Information Authority of Japan"
+        },
+        "CN": {
+          "title": "海滨变化",
+          "label": "1984–1995",
+          "heading": "海滨变化",
+          "body": "日本经济向服务与消费扩展时，神户海岸更多地面向公共生活。美利坚公园和Harborland增加文化、购物与休闲。港湾人工岛二期开工，六甲人工岛于1992年填海完成。工业、住房与休闲共享扩展的海岸。",
+          "sourceNote": "Geospatial Information Authority of Japan"
+        }
+      }
+    },
+    {
+      "id": "recovery",
+      "title": "City transition",
+      "label": "1995–2007",
+      "startYear": 1995,
+      "endYear": 2007,
+      "layerId": "historic-07",
+      "heading": "City transition",
+      "body": "The 1995 earthquake disrupted daily life, transport and the port. Reconstruction changed neighbourhoods and disaster planning; Luminarie became a place of remembrance. Kobe also pursued new regional connections through the Akashi Kaikyo Bridge and its airport, while a medical-industry cluster developed on Port Island.",
+      "duration": 10,
+      "hold": 2,
+      "fade": 2,
+      "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html",
+      "camera": null,
+      "translations": {
+        "JP": {
+          "title": "都市の転換",
+          "label": "1995–2007",
+          "heading": "都市の転換",
+          "body": "1995年の震災で暮らし・交通・港が大きな被害を受けました。復興は街区と防災計画を変え、ルミナリエは追悼の場となりました。明石海峡大橋と空港で広域のつながりを増やし、ポートアイランドでは医療産業が育ちました。",
+          "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html"
+        },
+        "CN": {
+          "title": "城市转型",
+          "label": "1995–2007",
+          "heading": "城市转型",
+          "body": "1995年地震严重影响日常生活、交通与港口。重建改变街区和防灾规划，Luminarie成为纪念场所。明石海峡大桥和机场增加地区联系，港湾人工岛发展医疗产业。",
+          "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html"
+        }
+      }
+    },
+    {
+      "id": "present",
+      "title": "Kobe today",
+      "label": "2007–2026",
+      "startYear": 2007,
+      "endYear": 2026,
+      "layerId": "seamlessphoto",
+      "heading": "Kobe today",
+      "body": "Kobe combines a working port with housing, research, tourism and public waterfronts. Planning now also addresses population decline and ageing, making daily services easier to reach and renewing existing neighbourhoods. The city’s older river routes, reclaimed coast and hillside housing remain visible beneath these changes.",
+      "duration": 10,
+      "hold": 2,
+      "fade": 2,
+      "sourceNote": "Geospatial Information Authority of Japan",
+      "camera": null,
+      "translations": {
+        "JP": {
+          "title": "今日の神戸",
+          "label": "2007–2026",
+          "heading": "今日の神戸",
+          "body": "港・住宅・研究・観光・市民の海岸が共存する神戸。人口減少と高齢化も都市計画の課題となり、身近なサービスや既存の街の更新が重視されています。古い河道、埋立地、山麓の住宅は今も街の形に残ります。",
+          "sourceNote": "Geospatial Information Authority of Japan"
+        },
+        "CN": {
+          "title": "今日神户",
+          "label": "2007–2026",
+          "heading": "今日神户",
+          "body": "今天的神户结合生产港口、住房、研究、旅游和公共海岸。规划也回应人口减少与老龄化，重视日常服务可达性和既有街区更新。旧河道、填海海岸和山坡住宅仍留在城市形态中。",
+          "sourceNote": "Geospatial Information Authority of Japan"
+        }
+      }
+    }
+  ],
+  "pages": [
+    {
+      "id": "home",
+      "name": "Timeline",
+      "icon": "history",
+      "description": "Kobe through time",
+      "defaultLayers": [],
+      "translations": {
+        "JP": {
+          "name": "タイムライン",
+          "description": "時をたどる神戸"
+        },
+        "CN": {
+          "name": "时间轴",
+          "description": "神户的历史变迁"
+        }
+      },
+      "body": "",
+      "hidden": false
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "icon": "train",
+      "description": "Kobe by rail, road, air & sea",
+      "body": "Turn roads, railways and ferry routes on or off in Layers. Click an airport or ferry marker for destinations. Roads and railways use 2025 data. The dashed airport ferry route is approximate.",
+      "defaultLayers": [
+        "pale",
+        "rail-1",
+        "rail-2",
+        "rail-3",
+        "rail-4",
+        "rail-5",
+        "stations",
+        "airports",
+        "ferry-terminals",
+        "bay-shuttle"
+      ],
+      "translations": {
+        "JP": {
+          "name": "交通",
+          "description": "鉄道・道路・空・海でつながる神戸",
+          "body": "レイヤーで道路・鉄道・航路を切り替えます。空港や港のマークを押すと行先が表示されます。道路と鉄道は2025年の情報です。空港間の破線は航路の目安です。"
+        },
+        "CN": {
+          "name": "交通",
+          "description": "铁路、公路、航空与海运连接神户",
+          "body": "在图层中开关道路、铁路和渡轮航线。点击机场或码头标记查看目的地。道路和铁路为2025年数据；机场间的虚线仅示意航线。"
+        }
+      },
+      "navigationBounds": [
+        [
+          34.3,
+          134.8
+        ],
+        [
+          35,
+          135.65
+        ]
+      ],
+      "minZoom": 10
+    },
+    {
+      "id": "water",
+      "name": "Water Systems",
+      "icon": "water",
+      "description": "Rivers, reservoirs and water supply",
+      "body": "Use Layers to show rivers, lakes, dams or water facilities. Click a feature for details and its data year. Supply areas show 2010 boundaries. Some small reservoirs are missing from the lake data.",
+      "defaultLayers": [
+        "pale",
+        "rivers-major",
+        "lakes",
+        "dams"
+      ],
+      "translations": {
+        "JP": {
+          "name": "水系・水道",
+          "description": "河川・貯水池・給水",
+          "body": "レイヤーで河川・湖・ダム・水道施設を表示します。地図上の項目を押すと説明と資料の年が表示されます。給水区域は2010年の境界です。小さな貯水池は未掲載の場合があります。"
+        },
+        "CN": {
+          "name": "水系与供水",
+          "description": "河流、水库与供水",
+          "body": "在图层中选择河流、湖泊、水坝或供水设施。点击地图上的要素查看说明和数据年份。供水区域为2010年边界；湖泊数据可能缺少小型水库。"
+        }
+      }
+    },
+    {
+      "id": "zoning",
+      "name": "Zoning",
+      "icon": "building",
+      "description": "Land-use zoning in Kobe",
+      "body": "Choose a layer, then click a coloured area to read its zone. Zoning sets broad rules for housing, shops and industry, including permitted uses and building size. It shows what may be built, not necessarily what exists today.\n\nKobe’s current zoning framework was initially designated in 1973 and has been reviewed roughly every five years. The 2023 citywide review emphasised walkable daily services, neighbourhood renewal and industry. District plans and other rules can add restrictions; this atlas is an overview.\n\nThe map uses FY2024 zoning data. Check Kobe City for current designations.",
+      "defaultLayers": [
+        "pale",
+        "zone-1",
+        "zone-2",
+        "zone-3",
+        "zone-4",
+        "zone-5",
+        "zone-6",
+        "zone-7",
+        "zone-9",
+        "zone-10",
+        "zone-11",
+        "zone-12",
+        "zone-13"
+      ],
+      "translations": {
+        "JP": {
+          "name": "用途地域",
+          "description": "神戸の用途地域",
+          "body": "レイヤーを選び、色のついた区域をクリックして用途地域を確認できます。用途地域は住宅・商業・工業の大枠を定め、建物の用途や大きさを規制します。現在の建物ではなく、建てられるもののルールです。\n\n神戸では現在の制度を1973年に当初指定し、概ね5年ごとに見直してきました。2023年の全市見直しは歩いて暮らせるサービス、街の更新、産業を重視しました。地区計画などの規制も加わるため、この地図は概要です。\n\n地図は2024年度の用途地域データです。最新の指定は神戸市で確認してください。"
+        },
+        "CN": {
+          "name": "用地规划",
+          "description": "神户用地分区",
+          "body": "选择图层，点击彩色区域查看分区。分区为住宅、商业和工业规定基本规则，包括允许用途与建筑规模。它显示可以建什么，并非现有建筑用途。\n\n神户现行分区框架最初于1973年指定，约每五年检讨。2023年全市检讨重视步行可达的日常服务、街区更新和产业。地区规划等规则还可能增加限制；本图仅为概览。\n\n地图采用2024年度分区数据。最新指定请查询神户市。"
+        }
+      },
+      "sources": [
+        {
+          "title": "Kobe City: zoning review",
+          "url": "https://www.city.kobe.lg.jp/a84931/shise/kekaku/jutakutoshikyoku/youtominaoshi/index.html"
+        },
+        {
+          "title": "Kobe City: building and planning rules",
+          "url": "https://www.city.kobe.lg.jp/a81042/kurashi/sumai/jutaku/chishiki/taterutoki/1-4/horesegen.html"
+        }
+      ]
+    },
+    {
+      "id": "disaster",
+      "name": "Natural Disaster Risk",
+      "icon": "land",
+      "description": "Explore natural hazards",
+      "body": "Choose Earthquake, Landslide risk or Water disaster risk at the bottom right. Use Layers to choose what appears on the map. Blank areas may have no data; they do not mean a place is safe.",
+      "defaultLayers": [
+        "pale",
+        "fault-geological",
+        "fault-active",
+        "hazard-flood",
+        "hazard-debris",
+        "hazard-steep",
+        "hazard-slide"
+      ],
+      "translations": {
+        "JP": {
+          "name": "自然災害リスク",
+          "description": "自然災害を知る",
+          "body": "右下で地震・土砂災害・水害を選び、レイヤーで表示項目を切り替えます。無着色の場所はデータがない場合があり、安全を示すものではありません。"
+        },
+        "CN": {
+          "name": "自然灾害风险",
+          "description": "了解自然灾害",
+          "body": "在右下角选择地震、滑坡或水灾，再用图层选择显示内容。空白区域可能没有数据，并不表示安全。"
+        }
+      }
+    },
+    {
+      "id": "population",
+      "name": "Population Density",
+      "icon": "people",
+      "description": "Population density through time",
+      "body": "Choose a census year at the bottom right. Colours show the average people per square kilometre in each census district. Blank areas have no coverage, not zero population. Boundaries change between years. Optional railway lines show the 2025 network.",
+      "defaultLayers": [
+        "pale",
+        "population-1960",
+        "population-1965",
+        "population-1970",
+        "population-1975",
+        "population-1980",
+        "population-1985",
+        "population-1990",
+        "population-1995",
+        "population-2000",
+        "population-2005",
+        "population-2010",
+        "population-2015",
+        "population-2020"
+      ],
+      "translations": {
+        "JP": {
+          "name": "人口密度",
+          "description": "人口密度の変遷",
+          "body": "右下で国勢調査の年を選びます。色は各地区の1km²当たりの平均人口を示します。無着色は対象外で、人口ゼロではありません。地区の境界は年ごとに変わります。鉄道は2025年の路線です。"
+        },
+        "CN": {
+          "name": "人口密度",
+          "description": "人口密度变化",
+          "body": "在右下角选择普查年份。颜色表示各区每平方公里的平均人口。空白表示未覆盖，并非无人居住。区域边界会随年份变化；可选铁路为2025年路网。"
+        }
+      },
+      "trivia": {
+        "title": "Hillside housing: a small detail",
+        "body": "Tadao Ando’s Rokko Housing I (1983) fits homes and shared stairs onto a steep Nada slope. It is a small architectural example of living with Kobe’s terrain, distinct from the large new towns made by cutting hills. Census colours describe population, not housing quality.",
+        "fromYear": 1985,
+        "sources": [
+          {
+            "title": "Tadao Ando Architect & Associates: Rokko Housing",
+            "url": "https://artsandculture.google.com/story/UQWB16Scu7JNUQ?hl=ja"
+          }
+        ],
+        "translations": {
+          "JP": {
+            "title": "山麓の住宅・小さな話",
+            "body": "安藤忠雄の六甲の集合住宅Ⅰ（1983）は、灘の急斜面に住戸と共用の階段を配置しました。山を削ってつくる大規模ニュータウンとは異なる、地形に合わせた暮らしの一例です。国勢調査の色は人口を示し、住宅の質を示すものではありません。"
+          },
+          "CN": {
+            "title": "山坡住宅的一点小知识",
+            "body": "安藤忠雄的六甲集合住宅Ⅰ（1983）将住户与共用楼梯嵌入滩区陡坡。它是适应神户地形的小型建筑案例，与挖山建设的大型新城不同。人口普查颜色表示人口，不表示住房质量。"
+          }
+        }
+      }
+    },
+    {
+      "id": "events",
+      "name": "Events",
+      "icon": "history",
+      "description": "Events across Kobe",
+      "body": "All timeline events share this map. Click a pin or shaded area for a short summary and a photo where available. Search below to find an event. Shaded areas are approximate, not historical boundaries or surveyed damage footprints.",
+      "defaultLayers": [
+        "pale",
+        "chapter-features"
+      ],
+      "translations": {
+        "JP": {
+          "name": "出来事",
+          "description": "神戸の出来事",
+          "body": "タイムラインの全出来事を一つの地図で見られます。ピンや領域をクリックすると解説と、入手できた場合は写真を表示します。下の検索欄で探せます。領域は概略であり、歴史的境界や被害範囲の測量図ではありません。"
+        },
+        "CN": {
+          "name": "事件",
+          "description": "神户的历史事件",
+          "body": "全部时间轴事件集中在这幅地图上。点击图钉或区域查看简短介绍及可用照片，也可用下方搜索框查找。区域仅为示意，并非历史边界或测绘的受灾范围。"
+        }
+      }
+    }
+  ],
+  "layers": [
+    {
+      "id": "pale",
+      "name": "GSI pale map",
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png",
+      "source": "qgis-pale",
+      "credit": "Geospatial Information Authority of Japan",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 18,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home",
+        "transport",
+        "zoning",
+        "disaster",
+        "population",
+        "water",
+        "events"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "地理院淡色地図",
+          "group": "地図画像",
+          "credit": "国土地理院"
+        },
+        "CN": {
+          "name": "地理院浅色地图",
+          "group": "地图影像",
+          "credit": "日本国土地理院"
+        }
+      },
+      "weight": 3,
+      "filterField": "",
+      "filterValue": ""
+    },
+    {
+      "id": "blank",
+      "name": "Blank map",
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/blank/{z}/{x}/{y}.png",
+      "source": "qgis-blank",
+      "credit": "Geospatial Information Authority of Japan",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 18,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home",
+        "transport",
+        "zoning",
+        "disaster",
+        "population",
+        "water",
+        "events"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "白地図",
+          "group": "地図画像",
+          "credit": "国土地理院"
+        },
+        "CN": {
+          "name": "空白底图",
+          "group": "地图影像",
+          "credit": "日本国土地理院"
+        }
+      }
+    },
+    {
+      "id": "historic-00",
+      "name": "Historical map · 1922–1923",
+      "type": "raster",
+      "url": "https://ktgis.net/kjmapw/kjtilemap/keihansin/00/{z}/{x}/{-y}.png",
+      "source": "qgis-historic-00",
+      "credit": "今昔マップ on the web",
+      "minNativeZoom": 8,
+      "maxNativeZoom": 16,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "歴史地図・1922–1923",
+          "group": "地図画像",
+          "credit": "今昔マップ on the web"
+        },
+        "CN": {
+          "name": "历史地图 · 1922–1923",
+          "group": "地图影像",
+          "credit": "今昔地图网页版"
+        }
+      }
+    },
+    {
+      "id": "gazo3",
+      "name": "Aerial · 1984–1986",
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/gazo3/{z}/{x}/{y}.jpg",
+      "source": "qgis-gazo3",
+      "credit": "Geospatial Information Authority of Japan",
+      "minNativeZoom": 10,
+      "maxNativeZoom": 17,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "航空写真・1984–1986",
+          "group": "地図画像",
+          "credit": "国土地理院"
+        },
+        "CN": {
+          "name": "航空影像 · 1984–1986",
+          "group": "地图影像",
+          "credit": "日本国土地理院"
+        }
+      }
+    },
+    {
+      "id": "ort_old10",
+      "name": "Aerial · 1961–1969",
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/ort_old10/{z}/{x}/{y}.png",
+      "source": "qgis-ort_old10",
+      "credit": "Geospatial Information Authority of Japan",
+      "minNativeZoom": 10,
+      "maxNativeZoom": 17,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "航空写真・1961–1969",
+          "group": "地図画像",
+          "credit": "国土地理院"
+        },
+        "CN": {
+          "name": "航空影像 · 1961–1969",
+          "group": "地图影像",
+          "credit": "日本国土地理院"
+        }
+      }
+    },
+    {
+      "id": "slopemap",
+      "name": "Slope",
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/slopemap/{z}/{x}/{y}.png",
+      "source": "qgis-slopemap",
+      "credit": "Geospatial Information Authority of Japan",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 18,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "傾斜量図",
+          "group": "地図画像",
+          "credit": "国土地理院"
+        },
+        "CN": {
+          "name": "坡度图",
+          "group": "地图影像",
+          "credit": "日本国土地理院"
+        }
+      }
+    },
+    {
+      "id": "std",
+      "name": "GSI standard",
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png",
+      "source": "qgis-std",
+      "credit": "Geospatial Information Authority of Japan",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 18,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home",
+        "disaster"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "地理院標準地図",
+          "group": "地図画像",
+          "credit": "国土地理院"
+        },
+        "CN": {
+          "name": "地理院标准地图",
+          "group": "地图影像",
+          "credit": "日本国土地理院"
+        }
+      }
+    },
+    {
+      "id": "historic-02",
+      "name": "Historical map · 1947–1950",
+      "type": "raster",
+      "url": "https://ktgis.net/kjmapw/kjtilemap/keihansin/02/{z}/{x}/{-y}.png",
+      "source": "qgis-historic-02",
+      "credit": "今昔マップ on the web",
+      "minNativeZoom": 8,
+      "maxNativeZoom": 16,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "歴史地図・1947–1950",
+          "group": "地図画像",
+          "credit": "今昔マップ on the web"
+        },
+        "CN": {
+          "name": "历史地图 · 1947–1950",
+          "group": "地图影像",
+          "credit": "今昔地图网页版"
+        }
+      }
+    },
+    {
+      "id": "ort",
+      "name": "Orthophoto · 2007 onward",
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg",
+      "source": "qgis-ort",
+      "credit": "Geospatial Information Authority of Japan",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 18,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "オルソ画像・2007年以降",
+          "group": "地図画像",
+          "credit": "国土地理院"
+        },
+        "CN": {
+          "name": "正射影像 · 2007年起",
+          "group": "地图影像",
+          "credit": "日本国土地理院"
+        }
+      }
+    },
+    {
+      "id": "seamlessphoto",
+      "name": "Latest aerial imagery",
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+      "source": "qgis-seamlessphoto",
+      "credit": "Geospatial Information Authority of Japan",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 18,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home",
+        "transport",
+        "zoning",
+        "disaster",
+        "population",
+        "water",
+        "events"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "最新航空写真",
+          "group": "地図画像",
+          "credit": "国土地理院"
+        },
+        "CN": {
+          "name": "最新航空影像",
+          "group": "地图影像",
+          "credit": "日本国土地理院"
+        }
+      }
+    },
+    {
+      "id": "historic-2man",
+      "name": "Historical map · 1892–1910",
+      "type": "raster",
+      "url": "https://ktgis.net/kjmapw/kjtilemap/keihansin/2man/{z}/{x}/{-y}.png",
+      "source": "qgis-historic-2man",
+      "credit": "今昔マップ on the web",
+      "minNativeZoom": 8,
+      "maxNativeZoom": 16,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "歴史地図・1892–1910",
+          "group": "地図画像",
+          "credit": "今昔マップ on the web"
+        },
+        "CN": {
+          "name": "历史地图 · 1892–1910",
+          "group": "地图影像",
+          "credit": "今昔地图网页版"
+        }
+      }
+    },
+    {
+      "id": "relief",
+      "name": "Elevation",
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png",
+      "source": "qgis-relief",
+      "credit": "Geospatial Information Authority of Japan",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 18,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home",
+        "disaster",
+        "water"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "標高",
+          "group": "地図画像",
+          "credit": "国土地理院"
+        },
+        "CN": {
+          "name": "高程",
+          "group": "地图影像",
+          "credit": "日本国土地理院"
+        }
+      }
+    },
+    {
+      "id": "historic-1888",
+      "name": "Historical map · 1888",
+      "type": "raster",
+      "url": "https://mapwarper.h-gis.jp/maps/tile/47/{z}/{x}/{y}.png",
+      "source": "qgis-historic-1888",
+      "credit": "Japanese Map Warper · map 47",
+      "minNativeZoom": 8,
+      "maxNativeZoom": 18,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "歴史地図・1888",
+          "group": "地図画像",
+          "credit": "Japanese Map Warper・地図47"
+        },
+        "CN": {
+          "name": "历史地图 · 1888",
+          "group": "地图影像",
+          "credit": "Japanese Map Warper · 地图47"
+        }
+      }
+    },
+    {
+      "id": "historic-01",
+      "name": "Historical map · 1927–1935",
+      "type": "raster",
+      "url": "https://ktgis.net/kjmapw/kjtilemap/keihansin/01/{z}/{x}/{-y}.png",
+      "source": "qgis-historic-01",
+      "credit": "今昔マップ on the web",
+      "minNativeZoom": 8,
+      "maxNativeZoom": 16,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "歴史地図・1927–1935",
+          "group": "地図画像",
+          "credit": "今昔マップ on the web"
+        },
+        "CN": {
+          "name": "历史地图 · 1927–1935",
+          "group": "地图影像",
+          "credit": "今昔地图网页版"
+        }
+      }
+    },
+    {
+      "id": "ort_USA10",
+      "name": "Aerial · 1945–1950",
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/ort_USA10/{z}/{x}/{y}.png",
+      "source": "qgis-ort_USA10",
+      "credit": "Geospatial Information Authority of Japan",
+      "minNativeZoom": 10,
+      "maxNativeZoom": 17,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "航空写真・1945–1950",
+          "group": "地図画像",
+          "credit": "国土地理院"
+        },
+        "CN": {
+          "name": "航空影像 · 1945–1950",
+          "group": "地图影像",
+          "credit": "日本国土地理院"
+        }
+      }
+    },
+    {
+      "id": "hillshademap",
+      "name": "Hillshade",
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/hillshademap/{z}/{x}/{y}.png",
+      "source": "qgis-hillshademap",
+      "credit": "Geospatial Information Authority of Japan",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 18,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home",
+        "disaster",
+        "water"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "陰影起伏図",
+          "group": "地図画像",
+          "credit": "国土地理院"
+        },
+        "CN": {
+          "name": "地形晕渲图",
+          "group": "地图影像",
+          "credit": "日本国土地理院"
+        }
+      }
+    },
+    {
+      "id": "gazo2",
+      "name": "Aerial · 1979–1983",
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/gazo2/{z}/{x}/{y}.jpg",
+      "source": "qgis-gazo2",
+      "credit": "Geospatial Information Authority of Japan",
+      "minNativeZoom": 10,
+      "maxNativeZoom": 17,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "航空写真・1979–1983",
+          "group": "地図画像",
+          "credit": "国土地理院"
+        },
+        "CN": {
+          "name": "航空影像 · 1979–1983",
+          "group": "地图影像",
+          "credit": "日本国土地理院"
+        }
+      }
+    },
+    {
+      "id": "gazo1",
+      "name": "Aerial · 1974–1978",
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/gazo1/{z}/{x}/{y}.jpg",
+      "source": "qgis-gazo1",
+      "credit": "Geospatial Information Authority of Japan",
+      "minNativeZoom": 10,
+      "maxNativeZoom": 17,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "航空写真・1974–1978",
+          "group": "地図画像",
+          "credit": "国土地理院"
+        },
+        "CN": {
+          "name": "航空影像 · 1974–1978",
+          "group": "地图影像",
+          "credit": "日本国土地理院"
+        }
+      }
+    },
+    {
+      "id": "sekishoku",
+      "name": "Red relief",
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/sekishoku/{z}/{x}/{y}.png",
+      "source": "qgis-sekishoku",
+      "credit": "Geospatial Information Authority of Japan",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 18,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home",
+        "disaster",
+        "water"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "赤色立体地図",
+          "group": "地図画像",
+          "credit": "国土地理院"
+        },
+        "CN": {
+          "name": "红色立体地形图",
+          "group": "地图影像",
+          "credit": "日本国土地理院"
+        }
+      }
+    },
+    {
+      "id": "ino-south",
+      "name": "Inō map · south (date unconfirmed)",
+      "type": "image",
+      "url": "data/ino-south.png",
+      "bounds": [
+        [
+          34.43098668481319,
+          134.66956710449548
+        ],
+        [
+          34.76233236342549,
+          135.5744970370979
+        ]
+      ],
+      "source": "local-ino",
+      "credit": "Owner-provided image; date to verify",
+      "opacity": 1,
+      "pages": [
+        "home"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "伊能図・南部（年代未確認）",
+          "group": "地図画像",
+          "credit": "所有者提供画像・年代要確認"
+        },
+        "CN": {
+          "name": "伊能图 · 南部（年代未确认）",
+          "group": "地图影像",
+          "credit": "用户提供的影像；年代待核实"
+        }
+      }
+    },
+    {
+      "id": "rail-1",
+      "name": "JR Shinkansen",
+      "type": "geojson",
+      "url": "data/railroadsection.geojson",
+      "filterField": "N02_002",
+      "filterValue": "1",
+      "source": "N02-25",
+      "credit": "MLIT National Land Numerical Information · 2025",
+      "opacity": 1,
+      "color": "#dd6861",
+      "weight": 3,
+      "pages": [
+        "transport",
+        "population"
+      ],
+      "group": "Railways · 2025",
+      "defaultVisible": true,
+      "translations": {
+        "JP": {
+          "name": "JR新幹線",
+          "group": "鉄道・2025年",
+          "credit": "国土交通省 国土数値情報・2025年"
+        },
+        "CN": {
+          "name": "JR新干线",
+          "group": "铁路 · 2025年",
+          "credit": "国土交通省国土数值信息 · 2025年"
+        }
+      }
+    },
+    {
+      "id": "rail-2",
+      "name": "JR conventional lines",
+      "type": "geojson",
+      "url": "data/railroadsection.geojson",
+      "filterField": "N02_002",
+      "filterValue": "2",
+      "source": "N02-25",
+      "credit": "MLIT National Land Numerical Information · 2025",
+      "opacity": 1,
+      "color": "#168477",
+      "weight": 3,
+      "pages": [
+        "transport",
+        "population"
+      ],
+      "group": "Railways · 2025",
+      "defaultVisible": true,
+      "translations": {
+        "JP": {
+          "name": "JR在来線",
+          "group": "鉄道・2025年",
+          "credit": "国土交通省 国土数値情報・2025年"
+        },
+        "CN": {
+          "name": "JR常规铁路",
+          "group": "铁路 · 2025年",
+          "credit": "国土交通省国土数值信息 · 2025年"
+        }
+      }
+    },
+    {
+      "id": "rail-3",
+      "name": "Public railways",
+      "type": "geojson",
+      "url": "data/railroadsection.geojson",
+      "filterField": "N02_002",
+      "filterValue": "3",
+      "source": "N02-25",
+      "credit": "MLIT National Land Numerical Information · 2025",
+      "opacity": 1,
+      "color": "#8a68c3",
+      "weight": 3,
+      "pages": [
+        "transport",
+        "population"
+      ],
+      "group": "Railways · 2025",
+      "defaultVisible": true,
+      "translations": {
+        "JP": {
+          "name": "公営鉄道",
+          "group": "鉄道・2025年",
+          "credit": "国土交通省 国土数値情報・2025年"
+        },
+        "CN": {
+          "name": "公营铁路",
+          "group": "铁路 · 2025年",
+          "credit": "国土交通省国土数值信息 · 2025年"
+        }
+      }
+    },
+    {
+      "id": "rail-4",
+      "name": "Private railways",
+      "type": "geojson",
+      "url": "data/railroadsection.geojson",
+      "filterField": "N02_002",
+      "filterValue": "4",
+      "source": "N02-25",
+      "credit": "MLIT National Land Numerical Information · 2025",
+      "opacity": 1,
+      "color": "#d29935",
+      "weight": 3,
+      "pages": [
+        "transport",
+        "population"
+      ],
+      "group": "Railways · 2025",
+      "defaultVisible": true,
+      "translations": {
+        "JP": {
+          "name": "民営鉄道",
+          "group": "鉄道・2025年",
+          "credit": "国土交通省 国土数値情報・2025年"
+        },
+        "CN": {
+          "name": "民营铁路",
+          "group": "铁路 · 2025年",
+          "credit": "国土交通省国土数值信息 · 2025年"
+        }
+      }
+    },
+    {
+      "id": "rail-5",
+      "name": "Third-sector railways",
+      "type": "geojson",
+      "url": "data/railroadsection.geojson",
+      "filterField": "N02_002",
+      "filterValue": "5",
+      "source": "N02-25",
+      "credit": "MLIT National Land Numerical Information · 2025",
+      "opacity": 1,
+      "color": "#3d7fbe",
+      "weight": 3,
+      "pages": [
+        "transport",
+        "population"
+      ],
+      "group": "Railways · 2025",
+      "defaultVisible": true,
+      "translations": {
+        "JP": {
+          "name": "第三セクター鉄道",
+          "group": "鉄道・2025年",
+          "credit": "国土交通省 国土数値情報・2025年"
+        },
+        "CN": {
+          "name": "第三部门铁路",
+          "group": "铁路 · 2025年",
+          "credit": "国土交通省国土数值信息 · 2025年"
+        }
+      }
+    },
+    {
+      "id": "stations",
+      "name": "Stations",
+      "type": "geojson",
+      "url": "data/station.geojson",
+      "source": "N02-25",
+      "credit": "MLIT · 2025",
+      "opacity": 1,
+      "color": "#253c4d",
+      "weight": 6,
+      "pages": [
+        "transport"
+      ],
+      "group": "Railways · 2025",
+      "defaultVisible": true,
+      "translations": {
+        "JP": {
+          "name": "駅",
+          "group": "鉄道・2025年",
+          "credit": "国土交通省・2025年"
+        },
+        "CN": {
+          "name": "车站",
+          "group": "铁路 · 2025年",
+          "credit": "国土交通省 · 2025年"
+        }
+      }
+    },
+    {
+      "id": "chapter-features",
+      "name": "Events",
+      "type": "chapter",
+      "source": "owner",
+      "opacity": 1,
+      "color": "#b57932",
+      "pages": [
+        "home",
+        "events"
+      ],
+      "group": "Chapter features",
+      "defaultVisible": true,
+      "translations": {
+        "JP": {
+          "name": "出来事",
+          "group": "章の地物"
+        },
+        "CN": {
+          "name": "事件",
+          "group": "章节要素"
+        }
+      }
+    },
+    {
+      "id": "kobe-boundaries",
+      "type": "geojson",
+      "renderer": "boundaries",
+      "name": "Kobe city + wards · 2025 boundaries",
+      "group": "Administrative boundaries",
+      "pages": [
+        "home",
+        "transport",
+        "water",
+        "zoning",
+        "disaster",
+        "population"
+      ],
+      "url": "data/kobe-boundaries.geojson",
+      "color": "#6d3db0",
+      "weight": 2,
+      "opacity": 1,
+      "credit": "MLIT N03 administrative boundaries (2025-01-01), processed · CC BY 4.0",
+      "translations": {
+        "JP": {
+          "name": "神戸市界・区界・区名（2025年）"
+        },
+        "CN": {
+          "name": "神户市界、区界及区名（2025年）"
+        }
+      }
+    },
+    {
+      "id": "highway-national",
+      "type": "geojson",
+      "renderer": "transport",
+      "name": "National expressways · 2025",
+      "group": "Highways",
+      "pages": [
+        "transport"
+      ],
+      "url": "data/highways-2025.geojson",
+      "filterField": "N06_008",
+      "filterValue": "1",
+      "color": "#d35823",
+      "weight": 3,
+      "opacity": 1,
+      "credit": "MLIT N06 roads, 2025 snapshot · CC BY 4.0",
+      "translations": {
+        "JP": {
+          "name": "高速自動車国道（2025）"
+        },
+        "CN": {
+          "name": "国家高速公路（2025）"
+        }
+      }
+    },
+    {
+      "id": "highway-arterial",
+      "type": "geojson",
+      "renderer": "transport",
+      "name": "National-road expressways · 2025",
+      "group": "Highways",
+      "pages": [
+        "transport"
+      ],
+      "url": "data/highways-2025.geojson",
+      "filterField": "N06_008",
+      "filterValue": "3",
+      "color": "#ad7130",
+      "weight": 3,
+      "opacity": 1,
+      "credit": "MLIT N06 roads, 2025 snapshot · CC BY 4.0",
+      "translations": {
+        "JP": {
+          "name": "一般国道の自動車専用道路（2025）"
+        },
+        "CN": {
+          "name": "国道专用公路（2025）"
+        }
+      }
+    },
+    {
+      "id": "highway-bridge",
+      "type": "geojson",
+      "renderer": "transport",
+      "name": "Honshu–Shikoku expressways · 2025",
+      "group": "Highways",
+      "pages": [
+        "transport"
+      ],
+      "url": "data/highways-2025.geojson",
+      "filterField": "N06_008",
+      "filterValue": "4",
+      "color": "#9d4386",
+      "weight": 3,
+      "opacity": 1,
+      "credit": "MLIT N06 roads, 2025 snapshot · CC BY 4.0",
+      "translations": {
+        "JP": {
+          "name": "本州四国連絡高速道路（2025）"
+        },
+        "CN": {
+          "name": "本州四国联络高速公路（2025）"
+        }
+      }
+    },
+    {
+      "id": "highway-urban",
+      "type": "geojson",
+      "renderer": "transport",
+      "name": "Urban expressways (Hanshin) · 2025",
+      "group": "Highways",
+      "pages": [
+        "transport"
+      ],
+      "url": "data/highways-2025.geojson",
+      "filterField": "N06_008",
+      "filterValue": "5",
+      "color": "#b74435",
+      "weight": 3,
+      "opacity": 1,
+      "credit": "MLIT N06 roads, 2025 snapshot · CC BY 4.0",
+      "translations": {
+        "JP": {
+          "name": "都市高速道路（阪神など）（2025）"
+        },
+        "CN": {
+          "name": "城市高速公路（阪神等）（2025）"
+        }
+      }
+    },
+    {
+      "id": "airports",
+      "type": "geojson",
+      "renderer": "transport",
+      "name": "Airports · selected destinations",
+      "group": "Airports & ferries",
+      "pages": [
+        "transport"
+      ],
+      "url": "data/transport-places.geojson",
+      "color": "#345ea2",
+      "weight": 4,
+      "opacity": 1,
+      "credit": "Routes: airport operators / Kobe City / Bay Shuttle; locations © OpenStreetMap contributors · ODbL",
+      "translations": {
+        "JP": {
+          "name": "空港・主な行先"
+        },
+        "CN": {
+          "name": "机场与主要目的地"
+        }
+      },
+      "filterField": "kind",
+      "filterValue": "airport"
+    },
+    {
+      "id": "ferry-terminals",
+      "type": "geojson",
+      "renderer": "transport",
+      "name": "Ferry terminals · routes",
+      "group": "Airports & ferries",
+      "pages": [
+        "transport"
+      ],
+      "url": "data/transport-places.geojson",
+      "color": "#087886",
+      "weight": 4,
+      "opacity": 1,
+      "credit": "Routes: airport operators / Kobe City / Bay Shuttle; locations © OpenStreetMap contributors · ODbL",
+      "translations": {
+        "JP": {
+          "name": "フェリー乗り場・航路"
+        },
+        "CN": {
+          "name": "渡轮码头与航线"
+        }
+      },
+      "filterField": "kind",
+      "filterValue": "ferry"
+    },
+    {
+      "id": "bay-shuttle",
+      "type": "geojson",
+      "renderer": "transport",
+      "name": "Kobe Airport ↔ KIX ferry · schematic",
+      "group": "Airports & ferries",
+      "pages": [
+        "transport"
+      ],
+      "url": "data/bay-shuttle.geojson",
+      "color": "#087886",
+      "weight": 4,
+      "opacity": 1,
+      "credit": "Routes: airport operators / Kobe City / Bay Shuttle; locations © OpenStreetMap contributors · ODbL",
+      "translations": {
+        "JP": {
+          "name": "神戸空港 ↔ 関空航路（模式図）"
+        },
+        "CN": {
+          "name": "神户机场 ↔ 关西机场渡轮（示意）"
+        }
+      }
+    },
+    {
+      "id": "zone-1",
+      "type": "geojson",
+      "renderer": "zoning",
+      "name": "Low-rise residential I",
+      "group": "Land-use zones · FY2024",
+      "url": "data/zoning-2024.geojson",
+      "pages": [
+        "zoning"
+      ],
+      "filterField": "YoutoCode",
+      "filterValue": 1,
+      "color": "#56a76a",
+      "opacity": 1,
+      "credit": "MLIT A55 / Kobe City, FY2024 · CC BY 4.0",
+      "translations": {
+        "JP": {
+          "name": "第１種低層住居専用地域"
+        },
+        "CN": {
+          "name": "第一类低层住宅专用"
+        }
+      }
+    },
+    {
+      "id": "zone-2",
+      "type": "geojson",
+      "renderer": "zoning",
+      "name": "Low-rise residential II",
+      "group": "Land-use zones · FY2024",
+      "url": "data/zoning-2024.geojson",
+      "pages": [
+        "zoning"
+      ],
+      "filterField": "YoutoCode",
+      "filterValue": 2,
+      "color": "#8fc779",
+      "opacity": 1,
+      "credit": "MLIT A55 / Kobe City, FY2024 · CC BY 4.0",
+      "translations": {
+        "JP": {
+          "name": "第２種低層住居専用地域"
+        },
+        "CN": {
+          "name": "第二类低层住宅专用"
+        }
+      }
+    },
+    {
+      "id": "zone-3",
+      "type": "geojson",
+      "renderer": "zoning",
+      "name": "Mid/high-rise residential I",
+      "group": "Land-use zones · FY2024",
+      "url": "data/zoning-2024.geojson",
+      "pages": [
+        "zoning"
+      ],
+      "filterField": "YoutoCode",
+      "filterValue": 3,
+      "color": "#acd05d",
+      "opacity": 1,
+      "credit": "MLIT A55 / Kobe City, FY2024 · CC BY 4.0",
+      "translations": {
+        "JP": {
+          "name": "第１種中高層住居専用地域"
+        },
+        "CN": {
+          "name": "第一类中高层住宅专用"
+        }
+      }
+    },
+    {
+      "id": "zone-4",
+      "type": "geojson",
+      "renderer": "zoning",
+      "name": "Mid/high-rise residential II",
+      "group": "Land-use zones · FY2024",
+      "url": "data/zoning-2024.geojson",
+      "pages": [
+        "zoning"
+      ],
+      "filterField": "YoutoCode",
+      "filterValue": 4,
+      "color": "#d0df77",
+      "opacity": 1,
+      "credit": "MLIT A55 / Kobe City, FY2024 · CC BY 4.0",
+      "translations": {
+        "JP": {
+          "name": "第２種中高層住居専用地域"
+        },
+        "CN": {
+          "name": "第二类中高层住宅专用"
+        }
+      }
+    },
+    {
+      "id": "zone-5",
+      "type": "geojson",
+      "renderer": "zoning",
+      "name": "Residential I",
+      "group": "Land-use zones · FY2024",
+      "url": "data/zoning-2024.geojson",
+      "pages": [
+        "zoning"
+      ],
+      "filterField": "YoutoCode",
+      "filterValue": 5,
+      "color": "#ead267",
+      "opacity": 1,
+      "credit": "MLIT A55 / Kobe City, FY2024 · CC BY 4.0",
+      "translations": {
+        "JP": {
+          "name": "第１種住居地域"
+        },
+        "CN": {
+          "name": "第一类住宅"
+        }
+      }
+    },
+    {
+      "id": "zone-6",
+      "type": "geojson",
+      "renderer": "zoning",
+      "name": "Residential II",
+      "group": "Land-use zones · FY2024",
+      "url": "data/zoning-2024.geojson",
+      "pages": [
+        "zoning"
+      ],
+      "filterField": "YoutoCode",
+      "filterValue": 6,
+      "color": "#e7b465",
+      "opacity": 1,
+      "credit": "MLIT A55 / Kobe City, FY2024 · CC BY 4.0",
+      "translations": {
+        "JP": {
+          "name": "第２種住居地域"
+        },
+        "CN": {
+          "name": "第二类住宅"
+        }
+      }
+    },
+    {
+      "id": "zone-7",
+      "type": "geojson",
+      "renderer": "zoning",
+      "name": "Quasi-residential",
+      "group": "Land-use zones · FY2024",
+      "url": "data/zoning-2024.geojson",
+      "pages": [
+        "zoning"
+      ],
+      "filterField": "YoutoCode",
+      "filterValue": 7,
+      "color": "#e9984e",
+      "opacity": 1,
+      "credit": "MLIT A55 / Kobe City, FY2024 · CC BY 4.0",
+      "translations": {
+        "JP": {
+          "name": "準住居地域"
+        },
+        "CN": {
+          "name": "准住宅"
+        }
+      }
+    },
+    {
+      "id": "zone-9",
+      "type": "geojson",
+      "renderer": "zoning",
+      "name": "Neighbourhood commercial",
+      "group": "Land-use zones · FY2024",
+      "url": "data/zoning-2024.geojson",
+      "pages": [
+        "zoning"
+      ],
+      "filterField": "YoutoCode",
+      "filterValue": 9,
+      "color": "#e884a0",
+      "opacity": 1,
+      "credit": "MLIT A55 / Kobe City, FY2024 · CC BY 4.0",
+      "translations": {
+        "JP": {
+          "name": "近隣商業地域"
+        },
+        "CN": {
+          "name": "邻里商业"
+        }
+      }
+    },
+    {
+      "id": "zone-10",
+      "type": "geojson",
+      "renderer": "zoning",
+      "name": "Commercial",
+      "group": "Land-use zones · FY2024",
+      "url": "data/zoning-2024.geojson",
+      "pages": [
+        "zoning"
+      ],
+      "filterField": "YoutoCode",
+      "filterValue": 10,
+      "color": "#cf5692",
+      "opacity": 1,
+      "credit": "MLIT A55 / Kobe City, FY2024 · CC BY 4.0",
+      "translations": {
+        "JP": {
+          "name": "商業地域"
+        },
+        "CN": {
+          "name": "商业"
+        }
+      }
+    },
+    {
+      "id": "zone-11",
+      "type": "geojson",
+      "renderer": "zoning",
+      "name": "Quasi-industrial",
+      "group": "Land-use zones · FY2024",
+      "url": "data/zoning-2024.geojson",
+      "pages": [
+        "zoning"
+      ],
+      "filterField": "YoutoCode",
+      "filterValue": 11,
+      "color": "#a993bd",
+      "opacity": 1,
+      "credit": "MLIT A55 / Kobe City, FY2024 · CC BY 4.0",
+      "translations": {
+        "JP": {
+          "name": "準工業地域"
+        },
+        "CN": {
+          "name": "准工业"
+        }
+      }
+    },
+    {
+      "id": "zone-12",
+      "type": "geojson",
+      "renderer": "zoning",
+      "name": "Industrial",
+      "group": "Land-use zones · FY2024",
+      "url": "data/zoning-2024.geojson",
+      "pages": [
+        "zoning"
+      ],
+      "filterField": "YoutoCode",
+      "filterValue": 12,
+      "color": "#7e9fce",
+      "opacity": 1,
+      "credit": "MLIT A55 / Kobe City, FY2024 · CC BY 4.0",
+      "translations": {
+        "JP": {
+          "name": "工業地域"
+        },
+        "CN": {
+          "name": "工业"
+        }
+      }
+    },
+    {
+      "id": "zone-13",
+      "type": "geojson",
+      "renderer": "zoning",
+      "name": "Exclusive industrial",
+      "group": "Land-use zones · FY2024",
+      "url": "data/zoning-2024.geojson",
+      "pages": [
+        "zoning"
+      ],
+      "filterField": "YoutoCode",
+      "filterValue": 13,
+      "color": "#75b9ca",
+      "opacity": 1,
+      "credit": "MLIT A55 / Kobe City, FY2024 · CC BY 4.0",
+      "translations": {
+        "JP": {
+          "name": "工業専用地域"
+        },
+        "CN": {
+          "name": "工业专用"
+        }
+      }
+    },
+    {
+      "id": "hazard-flood",
+      "type": "raster",
+      "hazardMode": "water",
+      "overlay": true,
+      "name": "River flooding · maximum scenario",
+      "group": "Hazard overlays",
+      "pages": [
+        "disaster"
+      ],
+      "url": "https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_data/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 17,
+      "color": "#d35451",
+      "opacity": 0.85,
+      "credit": "MLIT / prefectural authorities via GSI Hazard Map Portal; retrieved 2026-10-09",
+      "translations": {
+        "JP": {
+          "name": "洪水浸水想定・想定最大規模"
+        },
+        "CN": {
+          "name": "河流洪水·最大规模情景"
+        }
+      }
+    },
+    {
+      "id": "hazard-surge",
+      "type": "raster",
+      "hazardMode": "water",
+      "overlay": true,
+      "name": "Storm surge inundation",
+      "group": "Hazard overlays",
+      "pages": [
+        "disaster"
+      ],
+      "url": "https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_data/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 17,
+      "color": "#d35451",
+      "opacity": 0.85,
+      "credit": "MLIT / prefectural authorities via GSI Hazard Map Portal; retrieved 2026-10-09",
+      "translations": {
+        "JP": {
+          "name": "高潮浸水想定"
+        },
+        "CN": {
+          "name": "风暴潮淹没范围"
+        }
+      }
+    },
+    {
+      "id": "hazard-tsunami",
+      "type": "raster",
+      "hazardMode": "water",
+      "overlay": true,
+      "name": "Tsunami inundation",
+      "group": "Hazard overlays",
+      "pages": [
+        "disaster"
+      ],
+      "url": "https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_data/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 17,
+      "color": "#d35451",
+      "opacity": 0.85,
+      "credit": "MLIT / prefectural authorities via GSI Hazard Map Portal; retrieved 2026-10-09",
+      "translations": {
+        "JP": {
+          "name": "津波浸水想定"
+        },
+        "CN": {
+          "name": "海啸淹没范围"
+        }
+      }
+    },
+    {
+      "id": "hazard-debris",
+      "type": "raster",
+      "hazardMode": "landslide",
+      "overlay": true,
+      "name": "Debris-flow warning areas",
+      "group": "Hazard overlays",
+      "pages": [
+        "disaster"
+      ],
+      "url": "https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 17,
+      "color": "#d35451",
+      "opacity": 0.85,
+      "credit": "MLIT / prefectural authorities via GSI Hazard Map Portal; retrieved 2026-10-09",
+      "translations": {
+        "JP": {
+          "name": "土石流警戒区域"
+        },
+        "CN": {
+          "name": "泥石流警戒区域"
+        }
+      }
+    },
+    {
+      "id": "hazard-steep",
+      "type": "raster",
+      "hazardMode": "landslide",
+      "overlay": true,
+      "name": "Steep-slope collapse warning areas",
+      "group": "Hazard overlays",
+      "pages": [
+        "disaster"
+      ],
+      "url": "https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 17,
+      "color": "#d35451",
+      "opacity": 0.85,
+      "credit": "MLIT / prefectural authorities via GSI Hazard Map Portal; retrieved 2026-10-09",
+      "translations": {
+        "JP": {
+          "name": "急傾斜地崩壊警戒区域"
+        },
+        "CN": {
+          "name": "陡坡崩塌警戒区域"
+        }
+      }
+    },
+    {
+      "id": "hazard-slide",
+      "type": "raster",
+      "hazardMode": "landslide",
+      "overlay": true,
+      "name": "Landslide warning areas",
+      "group": "Hazard overlays",
+      "pages": [
+        "disaster"
+      ],
+      "url": "https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 17,
+      "color": "#d35451",
+      "opacity": 0.85,
+      "credit": "MLIT / prefectural authorities via GSI Hazard Map Portal; retrieved 2026-10-09",
+      "translations": {
+        "JP": {
+          "name": "地すべり警戒区域"
+        },
+        "CN": {
+          "name": "滑坡警戒区域"
+        }
+      }
+    },
+    {
+      "id": "fault-geological",
+      "type": "geojson",
+      "renderer": "faults",
+      "hazardMode": "earthquake",
+      "name": "Mapped geological faults",
+      "group": "Faults",
+      "url": "data/fault-geological.geojson",
+      "pages": [
+        "disaster"
+      ],
+      "color": "#61567c",
+      "weight": 3,
+      "opacity": 1,
+      "credit": "Geological Survey of Japan, AIST · source geometry clipped for Kobe atlas",
+      "translations": {
+        "JP": {
+          "name": "地質図の断層"
+        },
+        "CN": {
+          "name": "地质图断层"
+        }
+      }
+    },
+    {
+      "id": "fault-active",
+      "type": "geojson",
+      "renderer": "faults",
+      "hazardMode": "earthquake",
+      "name": "Active fault segments",
+      "group": "Faults",
+      "url": "data/fault-active.geojson",
+      "pages": [
+        "disaster"
+      ],
+      "color": "#c43b3d",
+      "weight": 3,
+      "opacity": 1,
+      "credit": "Geological Survey of Japan, AIST · source geometry clipped for Kobe atlas",
+      "translations": {
+        "JP": {
+          "name": "活断層・活動セグメント"
+        },
+        "CN": {
+          "name": "活动断层分段"
+        }
+      }
+    },
+    {
+      "id": "population-1960",
+      "type": "geojson",
+      "renderer": "population",
+      "censusYear": 1960,
+      "name": "1960 census · DID density",
+      "group": "Population density",
+      "pages": [
+        "population"
+      ],
+      "url": "data/population-1960.geojson",
+      "color": "#fd8d3c",
+      "opacity": 1,
+      "credit": "MLIT A16 / Statistics Bureau · census DID district averages",
+      "translations": {
+        "JP": {
+          "name": "1960年国勢調査・DID密度"
+        },
+        "CN": {
+          "name": "1960年普查·DID密度"
+        }
+      }
+    },
+    {
+      "id": "population-1965",
+      "type": "geojson",
+      "renderer": "population",
+      "censusYear": 1965,
+      "name": "1965 census · DID density",
+      "group": "Population density",
+      "pages": [
+        "population"
+      ],
+      "url": "data/population-1965.geojson",
+      "color": "#fd8d3c",
+      "opacity": 1,
+      "credit": "MLIT A16 / Statistics Bureau · census DID district averages",
+      "translations": {
+        "JP": {
+          "name": "1965年国勢調査・DID密度"
+        },
+        "CN": {
+          "name": "1965年普查·DID密度"
+        }
+      }
+    },
+    {
+      "id": "population-1970",
+      "type": "geojson",
+      "renderer": "population",
+      "censusYear": 1970,
+      "name": "1970 census · DID density",
+      "group": "Population density",
+      "pages": [
+        "population"
+      ],
+      "url": "data/population-1970.geojson",
+      "color": "#fd8d3c",
+      "opacity": 1,
+      "credit": "MLIT A16 / Statistics Bureau · census DID district averages",
+      "translations": {
+        "JP": {
+          "name": "1970年国勢調査・DID密度"
+        },
+        "CN": {
+          "name": "1970年普查·DID密度"
+        }
+      }
+    },
+    {
+      "id": "population-1975",
+      "type": "geojson",
+      "renderer": "population",
+      "censusYear": 1975,
+      "name": "1975 census · DID density",
+      "group": "Population density",
+      "pages": [
+        "population"
+      ],
+      "url": "data/population-1975.geojson",
+      "color": "#fd8d3c",
+      "opacity": 1,
+      "credit": "MLIT A16 / Statistics Bureau · census DID district averages",
+      "translations": {
+        "JP": {
+          "name": "1975年国勢調査・DID密度"
+        },
+        "CN": {
+          "name": "1975年普查·DID密度"
+        }
+      }
+    },
+    {
+      "id": "population-1980",
+      "type": "geojson",
+      "renderer": "population",
+      "censusYear": 1980,
+      "name": "1980 census · DID density",
+      "group": "Population density",
+      "pages": [
+        "population"
+      ],
+      "url": "data/population-1980.geojson",
+      "color": "#fd8d3c",
+      "opacity": 1,
+      "credit": "MLIT A16 / Statistics Bureau · census DID district averages",
+      "translations": {
+        "JP": {
+          "name": "1980年国勢調査・DID密度"
+        },
+        "CN": {
+          "name": "1980年普查·DID密度"
+        }
+      }
+    },
+    {
+      "id": "population-1985",
+      "type": "geojson",
+      "renderer": "population",
+      "censusYear": 1985,
+      "name": "1985 census · DID density",
+      "group": "Population density",
+      "pages": [
+        "population"
+      ],
+      "url": "data/population-1985.geojson",
+      "color": "#fd8d3c",
+      "opacity": 1,
+      "credit": "MLIT A16 / Statistics Bureau · census DID district averages",
+      "translations": {
+        "JP": {
+          "name": "1985年国勢調査・DID密度"
+        },
+        "CN": {
+          "name": "1985年普查·DID密度"
+        }
+      }
+    },
+    {
+      "id": "population-1990",
+      "type": "geojson",
+      "renderer": "population",
+      "censusYear": 1990,
+      "name": "1990 census · DID density",
+      "group": "Population density",
+      "pages": [
+        "population"
+      ],
+      "url": "data/population-1990.geojson",
+      "color": "#fd8d3c",
+      "opacity": 1,
+      "credit": "MLIT A16 / Statistics Bureau · census DID district averages",
+      "translations": {
+        "JP": {
+          "name": "1990年国勢調査・DID密度"
+        },
+        "CN": {
+          "name": "1990年普查·DID密度"
+        }
+      }
+    },
+    {
+      "id": "population-1995",
+      "type": "geojson",
+      "renderer": "population",
+      "censusYear": 1995,
+      "name": "1995 census · DID density",
+      "group": "Population density",
+      "pages": [
+        "population"
+      ],
+      "url": "data/population-1995.geojson",
+      "color": "#fd8d3c",
+      "opacity": 1,
+      "credit": "MLIT A16 / Statistics Bureau · census DID district averages",
+      "translations": {
+        "JP": {
+          "name": "1995年国勢調査・DID密度"
+        },
+        "CN": {
+          "name": "1995年普查·DID密度"
+        }
+      }
+    },
+    {
+      "id": "population-2000",
+      "type": "geojson",
+      "renderer": "population",
+      "censusYear": 2000,
+      "name": "2000 census · DID density",
+      "group": "Population density",
+      "pages": [
+        "population"
+      ],
+      "url": "data/population-2000.geojson",
+      "color": "#fd8d3c",
+      "opacity": 1,
+      "credit": "MLIT A16 / Statistics Bureau · census DID district averages",
+      "translations": {
+        "JP": {
+          "name": "2000年国勢調査・DID密度"
+        },
+        "CN": {
+          "name": "2000年普查·DID密度"
+        }
+      }
+    },
+    {
+      "id": "population-2005",
+      "type": "geojson",
+      "renderer": "population",
+      "censusYear": 2005,
+      "name": "2005 census · DID density",
+      "group": "Population density",
+      "pages": [
+        "population"
+      ],
+      "url": "data/population-2005.geojson",
+      "color": "#fd8d3c",
+      "opacity": 1,
+      "credit": "MLIT A16 / Statistics Bureau · census DID district averages",
+      "translations": {
+        "JP": {
+          "name": "2005年国勢調査・DID密度"
+        },
+        "CN": {
+          "name": "2005年普查·DID密度"
+        }
+      }
+    },
+    {
+      "id": "population-2010",
+      "type": "geojson",
+      "renderer": "population",
+      "censusYear": 2010,
+      "name": "2010 census · DID density",
+      "group": "Population density",
+      "pages": [
+        "population"
+      ],
+      "url": "data/population-2010.geojson",
+      "color": "#fd8d3c",
+      "opacity": 1,
+      "credit": "MLIT A16 / Statistics Bureau · census DID district averages",
+      "translations": {
+        "JP": {
+          "name": "2010年国勢調査・DID密度"
+        },
+        "CN": {
+          "name": "2010年普查·DID密度"
+        }
+      }
+    },
+    {
+      "id": "population-2015",
+      "type": "geojson",
+      "renderer": "population",
+      "censusYear": 2015,
+      "name": "2015 census · DID density",
+      "group": "Population density",
+      "pages": [
+        "population"
+      ],
+      "url": "data/population-2015.geojson",
+      "color": "#fd8d3c",
+      "opacity": 1,
+      "credit": "MLIT A16 / Statistics Bureau · census DID district averages",
+      "translations": {
+        "JP": {
+          "name": "2015年国勢調査・DID密度"
+        },
+        "CN": {
+          "name": "2015年普查·DID密度"
+        }
+      }
+    },
+    {
+      "id": "population-2020",
+      "type": "geojson",
+      "renderer": "population",
+      "censusYear": 2020,
+      "name": "2020 census · DID density",
+      "group": "Population density",
+      "pages": [
+        "population"
+      ],
+      "url": "data/population-2020.geojson",
+      "color": "#fd8d3c",
+      "opacity": 1,
+      "credit": "MLIT A16 / Statistics Bureau · census DID district averages",
+      "translations": {
+        "JP": {
+          "name": "2020年国勢調査・DID密度"
+        },
+        "CN": {
+          "name": "2020年普查·DID密度"
+        }
+      }
+    },
+    {
+      "id": "rivers-major",
+      "type": "geojson",
+      "renderer": "water",
+      "name": "Named rivers · 2009",
+      "group": "Water systems",
+      "pages": [
+        "water"
+      ],
+      "url": "data/rivers.geojson",
+      "color": "#237eae",
+      "opacity": 1,
+      "credit": "MLIT · original edition retained · noncommercial source conditions where applicable",
+      "translations": {
+        "JP": {
+          "name": "名称付き河川・2009年"
+        },
+        "CN": {
+          "name": "有名河流·2009年"
+        }
+      },
+      "named": true
+    },
+    {
+      "id": "rivers-minor",
+      "type": "geojson",
+      "renderer": "water",
+      "name": "Unnamed tributaries · 2009",
+      "group": "Water systems",
+      "pages": [
+        "water"
+      ],
+      "url": "data/rivers.geojson",
+      "color": "#75a7b9",
+      "opacity": 1,
+      "credit": "MLIT · original edition retained · noncommercial source conditions where applicable",
+      "translations": {
+        "JP": {
+          "name": "名称不明の支流・2009年"
+        },
+        "CN": {
+          "name": "无名支流·2009年"
+        }
+      },
+      "named": false
+    },
+    {
+      "id": "lakes",
+      "type": "geojson",
+      "renderer": "water",
+      "name": "Lakes & reservoirs · 2005",
+      "group": "Water systems",
+      "pages": [
+        "water"
+      ],
+      "url": "data/lakes.geojson",
+      "color": "#3e91b8",
+      "opacity": 1,
+      "credit": "MLIT · original edition retained · noncommercial source conditions where applicable",
+      "translations": {
+        "JP": {
+          "name": "湖沼・貯水池・2005年"
+        },
+        "CN": {
+          "name": "湖泊及水库·2005年"
+        }
+      }
+    },
+    {
+      "id": "dams",
+      "type": "geojson",
+      "renderer": "water",
+      "name": "Dams · 2014 inventory",
+      "group": "Water systems",
+      "pages": [
+        "water"
+      ],
+      "url": "data/dams.geojson",
+      "color": "#19577e",
+      "opacity": 1,
+      "credit": "MLIT · original edition retained · noncommercial source conditions where applicable",
+      "translations": {
+        "JP": {
+          "name": "ダム・2014年台帳"
+        },
+        "CN": {
+          "name": "水坝·2014年名录"
+        }
+      }
+    },
+    {
+      "id": "supply-areas",
+      "type": "geojson",
+      "renderer": "water",
+      "name": "Water-supply areas · 2010",
+      "group": "Water systems",
+      "pages": [
+        "water"
+      ],
+      "url": "data/supply-areas.geojson",
+      "color": "#568d68",
+      "opacity": 1,
+      "credit": "MLIT · original edition retained · noncommercial source conditions where applicable",
+      "translations": {
+        "JP": {
+          "name": "給水区域・2010年"
+        },
+        "CN": {
+          "name": "供水区域·2010年"
+        }
+      }
+    },
+    {
+      "id": "water-plants",
+      "type": "geojson",
+      "renderer": "water",
+      "name": "Water facilities · 2010",
+      "group": "Water systems",
+      "pages": [
+        "water"
+      ],
+      "url": "data/water-plants.geojson",
+      "color": "#774ca1",
+      "opacity": 1,
+      "credit": "MLIT · original edition retained · noncommercial source conditions where applicable",
+      "translations": {
+        "JP": {
+          "name": "浄水施設等・2010年"
+        },
+        "CN": {
+          "name": "供水设施·2010年"
+        }
+      }
+    },
+    {
+      "id": "historic-03",
+      "name": "Historical map · 1954–1956",
+      "type": "raster",
+      "url": "https://ktgis.net/kjmapw/kjtilemap/keihansin/03/{z}/{x}/{-y}.png",
+      "source": "qgis-historic-02",
+      "credit": "今昔マップ on the web",
+      "minNativeZoom": 8,
+      "maxNativeZoom": 16,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "旧版地形図・1954–1956"
+        },
+        "CN": {
+          "name": "历史地图·1954–1956"
+        }
+      }
+    },
+    {
+      "id": "historic-04",
+      "name": "Historical map · 1967–1970",
+      "type": "raster",
+      "url": "https://ktgis.net/kjmapw/kjtilemap/keihansin/04/{z}/{x}/{-y}.png",
+      "source": "qgis-historic-02",
+      "credit": "今昔マップ on the web",
+      "minNativeZoom": 8,
+      "maxNativeZoom": 16,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "旧版地形図・1967–1970"
+        },
+        "CN": {
+          "name": "历史地图·1967–1970"
+        }
+      }
+    },
+    {
+      "id": "historic-07",
+      "name": "Historical map · 1993–1997",
+      "type": "raster",
+      "url": "https://ktgis.net/kjmapw/kjtilemap/keihansin/07/{z}/{x}/{-y}.png",
+      "source": "qgis-historic-02",
+      "credit": "今昔マップ on the web",
+      "minNativeZoom": 8,
+      "maxNativeZoom": 16,
+      "opacity": 1,
+      "color": "#1c7880",
+      "pages": [
+        "home"
+      ],
+      "group": "Map images",
+      "defaultVisible": false,
+      "translations": {
+        "JP": {
+          "name": "旧版地形図・1993–1997"
+        },
+        "CN": {
+          "name": "历史地图·1993–1997"
+        }
+      }
+    }
+  ],
+  "features": [
+    {
+      "id": "event-ikuta-foundation",
+      "candidateId": 5,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "kobe-mura",
+      "year": 201,
+      "dateLabel": "201 · shrine tradition",
+      "title": "Ikuta Shrine founded",
+      "body": "The shrine gives 201 as its founding year. This is a religious tradition, not a verified date for Kobe’s first settlement. The pin marks today’s shrine.",
+      "location": "Ikuta Shrine today",
+      "locationNote": "Approximate location; not a surveyed historical site boundary.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.1902,
+          34.6941
+        ]
+      },
+      "color": "#aa6338",
+      "sources": [
+        {
+          "title": "Ikuta Shrine: shrine history",
+          "url": "https://ikutajinja.or.jp/history"
+        }
+      ],
+      "source": "Ikuta Shrine: shrine history",
+      "translations": {
+        "JP": {
+          "title": "生田神社の創建伝承",
+          "body": "神社は201年を創建年と伝えます。神戸の集落成立を確定する年代ではありません。ピンは現在の社地です。",
+          "dateLabel": "201年・創建伝承",
+          "location": "現在の生田神社",
+          "locationNote": "おおよその位置です。歴史的な敷地境界を示すものではありません。",
+          "imageCaption": "現在の姿です。当時の出来事の写真ではありません。"
+        },
+        "CN": {
+          "title": "生田神社创建传说",
+          "body": "神社传说创建于201年，并非神户最早聚落的考证年代。图钉标示今天的神社。",
+          "dateLabel": "201年·创建传说",
+          "location": "今天的生田神社",
+          "locationNote": "位置仅供参考，并非测绘的历史遗址边界。",
+          "imageCaption": "今天的景象，并非历史事件发生时的照片。"
+        }
+      },
+      "media": {
+        "title": "File:Ikuta Shrine Mar 2025 01.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Ikuta_Shrine_Mar_2025_01.jpg/960px-Ikuta_Shrine_Mar_2025_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Ikuta_Shrine_Mar_2025_01.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "artist": "Epicgenius",
+        "description": "Ikuta Shrine in Kobe, photographed in March 2025",
+        "date": "2025-03-19 16:19:06",
+        "path": "data/event-media/ikuta-shrine.jpg",
+        "caption": "Present-day view; not a photograph from the historical event.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Present-day view; not a photograph from the historical event."
+    },
+    {
+      "id": "event-nishimotomezuka",
+      "candidateId": 6,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "kobe-mura",
+      "year": 275,
+      "dateLabel": "Late 3rd century · approximate",
+      "title": "Nishimotomezuka tomb",
+      "body": "This large early burial mound shows connections with the Yamato political centre. Its placement on the timeline represents the late third century, not an exact construction year.",
+      "location": "Nishimotomezuka, Nada",
+      "locationNote": "Approximate location; not a surveyed historical site boundary.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.2372,
+          34.7056
+        ]
+      },
+      "color": "#aa6338",
+      "sources": [
+        {
+          "title": "Kobe City: burial mounds",
+          "url": "https://kobe-rekishiisan.city.kobe.lg.jp/about/kofun/"
+        }
+      ],
+      "source": "Kobe City: burial mounds",
+      "translations": {
+        "JP": {
+          "title": "西求女塚古墳",
+          "body": "大型古墳は大和の政治勢力とのつながりを示します。年表の位置は3世紀後半の目安で、正確な築造年ではありません。",
+          "dateLabel": "3世紀後半・概略",
+          "location": "灘区・西求女塚",
+          "locationNote": "おおよその位置です。歴史的な敷地境界を示すものではありません。",
+          "imageCaption": "現在の姿です。当時の出来事の写真ではありません。"
+        },
+        "CN": {
+          "title": "西求女塚古坟",
+          "body": "这座早期大型墓葬体现了与大和政治中心的联系。时间轴按3世纪后期示意，并非精确建造年份。",
+          "dateLabel": "3世纪后期·约",
+          "location": "滩区西求女塚",
+          "locationNote": "位置仅供参考，并非测绘的历史遗址边界。",
+          "imageCaption": "今天的景象，并非历史事件发生时的照片。"
+        }
+      },
+      "media": {
+        "title": "File:Nishimotomezuka Kofun01s3.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Nishimotomezuka_Kofun01s3.jpg/960px-Nishimotomezuka_Kofun01s3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Nishimotomezuka_Kofun01s3.jpg",
+        "license": "CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+        "artist": "663highland",
+        "description": "Nishimotomezuka Tomb in Kobe, Hyogo prefecture, Japan.",
+        "date": "2005-11-20",
+        "path": "data/event-media/nishimotomezuka.jpg",
+        "caption": "Present-day view; not a photograph from the historical event.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Present-day view; not a photograph from the historical event."
+    },
+    {
+      "id": "event-goshikizuka",
+      "candidateId": 7,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "kobe-mura",
+      "year": 375,
+      "dateLabel": "Late 4th century · approximate",
+      "title": "Goshikizuka tomb",
+      "body": "A major burial mound overlooks the Akashi Strait. The date represents the late fourth century; it is not an exact construction year.",
+      "location": "Goshikizuka, Tarumi",
+      "locationNote": "Approximate location; not a surveyed historical site boundary.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.049,
+          34.629
+        ]
+      },
+      "color": "#aa6338",
+      "sources": [
+        {
+          "title": "Kobe City: burial mounds",
+          "url": "https://kobe-rekishiisan.city.kobe.lg.jp/about/kofun/"
+        }
+      ],
+      "source": "Kobe City: burial mounds",
+      "translations": {
+        "JP": {
+          "title": "五色塚古墳",
+          "body": "明石海峡を見下ろす大型古墳です。年代は4世紀後半の目安で、正確な築造年ではありません。",
+          "dateLabel": "4世紀後半・概略",
+          "location": "垂水区・五色塚",
+          "locationNote": "おおよその位置です。歴史的な敷地境界を示すものではありません。",
+          "imageCaption": "現在の姿です。当時の出来事の写真ではありません。"
+        },
+        "CN": {
+          "title": "五色塚古坟",
+          "body": "这座大型墓葬俯瞰明石海峡。时间按4世纪后期示意，并非精确建造年份。",
+          "dateLabel": "4世纪后期·约",
+          "location": "垂水区五色塚",
+          "locationNote": "位置仅供参考，并非测绘的历史遗址边界。",
+          "imageCaption": "今天的景象，并非历史事件发生时的照片。"
+        }
+      },
+      "media": {
+        "title": "File:Goshiki-zuka Kofun, zenkei-2.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Goshiki-zuka_Kofun%2C_zenkei-2.jpg/960px-Goshiki-zuka_Kofun%2C_zenkei-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Goshiki-zuka_Kofun,_zenkei-2.jpg",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "artist": "Saigen Jiro",
+        "description": "五色塚古墳 墳丘全景",
+        "date": "2016-07-10 10:28:02",
+        "path": "data/event-media/goshikizuka.jpg",
+        "caption": "Present-day view; not a photograph from the historical event.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Present-day view; not a photograph from the historical event."
+    },
+    {
+      "id": "event-ikuta-relocation",
+      "candidateId": 8,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "kobe-mura",
+      "year": 799,
+      "dateLabel": "799 · shrine history",
+      "title": "Flood and shrine relocation",
+      "body": "Shrine history links flooding at the earlier Isagoyama site to a move into Ikuta Forest. The highlighted area connects the earlier setting and today’s shrine.",
+      "location": "Isagoyama–Ikuta",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.187,
+              34.69
+            ],
+            [
+              135.207,
+              34.69
+            ],
+            [
+              135.207,
+              34.718
+            ],
+            [
+              135.187,
+              34.718
+            ],
+            [
+              135.187,
+              34.69
+            ]
+          ]
+        ]
+      },
+      "color": "#aa6338",
+      "sources": [
+        {
+          "title": "Ikuta Shrine: shrine history",
+          "url": "https://ikutajinja.or.jp/history"
+        }
+      ],
+      "source": "Ikuta Shrine: shrine history",
+      "translations": {
+        "JP": {
+          "title": "洪水と生田神社の移転",
+          "body": "社伝では砂山の洪水を機に生田の森へ移ったとされます。表示区域は旧地周辺と現在の神社を結ぶ概略です。",
+          "dateLabel": "799年・社伝",
+          "location": "砂山〜生田",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。",
+          "imageCaption": "現在の姿です。当時の出来事の写真ではありません。"
+        },
+        "CN": {
+          "title": "洪水与神社迁移",
+          "body": "神社记载称砂山发生洪水后迁至生田之森。区域示意原址附近与今天神社的联系。",
+          "dateLabel": "799年·神社记载",
+          "location": "砂山至生田",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。",
+          "imageCaption": "今天的景象，并非历史事件发生时的照片。"
+        }
+      },
+      "media": {
+        "title": "File:Ikuta Shrine Mar 2025 01.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Ikuta_Shrine_Mar_2025_01.jpg/960px-Ikuta_Shrine_Mar_2025_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Ikuta_Shrine_Mar_2025_01.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "artist": "Epicgenius",
+        "description": "Ikuta Shrine in Kobe, photographed in March 2025",
+        "date": "2025-03-19 16:19:06",
+        "path": "data/event-media/ikuta-shrine.jpg",
+        "caption": "Present-day view; not a photograph from the historical event.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Present-day view; not a photograph from the historical event."
+    },
+    {
+      "id": "event-kanbe-households",
+      "candidateId": 9,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "kobe-mura",
+      "year": 806,
+      "dateLabel": "806 · shrine history",
+      "title": "44 supporting households",
+      "body": "Ikuta Shrine records 44 households assigned to support it. Their name, kanbe, is linked by the shrine to the name Kobe.",
+      "location": "Ikuta Shrine vicinity",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.182,
+              34.688
+            ],
+            [
+              135.2,
+              34.688
+            ],
+            [
+              135.2,
+              34.7
+            ],
+            [
+              135.182,
+              34.7
+            ],
+            [
+              135.182,
+              34.688
+            ]
+          ]
+        ]
+      },
+      "color": "#aa6338",
+      "sources": [
+        {
+          "title": "Ikuta Shrine: shrine history",
+          "url": "https://ikutajinja.or.jp/history"
+        }
+      ],
+      "source": "Ikuta Shrine: shrine history",
+      "translations": {
+        "JP": {
+          "title": "神社を支えた44戸",
+          "body": "生田神社は奉仕する44戸が置かれたと伝え、その呼称「神戸」を地名の由来としています。",
+          "dateLabel": "806年・社伝",
+          "location": "生田神社周辺",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "供奉神社的44户",
+          "body": "生田神社记载有44户负责供奉，并将其名称“神户”与城市名称联系起来。",
+          "dateLabel": "806年·神社记载",
+          "location": "生田神社附近",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-kyogashima",
+      "candidateId": 10,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "kobe-mura",
+      "year": 1174,
+      "dateLabel": "1174",
+      "title": "Kiyomori expands the harbour",
+      "body": "Taira no Kiyomori’s Kyogashima works improved the harbour for trade. The marker covers the Hyogo waterfront generally; the medieval shoreline differed from today’s.",
+      "location": "Hyogo waterfront",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.155,
+              34.658
+            ],
+            [
+              135.18,
+              34.658
+            ],
+            [
+              135.18,
+              34.678
+            ],
+            [
+              135.155,
+              34.678
+            ],
+            [
+              135.155,
+              34.658
+            ]
+          ]
+        ]
+      },
+      "color": "#aa6338",
+      "sources": [
+        {
+          "title": "Kobe City: port chronology",
+          "url": "https://www.city.kobe.lg.jp/a74134/kurashi/access/harbor/rekishi.html"
+        },
+        {
+          "title": "Kobe City: medieval heritage",
+          "url": "https://kobe-rekishiisan.city.kobe.lg.jp/history/chusei/"
+        }
+      ],
+      "source": "Kobe City: port chronology; Kobe City: medieval heritage",
+      "translations": {
+        "JP": {
+          "title": "清盛による港の整備",
+          "body": "平清盛の経ヶ島築造で交易港が整備されました。表示は兵庫の海岸周辺で、中世の海岸線とは異なります。",
+          "dateLabel": "1174年",
+          "location": "兵庫の海岸",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "清盛扩建港湾",
+          "body": "平清盛修建经之岛以改善贸易港湾。区域为兵库海岸示意，中世纪海岸线与今天不同。",
+          "dateLabel": "1174年",
+          "location": "兵库海岸",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-fukuhara-capital",
+      "candidateId": 11,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "kobe-mura",
+      "year": 1180,
+      "dateLabel": "1180",
+      "title": "Fukuhara briefly becomes the capital",
+      "body": "The imperial court moved from Kyoto to Fukuhara, then returned in November. Port access briefly put this area at the centre of national politics.",
+      "location": "Hirano–Fukuhara",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.16,
+              34.681
+            ],
+            [
+              135.176,
+              34.681
+            ],
+            [
+              135.176,
+              34.703
+            ],
+            [
+              135.16,
+              34.703
+            ],
+            [
+              135.16,
+              34.681
+            ]
+          ]
+        ]
+      },
+      "color": "#aa6338",
+      "sources": [
+        {
+          "title": "Kobe City: medieval history, Nishi Ward",
+          "url": "https://www.city.kobe.lg.jp/k25836/kuyakusho/nishiku/shokai/introduction/history/03_chusei.html"
+        },
+        {
+          "title": "Kobe City: medieval heritage",
+          "url": "https://kobe-rekishiisan.city.kobe.lg.jp/history/chusei/"
+        }
+      ],
+      "source": "Kobe City: medieval history, Nishi Ward; Kobe City: medieval heritage",
+      "translations": {
+        "JP": {
+          "title": "福原への都の移転",
+          "body": "朝廷は京都から福原へ移り、同年11月に戻りました。港に近いこの地域が短期間、日本政治の中心となりました。",
+          "dateLabel": "1180年",
+          "location": "平野・福原周辺",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "短暂的福原都城",
+          "body": "朝廷从京都迁至福原，同年11月返回。靠近港口的这里短暂成为日本政治中心。",
+          "dateLabel": "1180年",
+          "location": "平野与福原附近",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-ichi-no-tani",
+      "candidateId": 12,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "kobe-mura",
+      "year": 1184,
+      "dateLabel": "1184",
+      "title": "Battle of Ichi-no-Tani",
+      "body": "Minamoto forces defeated the Taira. Fighting involved the coastal corridor from Suma toward Ikuta; the highlight is a broad setting, not a mapped battlefront.",
+      "location": "Suma–Ikuta coastal corridor",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.098,
+              34.638
+            ],
+            [
+              135.202,
+              34.638
+            ],
+            [
+              135.202,
+              34.702
+            ],
+            [
+              135.098,
+              34.702
+            ],
+            [
+              135.098,
+              34.638
+            ]
+          ]
+        ]
+      },
+      "color": "#aa6338",
+      "sources": [
+        {
+          "title": "Kobe City: medieval history, Nishi Ward",
+          "url": "https://www.city.kobe.lg.jp/k25836/kuyakusho/nishiku/shokai/introduction/history/03_chusei.html"
+        }
+      ],
+      "source": "Kobe City: medieval history, Nishi Ward",
+      "translations": {
+        "JP": {
+          "title": "一ノ谷の戦い",
+          "body": "源氏が平氏を破りました。戦いは須磨から生田方面の海岸沿いに及び、表示は戦線ではなく広い舞台の概略です。",
+          "dateLabel": "1184年",
+          "location": "須磨〜生田の海岸沿い",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。",
+          "imageCaption": "17世紀半ばの絵画。戦いの数世紀後に描かれたものです。"
+        },
+        "CN": {
+          "title": "一之谷之战",
+          "body": "源氏击败平氏。战斗涉及须磨至生田方向的沿海地带；高亮为背景区域，并非测绘的战线。",
+          "dateLabel": "1184年",
+          "location": "须磨至生田沿海",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。",
+          "imageCaption": "17世纪中期的绘画，创作于战斗数百年后。"
+        }
+      },
+      "media": {
+        "title": "File:Battle of Ichi-no-Tani Folding Screen by Kano School.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Battle_of_Ichi-no-Tani_Folding_Screen_by_Kano_School.jpg/960px-Battle_of_Ichi-no-Tani_Folding_Screen_by_Kano_School.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Battle_of_Ichi-no-Tani_Folding_Screen_by_Kano_School.jpg",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "artist": "Kano School",
+        "description": "The Battle of Ichi-no-Tani [right of a pair of Scenes from the Tale of the Heike], mid 17th century. These screens illustrate two battles of the epochal Genpei War (1180–85) as narrated in the Tales of the Heike, an epic semihistorical account of two rival clans’ fight for control of Japan, written in the early 1200s. Each screen narrates a single battle through a number of small episodes divided and framed by gold clouds, landscape elements, and architectural spaces. The right screen shows scenes related to the Battle of Ichi-no-Tani (March 20, 1184), during which the Minamoto clan, identified by the white banners they carry, made a daring attack on the rival Taira clan at a Taira stronghold. The left screen shows the Battle of Yashima (March 22, 1185), another defeat for the Taira. The devastating war came to an end only a month later with the victory of the Minamoto, who took the title shogun, thus becoming Japan’s first military rulers.",
+        "date": "Circa 1650",
+        "path": "data/event-media/ichi-no-tani.jpg",
+        "caption": "Mid-17th-century painting of the battle, made centuries later.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Mid-17th-century painting of the battle, made centuries later."
+    },
+    {
+      "id": "event-minatogawa-battle",
+      "candidateId": 13,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "kobe-mura",
+      "year": 1336,
+      "dateLabel": "1336",
+      "title": "Battle of Minatogawa",
+      "body": "Ashikaga Takauji defeated forces supporting Emperor Go-Daigo. Minatogawa Shrine commemorates Kusunoki Masashige; the shrine is a later memorial, not the whole battlefield.",
+      "location": "Minatogawa–Wada Cape",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.153,
+              34.652
+            ],
+            [
+              135.181,
+              34.652
+            ],
+            [
+              135.181,
+              34.694
+            ],
+            [
+              135.153,
+              34.694
+            ],
+            [
+              135.153,
+              34.652
+            ]
+          ]
+        ]
+      },
+      "color": "#aa6338",
+      "sources": [
+        {
+          "title": "Kobe City: medieval history, Nishi Ward",
+          "url": "https://www.city.kobe.lg.jp/k25836/kuyakusho/nishiku/shokai/introduction/history/03_chusei.html"
+        },
+        {
+          "title": "Kobe City: Takauji and Masashige",
+          "url": "https://www.city.kobe.lg.jp/e90232/kuyakusho/hyogoku/shoukai/rekishi/history_4.html"
+        }
+      ],
+      "source": "Kobe City: medieval history, Nishi Ward; Kobe City: Takauji and Masashige",
+      "translations": {
+        "JP": {
+          "title": "湊川の戦い",
+          "body": "足利尊氏が後醍醐天皇側の軍を破りました。湊川神社は楠木正成を祀る後世の記念地で、戦場全体ではありません。",
+          "dateLabel": "1336年",
+          "location": "湊川・和田岬周辺",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。",
+          "imageCaption": "現在の姿です。当時の出来事の写真ではありません。"
+        },
+        "CN": {
+          "title": "凑川之战",
+          "body": "足利尊氏击败支持后醍醐天皇的军队。凑川神社是后世纪念楠木正成的场所，并非整个战场。",
+          "dateLabel": "1336年",
+          "location": "凑川与和田岬",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。",
+          "imageCaption": "今天的景象，并非历史事件发生时的照片。"
+        }
+      },
+      "media": {
+        "title": "File:Minatogawa Shrine in July 2022.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Minatogawa_Shrine_in_July_2022.jpg/960px-Minatogawa_Shrine_in_July_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Minatogawa_Shrine_in_July_2022.jpg",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "artist": "k_tweet",
+        "description": "Minatogawa Shrine in July 2022",
+        "date": "2022-07-29",
+        "path": "data/event-media/minatogawa-shrine.jpg",
+        "caption": "Present-day view; not a photograph from the historical event.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Present-day view; not a photograph from the historical event."
+    },
+    {
+      "id": "event-medieval-port-ledger",
+      "candidateId": 14,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "kobe-mura",
+      "year": 1445,
+      "dateLabel": "1445",
+      "title": "A busy medieval port",
+      "body": "A surviving port ledger records roughly 5,000 ship entries in a year, showing Hyogo’s role in coastal trade.",
+      "location": "Hyogo-tsu",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.155,
+              34.658
+            ],
+            [
+              135.18,
+              34.658
+            ],
+            [
+              135.18,
+              34.678
+            ],
+            [
+              135.155,
+              34.678
+            ],
+            [
+              135.155,
+              34.658
+            ]
+          ]
+        ]
+      },
+      "color": "#aa6338",
+      "sources": [
+        {
+          "title": "Kobe City: medieval heritage",
+          "url": "https://kobe-rekishiisan.city.kobe.lg.jp/history/chusei/"
+        }
+      ],
+      "source": "Kobe City: medieval heritage",
+      "translations": {
+        "JP": {
+          "title": "にぎわう中世の港",
+          "body": "残る入船帳には年間約5,000隻が記録され、兵庫津の海上交易の役割がわかります。",
+          "dateLabel": "1445年",
+          "location": "兵庫津",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "繁忙的中世纪港口",
+          "body": "留存的入港账簿记录一年约5,000艘船，展现兵库津在沿海贸易中的作用。",
+          "dateLabel": "1445年",
+          "location": "兵库津",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-hanakuma-castle",
+      "candidateId": 15,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "kobe-mura",
+      "year": 1575,
+      "dateLabel": "Late 16th century · approximate",
+      "title": "Hanakuma Castle and regional conflict",
+      "body": "Hanakuma Castle linked the harbour area to late-sixteenth-century warfare. This date marks the period, not a verified founding year; the pin marks the modern castle park.",
+      "location": "Hanakuma Castle Park",
+      "locationNote": "Approximate location; not a surveyed historical site boundary.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.1805,
+          34.689
+        ]
+      },
+      "color": "#aa6338",
+      "sources": [
+        {
+          "title": "Kobe City: early modern heritage",
+          "url": "https://kobe-rekishiisan.city.kobe.lg.jp/history/kinsei/"
+        }
+      ],
+      "source": "Kobe City: early modern heritage",
+      "translations": {
+        "JP": {
+          "title": "花隈城と地域の争い",
+          "body": "花隈城は16世紀後半の地域の争いと港を結びました。年代は時期の目安で、ピンは現在の城址公園です。",
+          "dateLabel": "16世紀後半・概略",
+          "location": "花隈城址公園",
+          "locationNote": "おおよその位置です。歴史的な敷地境界を示すものではありません。",
+          "imageCaption": "現在の姿です。当時の出来事の写真ではありません。"
+        },
+        "CN": {
+          "title": "花隈城与地区战争",
+          "body": "花隈城体现港湾地区与16世纪后期战争的关系。年份仅表示时期，图钉为今天的城址公园。",
+          "dateLabel": "16世纪后期·约",
+          "location": "花隈城址公园",
+          "locationNote": "位置仅供参考，并非测绘的历史遗址边界。",
+          "imageCaption": "今天的景象，并非历史事件发生时的照片。"
+        }
+      },
+      "media": {
+        "title": "File:Hanakuma castle01s3200.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Hanakuma_castle01s3200.jpg/960px-Hanakuma_castle01s3200.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Hanakuma_castle01s3200.jpg",
+        "license": "CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+        "artist": "663highland",
+        "description": "Hanakuma Castle in Kobe, Hyogo prefecture, Japan",
+        "date": "2007-03-21",
+        "path": "data/event-media/hanakuma-castle.jpg",
+        "caption": "Present-day view; not a photograph from the historical event.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Present-day view; not a photograph from the historical event."
+    },
+    {
+      "id": "event-ogo-castle",
+      "candidateId": 15,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "kobe-mura",
+      "year": 1575,
+      "dateLabel": "Late 16th century · approximate",
+      "title": "Ogo Castle and inland routes",
+      "body": "Ogo Castle shows the inland side of regional conflict. The timeline date represents the late sixteenth century, not an exact building date.",
+      "location": "Ogo, Kita Ward",
+      "locationNote": "Approximate location; not a surveyed historical site boundary.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.096605,
+          34.812539
+        ]
+      },
+      "color": "#aa6338",
+      "sources": [
+        {
+          "title": "Kobe City: early modern heritage",
+          "url": "https://kobe-rekishiisan.city.kobe.lg.jp/history/kinsei/"
+        },
+        {
+          "title": "CODH: Nihon Rekishi Chimei Taikei location dataset, Ogo Castle (CC BY 4.0)",
+          "url": "https://geoshape.ex.nii.ac.jp/nrct-poi/resource/29/290000032100.html"
+        }
+      ],
+      "source": "Kobe City: early modern heritage",
+      "translations": {
+        "JP": {
+          "title": "淡河城と内陸の道",
+          "body": "淡河城は地域の争いの内陸側の拠点です。年代は16世紀後半の目安で、正確な築城年ではありません。",
+          "dateLabel": "16世紀後半・概略",
+          "location": "北区・淡河",
+          "locationNote": "おおよその位置です。歴史的な敷地境界を示すものではありません。"
+        },
+        "CN": {
+          "title": "淡河城与内陆路线",
+          "body": "淡河城体现地区战争的内陆一面。时间按16世纪后期示意，并非精确建造年份。",
+          "dateLabel": "16世纪后期·约",
+          "location": "北区淡河",
+          "locationNote": "位置仅供参考，并非测绘的历史遗址边界。"
+        }
+      }
+    },
+    {
+      "id": "event-keicho-earthquake",
+      "candidateId": 16,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "kobe-mura",
+      "year": 1596,
+      "dateLabel": "1596",
+      "title": "Keicho-Fushimi earthquake",
+      "body": "Temple records and archaeological traces document earthquake damage at Suma, Nada and Sumiyoshi, with effects also recorded at Arima. The shaded coastal area is illustrative.",
+      "location": "Suma–Nada–Sumiyoshi; also Arima",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.1,
+              34.65
+            ],
+            [
+              135.31,
+              34.65
+            ],
+            [
+              135.31,
+              34.72
+            ],
+            [
+              135.1,
+              34.72
+            ],
+            [
+              135.1,
+              34.65
+            ]
+          ]
+        ]
+      },
+      "color": "#aa6338",
+      "sources": [
+        {
+          "title": "Kobe City: early modern heritage",
+          "url": "https://kobe-rekishiisan.city.kobe.lg.jp/history/kinsei/"
+        }
+      ],
+      "source": "Kobe City: early modern heritage",
+      "translations": {
+        "JP": {
+          "title": "慶長伏見地震",
+          "body": "須磨の寺院記録や灘・住吉の遺跡に被害が残り、有馬にも記録があります。海岸側の表示区域は概略です。",
+          "dateLabel": "1596年",
+          "location": "須磨・灘・住吉、ほか有馬",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "庆长伏见地震",
+          "body": "须磨寺院记录及滩、住吉的考古遗迹显示地震损害，有马也有记载。沿海高亮仅为示意。",
+          "dateLabel": "1596年",
+          "location": "须磨、滩、住吉及有马",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-edo-sake-waterpower",
+      "candidateId": 17,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "kobe-mura",
+      "year": 1650,
+      "dateLabel": "Edo period · representative position",
+      "title": "Sake and water-powered industry",
+      "body": "Streams at the Rokko foothills powered production, while coastal shipping carried goods to other markets. Nada became known for sake. This is a period of change, not one dated opening.",
+      "location": "Nada sake districts",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.221,
+              34.696
+            ],
+            [
+              135.287,
+              34.696
+            ],
+            [
+              135.287,
+              34.725
+            ],
+            [
+              135.221,
+              34.725
+            ],
+            [
+              135.221,
+              34.696
+            ]
+          ]
+        ]
+      },
+      "color": "#aa6338",
+      "sources": [
+        {
+          "title": "Kobe City: early modern heritage",
+          "url": "https://kobe-rekishiisan.city.kobe.lg.jp/history/kinsei/"
+        }
+      ],
+      "source": "Kobe City: early modern heritage",
+      "translations": {
+        "JP": {
+          "title": "酒造と水力産業",
+          "body": "六甲山麓の川が生産を支え、海運が商品を運びました。灘は酒造で知られるようになりました。単一の開業年ではなく時代の変化です。",
+          "dateLabel": "江戸時代・代表位置",
+          "location": "灘の酒造地域",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "酿酒与水力产业",
+          "body": "六甲山麓溪流为生产提供动力，海运将商品运往外地。滩以酿酒闻名。这是时期变化，并非某次开业。",
+          "dateLabel": "江户时期·示意位置",
+          "location": "滩酿酒地区",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-naval-school",
+      "candidateId": 18,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "kobe-mura",
+      "year": 1864,
+      "dateLabel": "1864",
+      "title": "Modern naval training school",
+      "body": "A naval training school opened as Japan confronted foreign naval power. The pin marks its waterfront vicinity, not a verified campus footprint.",
+      "location": "Near Higashi Yuenchi",
+      "locationNote": "Approximate location; not a surveyed historical site boundary.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.195,
+          34.685
+        ]
+      },
+      "color": "#aa6338",
+      "sources": [
+        {
+          "title": "Kobe City: port chronology",
+          "url": "https://www.city.kobe.lg.jp/a74134/kurashi/access/harbor/rekishi.html"
+        }
+      ],
+      "source": "Kobe City: port chronology",
+      "translations": {
+        "JP": {
+          "title": "神戸海軍操練所",
+          "body": "外国の海軍力に対応する時期に操練所が開かれました。ピンは海岸近くの概略位置で、敷地境界は未確認です。",
+          "dateLabel": "1864年",
+          "location": "東遊園地付近",
+          "locationNote": "おおよその位置です。歴史的な敷地境界を示すものではありません。"
+        },
+        "CN": {
+          "title": "神户海军训练所",
+          "body": "日本应对外国海军力量时开设训练所。图钉为海岸附近示意位置，并非确认的校园范围。",
+          "dateLabel": "1864年",
+          "location": "东游园地附近",
+          "locationNote": "位置仅供参考，并非测绘的历史遗址边界。"
+        }
+      }
+    },
+    {
+      "id": "event-port-opens",
+      "candidateId": 19,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "port-opening",
+      "year": 1868,
+      "dateLabel": "1 January 1868 · Gregorian",
+      "title": "Kobe opens to foreign trade",
+      "body": "Opening the port connected Kobe directly to international trade. The foreign settlement brought trading firms, new streets and new cultural connections.",
+      "location": "Port and foreign settlement",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.177,
+              34.673
+            ],
+            [
+              135.21,
+              34.673
+            ],
+            [
+              135.21,
+              34.692
+            ],
+            [
+              135.177,
+              34.692
+            ],
+            [
+              135.177,
+              34.673
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: port opening",
+          "url": "https://www.city.kobe.lg.jp/culture/modern_history/archive/history_01.html"
+        },
+        {
+          "title": "Kobe City: modern heritage",
+          "url": "https://kobe-rekishiisan.city.kobe.lg.jp/history/kindai/"
+        }
+      ],
+      "source": "Kobe City: port opening; Kobe City: modern heritage",
+      "translations": {
+        "JP": {
+          "title": "神戸港の開港",
+          "body": "開港で神戸は国際貿易へ直接つながりました。外国人居留地に商館や街路が整い、新しい文化も入りました。",
+          "dateLabel": "1868年1月1日・西暦",
+          "location": "港・外国人居留地",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "神户港对外开放",
+          "body": "开港使神户直接融入国际贸易。外国人居留地引入商行、新街道和文化联系。",
+          "dateLabel": "1868年1月1日・西暦",
+          "location": "港口与外国人居留地",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-kobe-incident",
+      "candidateId": 20,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "port-opening",
+      "year": 1868,
+      "dateLabel": "1868 · historical calendar date not converted",
+      "title": "Kobe Incident",
+      "body": "A clash between Bizen troops and foreigners near Sannomiya Shrine escalated into foreign occupation of the settlement and a diplomatic crisis.",
+      "location": "Sannomiya Shrine vicinity",
+      "locationNote": "Approximate location; not a surveyed historical site boundary.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.1891,
+          34.688
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: Kobe Incident",
+          "url": "https://www.city.kobe.lg.jp/culture/modern_history/archive/detail/history_02.html"
+        }
+      ],
+      "source": "Kobe City: Kobe Incident",
+      "translations": {
+        "JP": {
+          "title": "神戸事件",
+          "body": "三宮神社付近で備前藩兵と外国人が衝突し、居留地の占拠と外交問題に発展しました。",
+          "dateLabel": "1868年・旧暦の日付未換算",
+          "location": "三宮神社付近",
+          "locationNote": "おおよその位置です。歴史的な敷地境界を示すものではありません。",
+          "imageCaption": "現在の姿です。当時の出来事の写真ではありません。"
+        },
+        "CN": {
+          "title": "神户事件",
+          "body": "备前藩士兵与外国人在三宫神社附近冲突，继而发生居留地占领和外交危机。",
+          "dateLabel": "1868年·未换算旧历日期",
+          "location": "三宫神社附近",
+          "locationNote": "位置仅供参考，并非测绘的历史遗址边界。",
+          "imageCaption": "今天的景象，并非历史事件发生时的照片。"
+        }
+      },
+      "media": {
+        "title": "File:Sannomiya Shrine - panoramio.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Sannomiya_Shrine_-_panoramio.jpg/960px-Sannomiya_Shrine_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Sannomiya_Shrine_-_panoramio.jpg",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "artist": "DVMG",
+        "description": "Sannomiya Shrine",
+        "date": "15 March 2010 (original upload date)",
+        "path": "data/event-media/sannomiya-shrine.jpg",
+        "caption": "Present-day view; not a photograph from the historical event.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Present-day view; not a photograph from the historical event."
+    },
+    {
+      "id": "event-ikuta-river-diversion",
+      "candidateId": 21,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "port-opening",
+      "year": 1871,
+      "dateLabel": "1871",
+      "title": "Ikuta River diverted",
+      "body": "Moving the river east freed its former bed for roads and building land. Today’s Flower Road follows the old river corridor.",
+      "location": "Flower Road / new Ikuta River",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.194,
+            34.686
+          ],
+          [
+            135.193,
+            34.709
+          ],
+          [
+            135.201,
+            34.709
+          ],
+          [
+            135.206,
+            34.686
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: Ikuta River",
+          "url": "https://www.city.kobe.lg.jp/a43553/kurashi/machizukuri/river/ikuta.html"
+        }
+      ],
+      "source": "Kobe City: Ikuta River",
+      "translations": {
+        "JP": {
+          "title": "生田川の付け替え",
+          "body": "川を東へ移し、旧河道は道路や宅地になりました。現在のフラワーロードは旧河道に沿っています。",
+          "dateLabel": "1871年",
+          "location": "フラワーロード・新生田川",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "生田川改道",
+          "body": "河流向东改道后，旧河道用于道路和建设。今天的Flower Road沿旧河道延伸。",
+          "dateLabel": "1871年",
+          "location": "Flower Road与新生田川",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-kobe-osaka-rail",
+      "candidateId": 22,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "port-opening",
+      "year": 1874.3561643835617,
+      "dateLabel": "11 May 1874",
+      "title": "Railway connects Kobe and Osaka",
+      "body": "Rail made Kobe’s port part of a larger regional transport system. The line marks the Kobe end of the corridor, not the historical track alignment.",
+      "location": "Kobe Station and eastward corridor",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.1785,
+            34.679
+          ],
+          [
+            135.189,
+            34.689
+          ],
+          [
+            135.222,
+            34.706
+          ],
+          [
+            135.256,
+            34.715
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: modern heritage",
+          "url": "https://kobe-rekishiisan.city.kobe.lg.jp/history/kindai/"
+        }
+      ],
+      "source": "Kobe City: modern heritage",
+      "translations": {
+        "JP": {
+          "title": "神戸〜大阪の鉄道開通",
+          "body": "鉄道で港は広域の交通網につながりました。線は神戸側の概略で、当時の正確な線路位置ではありません。",
+          "dateLabel": "1874年5月11日",
+          "location": "神戸駅から東への経路",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。",
+          "imageCaption": "現在の姿です。当時の出来事の写真ではありません。"
+        },
+        "CN": {
+          "title": "神户至大阪铁路开通",
+          "body": "铁路使港口加入更大的地区运输网络。线条示意神户一端，并非历史轨道的精确位置。",
+          "dateLabel": "1874年5月11日",
+          "location": "神户站及向东通道",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。",
+          "imageCaption": "今天的景象，并非历史事件发生时的照片。"
+        }
+      },
+      "media": {
+        "title": "File:Kobe station north side.JPG",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Kobe_station_north_side.JPG/960px-Kobe_station_north_side.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Kobe_station_north_side.JPG",
+        "license": "CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+        "artist": "Tomomarusan",
+        "description": "Kobe station",
+        "date": "2005-05-19",
+        "path": "data/event-media/kobe-station.jpg",
+        "caption": "Present-day view; not a photograph from the historical event.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Present-day view; not a photograph from the historical event."
+    },
+    {
+      "id": "event-city-government",
+      "candidateId": 23,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "early-city",
+      "year": 1889,
+      "dateLabel": "1889",
+      "title": "Kobe becomes a city",
+      "body": "Municipal government began as the trading town grew. The highlight shows the central urban setting, not the legal boundary of the 1889 city.",
+      "location": "Central Kobe",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.15,
+              34.662
+            ],
+            [
+              135.217,
+              34.662
+            ],
+            [
+              135.217,
+              34.715
+            ],
+            [
+              135.15,
+              34.715
+            ],
+            [
+              135.15,
+              34.662
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: port chronology",
+          "url": "https://www.city.kobe.lg.jp/a74134/kurashi/access/harbor/rekishi.html"
+        }
+      ],
+      "source": "Kobe City: port chronology",
+      "translations": {
+        "JP": {
+          "title": "神戸市の成立",
+          "body": "交易の町が成長する中、市政が始まりました。表示は中心市街地の概略で、1889年の行政境界ではありません。",
+          "dateLabel": "1889年",
+          "location": "神戸中心部",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "神户市成立",
+          "body": "贸易城镇扩张过程中，市政建立。高亮为中心城区示意，并非1889年法定市界。",
+          "dateLabel": "1889年",
+          "location": "神户中心城区",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-minatogawa-flood",
+      "candidateId": 24,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "early-city",
+      "year": 1896,
+      "dateLabel": "1896",
+      "title": "Flood prompts river changes",
+      "body": "A destructive flood strengthened calls to divert Minatogawa. The old raised channel obstructed the growing city and exposed nearby districts to flooding.",
+      "location": "Old Minatogawa corridor",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.163,
+              34.67
+            ],
+            [
+              135.174,
+              34.67
+            ],
+            [
+              135.174,
+              34.699
+            ],
+            [
+              135.163,
+              34.699
+            ],
+            [
+              135.163,
+              34.67
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: Minatogawa tunnel",
+          "url": "https://www.city.kobe.lg.jp/a83166/kanko/bunka/bunkazai/history/isan/minatogawazuidou.html"
+        }
+      ],
+      "source": "Kobe City: Minatogawa tunnel",
+      "translations": {
+        "JP": {
+          "title": "洪水と湊川改修",
+          "body": "洪水を受け、湊川の付け替えが求められました。天井川は市街地の拡大を妨げ、周辺に洪水の危険をもたらしました。",
+          "dateLabel": "1896年",
+          "location": "旧湊川周辺",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "洪水推动河道改造",
+          "body": "破坏性洪水加强了凑川改道的诉求。高于周边的旧河道阻碍城市扩张，也增加附近洪水风险。",
+          "dateLabel": "1896年",
+          "location": "旧凑川通道",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-minatogawa-tunnel",
+      "candidateId": 24,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "early-city",
+      "year": 1901,
+      "dateLabel": "1901",
+      "title": "Minatogawa tunnel diverts the river",
+      "body": "A tunnel carried the river through Egeyama. The former channel became parks and urban land, helping Shinkaichi grow as an entertainment district.",
+      "location": "Minatogawa tunnel",
+      "locationNote": "Approximate location; not a surveyed historical site boundary.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.163,
+          34.685
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: Minatogawa tunnel",
+          "url": "https://www.city.kobe.lg.jp/a83166/kanko/bunka/bunkazai/history/isan/minatogawazuidou.html"
+        },
+        {
+          "title": "Kobe City: modern heritage",
+          "url": "https://kobe-rekishiisan.city.kobe.lg.jp/history/kindai/"
+        }
+      ],
+      "source": "Kobe City: Minatogawa tunnel; Kobe City: modern heritage",
+      "translations": {
+        "JP": {
+          "title": "湊川隧道の完成",
+          "body": "隧道で川を会下山に通しました。旧河道は公園や市街地になり、新開地の繁華街の成長につながりました。",
+          "dateLabel": "1901年",
+          "location": "湊川隧道",
+          "locationNote": "おおよその位置です。歴史的な敷地境界を示すものではありません。"
+        },
+        "CN": {
+          "title": "凑川隧道完成",
+          "body": "隧道将河水引过会下山。旧河道改作公园和城市用地，促进新开地娱乐街区发展。",
+          "dateLabel": "1901年",
+          "location": "凑川隧道",
+          "locationNote": "位置仅供参考，并非测绘的历史遗址边界。"
+        }
+      }
+    },
+    {
+      "id": "event-hyogo-canal",
+      "candidateId": 25,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "early-city",
+      "year": 1896,
+      "dateLabel": "1896–1899",
+      "title": "Hyogo Canal built",
+      "body": "Construction began in 1896 and finished in 1899, reshaping shipping routes around the Hyogo waterfront.",
+      "location": "Hyogo Canal",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.17,
+            34.662
+          ],
+          [
+            135.163,
+            34.665
+          ],
+          [
+            135.158,
+            34.677
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: port chronology",
+          "url": "https://www.city.kobe.lg.jp/a74134/kurashi/access/harbor/rekishi.html"
+        }
+      ],
+      "source": "Kobe City: port chronology",
+      "translations": {
+        "JP": {
+          "title": "兵庫運河の建設",
+          "body": "1896年に着工し、1899年に完成しました。兵庫の海岸の船の経路を変えました。",
+          "dateLabel": "1896–1899",
+          "location": "兵庫運河",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。",
+          "imageCaption": "現在の姿です。当時の出来事の写真ではありません。"
+        },
+        "CN": {
+          "title": "兵库运河建设",
+          "body": "1896年开工，1899年完成，改变了兵库海岸的航运路线。",
+          "dateLabel": "1896–1899",
+          "location": "兵库运河",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。",
+          "imageCaption": "今天的景象，并非历史事件发生时的照片。"
+        }
+      },
+      "media": {
+        "title": "File:Hyōgo Canal 002.JPG",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Hy%C5%8Dgo_Canal_002.JPG/960px-Hy%C5%8Dgo_Canal_002.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Hy%C5%8Dgo_Canal_002.JPG",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Pastern",
+        "description": "Hyōgo Canal(Hyōgo-ku, Kobe, Hyogo,Japan)",
+        "date": "2012-12",
+        "path": "data/event-media/hyogo-canal.jpg",
+        "caption": "Present-day view; not a photograph from the historical event.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Present-day view; not a photograph from the historical event."
+    },
+    {
+      "id": "event-kasato-maru",
+      "candidateId": 26,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "city-growth",
+      "year": 1908,
+      "dateLabel": "1908",
+      "title": "Emigration to Brazil",
+      "body": "Kasato Maru departed Kobe with emigrants for Brazil. The port linked local lives to migration across the world; the exact departure berth is not marked.",
+      "location": "Kobe port",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.177,
+              34.674
+            ],
+            [
+              135.215,
+              34.674
+            ],
+            [
+              135.215,
+              34.69
+            ],
+            [
+              135.177,
+              34.69
+            ],
+            [
+              135.177,
+              34.674
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: port chronology",
+          "url": "https://www.city.kobe.lg.jp/a74134/kurashi/access/harbor/rekishi.html"
+        }
+      ],
+      "source": "Kobe City: port chronology",
+      "translations": {
+        "JP": {
+          "title": "ブラジルへの移住",
+          "body": "笠戸丸が移民を乗せてブラジルへ出航しました。港は暮らしを世界の移住と結びました。正確な出航岸壁は示していません。",
+          "dateLabel": "1908年",
+          "location": "神戸港",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。",
+          "imageCaption": "移民船・笠戸丸。"
+        },
+        "CN": {
+          "title": "移民赴巴西",
+          "body": "笠户丸从神户搭载移民前往巴西。港口连接日常生活与全球移民；未标示精确出发泊位。",
+          "dateLabel": "1908年",
+          "location": "神户港",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。",
+          "imageCaption": "移民船笠户丸。"
+        }
+      },
+      "media": {
+        "title": "File:Kasato Maru ship (cruise line to Brazil).png",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Kasato_Maru_ship_%28cruise_line_to_Brazil%29.png/960px-Kasato_Maru_ship_%28cruise_line_to_Brazil%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Kasato_Maru_ship_(cruise_line_to_Brazil).png",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "artist": "Unknown authorUnknown author",
+        "description": "Kasato Maru ship. It was the first cruise line from Japan to Brazil. It transported the first Japanese migrants from Japan to Santos, São Paulo in 1908.",
+        "date": "circa 1908date QS:P,+1908-00-00T00:00:00Z/9,P1480,Q5727902",
+        "path": "data/event-media/kasato-maru.jpg",
+        "caption": "Kasato Maru, the emigrant ship.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Kasato Maru, the emigrant ship."
+    },
+    {
+      "id": "event-rice-riots",
+      "candidateId": 27,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "city-growth",
+      "year": 1918,
+      "dateLabel": "1918",
+      "title": "Rice riots and Suzuki Shoten fire",
+      "body": "Protests over rice prices led to the burning of Suzuki Shoten’s headquarters. City history describes the accusations of rice hoarding against the firm as mistaken.",
+      "location": "Sakaemachi vicinity",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.18,
+              34.677
+            ],
+            [
+              135.189,
+              34.677
+            ],
+            [
+              135.189,
+              34.687
+            ],
+            [
+              135.18,
+              34.687
+            ],
+            [
+              135.18,
+              34.677
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: Suzuki Shoten",
+          "url": "https://www.city.kobe.lg.jp/culture/modern_history/archive/detail/history_07.html"
+        }
+      ],
+      "source": "Kobe City: Suzuki Shoten",
+      "translations": {
+        "JP": {
+          "title": "米騒動と鈴木商店の焼失",
+          "body": "米価への抗議で鈴木商店本店が焼かれました。市の歴史解説では、同社の買い占めへの疑いは誤解だったとされています。",
+          "dateLabel": "1918年",
+          "location": "栄町周辺",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。",
+          "imageCaption": "1918年の火災後の鈴木商店。"
+        },
+        "CN": {
+          "title": "米骚动与铃木商店火灾",
+          "body": "抗议米价的骚动中，铃木商店总部被烧毁。市史说明针对该公司的囤米指控是误解。",
+          "dateLabel": "1918年",
+          "location": "荣町附近",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。",
+          "imageCaption": "1918年火灾后的铃木商店。"
+        }
+      },
+      "media": {
+        "title": "File:Suzuki Shoten burnt out.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Suzuki_Shoten_burnt_out.jpg/960px-Suzuki_Shoten_burnt_out.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Shoten_burnt_out.jpg",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "artist": "published by 国書刊行会",
+        "description": "鈴木商店（Suzuki Shoten） in Kobe burnt out.",
+        "date": "1918-08-12",
+        "path": "data/event-media/suzuki-shoten.jpg",
+        "caption": "Suzuki Shoten after the 1918 fire.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Suzuki Shoten after the 1918 fire."
+    },
+    {
+      "id": "event-hanshin-flood",
+      "candidateId": 28,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "interwar",
+      "year": 1938.5013698630137,
+      "dateLabel": "3–5 July 1938",
+      "title": "Great Hanshin Flood",
+      "body": "Heavy rain sent floodwater, rocks and debris down Rokko’s short rivers into the city. The disaster changed river engineering and erosion control.",
+      "location": "Rokko foothills and coastal city",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.1,
+              34.65
+            ],
+            [
+              135.31,
+              34.65
+            ],
+            [
+              135.31,
+              34.72
+            ],
+            [
+              135.1,
+              34.72
+            ],
+            [
+              135.1,
+              34.65
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: flood history",
+          "url": "https://www.city.kobe.lg.jp/a44881/bosai/disaster/flood01/flood02.html"
+        },
+        {
+          "title": "Kobe City: flood background",
+          "url": "https://www.city.kobe.lg.jp/a43553/kurashi/machizukuri/river/suigaisonae/02kako_01.html"
+        }
+      ],
+      "source": "Kobe City: flood history; Kobe City: flood background",
+      "translations": {
+        "JP": {
+          "title": "阪神大水害",
+          "body": "豪雨で六甲の短い川から水・岩・土砂が市街地へ流れ込みました。河川整備と砂防の転機となりました。",
+          "dateLabel": "1938年7月3〜5日",
+          "location": "六甲山麓・海岸の市街地",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "阪神大水灾",
+          "body": "暴雨使洪水、岩石和泥沙沿六甲短河流入城市，推动河道工程与水土防护改变。",
+          "dateLabel": "1938年7月3〜5日",
+          "location": "六甲山麓与沿海城区",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-air-raid-2",
+      "candidateId": 29,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "postwar",
+      "year": 1945.0931506849315,
+      "dateLabel": "4 February 1945",
+      "title": "February raid",
+      "body": "One of Kobe’s five major 1945 air raids. Bombing devastated homes and industrial areas. The highlighted area is a geographic setting, not a surveyed burn map.",
+      "location": "Urban Kobe",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.1,
+              34.65
+            ],
+            [
+              135.31,
+              34.65
+            ],
+            [
+              135.31,
+              34.72
+            ],
+            [
+              135.1,
+              34.72
+            ],
+            [
+              135.1,
+              34.65
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: air raids",
+          "url": "https://www.city.kobe.lg.jp/a44881/bosai/disaster/war01/war02.html"
+        }
+      ],
+      "source": "Kobe City: air raids",
+      "translations": {
+        "JP": {
+          "title": "神戸空襲",
+          "body": "1945年の5回の主要な空襲の一つです。住宅や工業地域が被害を受けました。表示は背景地域で、焼失範囲図ではありません。",
+          "dateLabel": "1945年2月4日",
+          "location": "神戸市街地",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "神户空袭",
+          "body": "神户1945年五次主要空袭之一。住宅与工业区遭到破坏。高亮为地理背景，并非测绘的焚毁范围。",
+          "dateLabel": "1945年2月4日",
+          "location": "神户城区",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-air-raid-3",
+      "candidateId": 29,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "postwar",
+      "year": 1945.2054794520548,
+      "dateLabel": "17 March 1945",
+      "title": "March firebombing",
+      "body": "One of Kobe’s five major 1945 air raids. Bombing devastated homes and industrial areas. The highlighted area is a geographic setting, not a surveyed burn map.",
+      "location": "Urban Kobe",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.1,
+              34.65
+            ],
+            [
+              135.31,
+              34.65
+            ],
+            [
+              135.31,
+              34.72
+            ],
+            [
+              135.1,
+              34.72
+            ],
+            [
+              135.1,
+              34.65
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: air raids",
+          "url": "https://www.city.kobe.lg.jp/a44881/bosai/disaster/war01/war02.html"
+        }
+      ],
+      "source": "Kobe City: air raids",
+      "translations": {
+        "JP": {
+          "title": "神戸空襲",
+          "body": "1945年の5回の主要な空襲の一つです。住宅や工業地域が被害を受けました。表示は背景地域で、焼失範囲図ではありません。",
+          "dateLabel": "1945年3月17日",
+          "location": "神戸市街地",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "神户空袭",
+          "body": "神户1945年五次主要空袭之一。住宅与工业区遭到破坏。高亮为地理背景，并非测绘的焚毁范围。",
+          "dateLabel": "1945年3月17日",
+          "location": "神户城区",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-air-raid-5",
+      "candidateId": 29,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "postwar",
+      "year": 1945.3561643835617,
+      "dateLabel": "11 May 1945",
+      "title": "Fukae aircraft works raid",
+      "body": "One of Kobe’s five major 1945 air raids. Bombing devastated homes and industrial areas. The highlighted area is a geographic setting, not a surveyed burn map.",
+      "location": "Fukae",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.288,
+              34.71
+            ],
+            [
+              135.307,
+              34.71
+            ],
+            [
+              135.307,
+              34.73
+            ],
+            [
+              135.288,
+              34.73
+            ],
+            [
+              135.288,
+              34.71
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: air raids",
+          "url": "https://www.city.kobe.lg.jp/a44881/bosai/disaster/war01/war02.html"
+        }
+      ],
+      "source": "Kobe City: air raids",
+      "translations": {
+        "JP": {
+          "title": "神戸空襲",
+          "body": "1945年の5回の主要な空襲の一つです。住宅や工業地域が被害を受けました。表示は背景地域で、焼失範囲図ではありません。",
+          "dateLabel": "1945年5月11日",
+          "location": "深江",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "神户空袭",
+          "body": "神户1945年五次主要空袭之一。住宅与工业区遭到破坏。高亮为地理背景，并非测绘的焚毁范围。",
+          "dateLabel": "1945年5月11日",
+          "location": "深江",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-air-raid-6",
+      "candidateId": 29,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "postwar",
+      "year": 1945.4246575342465,
+      "dateLabel": "5 June 1945",
+      "title": "June firebombing",
+      "body": "One of Kobe’s five major 1945 air raids. Bombing devastated homes and industrial areas. The highlighted area is a geographic setting, not a surveyed burn map.",
+      "location": "Urban Kobe",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.1,
+              34.65
+            ],
+            [
+              135.31,
+              34.65
+            ],
+            [
+              135.31,
+              34.72
+            ],
+            [
+              135.1,
+              34.72
+            ],
+            [
+              135.1,
+              34.65
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: air raids",
+          "url": "https://www.city.kobe.lg.jp/a44881/bosai/disaster/war01/war02.html"
+        }
+      ],
+      "source": "Kobe City: air raids",
+      "translations": {
+        "JP": {
+          "title": "神戸空襲",
+          "body": "1945年の5回の主要な空襲の一つです。住宅や工業地域が被害を受けました。表示は背景地域で、焼失範囲図ではありません。",
+          "dateLabel": "1945年6月5日",
+          "location": "神戸市街地",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "神户空袭",
+          "body": "神户1945年五次主要空袭之一。住宅与工业区遭到破坏。高亮为地理背景，并非测绘的焚毁范围。",
+          "dateLabel": "1945年6月5日",
+          "location": "神户城区",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-air-raid-8",
+      "candidateId": 29,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "postwar",
+      "year": 1945.5945205479452,
+      "dateLabel": "6 August 1945",
+      "title": "August raid",
+      "body": "One of Kobe’s five major 1945 air raids. Bombing devastated homes and industrial areas. The highlighted area is a geographic setting, not a surveyed burn map.",
+      "location": "Urban Kobe",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.1,
+              34.65
+            ],
+            [
+              135.31,
+              34.65
+            ],
+            [
+              135.31,
+              34.72
+            ],
+            [
+              135.1,
+              34.72
+            ],
+            [
+              135.1,
+              34.65
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: air raids",
+          "url": "https://www.city.kobe.lg.jp/a44881/bosai/disaster/war01/war02.html"
+        }
+      ],
+      "source": "Kobe City: air raids",
+      "translations": {
+        "JP": {
+          "title": "神戸空襲",
+          "body": "1945年の5回の主要な空襲の一つです。住宅や工業地域が被害を受けました。表示は背景地域で、焼失範囲図ではありません。",
+          "dateLabel": "1945年8月6日",
+          "location": "神戸市街地",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "神户空袭",
+          "body": "神户1945年五次主要空袭之一。住宅与工业区遭到破坏。高亮为地理背景，并非测绘的焚毁范围。",
+          "dateLabel": "1945年8月6日",
+          "location": "神户城区",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-1961-flood",
+      "candidateId": 30,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "postwar",
+      "year": 1961.4767123287672,
+      "dateLabel": "24–27 June 1961",
+      "title": "Floods and slope failures",
+      "body": "Heavy rain caused serious damage at hillside housing and construction sites. Growing onto steep land made slope safety a pressing urban issue.",
+      "location": "Rokko foothills",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.135,
+              34.69
+            ],
+            [
+              135.3,
+              34.69
+            ],
+            [
+              135.3,
+              34.75
+            ],
+            [
+              135.135,
+              34.75
+            ],
+            [
+              135.135,
+              34.69
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: flood history",
+          "url": "https://www.city.kobe.lg.jp/a44881/bosai/disaster/flood01/flood02.html"
+        }
+      ],
+      "source": "Kobe City: flood history",
+      "translations": {
+        "JP": {
+          "title": "豪雨と斜面崩壊",
+          "body": "豪雨で山麓の住宅や造成地に大きな被害が出ました。急斜面への開発で斜面の安全が都市の課題となりました。",
+          "dateLabel": "1961年6月24〜27日",
+          "location": "六甲山麓",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "洪水与山坡崩塌",
+          "body": "暴雨严重破坏山坡住宅和建设工地。向陡坡扩张使斜坡安全成为城市的重要问题。",
+          "dateLabel": "1961年6月24〜27日",
+          "location": "六甲山麓",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-port-tower",
+      "candidateId": 31,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "postwar",
+      "year": 1963,
+      "dateLabel": "1963",
+      "title": "Port Tower opens",
+      "body": "The waterfront gained a new landmark as Kobe’s port and trade expanded during Japan’s rapid economic growth.",
+      "location": "Naka Pier",
+      "locationNote": "Approximate location; not a surveyed historical site boundary.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.1867,
+          34.6826
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: port chronology",
+          "url": "https://www.city.kobe.lg.jp/a74134/kurashi/access/harbor/rekishi.html"
+        }
+      ],
+      "source": "Kobe City: port chronology",
+      "translations": {
+        "JP": {
+          "title": "ポートタワーの開業",
+          "body": "日本の高度成長と港の拡大を背景に、海岸に新しいランドマークが誕生しました。",
+          "dateLabel": "1963年",
+          "location": "中突堤",
+          "locationNote": "おおよその位置です。歴史的な敷地境界を示すものではありません。",
+          "imageCaption": "現在の姿です。当時の出来事の写真ではありません。"
+        },
+        "CN": {
+          "title": "港口塔开放",
+          "body": "日本经济高速增长、神户港扩张之际，海岸增添了新的地标。",
+          "dateLabel": "1963年",
+          "location": "中突堤",
+          "locationNote": "位置仅供参考，并非测绘的历史遗址边界。",
+          "imageCaption": "今天的景象，并非历史事件发生时的照片。"
+        }
+      },
+      "media": {
+        "title": "File:Kobe Port Tower and Maritime Museum, November 2016.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Kobe_Port_Tower_and_Maritime_Museum%2C_November_2016.jpg/960px-Kobe_Port_Tower_and_Maritime_Museum%2C_November_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Kobe_Port_Tower_and_Maritime_Museum,_November_2016.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "artist": "Martin Falbisoner",
+        "description": "Kobe harbor: Kobe Port Tower  and  Kobe Maritime Museum.",
+        "date": "2016-11-17 17:13:36",
+        "path": "data/event-media/kobe-port-tower.jpg",
+        "caption": "Present-day view; not a photograph from the historical event.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Present-day view; not a photograph from the historical event."
+    },
+    {
+      "id": "event-suma-conveyor",
+      "candidateId": "extra-conveyor",
+      "event": true,
+      "pageId": "home",
+      "chapterId": "postwar",
+      "year": 1964,
+      "dateLabel": "1964",
+      "title": "Mountains become housing and new coastline",
+      "body": "The Suma conveyor began operating. Excavated hills became housing sites; conveyors took soil to a loading pier and pusher barges carried it to reclamation areas. This mountain-to-sea method helped build Kobe’s artificial islands.",
+      "location": "Suma hillside-to-shore route, schematic",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.106,
+            34.665
+          ],
+          [
+            135.114,
+            34.646
+          ],
+          [
+            135.12,
+            34.638
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: Suma New Town and mountain-to-sea development",
+          "url": "https://www.city.kobe.lg.jp/i73375/kuyakusho/sumaku/syokaitorikumi/sumanewtown/nthistory.html"
+        }
+      ],
+      "source": "Kobe City: Suma New Town and mountain-to-sea development",
+      "translations": {
+        "JP": {
+          "title": "山を住宅地に、土を海へ",
+          "body": "須磨ベルトコンベヤが稼働。山の掘削跡は住宅地となり、土砂はコンベヤで船積み桟橋へ、プッシャーバージで埋立地へ運ばれました。「山、海へ行く」の手法は人工島づくりを支えました。",
+          "dateLabel": "1964年",
+          "location": "須磨の山〜海の経路・概略",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。",
+          "imageCaption": "神戸市提供の須磨コンベヤの歴史写真。"
+        },
+        "CN": {
+          "title": "山地变住宅，土方运向海洋",
+          "body": "须磨输送带开始运作。挖山后的土地改作住宅，土方经输送带运至装船码头，再由推驳船运往填海区。“山走向海洋”的方式支持神户人工岛建设。",
+          "dateLabel": "1964年",
+          "location": "须磨山地至海岸示意路线",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。",
+          "imageCaption": "神户市提供的须磨输送带历史照片。"
+        }
+      },
+      "media": {
+        "path": "data/event-media/city-conveyor.jpg",
+        "page": "https://www.city.kobe.lg.jp/i73375/kuyakusho/sumaku/syokaitorikumi/sumanewtown/nthistory.html",
+        "artist": "写真提供神戸市",
+        "license": "Kobe City reuse terms; credit required",
+        "caption": "Historical Suma conveyor photograph supplied by Kobe City.",
+        "sourceName": "Kobe City",
+        "url": "https://www.city.kobe.lg.jp/images/24159/history-1.jpg",
+        "reuseTerms": "Free reuse with 写真提供神戸市 credit; excluded where photo itself is a sale product or use harms the image of Design City Kobe."
+      },
+      "imageCaption": "Historical Suma conveyor photograph supplied by Kobe City."
+    },
+    {
+      "id": "event-port-island-start",
+      "candidateId": 32,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "metropolitan",
+      "year": 1966,
+      "dateLabel": "1966",
+      "title": "Port Island reclamation begins",
+      "body": "Construction began on an island planned for port facilities and urban uses. Soil from hill development helped make new land offshore while the excavated sites became housing.",
+      "location": "Port Island phase I, approximate",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.198,
+              34.661
+            ],
+            [
+              135.229,
+              34.661
+            ],
+            [
+              135.229,
+              34.686
+            ],
+            [
+              135.198,
+              34.686
+            ],
+            [
+              135.198,
+              34.661
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: port chronology",
+          "url": "https://www.city.kobe.lg.jp/a74134/kurashi/access/harbor/rekishi.html"
+        },
+        {
+          "title": "Kobe City: Suma New Town and mountain-to-sea development",
+          "url": "https://www.city.kobe.lg.jp/i73375/kuyakusho/sumaku/syokaitorikumi/sumanewtown/nthistory.html"
+        }
+      ],
+      "source": "Kobe City: port chronology; Kobe City: Suma New Town and mountain-to-sea development",
+      "translations": {
+        "JP": {
+          "title": "ポートアイランドの着工",
+          "body": "港湾施設と都市機能を持つ島の造成が始まりました。山の造成土が沖の土地をつくり、採取跡は住宅地になりました。",
+          "dateLabel": "1966年",
+          "location": "ポートアイランド第1期・概略",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。",
+          "imageCaption": "2007年撮影のポートアイランドの会議場。1981年の博覧会の写真ではありません。"
+        },
+        "CN": {
+          "title": "港湾人工岛开工",
+          "body": "兼有港口设施和城市用途的人工岛开始建设。开发山地的土方用于海上造地，挖土后的土地改作住宅。",
+          "dateLabel": "1966年",
+          "location": "港湾人工岛一期示意",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。",
+          "imageCaption": "2007年拍摄的港湾人工岛会议中心，并非1981年博览会照片。"
+        }
+      },
+      "media": {
+        "title": "File:Kobe International Conference Center02s3200.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Kobe_International_Conference_Center02s3200.jpg/960px-Kobe_International_Conference_Center02s3200.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Kobe_International_Conference_Center02s3200.jpg",
+        "license": "CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+        "artist": "663highland",
+        "description": "Kobe International Conference Center in Kobe, Hyogo prefecture, Japan",
+        "date": "2007-11-03",
+        "path": "data/event-media/portopia-1981.jpg",
+        "caption": "Conference centre on Port Island, photographed in 2007; not a photograph of the 1981 expo.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Conference centre on Port Island, photographed in 2007; not a photograph of the 1981 expo."
+    },
+    {
+      "id": "event-rokko-island-start",
+      "candidateId": 33,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "metropolitan",
+      "year": 1972,
+      "dateLabel": "1972",
+      "title": "Rokko Island reclamation begins",
+      "body": "A second large artificial island extended Kobe’s port and urban land. Reclamation continued until 1992.",
+      "location": "Rokko Island",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.259,
+              34.671
+            ],
+            [
+              135.287,
+              34.671
+            ],
+            [
+              135.287,
+              34.706
+            ],
+            [
+              135.259,
+              34.706
+            ],
+            [
+              135.259,
+              34.671
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: port chronology",
+          "url": "https://www.city.kobe.lg.jp/a74134/kurashi/access/harbor/rekishi.html"
+        }
+      ],
+      "source": "Kobe City: port chronology",
+      "translations": {
+        "JP": {
+          "title": "六甲アイランドの着工",
+          "body": "二つ目の大型人工島で港と市街地を拡大しました。埋立は1992年まで続きました。",
+          "dateLabel": "1972年",
+          "location": "六甲アイランド",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。",
+          "imageCaption": "現在の姿です。当時の出来事の写真ではありません。"
+        },
+        "CN": {
+          "title": "六甲人工岛开工",
+          "body": "第二座大型人工岛扩展港口和城市用地，填海持续至1992年。",
+          "dateLabel": "1972年",
+          "location": "六甲人工岛",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。",
+          "imageCaption": "今天的景象，并非历史事件发生时的照片。"
+        }
+      },
+      "media": {
+        "title": "File:Rokko Island, aerial view.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Rokko_Island%2C_aerial_view.jpg/960px-Rokko_Island%2C_aerial_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Rokko_Island,_aerial_view.jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "artist": "Hideyuki KAMON from Takarazuka / 宝塚市, Hyogo / 兵庫県, Japan / 日本",
+        "description": "Rokkō Island, Kobe, Hyogo, Japan",
+        "date": "2006-09-11 17:28",
+        "path": "data/event-media/rokko-island.jpg",
+        "caption": "Present-day view; not a photograph from the historical event.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Present-day view; not a photograph from the historical event."
+    },
+    {
+      "id": "event-portopia",
+      "candidateId": 32,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "expansion",
+      "year": 1981,
+      "dateLabel": "1981",
+      "title": "Portopia celebrates a new island city",
+      "body": "Port Island’s first phase was completed and Portopia ’81 showcased the new waterfront. The Port Liner connected Sannomiya to the island: reclaimed land now held port operations, housing and civic facilities.",
+      "location": "Port Island",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.198,
+              34.661
+            ],
+            [
+              135.229,
+              34.661
+            ],
+            [
+              135.229,
+              34.686
+            ],
+            [
+              135.198,
+              34.686
+            ],
+            [
+              135.198,
+              34.661
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: port chronology",
+          "url": "https://www.city.kobe.lg.jp/a74134/kurashi/access/harbor/rekishi.html"
+        }
+      ],
+      "source": "Kobe City: port chronology",
+      "translations": {
+        "JP": {
+          "title": "ポートピア’81と新しい島の街",
+          "body": "第1期が完成し、ポートピア’81で新しい海上都市を紹介しました。ポートライナーが三宮と島を結び、港・住宅・都市施設が埋立地に集まりました。",
+          "dateLabel": "1981年",
+          "location": "ポートアイランド",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。",
+          "imageCaption": "2007年撮影のポートアイランドの会議場。1981年の博覧会の写真ではありません。"
+        },
+        "CN": {
+          "title": "Portopia与新的人工岛城市",
+          "body": "一期完工，Portopia ’81展示新海岸城市。Port Liner连接三宫与人工岛，填海土地承载港口、住宅和公共设施。",
+          "dateLabel": "1981年",
+          "location": "港湾人工岛",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。",
+          "imageCaption": "2007年拍摄的港湾人工岛会议中心，并非1981年博览会照片。"
+        }
+      },
+      "media": {
+        "title": "File:Kobe International Conference Center02s3200.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Kobe_International_Conference_Center02s3200.jpg/960px-Kobe_International_Conference_Center02s3200.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Kobe_International_Conference_Center02s3200.jpg",
+        "license": "CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+        "artist": "663highland",
+        "description": "Kobe International Conference Center in Kobe, Hyogo prefecture, Japan",
+        "date": "2007-11-03",
+        "path": "data/event-media/portopia-1981.jpg",
+        "caption": "Conference centre on Port Island, photographed in 2007; not a photograph of the 1981 expo.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Conference centre on Port Island, photographed in 2007; not a photograph of the 1981 expo."
+    },
+    {
+      "id": "event-meriken-park",
+      "candidateId": 34,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "late-expansion",
+      "year": 1987,
+      "dateLabel": "1987",
+      "title": "Meriken Park opens",
+      "body": "A waterfront park and maritime museum opened, giving the working port a larger public and cultural role.",
+      "location": "Meriken Park",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.184,
+              34.678
+            ],
+            [
+              135.193,
+              34.678
+            ],
+            [
+              135.193,
+              34.685
+            ],
+            [
+              135.184,
+              34.685
+            ],
+            [
+              135.184,
+              34.678
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: port chronology",
+          "url": "https://www.city.kobe.lg.jp/a74134/kurashi/access/harbor/rekishi.html"
+        }
+      ],
+      "source": "Kobe City: port chronology",
+      "translations": {
+        "JP": {
+          "title": "メリケンパークの開園",
+          "body": "公園と海洋博物館が開き、仕事の場だった港に市民の利用と文化の場が加わりました。",
+          "dateLabel": "1987年",
+          "location": "メリケンパーク",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。",
+          "imageCaption": "現在の姿です。当時の出来事の写真ではありません。"
+        },
+        "CN": {
+          "title": "美利坚公园开放",
+          "body": "滨水公园与海洋博物馆开放，生产港口增加了公共休闲和文化功能。",
+          "dateLabel": "1987年",
+          "location": "美利坚公园",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。",
+          "imageCaption": "今天的景象，并非历史事件发生时的照片。"
+        }
+      },
+      "media": {
+        "title": "File:Kobe Meriken Park01bs3200.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Kobe_Meriken_Park01bs3200.jpg/960px-Kobe_Meriken_Park01bs3200.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Kobe_Meriken_Park01bs3200.jpg",
+        "license": "CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+        "artist": "663highland",
+        "description": "\"The bell of Hortensia\" in Meriken Park, Kobe, Hyogo prefecture, Japan",
+        "date": "2009-09-26",
+        "path": "data/event-media/meriken-park.jpg",
+        "caption": "Present-day view; not a photograph from the historical event.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Present-day view; not a photograph from the historical event."
+    },
+    {
+      "id": "event-port-island-phase2",
+      "candidateId": "extra-phase2",
+      "event": true,
+      "pageId": "home",
+      "chapterId": "late-expansion",
+      "year": 1987,
+      "dateLabel": "1987",
+      "title": "Port Island expands southward",
+      "body": "The second reclamation phase began south of the first island. Later deep-water container berths and the medical cluster added new roles to this reclaimed land.",
+      "location": "Port Island phase II, approximate",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.199,
+              34.639
+            ],
+            [
+              135.24,
+              34.639
+            ],
+            [
+              135.24,
+              34.665
+            ],
+            [
+              135.199,
+              34.665
+            ],
+            [
+              135.199,
+              34.639
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: port chronology",
+          "url": "https://www.city.kobe.lg.jp/a74134/kurashi/access/harbor/rekishi.html"
+        }
+      ],
+      "source": "Kobe City: port chronology",
+      "translations": {
+        "JP": {
+          "title": "ポートアイランド第2期の着工",
+          "body": "第1期の南で第2期埋立が始まりました。後に大水深コンテナ岸壁や医療産業が加わりました。",
+          "dateLabel": "1987年",
+          "location": "ポートアイランド第2期・概略",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "港湾人工岛向南扩建",
+          "body": "一期以南开始二期填海，后来深水集装箱泊位和医疗产业赋予这片新土地新的角色。",
+          "dateLabel": "1987年",
+          "location": "港湾人工岛二期示意",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-rokko-island-complete",
+      "candidateId": 33,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "late-expansion",
+      "year": 1992,
+      "dateLabel": "1992",
+      "title": "Rokko Island reclamation completed",
+      "body": "Twenty years of reclamation produced a major new island. Housing and city functions joined port land, linked to the mainland by bridge and transit.",
+      "location": "Rokko Island",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.259,
+              34.671
+            ],
+            [
+              135.287,
+              34.671
+            ],
+            [
+              135.287,
+              34.706
+            ],
+            [
+              135.259,
+              34.706
+            ],
+            [
+              135.259,
+              34.671
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: port chronology",
+          "url": "https://www.city.kobe.lg.jp/a74134/kurashi/access/harbor/rekishi.html"
+        }
+      ],
+      "source": "Kobe City: port chronology",
+      "translations": {
+        "JP": {
+          "title": "六甲アイランドの埋立完了",
+          "body": "20年の埋立で大型人工島が完成しました。港湾用地に住宅や都市機能が加わり、橋と交通で本土につながりました。",
+          "dateLabel": "1992年",
+          "location": "六甲アイランド",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。",
+          "imageCaption": "現在の姿です。当時の出来事の写真ではありません。"
+        },
+        "CN": {
+          "title": "六甲人工岛填海完成",
+          "body": "20年的填海形成大型人工岛。住宅和城市功能与港口并存，通过桥梁与公共交通连接陆地。",
+          "dateLabel": "1992年",
+          "location": "六甲人工岛",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。",
+          "imageCaption": "今天的景象，并非历史事件发生时的照片。"
+        }
+      },
+      "media": {
+        "title": "File:Rokko Island, aerial view.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Rokko_Island%2C_aerial_view.jpg/960px-Rokko_Island%2C_aerial_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Rokko_Island,_aerial_view.jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "artist": "Hideyuki KAMON from Takarazuka / 宝塚市, Hyogo / 兵庫県, Japan / 日本",
+        "description": "Rokkō Island, Kobe, Hyogo, Japan",
+        "date": "2006-09-11 17:28",
+        "path": "data/event-media/rokko-island.jpg",
+        "caption": "Present-day view; not a photograph from the historical event.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Present-day view; not a photograph from the historical event."
+    },
+    {
+      "id": "event-harborland",
+      "candidateId": 34,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "late-expansion",
+      "year": 1992,
+      "dateLabel": "1992",
+      "title": "Harborland opens",
+      "body": "Waterfront redevelopment added shopping, leisure and public space near Kobe Station, broadening the waterfront’s role beyond cargo handling.",
+      "location": "Harborland",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.177,
+              34.671
+            ],
+            [
+              135.185,
+              34.671
+            ],
+            [
+              135.185,
+              34.681
+            ],
+            [
+              135.177,
+              34.681
+            ],
+            [
+              135.177,
+              34.671
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: port chronology",
+          "url": "https://www.city.kobe.lg.jp/a74134/kurashi/access/harbor/rekishi.html"
+        }
+      ],
+      "source": "Kobe City: port chronology",
+      "translations": {
+        "JP": {
+          "title": "ハーバーランドの開業",
+          "body": "神戸駅近くの再開発で商業・余暇・公共空間が加わり、海岸の役割が貨物輸送以外にも広がりました。",
+          "dateLabel": "1992年",
+          "location": "ハーバーランド",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "Harborland开放",
+          "body": "神户站附近的滨水再开发增加购物、休闲与公共空间，使海岸功能超出货物装卸。",
+          "dateLabel": "1992年",
+          "location": "Harborland",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-hanshin-awaji-earthquake",
+      "candidateId": 35,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "recovery",
+      "year": 1995.0438356164384,
+      "dateLabel": "17 January 1995",
+      "title": "Great Hanshin-Awaji Earthquake",
+      "body": "Buildings, roads, railways and utilities failed across Kobe; fires destroyed neighbourhoods. Recovery reshaped housing, infrastructure and disaster planning. The epicentre lay off northern Awaji.",
+      "location": "Kobe coastal urban corridor",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.1,
+              34.65
+            ],
+            [
+              135.31,
+              34.65
+            ],
+            [
+              135.31,
+              34.72
+            ],
+            [
+              135.1,
+              34.72
+            ],
+            [
+              135.1,
+              34.65
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: earthquake chronology",
+          "url": "https://www.city.kobe.lg.jp/a46152/bosai/hanshinawaji/data/nenpyo/07nen.html"
+        }
+      ],
+      "source": "Kobe City: earthquake chronology",
+      "translations": {
+        "JP": {
+          "title": "阪神・淡路大震災",
+          "body": "建物・道路・鉄道・ライフラインが被害を受け、火災も広がりました。復興は住宅・基盤・防災計画を変えました。震源は淡路島北部沖でした。",
+          "dateLabel": "1995年1月17日",
+          "location": "神戸の海岸沿いの市街地",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。",
+          "imageCaption": "1995年1月17日の湊川町。"
+        },
+        "CN": {
+          "title": "阪神淡路大地震",
+          "body": "建筑、道路、铁路和市政设施受损，火灾蔓延。重建改变住房、基础设施与防灾规划。震中在淡路岛北部近海。",
+          "dateLabel": "1995年1月17日",
+          "location": "神户沿海城区",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。",
+          "imageCaption": "1995年1月17日的凑川町。"
+        }
+      },
+      "media": {
+        "title": "File:Hanshin-Awaji earthquake 1995 343.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Hanshin-Awaji_earthquake_1995_343.jpg/960px-Hanshin-Awaji_earthquake_1995_343.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Hanshin-Awaji_earthquake_1995_343.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "artist": "Akiyoshi Matsuoka (松岡明芳)",
+        "description": "Great Hanshin-Awaji Earthquake (in front of Topos, Minatogawa-cho)",
+        "date": "Taken on 17 January 1995",
+        "path": "data/event-media/great-hanshin-earthquake.jpg",
+        "caption": "Minatogawa-cho on 17 January 1995.",
+        "sourceName": "Wikimedia Commons"
+      },
+      "imageCaption": "Minatogawa-cho on 17 January 1995."
+    },
+    {
+      "id": "event-luminarie",
+      "candidateId": 36,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "recovery",
+      "year": 1995,
+      "dateLabel": "1995",
+      "title": "First Kobe Luminarie",
+      "body": "The lights commemorated earthquake victims and expressed hope for recovery. The highlighted central area is not a reconstruction of the original walking route.",
+      "location": "Central Kobe",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.187,
+              34.683
+            ],
+            [
+              135.197,
+              34.683
+            ],
+            [
+              135.197,
+              34.691
+            ],
+            [
+              135.187,
+              34.691
+            ],
+            [
+              135.187,
+              34.683
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: port chronology",
+          "url": "https://www.city.kobe.lg.jp/a74134/kurashi/access/harbor/rekishi.html"
+        }
+      ],
+      "source": "Kobe City: port chronology",
+      "translations": {
+        "JP": {
+          "title": "初めての神戸ルミナリエ",
+          "body": "犠牲者を追悼し、復興への希望を灯しました。表示は中心部の概略で、当初の会場経路の復元ではありません。",
+          "dateLabel": "1995年",
+          "location": "神戸中心部",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "首届神户Luminarie",
+          "body": "灯光纪念地震遇难者，也寄托重建希望。高亮为市中心示意，并非原始游览路线复原。",
+          "dateLabel": "1995年",
+          "location": "神户中心城区",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-akashi-bridge",
+      "candidateId": 37,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "recovery",
+      "year": 1998,
+      "dateLabel": "1998",
+      "title": "Akashi Kaikyo Bridge opens",
+      "body": "The bridge joined Maiko in Kobe to northern Awaji, making the strait a road connection on the route to Shikoku.",
+      "location": "Maiko–northern Awaji",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.022,
+            34.631
+          ],
+          [
+            135.009,
+            34.605
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: port chronology",
+          "url": "https://www.city.kobe.lg.jp/a74134/kurashi/access/harbor/rekishi.html"
+        }
+      ],
+      "source": "Kobe City: port chronology",
+      "translations": {
+        "JP": {
+          "title": "明石海峡大橋の開通",
+          "body": "神戸の舞子と淡路島北部を結び、海峡は四国方面への道路のつながりになりました。",
+          "dateLabel": "1998年",
+          "location": "舞子〜淡路島北部",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "明石海峡大桥通车",
+          "body": "大桥连接神户舞子与淡路岛北端，使海峡成为通往四国的道路联系。",
+          "dateLabel": "1998年",
+          "location": "舞子至淡路岛北部",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    },
+    {
+      "id": "event-airport-bay-shuttle",
+      "candidateId": 38,
+      "event": true,
+      "pageId": "home",
+      "chapterId": "recovery",
+      "year": 2006,
+      "dateLabel": "2006",
+      "title": "Airport, rail and Bay Shuttle open",
+      "body": "Kobe Airport opened on a reclaimed island. The Port Liner extension and Bay Shuttle to Kansai Airport added rail and sea access.",
+      "location": "Kobe Airport island",
+      "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.209,
+              34.626
+            ],
+            [
+              135.254,
+              34.626
+            ],
+            [
+              135.254,
+              34.643
+            ],
+            [
+              135.209,
+              34.643
+            ],
+            [
+              135.209,
+              34.626
+            ]
+          ]
+        ]
+      },
+      "color": "#986741",
+      "sources": [
+        {
+          "title": "Kobe City: port chronology",
+          "url": "https://www.city.kobe.lg.jp/a74134/kurashi/access/harbor/rekishi.html"
+        }
+      ],
+      "source": "Kobe City: port chronology",
+      "translations": {
+        "JP": {
+          "title": "空港・鉄道延伸・海上航路",
+          "body": "埋立島に神戸空港が開港。ポートライナー延伸と関西空港へのベイ・シャトルで鉄道と海のアクセスが加わりました。",
+          "dateLabel": "2006年",
+          "location": "神戸空港島",
+          "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
+        },
+        "CN": {
+          "title": "机场、铁路延伸与海上航线",
+          "body": "神户机场在填海岛上开放。Port Liner延伸及至关西机场的Bay Shuttle增加铁路和海上联系。",
+          "dateLabel": "2006年",
+          "location": "神户机场岛",
+          "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
+        }
+      }
+    }
+  ],
+  "updatedAt": "2026-10-09T08:24:31.365782+00:00"
+}

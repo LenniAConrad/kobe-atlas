@@ -1,0 +1,56 @@
+{
+  "datasets": [
+    {
+      "id": "N02-25",
+      "name": "Railways · Japan, 2025",
+      "fields": {
+        "N02_001": "Railway class",
+        "N02_002": "Operator category",
+        "N02_003": "Line name",
+        "N02_004": "Operator",
+        "N02_005": "Station name"
+      },
+      "codes": {
+        "1": "JR Shinkansen",
+        "2": "JR conventional lines",
+        "3": "Public railways",
+        "4": "Private railways",
+        "5": "Third-sector railways"
+      },
+      "counts": {
+        "RailroadSection": {
+          "original": 21933,
+          "retained": 1613,
+          "filter": "geometry bounding box intersects context bounds; complete source geometry retained",
+          "contextBounds": [
+            [
+              34.45,
+              134.8
+            ],
+            [
+              35.0,
+              135.6
+            ]
+          ]
+        },
+        "Station": {
+          "original": 10234,
+          "retained": 789,
+          "filter": "geometry bounding box intersects context bounds; complete source geometry retained",
+          "contextBounds": [
+            [
+              34.45,
+              134.8
+            ],
+            [
+              35.0,
+              135.6
+            ]
+          ]
+        }
+      },
+      "documentation": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html"
+    }
+  ],
+  "note": "Full original files, code lists and documentation snapshots are in sources/."
+}

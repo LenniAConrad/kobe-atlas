@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-ee1658d207b5cf14757edf907f9e3ed0.ico" />
+    <title> 日本版 Map Warper: エクスポート </title>
+    <link rel="stylesheet" media="screen" href="/assets/application-057519255ae30ef11962ecc701c1c7f2.css" />
+    <link href='//fonts.googleapis.com/css?family=Lato:400,700|Sorts+Mill+Goudy|Vidaloka' rel='stylesheet' type='text/css'>
+    <script src="/assets/openlayers/2.8/OpenLayers-2.8/OpenLayers-7d831286960acb6afa2589546c0e7545.js"></script>
+    <script src="/assets/application-8938d3b180f688b3006f7cc9d41dffad.js"></script>
+    <script>
+//<![CDATA[
+jQuery.noConflict();
+//]]>
+</script>
+    <script type="text/javascript">
+      var addthis_share = {templates: {twitter: '{{url}} (from @example_user@example.com)'}};
+      var addthis_config = {ui_click: true};
+
+
+      jQuery(function() {
+        jQuery("#wooTabs").tabs({selected:6});
+        jQuery("#wooTabs").bind("tabsselect", function(event, ui) {
+          if (typeof (pageTracker) !== 'undefined') {
+            pageTracker._trackEvent("Map", ui.tab.title, '47');
+          }
+        });
+
+        jQuery("#wooTabs").tabs('option', 'cache', true);
+
+        jQuery("#wooTabs").tabs({
+          beforeLoad: function( event, ui ) {
+            ui.jqXHR.error(function() {
+              if (ui.jqXHR.status == 401){
+                var flash = "申し訳ありません。これを見るには<a class='unauthorized' href='/u/sign_in'>ログイン</a>が必要かもしれません。";
+                jQuery(ui.panel).html(flash)
+              }else if (ui.jqXHR.status == 503){
+                var flash = "申し訳ありません。現在このサイトは閲覧しかできない状態になっていて使用できない機能があります。後でもう１度試してください。";
+                jQuery(ui.panel).html(flash)
+              }else{
+              //  
+              //  var flash = "エラーが発生しました。申し訳ありません！ もう１度同じ操作を試すか、ログインし直してください。";
+              //  jQuery(ui.panel).html(flash)
+              }
+            });
+            }
+        });
+
+        jQuery("#wooTabs").bind("tabsshow", function(event, ui) {
+          if (ui.panel.id == "Rectify") {
+            if (typeof to_map != 'undefined') {
+              to_map.updateSize();
+              from_map.updateSize();
+            }
+          }
+          if (ui.panel.id == "Preview_Rectified_Map") {
+            if (typeof warpedmap != 'undefined') {
+              warpedmap.updateSize();
+            }
+          }
+
+          if (ui.panel.id == "Crop") {
+            if (typeof clipmap != 'undefined') {
+              clipmap.updateSize();
+            }
+          }
+
+          if (ui.panel.id == "Show") {
+            if (typeof umap != 'undefined') {
+              umap.div.style.width = "100%";
+              umap.updateSize();
+            }
+          }
+          if (ui.panel.id == "Activity_History") {
+
+          }
+
+
+
+        }); //end tabshow
+
+      });//end jquery function
+
+    </script>
+    <script type="text/javascript">
+      // PageLoad function
+      // This function is called when  1. after calling $.historyInit(); 2. after calling $.historyLoad(); 3. after pushing "Go Back" button of a browser
+      var tabSuffix = "_tab"; //suffix to be added to link to stop jumping
+      function pageload(hash) {
+        if (hash) {
+          // restore ajax loaded state
+          if (jQuery.browser.msie) {
+            // jquery's $.load() function does't work when hash include special characters like aao.
+            hash = encodeURIComponent(hash);
+          }
+          hash = hash.slice(0, -tabSuffix.length)
+          var tab_divs = jQuery("div.ui-tabs-panel", jQuery("#wooTabs").tabs());
+          var select_tab_index = 0;
+          jQuery.each(tab_divs, function( index, value ) {
+            if (hash === value.id){
+              select_tab_index = index;
+            }
+          });
+
+          jQuery("#wooTabs").tabs( "option", "active", select_tab_index );
+          //jQuery("#wooTabs").tabs("select", hash);
+        } else {
+          //if there is no hash, wat to do? currently, nothing, as by default it should be displayed tab.
+          //show tab  //jQuery("#wooTabs").tabs("select", 0);
+        }
+      }
+
+      jQuery(document).ready(function() {
+        jQuery.historyInit(pageload); //TODO
+
+        // set onlick event for buttons
+        jQuery("a[rel='history']").click(function() {
+
+          var hash = this.title + tabSuffix;
+          jQuery.historyLoad(hash);
+        });
+      });
+    </script>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="oFSRt7mXGAPtY7U0o6dzSDM8Fnguv0qZkcwcCn2e+pEHeQFQ0hJtGqagLOQs6WUdj5yZWpziPbt+YyYKxpWo1g==" />
+    
+  </head>
+    <body>
+      <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+
+    <div id="headerDiv" class="headerDiv">
+      <h1><a href="/">日本版 Map Warper</a></h1>
+      <div class="user_status">
+    <a href="/u/sign_in">ログイン</a>
+    <a href="/u/sign_up">アカウント作成</a>
+    <div class="locale-switcher">
+    <span class="selected-locale">日本語 (ja)</span>
+    <ul class="selecticve-locale-items">
+        <li class="locale-item">
+          <a class="selective-locale" href="http://mapwarper.h-gis.jp/maps/47/export?locale=en">English (en)</a>
+        </li>
+    </ul>
+  </div>
+
+</div>
+
+      <div id="nav">
+  <ul id="navlist">
+    <li><a href="/">ホーム</a></li>
+    <li class=""><a href="http://mapwarper.h-gis.jp/maps">すべての地図を見る</a></li>
+    <li class="responsive responsive_narrow"><a href="http://mapwarper.h-gis.jp/maps?show_warped=1">整形済みの地図を見る</a></li>    
+    <li class="responsive responsive_wide"><a href="http://mapwarper.h-gis.jp/maps/geosearch?show_warped=1">場所から地図を探す</a></li>    
+    <li class="responsive"><a href="/maps/new">地図をアップロードする</a></li>
+    <li class="responsive"><a href="/layers">すべてのモザイクを見る</a></li>
+    <li class="responsive responsive_wide"><a href="http://mapwarper.h-gis.jp/layers/geosearch">場所からモザイクを探す</a></li>    
+    <li class="responsive responsive_narrow"><a href="/layers/new">モザイクを追加する</a></li>
+    <li class="responsive responsive_narrow"><a href="/about">Map Warperについて</a></li>
+    <li class="responsive responsive_narrow"><a href="/help">ヘルプ</a></li>
+  </ul>
+</div>
+
+    </div>
+    <a href="/">ホーム</a> &gt; <a href="http://mapwarper.h-gis.jp/maps">検索</a> &gt; <a href="/maps">地図</a> &gt; <a href="/maps/47">地図47</a>
+    <table id="map_table">
+      
+<tr>
+  <td class="table0">
+    <img src="/uploads/47/thumb/kobo3.png" alt="Kobo3" />
+  </td>
+  <td class="table0">
+    <span class="maplist_title">
+      神戸：五万分一地形圖
+    </span>
+
+    <br />
+    <span class="map_description">
+      Gomanbun no ichi chikeizu
+ALTERNATIVE TITLE
+五万分一地形圖
+TYPE OF RESOURCE
+Cartographic
+FORM
+cartographic materialmapmap
+EXTENT
+maps : some col. ; 39 x 46 cm. or smaller.
+IMPRINT
+Yatabe-machi : Kokudo Chiriin, Meiji 21?- 1888?-, 1888-
+ISSUANCE
+monographic
+IMPRINT
+谷田部町 : 國土地理院, 明治 21?- 1888?-
+LANGUAGE
+Japanese
+MAP DATA
+Scale 1:50,000.
+Creators/Contributors    </span>
+    <span class="map_summary">
+      アップロード者： <a href="/users/8">Keiji_Yano</a>.
+        ( <a href="/maps/47/layers">1枚のレイヤー</a>)
+      <span class="map_year">
+          作成: 1888      </span>
+      
+      最終更新日時 9年弱 前.
+        4個の基準点.
+    </span>
+    <br />
+
+    <span class="map_links">
+
+        リンク: <a href="https://purl.stanford.edu/fs206br6980">出所・参照情報</a>
+
+       |
+        <a href="http://mapwarper.h-gis.jp/maps/47.kml">KMLをダウンロードする</a>
+
+
+      <div style="clear:both;"></div>
+      <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style"
+     addthis:title="神戸：五万分一地形圖"
+     addthis:description="Gomanbun no ichi chikeizu ALTERNATIVE TITLE 五万分一地形圖 TYPE OF RESOURCE Cartographic FORM cartographic materialmapmap EXTENT maps : some col. ; 39 x 46 cm. or smaller. IMPRINT [Yatabe-machi] : Kokudo..." >
+  <a href="//www.addthis.com/bookmark.php?v=250&amp;username=example_user"
+     class="addthis_button_compact" >Share</a>
+  <span class="addthis_separator">|</span>
+  <a class="addthis_button_facebook"></a>
+  <a class="addthis_button_google"></a>
+  <a class="addthis_button_twitter"></a>
+</div>
+<script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#username=example_user"></script>
+<!-- AddThis Button END -->
+
+      <script type="text/javascript">
+  var isHovering = false;
+  function closeExportWindow(force) {
+    if (!isHovering || force) {
+      jQuery('#export_window').hide();
+    }
+  }
+  jQuery(document).ready(function() {
+
+    jQuery("#export_window").hide();
+    jQuery("#export_button").click(function() {
+      var o = jQuery(this).offset();
+      jQuery("#export_window").css({'position': 'absolute', 'left': o.left, 'top': o.top + 17});
+      jQuery("#export_window").show();
+    });
+
+    jQuery("#export_window").mouseenter(function() {
+      isHovering = true;
+    }).mouseleave(function() {
+      isHovering = false;
+      setTimeout('closeExportWindow(false)', 700);
+    });
+
+    jQuery("#close_export_window").click(function() {
+      closeExportWindow(true);
+    });
+
+  });
+</script>
+
+<span id="export_toolbox">|&nbsp;
+  <a href="#" id="export_button" class="export_button"><img height="16" src="/assets/KML-logo-20x25-8e805f48b7a393fe53116c90dd9d332a.png" alt="Kml logo 20x25" />&nbsp;エクスポート</a>
+  <div id="export_window" class="export_float_div hidden" >
+    <div id="export_window_inner">
+      <div id="export_window_head">
+        <span>リンクをエクスポートする</span>
+        <a id="close_export_window" href="#" >X</a>
+      </div>
+      <div id="export_window_content" style="display: block;">
+          <ul>
+            <li> <a href="http://mapwarper.h-gis.jp/maps/47.kml"><img src="/assets/KML-logo-20x25-8e805f48b7a393fe53116c90dd9d332a.png" alt="Kml logo 20x25" />KMLファイルをダウンロードする</a>  </li>
+            <li><a href="http://mapwarper.h-gis.jp/maps/wms/47?request=GetCapabilities&amp;service=WMS&amp;version=1.1.1"><img src="/assets/wms-20x25-51e097d1cc9daf2c6a10cb42215b17c9.png" alt="Wms 20x25" />WMS CapabilitiesのURL</a> </li>
+            <li>
+              <a href="http://mapwarper.h-gis.jp/maps/tile/47/z/x/y"><img src="/assets/tiles-20x25-81f481525967bd93b20c7d11cf277d8d.png" alt="Tiles 20x25" />タイル（Google・OSMのフォーマット）</a> 
+            </li>
+            <li><a href="http://mapwarper.h-gis.jp/maps/47/gcps.csv"><img src="/assets/csv-20x25-0e1887c9ba8e7531b89ff6f1622b8b7f.png" alt="Csv 20x25" />基準点をCSVでダウンロードする</a></li>
+              <li> Log in for</li>
+            <li> 他のエクスポートオプション </li>
+          </ul>
+        <div style="clear:both;"></div>
+      </div>
+      <div id="export_window_foot" style="display: block;">
+        日本版 Map Warper
+      </div>
+    </div>
+  </div>
+</span>
+
+    </span>
+  </td>
+</tr>
+
+    </table>
+
+    <div id="wooTabs">
+      <ul>
+            <li><a id="aa閲覧" href="/maps/47" title="閲覧">
+                <span>閲覧</span>
+              </a></li>
+            <li><a id="aa編集" href="/maps/47/edit" title="編集">
+                <span>編集</span>
+              </a></li>
+            <li><a id="aa整形" href="/maps/47/warp" title="整形">
+                <span>整形</span>
+              </a></li>
+            <li><a id="aa切り抜き" href="/maps/47/clip" title="切り抜き">
+                <span>切り抜き</span>
+              </a></li>
+            <li><a id="aa整列" href="/maps/47/align" title="整列">
+                <span>整列</span>
+              </a></li>
+            <li><a id="aaプレビュー" href="/maps/47/warped" title="プレビュー">
+                <span>プレビュー</span>
+              </a></li>
+            <li><a id="aaエクスポート" href="#Export" title="エクスポート">
+                <span>エクスポート</span>
+              </a></li>
+            <li><a id="aaメタデータ" href="/maps/47/metadata" title="メタデータ">
+                <span>メタデータ</span>
+              </a></li>
+            <li><a id="aa更新履歴" href="/maps/47/activity" title="更新履歴">
+                <span>更新履歴</span>
+              </a></li>
+            <li><a id="aaコメント" href="/maps/47/comments" title="コメント">
+                <span>コメント (0)</span>
+              </a></li>
+      </ul>
+      <div id="Export" >
+        
+        <div class="export-tab-container">
+<h2>エクスポート</h2>
+<h3>画像</h3>
+<ul>
+  <li>
+    GeoTIFF: <a href="http://mapwarper.h-gis.jp/maps/47/export.tif">整形済みのGeoTIFFをダウンロードする</a>
+  </li>
+  <li>
+    PNG: <a href="http://mapwarper.h-gis.jp/maps/47/export.png">整形済みのPNGをダウンロードする</a>
+    (および、それに関連づけられた.aux.xmlファイル <a href="http://mapwarper.h-gis.jp/maps/47/export.aux_xml">.aux.xml</a>)
+  </li>
+</ul>
+<h3>地図のフォーマット</h3>
+<ul>
+  <li>KML: <a href="http://mapwarper.h-gis.jp/maps/47.kml">KMLファイルをダウンロードする</a> （Google Earthなどで使用できます）</li>
+  <li>
+    WMS: <a href="http://mapwarper.h-gis.jp/maps/wms/47?request=GetCapabilities&amp;service=WMS&amp;version=1.1.1">WMS CapabilitiesのURL</a>
+    (<a href="http://mapwarper.h-gis.jp/maps/wms/47?request=GetMap&amp;version=1.1.1&amp;styles=&amp;format=image/png&amp;srs={proj}&amp;exceptions=application/vnd.ogc.session.inimage&amp;width={width}&amp;height={height}&amp;BBOX={bbox}&amp;">JOSM OpenStreetMap エディター</a>    )
+  </li>
+    <li>
+    タイル（Google・OSMのフォーマット）: https://mapwarper.h-gis.jp/maps/tile/47/{z}/{x}/{y}.png
+  </li>
+</ul>
+参照リンク：
+<ul>
+  <li>
+    <a href="http://example.com/alink">参照</a>
+  </li>
+</ul>
+
+<h3>基準点</h3>
+<ul>
+  <li>CSV: <a href="http://mapwarper.h-gis.jp/maps/47/gcps.csv">基準点をCSVでダウンロードする</a> </li>
+</div>
+
+<script>
+	setTimeout(() => {
+		document.querySelectorAll('a[href^="http://mapwarper.h-gis.jp"]')
+			.forEach(anchor => (anchor.href = anchor.href.replace(/^http:\/\//, 'https://')))
+	}, 500)
+</script>
+
+      </div>
+
+    </div>
+
+    <div id="panel-under-tabs">
+
+    </div>
+
+
+    <div id="footer">
+      <div id="nav">
+  <a href="/">ホーム</a> |
+  <a href="/maps/new">地図を追加する</a> |
+  <a href="/about.htm">Map Waperについて</a> |
+  <a href="/help.htm">ヘルプ</a>
+</div>
+
+
+    </div>
+
+      <script type="text/javascript">
+    try {
+      var pageTracker = _gat._getTracker("123");
+      pageTracker._setCookiePath("");
+      pageTracker._trackPageview("maps/export/47");
+    } catch(err) {}</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,78 @@
+{
+  "retrieved": "2026-10-09",
+  "sources": [
+    "https://ikutajinja.or.jp/history",
+    "https://www.city.kobe.lg.jp/culture/modern_history/archive/history_01.html",
+    "https://maps.gsi.go.jp/development/ichiran.html",
+    "https://ktgis.net/kjmapw/tilemapservice.html",
+    "data/geology-source.json"
+  ],
+  "decisions": "Ikuta 201 traditional foundation–1868 port opening; Inō supplied aligned image. Modern chapter ranges contiguous, <=20 years. Postwar1945–1965 uses GSI1961–1969 for wider coverage; earlier photography remains optional. Map source dates are separate from chapter periods. Early settlement chapter removed by owner. Formation now gives a sourced geological sequence.",
+  "chapters": [
+    {
+      "id": "traditions",
+      "label": "Mythological context",
+      "layerId": "pale"
+    },
+    {
+      "id": "formation",
+      "label": "Geological context",
+      "layerId": "relief"
+    },
+    {
+      "id": "kobe-mura",
+      "label": "201 (trad.)–1868",
+      "layerId": "ino-south"
+    },
+    {
+      "id": "port-opening",
+      "label": "1868–1888",
+      "layerId": "historic-1888"
+    },
+    {
+      "id": "early-city",
+      "label": "1888–1908",
+      "layerId": "historic-2man"
+    },
+    {
+      "id": "city-growth",
+      "label": "1908–1928",
+      "layerId": "historic-00"
+    },
+    {
+      "id": "interwar",
+      "label": "1928–1945",
+      "layerId": "historic-01"
+    },
+    {
+      "id": "postwar",
+      "label": "1945–1965",
+      "layerId": "ort_old10"
+    },
+    {
+      "id": "metropolitan",
+      "label": "1965–1974",
+      "layerId": "historic-04"
+    },
+    {
+      "id": "expansion",
+      "label": "1974–1984",
+      "layerId": "gazo1"
+    },
+    {
+      "id": "late-expansion",
+      "label": "1984–1995",
+      "layerId": "gazo3"
+    },
+    {
+      "id": "recovery",
+      "label": "1995–2007",
+      "layerId": "historic-07"
+    },
+    {
+      "id": "present",
+      "label": "2007–2026",
+      "layerId": "seamlessphoto"
+    }
+  ]
+}

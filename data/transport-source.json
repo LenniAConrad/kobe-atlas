@@ -1,0 +1,15 @@
+{
+  "reviewed": "2026-10-09",
+  "scope": "Three regional airports and five main terminal markers, including a representative Rokko Island terminal complex. Selected destinations, not a complete schedule or traffic ranking.",
+  "locations": "OpenStreetMap contributors, ODbL 1.0; representative feature centers from sources/originals/transport-osm.json",
+  "routeGeometry": "Authored schematic between OSM terminal centers with offshore control points. Not AIS/GPS/navigation data.",
+  "references": [
+    "https://www.city.kobe.lg.jp/a45623/kurashi/access/harbor/ferryterminal.html",
+    "https://www.kairport.co.jp/en/search/flight",
+    "https://www.kansai-airport.or.jp/en/flight/search",
+    "https://www.kobe-access.jp/eng/howto.php",
+    "https://www.osaka-airport.co.jp/en/flight/search"
+  ],
+  "sourceSHA256": "1d1adb8043fa4f63169bac4b99f048d7f13e7ee648809c57630b0626cf0936d1",
+  "routeChecks": "Official airport indexed flight listings and Kobe City ferry terminal guide reviewed; official Bay Shuttle boarding guide reviewed. Check operators for current schedules."
+}

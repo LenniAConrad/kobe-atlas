@@ -1,0 +1,534 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>タイルマップサービス|今昔マップ on the web:時系列地形図閲覧サイト|埼玉大学教育学部　谷謙二（人文地理学研究室）</title>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+    <style>
+        A:link {
+            font-size: 15px;
+            text-decoration: none;
+            color: blue;
+        }
+
+        A:visited {
+            font-size: 15px;
+            text-decoration: none;
+            color: blue;
+        }
+
+        A:active {
+            font-size: 15px;
+            text-decoration: none;
+            color: blue;
+        }
+
+        A:hover {
+            font-size: 15px;
+            text-decoration: underline;
+            color: #880088;
+        }
+
+        TABLE {
+            font-size: 15px;
+            text-decoration: none;
+            line-height: 120%;
+            border-collapse: collapse;
+            color: black;
+        }
+
+        TD {
+            border: solid;
+            border-width: 1px;
+        }
+
+        div.line {
+            position: absolute;
+            font-family: "メイリオ";
+            font-size: 15px;
+            color: #000000;
+            line-height: 18px;
+        }
+
+        div.title {
+            position: absolute;
+            background-color: #ffdddd;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+        }
+        code {
+            font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+        }
+        .prettyprint ol.linenums > li {
+            list-style-type: decimal;
+        }
+    </style>
+
+</head>
+<body>
+    <div style="position: relative">
+        <div style="position: absolute; top: 0px; left: 0px;">
+            <img src="../ttl.gif" width="105" height="30">
+        </div>
+        <div style="position: absolute; top: 5px; left: 15px;">
+            <a href="../index.html"><b>KTGIS.net</b></a>
+        </div>
+        <div style="position: absolute; top: 0px; left: 107px;">
+            <img src="../ttl.gif" width="105" height="30">
+        </div>
+        <div style="position: absolute; top: 5px; left: 123px;">
+            <a href="../mandara/index.php"><b>MANDARA</b></a>
+        </div>
+        <div style="position: absolute; top: 0px; left: 214px;">
+            <img src="../ttl_blue2.gif" width="105" height="30">
+        </div>
+        <div style="position: absolute; top: 5px; left: 235px;">
+            <a href="index.html"><b>今昔マップ</b></a>
+        </div>
+        <div style="position: absolute; top: 0px; left: 321px;">
+            <img src="../ttl.gif" width="105" height="30">
+        </div>
+        <div style="position: absolute; top: 5px; left: 347px;">
+            <a href="../lab/index.php"><b>研究室</b></a>
+        </div>
+        <div style="position: absolute; top: 0px; left: 428px;">
+            <img src="../ttl.gif" width="105" height="30">
+        </div>
+        <div style="position: absolute; top: 5px; left: 445px;">
+            <a href="../gcode/index.php"><b>Geocoding</b></a>
+        </div>
+        <div style="position: absolute; top: 0px; left: 535px;">
+            <img src="../ttl.gif" width="105" height="30">
+        </div>
+        <div style="position: absolute; top: 5px; left: 560px;">
+            <a href="../service/index.html"><b>サービス</b></a>
+        </div>
+
+        <div style="position: absolute; top: 0px; left: 642px;">
+            <img src="../ttl.gif" width="105" height="30">
+        </div>
+        <div style="position: absolute;top: 5px; left: 666px;">
+            <a href="../disaster/index.html"><b>災害関連</b></a>
+        </div>
+        <br>
+        <br>
+    </div>
+
+    <div class="line" style="top:60px;left:80px;width:650px;height:75px">
+        <div class="line" id="titleBox" style="top:0px;left:0px;width:150px;height:70px;border:solid;border-color:#000000;border-width:1px;background-color:#ffffff;border-radius: 5px">
+            <a href="index.html"><img src="title.png" width="143" height="68" style="border-style:none" /></a>
+        </div>
+        <div class="line" style="top:10px;left:160px;width:450px;height:55px">
+            時系列地形図閲覧サイト「今昔マップ on the web」<br />タイルマップサービス<br />
+            埼玉大学教育学部　<a href="../lab/index.php">谷 謙二（人文地理学研究室）</a>
+        </div>
+    </div>
+    <div class="line" style="position:absolute;top:145px;left:80px;width:630px">
+        <div class="title">タイルマップサービス </div>
+        <br />
+        本サイトの地図画像は、球面メルカトルによる一般的なタイルマップとなっています。そのため、外部のアプリケーションから地図画像を取り出して表示することができます。<br />
+        タイルへのアクセスは次のようになります。タイルの始点は<b>南西</b>です。<b>QGIS,Leafletでタイルレイヤを設定する際は、yをマイナスに{-y}として下さい。</b><br />
+        <br />
+        https://ktgis.net/kjmapw/kjtilemap/データセットフォルダ/時期フォルダ/{z}/{x}/{y}.png<br />
+        <br />
+        <div class="title">アプリケーションに本サイトのタイルマップを設定した場合</div>
+        <br />
+        必ず「今昔マップ on the web」という文字を画面に入れてください。一般公開される場合、下記までご連絡いただけると幸いです。<br />
+        <br />
+        <div class="title">問い合わせ先</div>
+        <br />
+        埼玉大学教育学部　谷謙二（人文地理学研究室）<br />
+        <img src="../lab/address.png" />
+        <br />
+        <br />
+        <div class="title">データセットごとのフォルダ構成 </div>
+        <br />
+        データセットごとのフォルダ構成は以下のようになっており、データセットフォルダの下に時期フォルダが入っています。表示できる<b>ズームレベルは8～16</b>ですが、東北地方太平洋岸と関東は<b>8～15</b>となっています。
+        <br /><br />
+              <table style="width:80%;margin-left: auto;margin-right: auto;text-align:center">
+                  <tr style="background-color:#dddddd"><td style="width:100px">データセット</td><td>データセットフォルダ</td><td>時期</td><td>時期フォルダ</td></tr>
+                  <tr><td rowspan="9">首都圏</td><td rowspan="9">tokyo50</td><td>1896-1909年</td><td>2man</td></tr>
+                  <tr><td>1917-1924年</td><td>00</td></tr>
+                  <tr><td>1927-1939年</td><td>01</td></tr>
+                  <tr><td>1944-1954年</td><td>02</td></tr>
+                  <tr><td>1965-1968年</td><td>03</td></tr>
+                  <tr><td>1975-1978年</td><td>04</td></tr>
+                  <tr><td>1983-1987年</td><td>05</td></tr>
+                  <tr><td>1992-1995年</td><td>06</td></tr>
+                  <tr><td>1998-2005年</td><td>07</td></tr>
+                  <tr><td rowspan="10">中京圏</td><td rowspan="10">chukyo</td><td>1888-1898年</td><td>2man</td></tr>
+                  <tr><td>1920年</td><td>00</td></tr>
+                  <tr><td>1932年</td><td>01</td></tr>
+                  <tr><td>1937-1938年</td><td>02</td></tr>
+                  <tr><td>1947年</td><td>03</td></tr>
+                  <tr><td>1959-1960年</td><td>04</td></tr>
+                  <tr><td>1968-1973年</td><td>05</td></tr>
+                  <tr><td>1976-1980年</td><td>06</td></tr>
+                  <tr><td>1984-1989年</td><td>07</td></tr>
+                  <tr><td>1992-1996年</td><td>08</td></tr>
+                  <tr><td rowspan="10">京阪神圏</td><td rowspan="10">keihansin</td><td>1892-1910年</td><td>2man</td></tr>
+                  <tr><td>1922-1923年</td><td>00</td></tr>
+                  <tr><td>1927-1935年</td><td>01</td></tr>
+                  <tr><td>1947-1950年</td><td>02</td></tr>
+                  <tr><td>1954-1956年</td><td>03</td></tr>
+                  <tr><td>1961-1964年</td><td>03x</td></tr>
+                  <tr><td>1967-1970年</td><td>04</td></tr>
+                  <tr><td>1975-1979年</td><td>05</td></tr>
+                  <tr><td>1983-1988年</td><td>06</td></tr>
+                  <tr><td>1993-1997年</td><td>07</td></tr>
+                  <tr><td rowspan="5">札幌</td><td rowspan="5">sapporo</td><td>1916年</td><td>00</td></tr>
+                  <tr><td>1935年</td><td>01</td></tr>
+                  <tr><td>1950-1952年</td><td>02</td></tr>
+                  <tr><td>1975-1976年</td><td>03</td></tr>
+                  <tr><td>1995-1998年</td><td>04</td></tr>
+                  <tr><td rowspan="5">仙台</td><td rowspan="5">sendai</td><td>1928-1933年</td><td>00</td></tr>
+                  <tr><td>1946年</td><td>01</td></tr>
+                  <tr><td>1963-1967年</td><td>02</td></tr>
+                  <tr><td>1977-1978年</td><td>03</td></tr>
+                  <tr><td>1995-2000年</td><td>04</td></tr>
+                  <tr><td rowspan="6">広島</td><td rowspan="6">hiroshima</td><td>1894-1899年</td><td>2man</td></tr>
+                  <tr><td>1925-1932年</td><td>00</td></tr>
+                  <tr><td>1950-1954年</td><td>01</td></tr>
+                  <tr><td>1967-1969年</td><td>02</td></tr>
+                  <tr><td>1984-1990年</td><td>03</td></tr>
+                  <tr><td>1992-2001年</td><td>04</td></tr>
+                  <tr><td rowspan="6">福岡・北九州</td><td rowspan="6">fukuoka</td><td>1922-1926年</td><td>00</td></tr>
+                  <tr><td>1936-1938年</td><td>01</td></tr>
+                  <tr><td>1948-1956年</td><td>02</td></tr>
+                  <tr><td>1967-1972年</td><td>03</td></tr>
+                  <tr><td>1982-1986年</td><td>04</td></tr>
+                  <tr><td>1991-2000年</td><td>05</td></tr>
+                  <tr><td rowspan="4">東北地方太平洋岸</td><td rowspan="4">tohoku_pacific_coast</td><td>1901-1913年</td><td>00</td></tr>
+                  <tr><td>1949-1953年</td><td>01</td></tr>
+                  <tr><td>1969-1982年</td><td>02</td></tr>
+                  <tr><td>1990-2008年</td><td>03</td></tr>
+                  <tr><td rowspan="4">関東</td><td rowspan="4">kanto</td><td>1894-1915年</td><td>00</td></tr>
+                  <tr><td>1928-1945年</td><td>01</td></tr>
+                  <tr><td>1972-1982年</td><td>02</td></tr>
+                  <tr><td>1988-2008年</td><td>03</td></tr>
+                  <tr><td rowspan="4">沖縄本島南部</td><td rowspan="4">okinawas</td><td>1919年</td><td>00</td></tr>
+                  <tr><td>1973-1975年</td><td>01</td></tr>
+                  <tr><td>1992-1994年</td><td>02</td></tr>
+                  <tr><td>2005-2008年</td><td>03</td></tr>
+                  <tr><td rowspan="7">浜松・豊橋</td><td rowspan="7">hamamatsu</td><td>1889-1890年</td><td>2man</td></tr>
+                  <tr><td>1916-1918年</td><td>00</td></tr>
+                  <tr><td>1938-1950年</td><td>01</td></tr>
+                  <tr><td>1956-1959年</td><td>02</td></tr>
+                  <tr><td>1975-1988年</td><td>03</td></tr>
+                  <tr><td>1988-1995年</td><td>04</td></tr>
+                  <tr><td>1996-2010年</td><td>05</td></tr>
+                  <tr><td rowspan="5">熊本</td><td rowspan="5">kumamoto</td><td>1900-1901年</td><td>2man</td></tr>
+                  <tr><td>1926年</td><td>00</td></tr>
+                  <tr><td>1965-1971年</td><td>01</td></tr>
+                  <tr><td>1983年</td><td>02</td></tr>
+                  <tr><td>1998-2000年</td><td>03</td></tr>
+                  <tr><td rowspan="5">新潟</td><td rowspan="5">niigata</td><td>1910-1911年</td><td>00</td></tr>
+                  <tr><td>1930-1931年</td><td>01</td></tr>
+                  <tr><td>1966-1968年</td><td>02</td></tr>
+                  <tr><td>1980-1988年</td><td>03</td></tr>
+                  <tr><td>1997-2001年</td><td>04</td></tr>
+                  <tr><td rowspan="5">姫路</td><td rowspan="5">himeji</td><td>1903-1910年</td><td>2man</td></tr>
+                  <tr><td>1923年</td><td>00</td></tr>
+                  <tr><td>1967年</td><td>01</td></tr>
+                  <tr><td>1981-1985年</td><td>02</td></tr>
+                  <tr><td>1997-2001年</td><td>03</td></tr>
+                  <tr><td rowspan="5">岡山・福山</td><td rowspan="5">okayama</td><td>1895-1898年</td><td>2man</td></tr>
+                  <tr><td>1925年</td><td>00</td></tr>
+                  <tr><td>1965-1970年</td><td>01</td></tr>
+                  <tr><td>1978-1988年</td><td>02</td></tr>
+                  <tr><td>1990-2000年</td><td>03</td></tr>
+                  <tr><td rowspan="6">鹿児島</td><td rowspan="6">kagoshima</td><td>1902年</td><td>5man</td></tr>
+                  <tr><td>1902年</td><td>2man</td></tr>
+                  <tr><td>1932年</td><td>00</td></tr>
+                  <tr><td>1966年</td><td>01</td></tr>
+                  <tr><td>1982-1983年</td><td>02</td></tr>
+                  <tr><td>1996-2001年</td><td>03</td></tr>
+                  <tr><td rowspan="5">松山</td><td rowspan="5">matsuyama</td><td>1903年</td><td>2man</td></tr>
+                  <tr><td>1928-1955年</td><td>00</td></tr>
+                  <tr><td>1968年</td><td>01</td></tr>
+                  <tr><td>1985年</td><td>02</td></tr>
+                  <tr><td>1998-1999年</td><td>03</td></tr>
+                  <tr><td rowspan="4">大分</td><td rowspan="4">oita</td><td>1914年</td><td>00</td></tr>
+                  <tr><td>1973年</td><td>01</td></tr>
+                  <tr><td>1984-1986年</td><td>02</td></tr>
+                  <tr><td>1997-2001年</td><td>03</td></tr>
+                  <tr><td rowspan="6">長崎</td><td rowspan="6">nagasaki</td><td>1900-1901年</td><td>2man</td></tr>
+                  <tr><td>1924-1926年</td><td>00</td></tr>
+                  <tr><td>1954年</td><td>01</td></tr>
+                  <tr><td>1970-1970年</td><td>02</td></tr>
+                  <tr><td>1982-1983年</td><td>03</td></tr>
+                  <tr><td>1996-2000年</td><td>03</td></tr>
+                  <tr><td rowspan="5">金沢・富山</td><td rowspan="5">kanazawa</td><td>1909-1910年</td><td>2man</td></tr>
+                  <tr><td>1930年</td><td>00</td></tr>
+                  <tr><td>1968-1969年</td><td>01</td></tr>
+                  <tr><td>1981-1985年</td><td>02</td></tr>
+                  <tr><td>1994-2001年</td><td>03</td></tr>
+                  <tr><td rowspan="6">和歌山</td><td rowspan="6">wakayama</td><td>1908-1912年</td><td>2man</td></tr>
+                  <tr><td>1934年</td><td>00</td></tr>
+                  <tr><td>1947年</td><td>01</td></tr>
+                  <tr><td>1966-1967年</td><td>02</td></tr>
+                  <tr><td>1984-1985年</td><td>03</td></tr>
+                  <tr><td>1998-2000年</td><td>04</td></tr>
+                  <tr><td rowspan="5">青森</td><td rowspan="5">aomori</td><td>1912年</td><td>00</td></tr>
+                  <tr><td>1939-1955年</td><td>01</td></tr>
+                  <tr><td>1970年</td><td>02</td></tr>
+                  <tr><td>1984-1989年</td><td>03</td></tr>
+                  <tr><td>2003-2011年</td><td>04</td></tr>
+                  <tr><td rowspan="5">高松</td><td rowspan="5">takamatsu</td><td>1896-1910年</td><td>2man</td></tr>
+                  <tr><td>1928年</td><td>00</td></tr>
+                  <tr><td>1969年</td><td>01</td></tr>
+                  <tr><td>1983-1984年</td><td>02</td></tr>
+                  <tr><td>1990-2000年</td><td>03</td></tr>
+                  <tr><td rowspan="6">長野</td><td rowspan="6">nagano<td>1912年</td><td>00</td></tr>
+                  <tr><td>1937年</td><td>01</td></tr>
+                  <tr><td>1960年</td><td>02</td></tr>
+                  <tr><td>1972-1973年</td><td>03</td></tr>
+                  <tr><td>1985年</td><td>04</td></tr>
+                  <tr><td>2001年</td><td>05</td></tr>
+                  <tr><td rowspan="5">福島</td><td rowspan="5">fukushima</td><td>1908年</td><td>00</td></tr>
+                  <tr><td>1931年</td><td>01</td></tr>
+                  <tr><td>1972-1973年</td><td>02</td></tr>
+                  <tr><td>1983年</td><td>03</td></tr>
+                  <tr><td>1996-2000年</td><td>04</td></tr>
+                  <tr><td rowspan="5">福井</td><td rowspan="5">fukui</td><td>1909年</td><td>2man</td></tr>
+                  <tr><td>1930年</td><td>00</td></tr>
+                  <tr><td>1969-1973年</td><td>01</td></tr>
+                  <tr><td>1988-1990年</td><td>02</td></tr>
+                  <tr><td>1996-2000年</td><td>03</td></tr>
+                  <tr><td rowspan="4">秋田</td><td rowspan="4">akita<td>1912年</td><td>00</td></tr>
+                  <tr><td>1971-1972年</td><td>01</td></tr>
+                  <tr><td>1985-1990年</td><td>02</td></tr>
+                  <tr><td>2006-2007年</td><td>03</td></tr>
+                  <tr><td rowspan="5">盛岡</td><td rowspan="5">morioka</td><td>1811-1912年</td><td>00</td></tr>
+                  <tr><td>1939年</td><td>01</td></tr>
+                  <tr><td>1968-1969年</td><td>02</td></tr>
+                  <tr><td>1983-1988年</td><td>03</td></tr>
+                  <tr><td>1999-2002年</td><td>04</td></tr>
+                  <tr><td rowspan="5">鳥取</td><td rowspan="5">tottori</td><td>1897年</td><td>2man</td></tr>
+                  <tr><td>1932年</td><td>00</td></tr>
+                  <tr><td>1973年</td><td>01</td></tr>
+                  <tr><td>1988年</td><td>02</td></tr>
+                  <tr><td>1999-2001年</td><td>03</td></tr>
+                  <tr><td rowspan="6">徳島</td><td rowspan="6">tokushima</td><td>1896-1909年</td><td>2man</td></tr>
+                  <tr><td>1917年</td><td>00</td></tr>
+                  <tr><td>1928-1934年</td><td>01</td></tr>
+                  <tr><td>1969-1970年</td><td>02</td></tr>
+                  <tr><td>1981-1987年</td><td>03</td></tr>
+                  <tr><td>1997-2000年</td><td>04</td></tr>
+                  <tr><td rowspan="5">高知</td><td rowspan="5">kochi</td><td>1906-1907年</td><td>2man</td></tr>
+                  <tr><td>1933年</td><td>00</td></tr>
+                  <tr><td>1965年</td><td>01</td></tr>
+                  <tr><td>1982年</td><td>02</td></tr>
+                  <tr><td>1998-2003年</td><td>03</td></tr>
+                  <tr><td rowspan="5">宮崎</td><td rowspan="5">miyazaki</td><td>1902年</td><td>00</td></tr>
+                  <tr><td>1935年</td><td>01</td></tr>
+                  <tr><td>1962年</td><td>02</td></tr>
+                  <tr><td>1979年</td><td>03</td></tr>
+                  <tr><td>1999-2001年</td><td>04</td></tr>
+                  <tr><td rowspan="5">山形</td><td rowspan="5">yamagata</td><td>1901-1903年</td><td>2man</td></tr>
+                  <tr><td>1931年</td><td>00</td></tr>
+                  <tr><td>1970年</td><td>01</td></tr>
+                  <tr><td>1980-1989年</td><td>02</td></tr>
+                  <tr><td>1999-2001年</td><td>03</td></tr>
+                  <tr><td rowspan="6">佐賀・久留米</td><td rowspan="6">saga</td><td>1900-1911年</td><td>2man</td></tr>
+                  <tr><td>1914-1926年</td><td>00</td></tr>
+                  <tr><td>1931-1940年</td><td>01</td></tr>
+                  <tr><td>1958-1964年</td><td>02</td></tr>
+                  <tr><td>1977-1982年</td><td>03</td></tr>
+                  <tr><td>1998-2001年</td><td>04</td></tr>
+                  <tr><td rowspan="5">松江・米子</td><td rowspan="5">matsue</td><td>1915年</td><td>00</td></tr>
+                  <tr><td>1934年</td><td>01</td></tr>
+                  <tr><td>1975年</td><td>02</td></tr>
+                  <tr><td>1989-1990年</td><td>03</td></tr>
+                  <tr><td>1997-2003年</td><td>04</td></tr>
+                  <tr><td rowspan="6">津</td><td rowspan="6">tsu</td><td>1892-1898年</td><td>2man</td></tr>
+                  <tr><td>1920年</td><td>00</td></tr>
+                  <tr><td>1937年</td><td>01</td></tr>
+                  <tr><td>1959年</td><td>02</td></tr>
+                  <tr><td>1980-1982年</td><td>03</td></tr>
+                  <tr><td>1991-1999年</td><td>04</td></tr>
+                  <tr><td rowspan="6">山口</td><td rowspan="6">yamaguchi</td><td>1897-1909年</td><td>2man</td></tr>
+                  <tr><td>1922-1927年</td><td>00</td></tr>
+                  <tr><td>1936-1951年</td><td>01</td></tr>
+                  <tr><td>1969年</td><td>02</td></tr>
+                  <tr><td>1983-1989年</td><td>03</td></tr>
+                  <tr><td>2000-2001年</td><td>04</td></tr>
+                  <tr><td rowspan="5">旭川</td><td rowspan="5">asahikawa</td><td>1916-1917年</td><td>00</td></tr>
+                  <tr><td>1950-1952年</td><td>01</td></tr>
+                  <tr><td>1972-1974年</td><td>02</td></tr>
+                  <tr><td>1986年</td><td>03</td></tr>
+                  <tr><td>1999-2001年</td><td>04</td></tr>
+                  <tr><td rowspan="5">函館</td><td rowspan="5">hakodate</td><td>19159年</td><td>00</td></tr>
+                  <tr><td>1951-1955年</td><td>01</td></tr>
+                  <tr><td>1968年</td><td>02</td></tr>
+                  <tr><td>1986-1989年</td><td>03</td></tr>
+                  <tr><td>1996-2001年</td><td>04</td></tr>
+                  <tr><td rowspan="5">松本</td><td rowspan="5">matsumoto</td><td>1910年</td><td>00</td></tr>
+                  <tr><td>1931年</td><td>01</td></tr>
+                  <tr><td>1974-1975年</td><td>02</td></tr>
+                  <tr><td>1987-1992年</td><td>03</td></tr>
+                  <tr><td>1996-2001年</td><td>04</td></tr>
+                  <tr><td rowspan="5">佐世保</td><td rowspan="5">sasebo</td><td>1900-1901年</td><td>2man</td></tr>
+                  <tr><td>1924年</td><td>00</td></tr>
+                  <tr><td>1971年</td><td>01</td></tr>
+                  <tr><td>1985-1987年</td><td>02</td></tr>
+                  <tr><td>1997-1998年</td><td>03</td></tr>
+                  <tr><td rowspan="5">弘前</td><td rowspan="5">hirosaki</td><td>1912年</td><td>00</td></tr>
+                  <tr><td>1939年</td><td>01</td></tr>
+                  <tr><td>1970-1971年</td><td>02</td></tr>
+                  <tr><td>1980-1986年</td><td>03</td></tr>
+                  <tr><td>1994-1997年</td><td>04</td></tr>
+                  <tr><td rowspan="5">会津</td><td rowspan="5">aizu</td><td>1908-1910年</td><td>00</td></tr>
+                  <tr><td>1931年</td><td>01</td></tr>
+                  <tr><td>1972-1975年</td><td>02</td></tr>
+                  <tr><td>1988-1991年</td><td>03</td></tr>
+                  <tr><td>1997-2000年</td><td>04</td></tr>
+                  <tr><td rowspan="5">釧路</td><td rowspan="5">kushiro</td><td>1897年</td><td>00</td></tr>
+                  <tr><td>1922年</td><td>01</td></tr>
+                  <tr><td>1958年</td><td>02</td></tr>
+                  <tr><td>1981年</td><td>03</td></tr>
+                  <tr><td>2001年</td><td>04</td></tr>
+                  <tr><td rowspan="5">苫小牧</td><td rowspan="5">tomakomai</td><td>1896年</td><td>00</td></tr>
+                  <tr><td>1935年</td><td>01</td></tr>
+                  <tr><td>1954-1955年</td><td>02</td></tr>
+                  <tr><td>1983-1984年</td><td>03</td></tr>
+                  <tr><td>1993-999年</td><td>04</td></tr>
+                  <tr><td rowspan="5">帯広</td><td rowspan="5">obihiro</td><td>1896年</td><td>00</td></tr>
+                  <tr><td>1930年</td><td>01</td></tr>
+                  <tr><td>1956-1957年</td><td>02</td></tr>
+                  <tr><td>1985年</td><td>03</td></tr>
+                  <tr><td>1998-2000年</td><td>04</td></tr>
+                  <tr><td rowspan="5">都城</td><td rowspan="5">miyakonojyou</td><td>1902年</td><td>00</td></tr>
+                  <tr><td>1932年</td><td>01</td></tr>
+                  <tr><td>1966年</td><td>02</td></tr>
+                  <tr><td>1979-1980年</td><td>03</td></tr>
+                  <tr><td>1998-2001年</td><td>04</td></tr>
+                  <tr><td rowspan="5">東予</td><td rowspan="5">toyo</td><td>1898-1906年</td><td>00</td></tr>
+                  <tr><td>1928年</td><td>01</td></tr>
+                  <tr><td>1966-1969年</td><td>02</td></tr>
+                  <tr><td>1984-1989年</td><td>03</td></tr>
+                  <tr><td>1994-2001年</td><td>04</td></tr>
+                   <tr><td rowspan="5">庄内</td><td rowspan="5">syonai</td><td>1913年</td><td>00</td></tr>
+                  <tr><td>1934年</td><td>01</td></tr>
+                  <tr><td>1974年</td><td>02</td></tr>
+                  <tr><td>1987年</td><td>03</td></tr>
+                  <tr><td>1997-2001年</td><td>04</td></tr>
+                  <tr><td rowspan="5">室蘭</td><td rowspan="5">muroran</td><td>1896年</td><td>00</td></tr>
+                  <tr><td>1917年</td><td>01</td></tr>
+                  <tr><td>1955年</td><td>02</td></tr>
+                  <tr><td>1986-1987年</td><td>03</td></tr>
+                  <tr><td>1998-2000年</td><td>04</td></tr>
+                  <tr><td rowspan="6">近江</td><td rowspan="6">omi</td><td>1891-1909年</td><td>2man</td></tr>
+                  <tr><td>1920-1922年</td><td>00</td></tr>
+                  <tr><td>1954年</td><td>01</td></tr>
+                  <tr><td>1967-1971年</td><td>02</td></tr>
+                  <tr><td>1979-1986年</td><td>03</td></tr>
+                  <tr><td>1992-1999年</td><td>04</td></tr>
+                   <tr><td rowspan="5">岩手県南</td><td rowspan="5">iwatekennan</td><td>1913年</td><td>00</td></tr>
+                  <tr><td>1951年</td><td>01</td></tr>
+                  <tr><td>1968年</td><td>02</td></tr>
+                  <tr><td>1985-1986年</td><td>03</td></tr>
+                  <tr><td>1996-2001年</td><td>04</td></tr>
+                   <tr><td rowspan="5">延岡</td><td rowspan="5">nobeoka</td><td>1901年</td><td>00</td></tr>
+                  <tr><td>1932-1942年</td><td>01</td></tr>
+                  <tr><td>1965年</td><td>02</td></tr>
+                  <tr><td>1978-1978年</td><td>03</td></tr>
+                  <tr><td>1999-2000年</td><td>04</td></tr>
+                     <tr><td rowspan="5">八代</td><td rowspan="5">yatsushiro</td><td>1913年</td><td>00</td></tr>
+                  <tr><td>1951年</td><td>01</td></tr>
+                  <tr><td>1968年</td><td>02</td></tr>
+                  <tr><td>1983-1986年</td><td>03</td></tr>
+                  <tr><td>1997-2000年</td><td>04</td></tr>
+                  <tr><td rowspan="6">大牟田・島原</td><td rowspan="6">omuta</td><td>1910年</td><td>00</td></tr>
+                  <tr><td>1941-1942年</td><td>01</td></tr>
+                  <tr><td>1970年</td><td>02</td></tr>
+                  <tr><td>1983-1987年</td><td>03</td></tr>
+                  <tr><td>1993-1994年</td><td>04</td></tr>
+                  <tr><td>1999-2000年</td><td>05</td></tr>
+                  <tr><td rowspan="5">周南</td><td rowspan="5">shunan</td><td>1899年</td><td>00</td></tr>
+                  <tr><td>1949年</td><td>01</td></tr>
+                  <tr><td>1968-1969年</td><td>02</td></tr>
+                  <tr><td>1985年</td><td>03</td></tr>
+                  <tr><td>1994-2001年</td><td>04</td></tr>
+                  <tr><td rowspan="5">米沢</td><td rowspan="5">yonezawa</td><td>1908-1910年</td><td>00</td></tr>
+                  <tr><td>1952-1953年</td><td>01</td></tr>
+                  <tr><td>1970-1973年</td><td>02</td></tr>
+                  <tr><td>1984年</td><td>03</td></tr>
+                  <tr><td>1999-2001年</td><td>04</td></tr>
+                  <tr><td rowspan="5">伊那</td><td rowspan="5">ina</td><td>1911年</td><td>00</td></tr>
+                  <tr><td>1951-1952年</td><td>01</td></tr>
+                  <tr><td>1976年</td><td>02</td></tr>
+                  <tr><td>1987-1990年</td><td>03</td></tr>
+                  <tr><td>1998-2001年</td><td>04</td></tr>
+                  <tr><td rowspan="5">伊賀</td><td rowspan="5">iga</td><td>1892年</td><td>00</td></tr>
+                  <tr><td>1937年</td><td>01</td></tr>
+                  <tr><td>1968年</td><td>02</td></tr>
+                  <tr><td>1980-1986年</td><td>03</td></tr>
+                  <tr><td>1996-2001年</td><td>04</td></tr>                  
+                </table>
+        <br />
+        <div class="title">カシミール3Dのタイルマッププラグインで表示させるための設定 </div>
+        <br />
+        <a href="http://www.kashmir3d.com/">カシミール3D</a>のタイムマッププラグインを使用して本サイトの地図を表示できます。<br />
+        設定は次の通りです。この例では、首都圏の大正期の地形図を設定しており、データセットフォルダは「tokyo50」、時期フォルダは「00」となります。「/$Z/$X/$Y」はどのデータセットでも共通です。画像のタイプは「PNG」、タイルの始点は「南西」に設定してください。<br />
+        <div style="width:100%;text-align:center">
+      <img src=" kashmir3dsetting.png" style="border:solid;border-width:1px;border-color:#000000" title="カシミール3Dのタイルマップ設定画面" />
+    </div>
+    <br />
+    <div class="title">Google Maps API v3で表示するための基本的なJavaScriptコード </div>
+    <br />
+    Google Maps API v3でベースマップタイプに設定するためのJavaScriptのコードです。
+    <div style="border: solid; border-width: 1px; border-color: #aaaaaa; background-color: #222222; border-radius:15px">
+        <pre><code class="prettyprint linenums">    function kjmapType() {
+      this.tileSize = new google.maps.Size(256,256);
+      this.minZoom = 8;
+      this.maxZoom = 16;
+      this.name = '今昔マップ　首都圏 明治期';
+      this.alt = '今昔マップ　首都圏 明治期';
+      this.getTile = function( tileXY, zoom, ownerDocument ) {
+         var tileImage = ownerDocument.createElement('img');
+         var ymax = 1 << zoom;
+         var y = ymax - tileXY.y - 1;
+         var dataSetFolder = "tokyo50"; //データセットのフォルダ指定
+         var ageFolder = "00";   //データセット内の時期別フォルダ指定
+         var src = "http://ktgis.net/kjmapw/kjtilemap/"
+                  + dataSetFolder + "/"
+                  + ageFolder + "/"
+                  + zoom + "/"
+                  + tileXY.x + "/"
+                  + y
+                  + ".png";
+         tileImage.setAttribute("src", src);
+         tileImage.style.width = this.tileSize.width + "px";
+         tileImage.style.height = this.tileSize.height + "px";
+         return tileImage;
+      };
+   }
+   
+   var map;
+   kjmapTypeObj = new kjmapType();
+   function init_google_map() {
+      var mapOptions = {
+         zoom: 15,
+         center: new google.maps.LatLng( 35.678257,139.715512 ),
+         streetViewControl: true,
+         mapTypeId: google.maps.MapTypeId.ROADMAP,
+         mapTypeControlOptions: {
+            mapTypeIds: [ google.maps.MapTypeId.ROADMAP, 'kjmap' ],
+            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR
+         }
+      };
+      var mapDiv = document.getElementById('map_canvas');
+      map = new google.maps.Map( mapDiv, mapOptions );
+      map.mapTypes.set('kjmap', kjmapTypeObj);
+      });
+   }</code></pre>
+    </div>
+    <img src="arrow2.gif" /> <a href="kjmapw_sample.html" target="_blank">サンプルを表示</a><br />
+    <br />
+    </div>
+
+</body>
+</html>

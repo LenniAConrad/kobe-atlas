@@ -1,0 +1,35 @@
+{
+  "source": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A55-2024.html",
+  "download": "https://nlftp.mlit.go.jp/ksj/gml/data/A55/A55-24/A55-24_28100_GEOJSON.zip",
+  "edition": "FY2024",
+  "license": "CC BY 4.0",
+  "municipality": "28100 Kobe",
+  "features": 1878,
+  "categoryCounts": {
+    "13": 15,
+    "11": 148,
+    "1": 434,
+    "3": 383,
+    "7": 25,
+    "5": 272,
+    "6": 122,
+    "9": 185,
+    "4": 122,
+    "10": 94,
+    "2": 27,
+    "12": 51
+  },
+  "sourceSHA256": "1d4058d3d540d9aa938de8060577f8b9c4b18c90c95586b0d3663c119eddff4c",
+  "outputSHA256": "91b112706ea01193ed7ad4f6271a5d675a1dc42a05c123bc826500935c56df79",
+  "processing": "Extracted 28100_youto.geojson without geometry simplification or attribute changes; deterministic feature IDs added. Source coordinates: JGD2011 geographic.",
+  "fields": {
+    "YoutoCode": "Land-use zone category; codes 1–13 (8 is rural residential; absent in this Kobe dataset)",
+    "FAR": "Floor area ratio (%)",
+    "BCR": "Building coverage ratio (%)",
+    "INDate": "Initial effective date, where supplied",
+    "FNDate": "Latest effective date, where supplied"
+  },
+  "limitations": "FY2024 is the dataset edition, not a per-feature decision date. All Kobe initial/latest decision-date fields in this extract are null. Reference use only; consult Kobe City for current parcel-level decisions. Uncoloured land is outside these polygons, not evidence that it has no planning controls.",
+  "municipalReference": "https://www.city.kobe.lg.jp/a35466/business/kaihatsu/plan/search.html",
+  "selection": "A55 is the latest official downloadable national planning edition located (FY2024), with complete Kobe municipality polygons and documented categories. Kobe municipal map is linked for current decisions. A29 is an older predecessor; no conflicting vintage is overlaid."
+}

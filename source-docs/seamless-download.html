@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!-- ダウンロードサイト 2022.06.01 -->
+<html lang="ja">
+<head>
+	<meta charset="utf-8"/>
+	<title>ダウンロード索引</title>
+	<style>
+		body { 
+			margin:0px;
+		}
+		#map {
+			width: 100%;//760px;
+			height: 730px;
+			position: absolute;
+			margin-top:0px; left: 0px;
+		}
+		.title {
+			font-weight: bold;
+		}
+		#memo, #kmlSize, #shapeSize {
+			width: 100%;
+			overflow-wrap: break-word;
+			font-size: 0.875rem;//14px;
+			display: inline-block; 
+			_display: inline;
+		}
+		.leaflet-marker-icon, .leaflet-zoom-animated, .leaflet-interactive {
+			font-size: 0.58rem;//9px;
+		}
+		#list{
+			-webkit-text-fill-color: black; // iOS用
+			opacity: 1; // iOS用
+			color:black;
+			font-size: 0.875rem;//14px;
+			background-color: #ffffcc;
+			border: 1px solid #7f9db9;
+			box-shadow: inset 1px 1px 1px 1px #c9c9c9;
+			width:60%;//600px;
+  		}
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.2.2/jszip.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.3/FileSaver.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.css" />
+</head>
+<body>
+	<div id="header">
+		<div id="memo">下の地図でダウンロードしたい区画をクリックし，選択してください
+			(複数選択可）地質図更新日:2025年7月18日<br/>
+			選択された区画<input type="text" id="list" disabled="disabled" value="まだ何も選択されていません"><br/>
+			ベクトルデータダウンロード
+			<input type="button" id="shape" value="Shapefile">
+			<input type="button" id="kml" value="KML">
+			
+		</div>
+	</div>
+	<div id="map"></div>
+	<script type="module">
+		( async _ => {
+			var aryList = [], iconMarkers = L.featureGroup();
+			var aryGrid = [];
+		
+			// ダウンロード索引
+			const meshlist = await( await fetch( './json/meshList.json' )).json(),
+			// ダウンロードサイズ
+			sizelist = await( await fetch( './json/sizeList.json' )).json();
+
+			// キャッシュ対応
+			document.querySelector( '#list' ).value = "まだ何も選択されていません";
+			document.querySelector( '#kml' ).value = "KML 0KB";
+			document.querySelector( '#shape' ).value = "Shapefile 0KB";
+
+			// 地理院地図，シームレス描画
+			const center = { lat: 34.0, lng: 138.0 };
+					var map = L.map("map", {
+						zoom: 5, 
+						minZoom: 5,
+						maxZoom: 9,
+						center: center,
+						keyboard : false // iOSでのmapの動きを止める
+					}),
+					// 単色地図
+					CHIRIIN_PALE = L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png', {
+					    attribution: "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>国土地理院</a>"
+					}).addTo( map ),
+					// 白地図
+					CHIRIIN_BLANK = L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/blank/{z}/{x}/{y}.png', {
+					    attribution: "<a href='https://www.openstreetmap.org/copyright' target='_blank'>国土地理院</a>"
+					}),
+					// シームレス
+					seamless = L.tileLayer(
+						"https://gbank.gsj.jp/seamless/v2/tiles/g/{z}/{y}/{x}.png", 
+						{attribution : '<a target="_blank" href="https://gbank.gsj.jp/seamless/">シームレス地質図</a>',
+							opacity: 0.5
+						}).addTo( map );
+
+					var baseLayers = {
+						"単色地図": CHIRIIN_PALE,
+						"白地図": CHIRIIN_BLANK
+					};
+
+					var overlays = {
+						"シームレス地質図V2": seamless
+					};
+					L.control.layers( baseLayers, overlays ).addTo( map );
+
+			var num, latLng, bounds, grid, code, meshNo, kml = 0, shape = 0;
+			for( num of meshlist ) {
+				meshNo = String( num["code"] );
+				// 緯度経度取得
+				latLng = mesh( meshNo );
+				// 描画位置指定
+				bounds = [ latLng, [ latLng[0] + 0.667, latLng[1] + 1 ] ];
+				grid = L.rectangle( bounds, { className: "c" + meshNo, color: 'black', fillOpacity: 0, weight: 1 });//.addTo( map );
+				aryGrid.push( grid );
+				// コード表示
+				code = L.divIcon( { html: meshNo, className: "c" + meshNo, iconAnchor: [ -1, 15 ] });
+				iconMarkers.addLayer( L.marker( latLng, { icon: code }) );
+			};
+			map.addLayer( iconMarkers );
+			L.layerGroup( aryGrid ).addTo( map );
+
+			// mouseover:オンマウスのときは青く塗りつぶす
+			document.querySelector( '#map' ).addEventListener( 'mouseover', e => {
+				var elm = e.target,
+					no = ( e.target.textContent ).substr( 0, 4 );
+
+				if( elm.getAttribute( "stroke" ) && elm.getAttribute( "fill" ) !== "red" ){
+					elm.setAttribute( "fill", "blue" ); 
+					elm.setAttribute( "fill-opacity", "0.5" );
+				// 海域にmouseoverしたときに3036(先頭のメッシュコード)に色がつくのを回避(elm.id !== "map")
+				}else if( no.length === 4 && elm.id !== "map" ){
+					var elm2 = document.querySelector( 'path.c' + no );
+					if( elm2.getAttribute( "stroke" ) && elm2.getAttribute( "fill" ) !== "red" ){
+						elm2.setAttribute( "fill", "blue" );
+						elm2.setAttribute( "fill-opacity", "0.5" );
+					}
+				}
+			});
+			
+			// mouseover:マウスが離れたら元に戻す
+			document.querySelector( '#map' ).addEventListener( 'mouseout', e => {
+				var elm = e.target,
+					no = ( e.target.textContent ).substr( 0, 4 );
+
+				if( elm.getAttribute( "stroke" ) && elm.getAttribute( "fill" ) !== "red" ){
+					elm.setAttribute( "fill", "black" ); 
+					elm.setAttribute( "fill-opacity", "0" );
+				}else if( no.length === 4 && elm.id !== "map" ){
+				// 海域にmouseoutしたときに3036(先頭のメッシュコード)に色がつくのを回避(elm.id !== "map")
+					var elm2 = document.querySelector( "path.c" + no );
+					if( elm2.getAttribute( "stroke" ) && elm2.getAttribute( "fill" ) !== "red" ){
+						elm2.setAttribute( "fill", "black" ); 
+						elm2.setAttribute( "fill-opacity", "0" );
+					}
+				}
+			});
+		
+			// mouseclick:選択区画を赤く塗りつぶす
+			map.on( 'click', function( e ){
+				// 選択区画
+				var place, size, res_m,
+					num = idokeido( e.latlng ), // 一次メッシュコード
+					elm = e.originalEvent.target;
+				if( !elm.getAttribute( "id" ) ){
+					// サイズ取得
+					size = sizelist.filter( function( item, index ){
+						if ( item.code == num ) return true;
+					});	
+					// code,地名取得
+					res_m = meshlist.filter( function( item, index ){
+						if ( item.code == num ) return true;
+					});	
+					place = res_m[0]["code"] + ":" + res_m[0]["title"];
+					
+					var elm2 = document.querySelector( "path.c" + num );
+					// 未選択なら赤で塗りつぶす
+					if( elm2.getAttribute( "stroke" ) && elm2.getAttribute( "fill" ) !== "red" ){
+						elm2.setAttribute( "fill", "red" ); 
+						elm2.setAttribute( "fill-opacity", "0.5" );
+						// 地名をリストに追加
+						aryList.push( place );
+						// ダウンロードサイズ+
+						kml += size[0]["kml"];
+						shape += size[0]["shape"];
+						
+					// 選択済なら透明に戻す
+					}else{
+						// 地名をリストから削除
+						var index = aryList.indexOf( place );
+						aryList.splice( index, 1 );
+						elm2.setAttribute( "fill", "black" ); 
+						elm2.setAttribute( "fill-opacity", "0" ); 
+						// ダウンロードサイズ-
+						kml -= size[0]["kml"];
+						shape -= size[0]["shape"];
+					}
+					document.querySelector( '#list' ).value = ( aryList.length > 0 ) ? aryList : "まだ何も選択されていません";
+					document.querySelector( '#kml' ).value = "KML " + kml + "KB";
+					document.querySelector( '#shape' ).value = "Shapefile " + shape + "KB";
+				}
+			});
+
+			// ダウンロード
+			document.querySelector( '#kml' ).addEventListener( 'click', async e => {
+				const path = "./kml/";//***d.zip
+				var type = "kml", list = document.querySelector( '#list' ).value;
+				download( path, type, list );
+			});
+			
+			document.querySelector( '#shape' ).addEventListener( 'click', async e => {
+				const path = "./shape/";
+				// shapeの拡張子はzip
+				var type = "zip", list = document.querySelector( '#list' ).value;
+				download( path, type, list );
+			});
+			
+			// ズームレベル変更
+			map.on( 'zoomend', function( e ){
+				var text, p, top, font, w, z = map.getZoom();
+				// ズームレベルが7以上のときは地名表示
+				switch( z ) {
+					case 5:
+						top = "-15px";
+						font = "9px";
+						w = "auto";
+						break;
+					case 6:
+						top = "-35px";
+						font = "9px";
+						w = "auto";
+						break;
+					case 7:
+						top = "-70px";
+						font = "12px";
+						w = "80px";
+						break;
+					case 8:
+						top = "-140px";
+						font = "16px";
+						w = "150px";
+						break;
+					case 9:
+						top = "-280px";
+						font = "30px";
+						w = "250px";
+						break;
+				}
+				for( var j in iconMarkers._layers ) {
+					// コードのみ取得
+					var num = ( iconMarkers._layers[j]._icon.innerHTML ).substr( 0, 4 );
+					// meshlistの位置
+					p = meshlist.filter( function( item, index ){
+						if ( item.code == num ) return true;
+					});	
+					text = ( z > 6 ) ? num + "<br/>" + p[0]["title"] : num;
+					iconMarkers._layers[j]._icon.innerHTML = text;
+					iconMarkers._layers[j]._icon.style["margin-top"] = top;
+					iconMarkers._layers[j]._icon.style["font-size"] = font;
+					iconMarkers._layers[j]._icon.style["width"] = w;
+				}
+			});
+
+			// 緯度経度を一次メッシュに変換
+			function idokeido( latlng ){
+				var lat = ( Math.floor( latlng.lat * 3 / 2 )).toString(),
+					lng = ( Math.floor( latlng.lng - 100 )).toString();
+				return lat + lng;
+			};
+			
+			// 一次メッシュを緯度経度に変換
+			function mesh( no ){
+				var mesh1_lat = no.substr( 0, 2 ),// 上2桁
+					mesh1_lng = no.substr( 2, 2 );// 下2桁
+					
+				var first_two = Number( mesh1_lat ),
+					last_two = Number( mesh1_lng );
+					
+				var lat  = first_two * 2 / 3,
+					lng = last_two + 100;
+				
+				return [ lat, lng ];
+			};
+
+			// ダウンロード
+			async function download( path, type, list ){
+				var url, target,
+					type2 = ( type === "kml" ) ? "kmz" : type;
+				type = ( type === "zip" ) ? "shape" : type;
+				// ファイルの数
+				var cnt = ( ( list.match( /,/g ) || [] ).length ) + 1;
+				// ファイルが1つの場合
+				if( cnt === 1 ){
+					target = list.split( ":" );
+					url = path + "seamlessV2_" + type + "_" + target[ 0 ] + "." + type2;
+					// ダウンロード
+					const a = document.createElement("a");
+					document.body.appendChild( a );
+					a.download = "seamlessV2_" + type + "_" + target[ 0 ] + "." + type2;//url;
+					a.href = url;
+					a.click();
+					a.remove();
+					URL.revokeObjectURL( url );
+				}else{ // zip(非圧縮)でダウンロード
+					var target2 = list.split( "," );
+					var zip = new JSZip();
+					for( var q = 0; q < cnt; ++q ){
+						target = target2[q].split( ":" );
+						url = path + "seamlessV2_" + type + "_" + target[ 0 ] + "." + type2;
+						var response = await fetch( url ),
+							content = await response.blob();
+						zip.file( "seamlessV2_" + type + "_" + target[ 0 ] + "." + type2, content );
+					}
+					zip.generateAsync({ type: "blob" }).then( function( content ) {
+						var saveName = ( type === "kml" ) ? "kmlFile.zip" : "shapeFile.zip";
+						saveAs( content, saveName );
+					});
+				}
+			}
+		} )();
+	</script>
+</body>
+</html>

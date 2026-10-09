@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang='ja'> <!-- kishindan_segment -->
+    <head>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+    <meta charset='UTF-8'>
+    <title>産総研:活断層データベース</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    <meta name='csrf-param' content='authenticity_token'>
+    <meta name='csrf-token' content=''>
+
+    <link rel='icon' href='https://gbank.gsj.jp/favicon.ico'>
+
+    <script>
+      var Context = {
+        'name' : 'kishindan_segment',
+        'root' : 'https://gbank.gsj.jp/activefault/',
+        'lang' : 'ja',
+        'mode' : 'cyber'
+      };
+    </script>
+
+    
+    <script src='https://gbank.gsj.jp/activefault/js/Polyfill/es6-promise.auto.min.js?v=20180202073850'></script>
+    <script src='https://gbank.gsj.jp/activefault/js/Polyfill/fetch.js?v=20180202073850'></script>
+    <script src='https://gbank.gsj.jp/activefault/js/Polyfill/setImmediate.js?v=20180202073850'></script>
+
+    <script src='https://gbank.gsj.jp/activefault/js/console_log.js'></script>
+
+    
+    <link rel='stylesheet' href='https://gbank.gsj.jp/activefault/js/Leaflet/leaflet.css?v=20180827054055'>
+<link rel='stylesheet' href='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/L.Grid.css?v=20180202073850'>
+<link rel='stylesheet' href='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/leaflet-sidebar.css?v=20190709014347' />
+<link rel='stylesheet' href='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/Leaflet.Dialog.css?v=20180726020921' />
+<link rel='stylesheet' href='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/leaflet.rangeSelector.css?v=20210217051712' />
+<link rel='stylesheet' href='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/leaflet.legend.css?v=20240411025345' />
+<link rel='stylesheet' href='https://gbank.gsj.jp/activefault/css/font/css/font-awesome.min.css?v=20180427065009' />
+
+    <link rel='stylesheet' href='https://gbank.gsj.jp/activefault/css/style_Disp_AF.css?v=20240411025311' media='screen,tv' >
+    <link rel='stylesheet' href='https://gbank.gsj.jp/activefault/css/style_Print_AF.css?v=20180730092437' media='print' >
+
+    
+    <link rel="stylesheet" href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css' type="text/css" media="screen,tv">
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/i18n/jquery-ui-i18n.min.js'></script>
+<script src='https://gbank.gsj.jp/activefault/CYBER/jquery.zclip.min.js?v=20180717072210'></script>
+    <script src='https://gbank.gsj.jp/activefault/js/ja/header.js'></script>
+
+          
+        <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-40321869-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript';
+    ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+      '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+  </head>
+
+              <body onload='Highlight(1);' onmousemove='closesubnav(event);' >
+      
+        <div id='masthead' class='{{ $sClass); ?>'>
+
+            <table class='Heading'>
+        <tr>
+
+          <td class='HeadingImageArea'>
+            <div class='HeadingImage'>
+              <h1 id='siteName'>
+                <a href='https://gbank.gsj.jp/activefault/ja'>活断層データベース</a>
+              </h1>
+            </div>
+          </td>
+
+          <td class='HeadingLogo'>
+            <div id='utility'>
+              <a href='https://www.aist.go.jp/' target='new'><img alt='AIST logo' border='0' src='https://gbank.gsj.jp/activefault/image/AISTLOGOmini.gif?v=20180202073850'></a>
+            </div>
+          </td>
+
+        </tr>
+      </table> 
+            <div id='globalNav'>
+        <div id='globalLink' class='Cyber_J'>
+          <a href="https://gbank.gsj.jp/activefault/" id="gl1"  class="glink" onmouseover="ehandler(event,menuitem1);"  >トップ</a>
+<a href="https://gbank.gsj.jp/activefault/search_route_chart.html" id="gl2"  class="glink" onmouseover="ehandler(event,menuitem2);"  >検索入口</a>
+<a href="https://gbank.gsj.jp/activefault/earthquake.html" id="gl3"  class="glink" onmouseover="ehandler(event,menuitem3);"  >最近の地震</a>
+<a href="https://gbank.gsj.jp/activefault/database.html" id="gl4"  class="glink" onmouseover="ehandler(event,menuitem4);"  >このデータベースについて</a>
+<a href="https://gbank.gsj.jp/activefault/yougo.html" id="gl5"  class="glink" onmouseover="ehandler(event,menuitem5);"  >用語解説</a>
+<a href="https://gbank.gsj.jp/activefault/attention.html" id="gl6"  class="glink" onmouseover="ehandler(event,menuitem6);"  >ご利用にあたって</a>
+<a href="https://gbank.gsj.jp/activefault/question.html" id="gl11" class="glink" onmouseover="ehandler(event,menuitem11);" >よくある質問</a>
+<a href="https://gbank.gsj.jp/activefault/mail_contact.html" id="gl7"  class="glink" onmouseover="ehandler(event,menuitem7);"  >ご意見・ご感想</a>
+<a href="https://gbank.gsj.jp/activefault/cgi/search_archive" id="gl12" class="glink" onmouseover="ehandler(event,menuitem12);" >アーカイブ</a>
+<a href="https://gbank.gsj.jp/activefault/sitemap.html" id="gl10" class="glink" onmouseover="ehandler(event,menuitem10);" >サイトマップ</a>
+<a href="https://gbank.gsj.jp/activefault/en" id="gl8"  class="glink" onmouseover="ehandler(event,menuitem8);"  >English</a>
+        </div>
+      </div>       <div id='subGlobalNav'>
+              </div>
+    </div> 
+     
+    <div id='pagecell1'>
+
+      <script>
+  function GoBackWindows(id,num){
+    var lines = "";
+    var myData = lines.split(",");
+
+    var newline ="";
+    for( i = 0 ; i < num ; i++){
+      if ( i > 0 ){
+        newline = newline + ",";
+      }
+      newline = newline + myData[i];
+    }
+
+    document.LinkList.topic_list.value=newline;
+
+    var targets = {"0":"bunken_search","1":"search_result_kis","2":"search_result_seg","3":"kishindan_segment_list","4":"segment_param","5":"tyousati_list","6":"henni_list","7":"event_list","8":"bunken_list","9":"c14nendai_list","10":"henni_detail","11":"henni_kizyun_nendai","12":"bunken_info","13":"image_info","14":"suihon_kekka","15":"bunken_search_info","16":"bunken_search_image_info","17":"bunken_search","18":"tyousati_list_from_bunken","19":"tyousati","20":"search","21":"search_archive","22":"aist_activefault","23":"photos","default":"search"};
+
+    if ( ! targets[ id ] ) {
+      targets[ id ] = targets.default;
+    }
+
+    document.LinkList.action = 'https://gbank.gsj.jp/activefault/cgi/' + targets[ id ];
+    document.LinkList.submit();
+  }
+
+  function changeMap(i){
+    document.LinkList.search_mode.value= i;
+    document.LinkList.action='https://gbank.gsj.jp/activefault/cgi/search';
+    document.LinkList.submit();
+  }
+  
+  // bunken_listへのリンク
+  function linkBunkenList( tyousatiId ){
+    document.LinkList.tyousati_id.value = tyousatiId;
+    document.LinkList.action = 'https://gbank.gsj.jp/activefault/cgi/bunken_list';
+    document.LinkList.submit();
+  }
+</script>
+
+<form name="LinkList" target="_self" action='https://gbank.gsj.jp/activefault/cgi/search' method="get">
+  <input type="hidden" name="_token" value="CtkwAKi6upGKLlwTqQK65XEWIRNQoX095IBAjXEx">
+  <input type="hidden" name="topic_list" value="" />
+  <input type="hidden" name="search_mode" value="1" />
+  <input type="hidden" name="HasLineCheckBox" value="" />
+
+  <input type="hidden" name="zuhyou_tyousati_ids" value="" />
+  <input type="hidden" name="syashin_tyousati_ids" value="" />
+  <input type="hidden" name="limit" value="" />
+
+
+</form>
+
+
+
+                  
+      
+      <div id="breadCrumb">
+  
+                    <span>起震断層・活動セグメント検索</span>
+            
+  </div>
+
+
+      
+            <div id='content' align='center'>        
+              <!-- content section ( contents.cgi.ja.kishindan_segment ) start. -->
+    <div class="feature">
+  <div align="right"><a href='https://gbank.gsj.jp/activefault/usage_gmap.html#kensaku11'>この画面の使い方</a></div>
+
+  <form name="MapSearch" action='https://gbank.gsj.jp/activefault/cgi/kishindan_segment_list' method="get"><input type="hidden" name="_token" value="CtkwAKi6upGKLlwTqQK65XEWIRNQoX095IBAjXEx">
+    <input type="hidden" name="kid" value="" />
+    <input type="hidden" name="search_mode" value="1" />
+  </form>
+
+  <form name="DB095SearchForm" action="" method="get"><input type="hidden" name="_token" value="CtkwAKi6upGKLlwTqQK65XEWIRNQoX095IBAjXEx">
+    <input type="hidden" name="TYPE" value="" />
+    <input type="hidden" name="search_mode" value="1" />
+    <input type="hidden" name="segment_id" value="" />
+    <input type="hidden" name="check_point" value="0" />
+    <input type="hidden" name="topic_list" value="" />
+    <input type="hidden" name="referer_point" value="" />
+    <input type="hidden" name="tyousati_itiran" value="" />
+    <input type="hidden" name="fval_tyousati_p1" id="fval_tyousati_p1" value="" />
+    <input type="hidden" name="fval_tyousati_p2" id="fval_tyousati_p2" value="" />
+    <input type="hidden" name="segmentsearch_gmap" value="" />
+    <input type="hidden" name="segmentsearch_language" value="jp" />
+    <input type="hidden" name="HasLineCheckBox" value="0" />
+
+    
+    <div id='afmaparea'>
+
+    <div id='afmap' class='medium sidebar-map'>
+  </div> 
+      <div class="Legend">
+    <div id='afmap-sidebar' class='sidebar collapsed kishindan_segment_search ja'>
+            <div class="sidebar-tabs">
+        <ul role="tablist">
+          <li><a href="#home" role="tab">&equiv;</a></li>
+        </ul>
+      </div>
+            <div class="sidebar-content">
+        <div class="sidebar-pane" id="home">
+                    <script> 
+  var quakeLegend = null;
+  
+  function onChkDestructiveEarthquakes(checkbox){
+    if (checkbox.checked){
+      oMap.event_on('zoom', onZoomDestructiveEarthquakes);
+      onZoomDestructiveEarthquakes();
+    } else {
+      oMap.event_off('zoom', onZoomDestructiveEarthquakes);
+      if(quakeLegend !== null){
+        oMap.removeControl(quakeLegend);
+        quakeLegend = null;
+      }
+    }
+    
+    onChkLegend( checkbox, 'DestructiveEarthquakes' );
+  }
+  
+  function onZoomDestructiveEarthquakes(){
+    if(quakeLegend === null){
+      quakeLegend = oMap.Legend('主な被害地震凡例', '<img src="https://gbank.gsj.jp/activefault/image/LegendOfDestructiveEarthquake.png?v=20180202073850">');
+      oMap.draggable(quakeLegend);
+    }
+  }
+  
+  var quakeDispLegend = null;
+  
+  function onChkQuakeDisp(checkbox){
+    if (checkbox.checked){
+      oMap.event_on('zoom', onZoomQuakeDisp);
+      onZoomQuakeDisp();
+    } else {
+      oMap.event_off('zoom', onZoomQuakeDisp);
+      if(quakeDispLegend !== null){
+        oMap.removeControl(quakeDispLegend);
+        quakeDispLegend = null;
+      }
+    }
+    
+    onChkLegend( checkbox, 'QuakeDisp' );
+  }
+  
+  function onZoomQuakeDisp(){
+    if(quakeDispLegend === null){
+      quakeDispLegend = oMap.Legend('震源位置リアルタイム表示凡例', '<img src="https://gbank.gsj.jp/activefault/image/LegendOfFocus.png?v=20180202073850">');
+      oMap.draggable(quakeDispLegend);
+    }
+  }
+  
+  var epicentersLegend = null;
+  
+  function onChkEpicenters(checkbox){
+    if (checkbox.checked){
+      if(epicentersLegend === null){
+        epicentersLegend = oMap.Legend('地震の震央凡例', '<img src="https://gbank.gsj.jp/activefault/image/hanrei4dep.gif?v=20240411030141">');
+        oMap.draggable(epicentersLegend);
+      }
+    } else {
+      if(epicentersLegend !== null){
+        oMap.removeControl(epicentersLegend);
+        epicentersLegend = null;
+      }
+    }
+    
+    onChkLegend( checkbox, 'Epicenters' );
+  }
+</script>
+
+<div class="Legend">
+  <table>
+    <tr id='SearchArea'>       <th>
+        <input type="checkbox" onclick="onSearchAreaChkLegend( this)"/>
+      </th>
+      <td>
+        <img id="imgSearchArea" alt="[ ]" src='https://gbank.gsj.jp/activefault/image/search_area.jpg?v=20180202073850' width="30" height="30" />
+      </td>
+      <td>
+        範囲選択
+        <input type="button" onclick="SubmitGmapInfo();" value="検索" />
+      </td>
+    </tr>
+    
+    <tr>      <th>
+        <input type="checkbox" onclick="onChkLegend( this, 'BehavioralSegments_tile' )" checked/>
+      </th>
+      <td>
+        <img alt="" src='https://gbank.gsj.jp/activefault/image/redline2.png?v=20180202073850' width="30" height="30"/>
+      </td>
+      <td>
+        活動セグメント<br />
+        (線をクリックすると活動セグメント名を表示)
+      </td>
+    </tr>
+  </table>
+<br/><div style="text-align: left">地図</div>
+  <table>   
+    <tr>       <th>
+        <input type="checkbox" onclick="onChkLegend( this, 'LatLngGrid' )" />
+      </th>
+      <td>
+        緯度経度グリッド
+      </td>
+    </tr>
+    
+    <tr>       <th>
+        <input type="checkbox" onclick="onChkLegend( this, 'AfZufuku' )" />
+      </th>
+      <td>
+        5万分の1地形図の図郭境界
+      </td>
+    </tr>
+
+    <tr>       <th>
+        <input type="checkbox" onclick="onChkLegend( this, 'Seamless' )" />
+      </th>
+      <td>
+        <a target="_blank" href="https://gbank.gsj.jp/seamless/">20万分の1日本シームレス地質図<sup>&reg;</sup></a>
+        <a target="_blank" href="https://gbank.gsj.jp/seamless/legend.html">[凡例]</a>
+      </td>
+    </tr>
+
+    <tr>       <th>
+        <input type="checkbox" onclick="onChkLegend( this, 'Volcanos' )" />
+      </th>
+      <td>
+        <a target="_blank" href="https://gbank.gsj.jp/volcano/Quat_Vol/index.html">第四紀火山</a>
+      </td>
+    </tr>
+
+    <tr>       <th>
+        <input type="checkbox" onclick="onChkLegend( this, 'Offshores' )" />
+      </th>
+      <td>
+        <a target="_blank" href="https://gbank.gsj.jp/marineseisdb/">海域地質構造DB</a>
+      </td>
+    </tr>
+
+    <tr>       <th>
+        <input type="checkbox" onclick="onChkLegend( this, 'Phyokas' )" />
+      </th>
+      <td>
+        震源断層モデル<br />
+        (（独）防災科学技術研究所<br />
+        <a target="_blank" href="http://www.j-shis.bosai.go.jp/">地震ハザードステーションJ-SHIS</a>データ<br />
+        （2013年モデル1）を利用)
+      </td>
+    </tr>
+    
+    <tr>       <th>
+        <input type="checkbox" onclick="onChkLegend( this, 'Toshikens' )" />
+      </th>
+      <td>
+        <a target="_blank" href="http://www.gsi.go.jp/bousaichiri/active_fault.html">国土地理院 都市圏活断層図</a>
+      </td>
+    </tr>
+  </table>
+<br/><div style="text-align: left">地震情報</div>
+  <table>
+    <tr id='DestructiveEarthquakes'>       <th>
+        <input type="checkbox" onclick="onChkDestructiveEarthquakes( this )" />
+      </th>
+      <td>
+        主な被害地震(1923年以降)
+      </td>
+    </tr>
+
+    <tr>       <th>
+        <input id="ChkEpicenters" type="checkbox" onclick="onChkEpicenters( this )" />
+      </th>
+      <td>
+        地震の震央<br />
+        (気象庁による全国の震源カタログ）
+          <select id="SelEpicentersYear" class="Years" onchange="onSelLegendEpicenters( this )">
+                        <option value='2025'>2025</option>
+                        <option value='2024'>2024</option>
+                        <option value='2023'>2023</option>
+                        <option value='2022'>2022</option>
+                        <option value='2021'>2021</option>
+                        <option value='2020'>2020</option>
+                        <option value='2019'>2019</option>
+                        <option value='2018'>2018</option>
+                        <option value='2017'>2017</option>
+                        <option value='2016'>2016</option>
+                        <option value='2015'>2015</option>
+                        <option value='2014'>2014</option>
+                        <option value='2013'>2013</option>
+                        <option value='2012'>2012</option>
+                        <option value='2011'>2011</option>
+                        <option value='2010'>2010</option>
+                        <option value='2009'>2009</option>
+                        <option value='2008'>2008</option>
+                        <option value='2007'>2007</option>
+                        <option value='2006'>2006</option>
+                        <option value='2005'>2005</option>
+                        <option value='2004'>2004</option>
+                        <option value='2003'>2003</option>
+                        <option value='2002'>2002</option>
+                        <option value='2001'>2001</option>
+                        <option value='2000'>2000</option>
+                        <option value='1999'>1999</option>
+                        <option value='1998'>1998</option>
+                        <option value='1997'>1997</option>
+                        <option value='1996'>1996</option>
+                        <option value='1995'>1995</option>
+                        <option value='1994'>1994</option>
+                        <option value='1993'>1993</option>
+                        <option value='1992'>1992</option>
+                        <option value='1991'>1991</option>
+                        <option value='1990'>1990</option>
+                        <option value='1989'>1989</option>
+                        <option value='1988'>1988</option>
+                        <option value='1987'>1987</option>
+                        <option value='1986'>1986</option>
+                        <option value='1985'>1985</option>
+                        <option value='1984'>1984</option>
+                        <option value='1983'>1983</option>
+                        <option value='1982'>1982</option>
+                        <option value='1981'>1981</option>
+                        <option value='1980'>1980</option>
+                        <option value='1979'>1979</option>
+                        <option value='1978'>1978</option>
+                        <option value='1977'>1977</option>
+                        <option value='1976'>1976</option>
+                        <option value='1975'>1975</option>
+                        <option value='1974'>1974</option>
+                        <option value='1973'>1973</option>
+                        <option value='1972'>1972</option>
+                        <option value='1971'>1971</option>
+                        <option value='1970'>1970</option>
+                        <option value='1969'>1969</option>
+                        <option value='1968'>1968</option>
+                        <option value='1967'>1967</option>
+                        <option value='1966'>1966</option>
+                        <option value='1965'>1965</option>
+                        <option value='1964'>1964</option>
+                        <option value='1963'>1963</option>
+                        <option value='1962'>1962</option>
+                        <option value='1961'>1961</option>
+                        <option value='1960'>1960</option>
+                        <option value='1959'>1959</option>
+                        <option value='1958'>1958</option>
+                        <option value='1957'>1957</option>
+                        <option value='1956'>1956</option>
+                        <option value='1955'>1955</option>
+                        <option value='1954'>1954</option>
+                        <option value='1953'>1953</option>
+                        <option value='1952'>1952</option>
+                        <option value='1951'>1951</option>
+                        <option value='1950'>1950</option>
+                        <option value='1949'>1949</option>
+                        <option value='1948'>1948</option>
+                        <option value='1947'>1947</option>
+                        <option value='1946'>1946</option>
+                        <option value='1945'>1945</option>
+                        <option value='1944'>1944</option>
+                        <option value='1943'>1943</option>
+                        <option value='1942'>1942</option>
+                        <option value='1941'>1941</option>
+                        <option value='1940'>1940</option>
+                        <option value='1939'>1939</option>
+                        <option value='1938'>1938</option>
+                        <option value='1937'>1937</option>
+                        <option value='1936'>1936</option>
+                        <option value='1935'>1935</option>
+                        <option value='1934'>1934</option>
+                        <option value='1933'>1933</option>
+                        <option value='1932'>1932</option>
+                        <option value='1931'>1931</option>
+                        <option value='1930'>1930</option>
+                        <option value='1929'>1929</option>
+                        <option value='1928'>1928</option>
+                        <option value='1927'>1927</option>
+                        <option value='1926'>1926</option>
+                        <option value='1925'>1925</option>
+                        <option value='1924'>1924</option>
+                        <option value='1923'>1923</option>
+                      </select>
+      </td>
+    </tr>
+    
+    <tr id='QuakeDisp'>
+      <th>         <input type="checkbox" onclick="onChkQuakeDisp( this )" />
+      </th>
+      <td>
+        震源位置リアルタイム表示<br />
+        ( 最近2週間に発生したM4.0以上のもの )<br />
+        <a target="_blank" href="http://xml.kishou.go.jp/index.html">気象庁の防災情報による</a>
+      </td>
+    </tr>
+  </table>
+  
+        
+</div>         </div>
+      </div>
+    </div>   </div>   
+</div> 
+    <table class="layout">
+
+      <tr class="layout">
+        <td colspan="8" class="layout"><hr /></td>
+      </tr>
+
+      <tr class="layout">
+        <td colspan="8" class="layout"><div align="left" style="white-space: nowrap;padding-bottom:10px;">
+          検索方法をチェックし、検索語を選択/入力してから、起震断層又は活動セグメントのボタンを押してください。
+        </div></td>
+      </tr>
+
+      <tr class="layout">
+        <td class="layout"><input type="radio" name="SearchTYPE" value="TYPE0" onClick="MoveRadioFunc(1);" /></td>
+        <td align="left" class="layout"><div id="search_item1">すべて表示</div></td>
+        <td colspan="3" class="layout"></td>
+        <td rowspan="6" align="left" class="layout"><input type="button" value="起震断層" onClick="SubmitRadioFunc(1);" /></td>
+        <td rowspan="6" align="left" class="layout"><input type="button" value="活動セグメント" onClick="SubmitRadioFunc(0);" /></td>
+        <td rowspan="6" align="left" class="layout"><input type="Reset" value="クリア" /></td>
+      </tr>
+
+      <tr class="layout">
+        <td class="layout"><input type="radio" name="SearchTYPE" value="TYPE1" onClick="MoveRadioFunc(2);"/></td>
+        <td align="left" class="layout"><div id="search_item2">名前で検索</div></td>
+        <td colspan="3" align="left" class="layout"><input name="fval_type1" style="ime-mode:active;" onChange="JavaScript:MoveRadioFunc(2);" /> </td>
+      </tr>
+
+      <tr class="layout">
+        <td class="layout">&nbsp;</td>
+        <td colspan="4" align="left" class="layout" nowrap>
+          (起震断層名・活動セグメント名・基盤的調査観測の対象活断層名・各種文献に示された活断層など、<BR />
+          いろいろな活断層名の部分一致検索を行なうことが出来ます。多めにヒットしたり、 <BR />
+          時間がかかったりする場合もありますので、ご注意下さい。)
+        </td>
+      </tr>
+
+      <tr class="layout">
+        <td class="layout">
+          <input type="radio" name="SearchTYPE" value="ZICHITAI" onClick="MoveRadioFunc(3);"/>
+        </td>
+        <td align="left" class="layout"><div id="search_item3">都道府県名で検索</div></td>
+        <td class="layout"  align="left">
+          <select name="fval_zichitai" onChange="JavaScript:MoveRadioFunc(3);" >
+                            <option value="0">海域</option>
+                            <option value="1000">北海道</option>
+                            <option value="2000">青森県</option>
+                            <option value="3000">岩手県</option>
+                            <option value="4000">宮城県</option>
+                            <option value="5000">秋田県</option>
+                            <option value="6000">山形県</option>
+                            <option value="7000">福島県</option>
+                            <option value="8000">茨城県</option>
+                            <option value="9000">栃木県</option>
+                            <option value="10000">群馬県</option>
+                            <option value="11000">埼玉県</option>
+                            <option value="12000">千葉県</option>
+                            <option value="13000">東京都</option>
+                            <option value="14000">神奈川県</option>
+                            <option value="15000">新潟県</option>
+                            <option value="16000">富山県</option>
+                            <option value="17000">石川県</option>
+                            <option value="18000">福井県</option>
+                            <option value="19000">山梨県</option>
+                            <option value="20000">長野県</option>
+                            <option value="21000">岐阜県</option>
+                            <option value="22000">静岡県</option>
+                            <option value="23000">愛知県</option>
+                            <option value="24000">三重県</option>
+                            <option value="25000">滋賀県</option>
+                            <option value="26000">京都府</option>
+                            <option value="27000">大阪府</option>
+                            <option value="28000">兵庫県</option>
+                            <option value="29000">奈良県</option>
+                            <option value="30000">和歌山県</option>
+                            <option value="31000">鳥取県</option>
+                            <option value="32000">島根県</option>
+                            <option value="33000">岡山県</option>
+                            <option value="34000">広島県</option>
+                            <option value="35000">山口県</option>
+                            <option value="36000">徳島県</option>
+                            <option value="37000">香川県</option>
+                            <option value="38000">愛媛県</option>
+                            <option value="39000">高知県</option>
+                            <option value="40000">福岡県</option>
+                            <option value="41000">佐賀県</option>
+                            <option value="42000">長崎県</option>
+                            <option value="43000">熊本県</option>
+                            <option value="44000">大分県</option>
+                            <option value="45000">宮崎県</option>
+                            <option value="46000">鹿児島県</option>
+                            <option value="47000">沖縄県</option>
+                      </select>
+        </td>
+      </tr>
+
+      <tr class="layout">
+        <td class="layout">
+          <input type="radio" name="SearchTYPE" value="TYPE2" onClick="MoveRadioFunc(4);"/>
+        </td>
+        <td align="left" class="layout" nowrap><div id="search_item4">パラメータ代表値で検索</div></td>
+        <td align="left" class="layout" nowrap>
+          <select name="fval_type2_opt1" onChange="JavaScript:MoveRadioFunc(4);">
+            <option value="0">長さ[km]</option>
+            <option value="1">平均変位速度[m/千年]</option>
+            <option value="2">単位変位量[m]</option>
+            <option value="3">平均活動間隔[千年]</option>
+            <option value="4">最新活動時期(野外調査)下限値[AD]</option>
+            <option value="5">最新活動時期(野外調査)上限値[AD]</option>
+            <option value="6">対応歴史地震[AD]</option>
+            <option value="7">地震後経過率</option>
+            <option value="8">将来活動確率(BPT)[%]</option>
+            <option value="9">将来活動確率(ポアソン)[%]</option>
+          </select>
+          <input type="text" name="fval_type2" size="7" onChange="JavaScript:MoveRadioFunc(4);" />
+          <select name="fval_type2_opt2" onChange="JavaScript:MoveRadioFunc(4);">
+            <option value="0">等しい</option>
+            <option value="1">以上</option>
+            <option value="2">以下</option>
+            <option value="3">より大きい</option>
+            <option value="4">より小さい</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr class="layout">
+        <td class="layout">
+          <input type="radio" name="SearchTYPE" value="TYPE3" onClick="MoveRadioFunc(5);"/>
+        </td>
+        <td align="left" class="layout" nowrap>
+          <div id="search_item5">
+            歴史地震で検索
+          </div>
+        </td>
+        <td align="left" class="layout" nowrap></td>
+      </tr>
+
+      <tr class="layout">
+        <td class="layout"></td>
+        <td colspan="2" align="left" class="layout" nowrap style="padding-left:2em;">
+          <table class="layout">
+            <tr class="layout">
+              <td class="layout">
+                歴史地震名
+              </td>
+              <td class="layout">
+                <input type="text" name="fval_type3_name" size="15" onChange="JavaScript:MoveRadioFunc(5);" /> (部分一致)
+              </td>
+            </tr>
+            <tr class="layout">
+              <td class="layout">
+                歴史地震の発生年(西暦)
+              </td>
+              <td  class="layout">
+                <input type="text" name="fval_type3_yunder" size="6" onChange="JavaScript:MoveRadioFunc(5);" />年～<input type="text" name="fval_type3_yupper" size="6" onChange="JavaScript:MoveRadioFunc(5);" />年
+              </td>
+            </tr>
+
+            <tr class="layout">
+              <td colspan="2" class="layout">
+                <a href="javascript: switch_table();"> 年表から検索</a>（クリックすると年表を表示/非表示します）
+                <input type="hidden" name="fval_type3_cd" value="" />
+              </td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+
+      <tr class="layout">
+        <td class="layout"> </td>
+        <td colspan="6" class="layout" style="padding-left: 4em">
+          <div id="chronologicaltable" style="display: none;">
+            <table class="layout" width="100%">
+              <tr><th>番号</th><th>歴史地震名</th><th>発生年 （西暦）</th><th>発生年 （和暦）</th><th>マグニチュード</th><th>変位が確認された活動セグメント</th></tr>
+              <tr>
+    <td>76</td>
+  <td><a href="javascript:Submit_Chrono( '76' );">熊本地震</a></td>
+  <td>2026</td>
+  <td>令和8</td>
+  <td>7.1</td>
+  <td>
+ 218-02 御船活動セグメント 218-03 八代活動セグメント 
+  </td>
+</tr>
+
+<tr>
+    <td>75</td>
+   <td><a href="javascript:Submit_Chrono( '75' );">能登半島地震</a></td>
+  <td>2024</td>
+  <td>令和6</td>
+  <td>7.6</td>
+  <td>
+ 329-01 門前沖活動セグメント 329-02 猿山沖活動セグメント 329-03 輪島沖活動セグメント 329-04 珠洲沖活動セグメント  
+  </td>
+</tr>
+
+                  <tr>
+                <td>74</td>     
+   <td>石川県能登地方の地震</td>
+  <td>2023</td>
+  <td>令和5</td>
+  <td>6.5</td>
+  <td>
+ 329-03 輪島沖活動セグメント
+  </td>
+</tr>              
+                   
+
+     <tr>
+         <td>73</td>
+   <td>北海道胆振東部地震</td>
+  <td>2018</td>
+  <td>平成30</td>
+  <td>6.7</td>
+  <td>
+  </td>
+</tr>      
+
+  <tr>
+       <td>72</td>
+   <td>大阪府北部の地震</td>
+  <td>2018</td>
+  <td>平成30</td>
+  <td>6.1</td>
+  <td>
+  </td>
+</tr>
+
+                   
+   <tr>
+       <td>71</td>
+   <td>茨城県北部の地震</td>
+  <td>2016</td>
+  <td>平成28</td>
+  <td>6.3</td>
+  <td>
+  </td>
+</tr>                    
+                   
+   <tr>
+       <td>70</td>
+   <td>鳥取県中部の地震</td>
+  <td>2016</td>
+  <td>平成28</td>
+  <td>6.6</td>
+  <td>
+  </td>
+</tr>     
+
+       
+<tr>
+    <td>69</td>
+  <td><a href="javascript:Submit_Chrono( '69' );">熊本地震</a></td>
+  <td>2016</td>
+  <td>平成28</td>
+  <td>7.3</td>
+  <td>
+ 218-01 布田川活動セグメント 218-02 御船活動セグメント
+  </td>
+</tr>     
+                      
+ <tr>
+ <td>68</td>
+  <td><a href="javascript:Submit_Chrono( '68' );">長野県北部の地震</a></td>
+  <td>2014</td>
+  <td>平成26</td>
+  <td>6.8</td>
+  <td>
+ 084-01 神城活動セグメント
+  </td>
+</tr>
+
+<tr>
+<td>67</td> 
+  <td><a href="javascript:Submit_Chrono( '67' );">福島県浜通りの地震</a></td>
+  <td>2011</td>
+  <td>平成23</td>
+  <td>7.0</td>
+  <td>
+  060-01 井戸沢セグメント
+  272-01 湯ノ岳活動セグメント
+  </td>
+</tr>
+
+<tr>
+    <td>66</td>
+  <td>静岡県東部の地震</td>
+  <td>2011</td>
+  <td>平成23</td>
+  <td>6.4</td>
+  <td>
+  </td>
+</tr>
+
+
+
+<tr>
+    <td>65</td>
+  <td>長野県・新潟県県境付近の地震</td>
+  <td>2011</td>
+  <td>平成23</td>
+  <td>6.7</td>
+  <td>
+  </td>
+</tr>
+
+<tr>
+<td>64</td> 
+  <td>岩手・宮城内陸地震</td>
+  <td>2008</td>
+  <td>平成20</td>
+  <td>7.2</td>
+  <td>
+  </td>
+</tr>
+<tr>
+ <td>63</td>
+  <td>新潟県中越沖地震</td>
+  <td>2007</td>
+  <td>平成19</td>
+  <td>6.8</td>
+  <td>
+  </td>
+</tr>
+<tr>
+ <td>62</td>
+  <td>能登半島地震</td>
+  <td>2007</td>
+  <td>平成19</td>
+  <td>6.9</td>
+  <td>
+  329-01 門前沖活動セグメント
+  </td>
+</tr>
+<tr>
+ <td>61</td>
+  <td><a href="javascript:Submit_Chrono( '61' );">福岡県西方沖の地震</a></td>
+  <td>2005</td>
+  <td>平成17</td>
+  <td>7.0</td>
+  <td>
+  215-02 玄海島活動セグメント
+  </td>
+</tr>
+<tr>
+ <td>60</td>
+  <td>新潟県中越地震</td>
+  <td>2004</td>
+  <td>平成16</td>
+  <td>6.8</td>
+  <td>
+  </td>
+</tr>
+<tr>
+ <td>59</td>
+  <td>鳥取県西部地震</td>
+  <td>2000</td>
+  <td>平成12</td>
+  <td>7.3</td>
+  <td>
+  </td>
+</tr>
+<tr>
+ <td>58</td>
+  <td><a href="javascript:Submit_Chrono( '58' );">岩手県内陸北部地震</a></td>
+  <td>1998</td>
+  <td>平成10</td>
+  <td>6.1</td>
+  <td>027-01 雫石盆地西縁活動セグメント
+  </td>
+</tr>
+<tr>
+ <td>57</td>
+  <td><a href="javascript:Submit_Chrono( '57' );">兵庫県南部地震</a></td>
+  <td>1995</td>
+  <td>平成7</td>
+  <td>7.2</td>
+  <td>
+  176-09 北淡活動セグメント
+  </td>
+</tr>
+<tr>
+ <td>56</td>
+  <td>伊豆大島近海地震</td>
+  <td>1978</td>
+  <td>昭和53</td>
+  <td>7.0</td>
+  <td>
+  </td>
+</tr>
+<tr>
+ <td>55</td>
+  <td>大分県中部地震</td>
+  <td>1975</td>
+  <td>昭和50</td>
+  <td>6.4</td>
+  <td>
+  </td>
+</tr>
+<tr>
+ <td>54</td>
+  <td>伊豆半島沖地震</td>
+  <td>1974</td>
+  <td>昭和49</td>
+  <td>6.9</td>
+  <td>
+  </td>
+</tr>
+<tr>
+ <td>53</td>
+  <td><a href="javascript:Submit_Chrono( '53' );">福井地震</a></td>
+  <td>1948</td>
+  <td>昭和23</td>
+  <td>7.1</td>
+  <td>
+  136-02 金津活動セグメント
+  </td>
+</tr>
+<tr>
+ <td>52</td>
+  <td><a href="javascript:Submit_Chrono( '52' );">三河地震</a></td>
+  <td>1945</td>
+  <td>昭和20</td>
+  <td>6.8</td>
+  <td>
+  129-02 深溝活動セグメント
+  129-01 横須賀活動セグメント
+  </td>
+</tr>
+<tr>
+ <td>51</td>
+  <td><a href="javascript:Submit_Chrono( '51' );">鳥取地震</a></td>
+  <td>1943</td>
+  <td>昭和18</td>
+  <td>7.2</td>
+  <td>
+  281-01 鹿野活動セグメント
+  </td>
+</tr>
+<tr>
+ <td>50</td>
+  <td>西埼玉地震</td>
+  <td>1931</td>
+  <td>昭和6</td>
+  <td>6.9</td>
+  <td>
+  </td>
+</tr>
+<tr>
+ <td>49</td>
+  <td><a href="javascript:Submit_Chrono( '49' );">北伊豆地震</a></td>
+  <td>1930</td>
+  <td>昭和5</td>
+  <td>7.3</td>
+  <td>
+  078-03 姫之湯活動セグメント
+  078-02 修善寺活動セグメント
+  078-01 丹那活動セグメント
+  </td>
+</tr>
+<tr>
+  <td>48</td>
+  <td><a href="javascript:Submit_Chrono( '48' );">北丹後地震</a></td>
+  <td>1927</td>
+  <td>昭和2</td>
+  <td>7.3</td>
+  <td>
+  280-01 郷村活動セグメント
+  171-02 山田活動セグメント
+  </td>
+</tr>
+<tr>
+  <td>47</td>
+  <td>北但馬地震</td>
+  <td>1925</td>
+  <td>大正14</td>
+  <td>6.8</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>46</td>
+  <td>関東地震</td>
+  <td>1923</td>
+  <td>大正12</td>
+  <td>7.9</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>45</td>
+  <td>千々石湾</td>
+  <td>1922</td>
+  <td>大正11</td>
+  <td>6.9</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>44</td>
+  <td>秋田仙北地震</td>
+  <td>1914</td>
+  <td>大正3</td>
+  <td>7.1</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>43</td>
+  <td>姉川地震</td>
+  <td>1909</td>
+  <td>明治42</td>
+  <td>6.8</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>42</td>
+  <td>宮城県北部</td>
+  <td>1900</td>
+  <td>明治33</td>
+  <td>7.0</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>41</td>
+  <td><a href="javascript:Submit_Chrono( '41' );">陸羽地震</a></td>
+  <td>1896</td>
+  <td>明治29</td>
+  <td>7.2</td>
+  <td>
+  030-01 川舟活動セグメント
+  029-01 千屋活動セグメント
+  </td>
+</tr>
+<tr>
+  <td>40</td>
+  <td>庄内地震</td>
+  <td>1894</td>
+  <td>明治27</td>
+  <td>7.0</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>39</td>
+  <td><a href="javascript:Submit_Chrono( '39' );">濃尾地震</a></td>
+  <td>1891</td>
+  <td>明治24</td>
+  <td>8.0</td>
+  <td>
+  141-06 梅原活動セグメント
+  141-05 長滝活動セグメント
+  141-04 黒津活動セグメント
+  141-03 根尾谷活動セグメント
+  141-01 温見活動セグメント
+  </td>
+</tr>
+<tr>
+  <td>38</td>
+  <td>浜田地震</td>
+  <td>1872</td>
+  <td>明治5</td>
+  <td>7.1</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>37</td>
+  <td><a href="javascript:Submit_Chrono( '37' );">飛越地震</a></td>
+  <td>1858</td>
+  <td>安政5</td>
+  <td></td>
+  <td>
+  097-03 跡津川活動セグメント
+  </td>
+</tr>
+<tr>
+  <td>36</td>
+  <td><a href="javascript:Submit_Chrono( '36' );">伊賀上野地震</a></td>
+  <td>1854</td>
+  <td>安政1</td>
+  <td>7　1/4</td>
+  <td>
+  164-02 伊賀上野活動セグメント
+  </td>
+</tr>
+<tr>
+  <td>35</td>
+  <td><a href="javascript:Submit_Chrono( '35' );">善光寺地震</a></td>
+  <td>1847</td>
+  <td>弘化4</td>
+  <td>7.4</td>
+  <td>
+  081-02 善光寺活動セグメント
+  </td>
+</tr>
+<tr>
+  <td>34</td>
+  <td>京都</td>
+  <td>1830</td>
+  <td>天保1</td>
+  <td>6.5</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>33</td>
+  <td>三条地震</td>
+  <td>1828</td>
+  <td>文政11</td>
+  <td>6.9</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>32</td>
+  <td>伊勢・美濃・近江</td>
+  <td>1819</td>
+  <td>文政2</td>
+  <td>7　1/4</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>31</td>
+  <td>象潟地震</td>
+  <td>1804</td>
+  <td>文化1</td>
+  <td>7.0</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>30</td>
+  <td>加賀</td>
+  <td>1799</td>
+  <td>寛政11</td>
+  <td>6.0</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>29</td>
+  <td>西津軽</td>
+  <td>1793</td>
+  <td>寛政4</td>
+  <td></td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>28</td>
+  <td>雲仙岳</td>
+  <td>1792</td>
+  <td>寛政4</td>
+  <td>6.4</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>27</td>
+  <td>相模・武蔵・甲斐</td>
+  <td>1782</td>
+  <td>天明2</td>
+  <td>7</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>26</td>
+  <td><a href="javascript:Submit_Chrono( '26' );">津軽</a></td>
+  <td>1766</td>
+  <td>明和3</td>
+  <td>7　1/4</td>
+  <td>
+  022-02 黒石活動セグメント
+  022-01 津軽山地西縁活動セグメント
+  </td>
+</tr>
+<tr>
+  <td>25</td>
+  <td>越後・越中</td>
+  <td>1751</td>
+  <td>宝暦1</td>
+  <td></td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>24</td>
+  <td>陸奥</td>
+  <td>1739</td>
+  <td>元文4</td>
+  <td>7.1</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>23</td>
+  <td>信濃・三河</td>
+  <td>1718</td>
+  <td>享保3</td>
+  <td>7.0</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>22</td>
+  <td>羽後・陸奥</td>
+  <td>1704</td>
+  <td>宝永1</td>
+  <td>7.0</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>21</td>
+  <td><a href="javascript:Submit_Chrono( '21' );">能代付近</a></td>
+  <td>1694</td>
+  <td>元禄7</td>
+  <td>7.0</td>
+  <td>
+  025-01 能代活動セグメント
+  </td>
+</tr>
+<tr>
+  <td>20</td>
+  <td>下野・岩代</td>
+  <td>1683</td>
+  <td>天和3</td>
+  <td>7.0</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><a href="javascript:Submit_Chrono( '19' );">近江</a></td>
+  <td>1662</td>
+  <td>寛文2</td>
+  <td></td>
+  <td>
+  170-01 途中谷活動セグメント
+  168-01 三方活動セグメント
+  </td>
+</tr>
+<tr>
+  <td>18</td>
+  <td>岩代・下野</td>
+  <td>1659</td>
+  <td>万治2</td>
+  <td></td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>17</td>
+  <td>武蔵・下野</td>
+  <td>1649</td>
+  <td>慶安2</td>
+  <td>7.0</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><a href="javascript:Submit_Chrono( '16' );">会津</a></td>
+  <td>1611</td>
+  <td>慶長16</td>
+  <td>6.9</td>
+  <td>
+  052-01 塔寺活動セグメント
+  </td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><a href="javascript:Submit_Chrono( '15' );">別府湾</a></td>
+  <td>1596</td>
+  <td>慶長1</td>
+  <td>7.0</td>
+  <td>
+  211-04 日出沖活動セグメント
+  211-03 別府湾中央活動セグメント
+  211-02 杵築沖活動セグメント
+  183-15 豊予海峡活動セグメント
+  </td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><a href="javascript:Submit_Chrono( '14' );">慶長伏見地震</a></td>
+  <td>1596</td>
+  <td>慶長1</td>
+  <td>7　1/2</td>
+  <td>
+  287-01 先山活動セグメント
+  176-11 川西活動セグメント
+  176-08 東浦活動セグメント
+  176-07 六甲山活動セグメント
+  176-06 伊丹活動セグメント
+  176-02 高槻活動セグメント
+  </td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><a href="javascript:Submit_Chrono( '13' );">天正地震</a></td>
+  <td>1586</td>
+  <td>天正13</td>
+  <td>7.8</td>
+  <td>
+  145-02 養老活動セグメント
+  115-04 坂下活動セグメント
+  115-02 小和知活動セグメント
+  107-03 三尾河活動セグメント
+  </td>
+</tr>
+<tr>
+  <td>12</td>
+  <td>摂津・河内</td>
+  <td>1510</td>
+  <td>永正7</td>
+  <td></td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>11</td>
+  <td>近江北部・若狭</td>
+  <td>1325</td>
+  <td>正中2</td>
+  <td>6.5</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>10</td>
+  <td>鎌倉</td>
+  <td>1293</td>
+  <td>永仁1</td>
+  <td>7</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>9</td>
+  <td>近江・山城・大和</td>
+  <td>1185</td>
+  <td>文治1</td>
+  <td>7.4</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>8</td>
+  <td>出雲</td>
+  <td>880</td>
+  <td>元慶4</td>
+  <td>7</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>7</td>
+  <td>関東諸国</td>
+  <td>878</td>
+  <td>元慶2</td>
+  <td>7.4</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><a href="javascript:Submit_Chrono( '6' );">播磨・山城</a></td>
+  <td>868</td>
+  <td>貞観10</td>
+  <td></td>
+  <td>
+  189-04 暮坂峠活動セグメント
+  189-03 安富活動セグメント
+  189-02 土万活動セグメント
+  189-01 大原活動セグメント
+  </td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>信濃</td>
+  <td>841</td>
+  <td>承和8</td>
+  <td></td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>伊豆</td>
+  <td>841</td>
+  <td>承和8</td>
+  <td>7</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>関東諸国</td>
+  <td>818</td>
+  <td>弘仁9</td>
+  <td></td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>美濃</td>
+  <td>745</td>
+  <td>天平17</td>
+  <td>7.9</td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>1</td>
+  <td><a href="javascript:Submit_Chrono( '1' );">筑紫</a></td>
+  <td>679</td>
+  <td>天武7</td>
+  <td></td>
+  <td>
+  219-01 水縄活動セグメント
+  </td>
+</tr>
+
+            </table>
+          </div>
+        </td>
+      </tr>
+
+    </table>
+
+  </form>
+
+</div>
+    <!-- content section ( contents.cgi.ja.kishindan_segment ) end. -->
+        </div>
+
+      
+            <div id='footer'>
+        <center>
+          <div id="siteInfo">
+            <table class="layout">
+              <tr>
+                <td>
+                  <table class='banner'>
+  <tr>
+
+        <td>
+      <a href='https://www.gsj.jp/HomePageJP.html' target='new'>
+        <img alt='GSJ' border='0' src='https://gbank.gsj.jp/activefault/image/gsj.jpg?v=20180202073850'><br />
+        地質調査総合センター
+      </a>
+    </td>
+
+        <td>
+      <a href='http://www.aist.go.jp/' target='new'>
+        <img alt='AIST' border='0' src='https://gbank.gsj.jp/activefault/image/AISTLOGOmini-BK.gif?v=20180202073850' height='22'><br/>
+        産業技術総合研究所
+      </a>
+    </td>
+
+        <td>
+      <a href='https://unit.aist.go.jp/ievg/' target='new'>
+        <img alt='IEVG' border='0' src='https://gbank.gsj.jp/activefault/image/ievg4_LOGO.png?v=20180202073850' height='50'>
+      </a>
+    </td>
+
+        <td>
+      <a href='https://gbank.gsj.jp/activefault/person.html'>責任者・担当者</a> |
+      <a href='https://gbank.gsj.jp/activefault/individual.html'>個人情報保護</a> |
+      <a href='https://gbank.gsj.jp/activefault/mail_contact.html'>ご意見・ご感想</a>
+    </td>
+
+  </tr>
+</table>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </center>
+      </div>
+
+    </div> 
+    
+    
+    <script src='https://gbank.gsj.jp/activefault/js/menu.js'></script>
+
+    
+    
+        <script src='https://gbank.gsj.jp/activefault/js/Leaflet/leaflet.js?v=20180202073850'></script>
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/Leaflet.GoogleMutant.js?v=20180202073850'></script>
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/L.Grid.js?v=20180202073850'></script>
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/layer/vector/KML.js?v=20210301062859'></script>
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/leaflet-sidebar.js?v=20180202073850'></script>
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/Leaflet.Dialog.js?v=20180706083320'></script>
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/leaflet.latlng-graticule.js?v=20180706083320'></script>
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/leaflet.zoomViewer.js?v=20180730054959'></script>
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/leaflet.rangeSelector.js?v=20210219082641'></script>
+<script src='https://gbank.gsj.jp/activefault/js/Leaflet/Plugins/leaflet.legend.js?v=20240411025345'></script>
+
+
+<script src='https://gbank.gsj.jp/activefault/js/cRectangle.js'></script>
+<script src='https://gbank.gsj.jp/activefault/js/cLonLat.js'></script>
+<script src='https://gbank.gsj.jp/activefault/js/cDegMinSec.js'></script>
+
+<script src='https://gbank.gsj.jp/activefault/js/mapInfos.js'></script>
+<script src='https://gbank.gsj.jp/activefault/js/cMap.js'></script>
+
+    <script>
+      var quakeDisplayIcons = {values:[{options:{date:"2026/09/26 10:31 頃",magnitude:4.5,mag:4,center:[32.803378031,130.797667929],depth: 10}},{options:{date:"2026/09/29 04:45 頃",magnitude:4.9,mag:4,center:[36.103184019,139.896760312],depth: 50}},{options:{date:"2026/09/30 14:00 頃",magnitude:6.0,mag:6,center:[23.804202616,122.898738311],depth: 10}},{options:{date:"2026/10/01 21:27 頃",magnitude:5.1,mag:5,center:[35.803230075,140.696707689],depth: 50}},{options:{date:"2026/10/02 02:17 頃",magnitude:5.0,mag:5,center:[39.902835240,143.196311326],depth: 10}},{options:{date:"2026/10/03 05:34 頃",magnitude:4.3,mag:4,center:[39.902833493,143.096319631],depth: 10}},{options:{date:"2026/10/03 15:05 頃",magnitude:4.5,mag:4,center:[29.403738168,130.597841067],depth: 20}},{options:{date:"2026/10/05 22:30 頃",magnitude:4.6,mag:4,center:[25.104072313,123.398636940],depth:150}},{options:{date:"2026/10/07 02:47 頃",magnitude:4.6,mag:4,center:[43.902473803,146.995811611],depth: 10}},{options:{date:"2026/10/07 09:22 頃",magnitude:4.1,mag:4,center:[37.003108720,141.096619227],depth: 60}},{options:{date:"2026/10/08 04:13 頃",magnitude:4.8,mag:4,center:[35.703240770,140.696712293],depth: 50}},{options:{date:"2026/10/08 07:14 頃",magnitude:4.0,mag:4,center:[36.503153463,140.596683767],depth: 60}},{options:{date:"2026/10/09 04:23 頃",magnitude:4.1,mag:4,center:[40.502765831,142.896308616],depth: 30}}]};
+      var destructiveEarthquakeIcons = {values: [{options:{date:"1923/09/01 11:58:32",magnitude:7.9,mag:7,center:[35.333253010,139.131859290],depth: 23,maxIntensity:"6",place:"神奈川県西部",name:"関東地震（関東大震災）"}},{options:{date:"1925/05/23 11:09:48",magnitude:6.8,mag:6,center:[35.566452934,134.830505775],depth:  0,maxIntensity:"6",place:"兵庫県北部",name:"北但馬地震"}},{options:{date:"1927/03/07 18:27:39",magnitude:7.3,mag:7,center:[35.634847307,134.927194596],depth: 18,maxIntensity:"6",place:"京都府北部",name:"北丹後地震"}},{options:{date:"1930/11/26 04:02:47",magnitude:7.3,mag:7,center:[35.044981020,138.970185990],depth:  1,maxIntensity:"6",place:"静岡県伊豆地方",name:"北伊豆地震"}},{options:{date:"1933/03/03 02:30:48",magnitude:8.1,mag:8,center:[39.131251246,145.112887685],depth:  0,maxIntensity:"5",place:"三陸沖",name:"昭和三陸地震"}},{options:{date:"1943/09/10 17:36:53",magnitude:7.2,mag:7,center:[35.474851379,134.180563970],depth:  0,maxIntensity:"6",place:"鳥取県東部",name:"鳥取地震"}},{options:{date:"1944/12/07 13:35:40",magnitude:7.9,mag:7,center:[33.576689196,136.172185972],depth: 40,maxIntensity:"6",place:"三重県南東沖",name:"東南海地震"}},{options:{date:"1945/01/13 03:38:23",magnitude:6.8,mag:6,center:[34.704984900,137.110356103],depth: 11,maxIntensity:"5",place:"三河湾",name:"三河地震"}},{options:{date:"1946/12/21 04:19:04",magnitude:8.0,mag:8,center:[32.938451757,135.845542488],depth: 24,maxIntensity:"5",place:"和歌山県南方沖",name:"南海地震"}},{options:{date:"1948/06/28 16:13:29",magnitude:7.1,mag:7,center:[36.174813305,136.287056797],depth:  0,maxIntensity:"6",place:"福井県嶺北",name:"福井地震"}},{options:{date:"1983/05/26 11:59:58",magnitude:7.7,mag:7,center:[40.362713974,139.069932842],depth: 14,maxIntensity:"5",place:"秋田県沖",name:"日本海中部地震"}},{options:{date:"1993/01/15 20:06:07",magnitude:7.5,mag:7,center:[42.922532392,144.349376518],depth:101,maxIntensity:"6",place:"釧路沖",name:"釧路沖地震"}},{options:{date:"1993/07/12 22:17:12",magnitude:7.8,mag:7,center:[42.784156837,139.176512491],depth: 35,maxIntensity:"5",place:"北海道南西沖",name:"北海道南西沖地震"}},{options:{date:"1995/01/17 05:46:52",magnitude:7.3,mag:7,center:[34.601559663,135.032233452],depth: 16,maxIntensity:"7",place:"大阪湾",name:"兵庫県南部地震（阪神・淡路大震災）"}},{options:{date:"1997/05/13 14:38:27",magnitude:6.4,mag:6,center:[31.951760418,130.299448520],depth:  9,maxIntensity:"6弱",place:"鹿児島県薩摩地方",name:""}},{options:{date:"1998/09/03 16:58:17",magnitude:6.2,mag:6,center:[39.807805233,140.896506699],depth:  8,maxIntensity:"6弱",place:"岩手県内陸北部",name:""}},{options:{date:"2000/07/01 16:01:56",magnitude:6.5,mag:6,center:[34.193375951,139.190206932],depth: 16,maxIntensity:"6弱",place:"新島・神津島近海",name:""}},{options:{date:"2000/07/15 10:30:32",magnitude:6.3,mag:6,center:[34.426651845,139.238592172],depth: 10,maxIntensity:"6弱",place:"新島・神津島近海",name:""}},{options:{date:"2000/07/30 21:25:47",magnitude:6.5,mag:6,center:[33.973403265,139.406899065],depth: 17,maxIntensity:"6弱",place:"三宅島近海",name:""}},{options:{date:"2000/08/18 10:52:23",magnitude:6.1,mag:6,center:[34.203375697,139.236902593],depth: 12,maxIntensity:"6弱",place:"新島・神津島近海",name:""}},{options:{date:"2000/08/18 12:49:13",magnitude:5.1,mag:5,center:[34.296664554,139.170203837],depth:  7,maxIntensity:"6弱",place:"新島・神津島近海",name:""}},{options:{date:"2000/10/06 13:30:18",magnitude:7.3,mag:7,center:[35.276458015,133.345642445],depth:  9,maxIntensity:"6強",place:"鳥取県西部 平成12年(2000年)鳥取県西部地震",name:"北緯35度16.4分 東経133度20.9分"}},{options:{date:"2001/03/24 15:27:54",magnitude:6.7,mag:6,center:[34.134968671,132.690749395],depth: 46,maxIntensity:"6弱",place:"安芸灘 平成13年（2001年）芸予地震",name:"北緯34度7.9分 東経132度41.6分"}},{options:{date:"2003/05/26 18:24:33",magnitude:7.1,mag:7,center:[38.822923677,141.646489764],depth: 72,maxIntensity:"6弱",place:"宮城県沖",name:"北緯38度49.2分 東経141度39.0分"}},{options:{date:"2003/07/26 00:13:08",magnitude:5.6,mag:5,center:[38.436256534,141.159847984],depth: 12,maxIntensity:"6弱",place:"宮城県中部",name:"北緯38度24.3分 東経141度10.2分"}},{options:{date:"2003/07/26 07:13:31",magnitude:6.4,mag:6,center:[38.407959678,141.166548730],depth: 12,maxIntensity:"6強",place:"宮城県中部",name:""}},{options:{date:"2003/07/26 16:56:44",magnitude:5.5,mag:5,center:[38.502949837,141.184842837],depth: 12,maxIntensity:"6弱",place:"宮城県中部",name:""}},{options:{date:"2003/09/26 04:50:07",magnitude:8.0,mag:8,center:[41.780949694,144.074451916],depth: 45,maxIntensity:"6弱",place:"十勝沖 平成15年（2003年）十勝沖地震",name:"北緯41度46.7分 東経144度4.7分"}},{options:{date:"2003/09/26 06:08:02",magnitude:7.1,mag:7,center:[41.710950399,143.686187385],depth: 21,maxIntensity:"6弱",place:"十勝沖",name:""}},{options:{date:"2004/10/23 17:56:00",magnitude:6.8,mag:6,center:[37.294738521,138.863491257],depth: 13,maxIntensity:"7",place:"新潟県中越地方 平成16年（2004年）新潟県中越地震",name:"北緯37度17.5分 東経138度52.0分"}},{options:{date:"2004/10/23 18:11:57",magnitude:6.0,mag:6,center:[37.254742128,138.825096288],depth: 12,maxIntensity:"6強",place:"新潟県中越地方",name:""}},{options:{date:"2004/10/23 18:34:06",magnitude:6.5,mag:6,center:[37.308038204,138.926785388],depth: 14,maxIntensity:"6強",place:"新潟県中越地方",name:""}},{options:{date:"2004/10/23 19:45:57",magnitude:5.7,mag:5,center:[37.298038313,138.871790416],depth: 12,maxIntensity:"6弱",place:"新潟県中越地方",name:""}},{options:{date:"2004/10/27 10:40:50",magnitude:6.1,mag:6,center:[37.294741430,139.030077422],depth: 12,maxIntensity:"6弱",place:"新潟県中越地方",name:""}},{options:{date:"2005/03/20 10:53:40",magnitude:7.0,mag:7,center:[33.741566765,130.172676634],depth:  9,maxIntensity:"6弱",place:"福岡県西方沖 福岡県西方沖地震",name:"北緯33度44.3分 東経130度10.5分"}},{options:{date:"2005/08/16 11:46:26",magnitude:7.2,mag:7,center:[38.151306460,142.273168645],depth: 42,maxIntensity:"6弱",place:"宮城県沖",name:""}},{options:{date:"2007/03/25 09:41:58",magnitude:6.9,mag:6,center:[37.223008088,136.681975733],depth: 11,maxIntensity:"6強",place:"能登半島沖 平成19年（2007年）能登半島地震",name:"北緯37度13.2分 東経136度41.1分"}},{options:{date:"2007/07/16 10:13:22",magnitude:6.8,mag:6,center:[37.559705666,138.605100516],depth: 17,maxIntensity:"6強",place:"新潟県上中越沖 平成19年（2007年）新潟県中越沖地震",name:"北緯37度33.4分 東経138度36.5分"}},{options:{date:"2007/07/16 15:37:40",magnitude:5.8,mag:5,center:[37.506311989,138.640100067],depth: 23,maxIntensity:"6弱",place:"新潟県上中越沖",name:""}},{options:{date:"2008/06/14 08:43:45",magnitude:7.2,mag:7,center:[39.031187952,140.876544117],depth:  8,maxIntensity:"6強",place:"岩手県内陸南部 平成20年（2008年）岩手・宮城内陸地震",name:"北緯39度01.7分 東経140度52.8分"}},{options:{date:"2008/07/24 00:26:20",magnitude:6.8,mag:6,center:[39.734525908,141.631449037],depth:108,maxIntensity:"6弱",place:"岩手県沿岸北部",name:"北緯39度43.9分 東経141度38.1分"}},{options:{date:"2009/08/11 05:07:06",magnitude:6.5,mag:6,center:[34.788300179,138.495237254],depth: 23,maxIntensity:"6弱",place:"駿河湾",name:"北緯34度47.1分 東経138度29.9分"}},{options:{date:"2011/03/11 14:46:18",magnitude:9.0,mag:8,center:[38.106321459,142.856422277],depth: 24,maxIntensity:"7",place:"三陸沖 平成23年（2011年）東北地方太平洋沖地震（東日本大震災）",name:"北緯38度06.2分 東経142度51.6分"}},{options:{date:"2011/03/11 15:15:34",magnitude:7.6,mag:7,center:[36.123205486,141.248347142],depth: 43,maxIntensity:"6強",place:"茨城県沖",name:"北緯36度07.2分 東経141度15.1分"}},{options:{date:"2011/03/12 03:59:16",magnitude:6.7,mag:6,center:[36.988066607,138.593527799],depth:  8,maxIntensity:"6強",place:"長野県北部",name:"北緯36度59.1分 東経138度35.8分"}},{options:{date:"2011/03/12 04:31:56",magnitude:5.9,mag:5,center:[36.951370096,138.568531565],depth:  1,maxIntensity:"6弱",place:"長野県北部",name:""}},{options:{date:"2011/03/12 05:42:20",magnitude:5.3,mag:5,center:[36.974767912,138.586828967],depth:  4,maxIntensity:"6弱",place:"長野県北部",name:""}},{options:{date:"2011/03/15 22:31:46",magnitude:6.4,mag:6,center:[35.311547966,138.710195308],depth: 14,maxIntensity:"6強",place:"静岡県東部",name:"北緯35度18.5分 東経138度42.8分"}},{options:{date:"2011/04/07 23:32:43",magnitude:7.2,mag:7,center:[38.206294348,141.916495734],depth: 66,maxIntensity:"6強",place:"宮城県沖",name:"北緯38度12.2分 東経141度55.2分"}},{options:{date:"2011/04/11 17:16:12",magnitude:7.0,mag:7,center:[36.948107123,140.668357326],depth:  6,maxIntensity:"6弱",place:"福島県浜通り",name:"北緯36度56.7分 東経140度40.3分"}},{options:{date:"2011/04/12 14:07:42",magnitude:6.4,mag:6,center:[37.054795215,140.639954772],depth: 15,maxIntensity:"6弱",place:"福島県中通り",name:"北緯37度03.1分 東経140度38.6分"}},{options:{date:"2013/04/13 05:33:18",magnitude:6.3,mag:6,center:[34.421575304,134.825558904],depth: 15,maxIntensity:"6弱",place:"淡路島付近",name:"北緯34度25.1分 東経134度49.7分"}},{options:{date:"2014/11/22 22:08:18",magnitude:6.7,mag:6,center:[36.694785634,137.886899988],depth:  5,maxIntensity:"6弱",place:"長野県北部",name:"北緯36度41.5分 東経137度53.4分"}},{options:{date:"2016/04/14 21:26:34",magnitude:6.5,mag:6,center:[32.745051082,130.806003256],depth: 11,maxIntensity:"7",place:"熊本県熊本地方など 平成28年（2016年）熊本地震",name:"北緯32度44.5分 東経130度48.5分"}},{options:{date:"2016/04/16 01:25:05",magnitude:7.3,mag:7,center:[32.756715686,130.759339928],depth: 12,maxIntensity:"7",place:"熊本県熊本地方など 平成28年（2016年）熊本地震",name:"北緯32度45.3分 東経130度45.8分"}},{options:{date:"2016/06/16 14:21:28",magnitude:5.3,mag:5,center:[41.950910847,140.983067527],depth: 11,maxIntensity:"6弱",place:"内浦湾",name:""}},{options:{date:"2016/10/21 14:07:23",magnitude:6.6,mag:6,center:[35.383155453,133.852295455],depth: 11,maxIntensity:"6弱",place:"鳥取県中部",name:"北緯35度22.8分 東経133度51.3分"}},{options:{date:"2016/12/28 21:38:49",magnitude:6.3,mag:6,center:[36.723129469,140.570009153],depth: 11,maxIntensity:"6弱",place:"茨城県北部",name:"北緯36度43.2分 東経140度34.4分"}},{options:{date:"2018/06/18 07:58:34",magnitude:6.1,mag:6,center:[34.846577032,135.618840153],depth: 13,maxIntensity:"6弱",place:"大阪府北部",name:"北緯34度50.6分 東経135度37.3分"}},{options:{date:"2018/09/06 03:08:00",magnitude:6.7,mag:6,center:[42.692516009,142.002948678],depth: 37,maxIntensity:"7",place:"胆振地方中東部 平成30年北海道胆振東部地震",name:"北緯42度41.4分 東経142度00.4分"}},{options:{date:"2019/01/03 18:10:28",magnitude:5.1,mag:5,center:[33.030016151,130.551011278],depth: 10,maxIntensity:"6弱",place:"熊本県熊本地方",name:""}},{options:{date:"2019/02/21 21:22:40",magnitude:5.8,mag:5,center:[42.767473002,139.999778188],depth: 33,maxIntensity:"6弱",place:"胆振地方中東部",name:""}},{options:{date:"2019/06/18 22:22:20",magnitude:6.7,mag:6,center:[38.609575227,139.475013227],depth: 14,maxIntensity:"6強",place:"山形県沖",name:"北緯38度36.4分 東経139度28.7分"}},{options:{date:"2021/02/13 23:07:51",magnitude:7.3,mag:7,center:[37.731374604,141.694869308],depth: 55,maxIntensity:"6強",place:"福島県沖",name:"北緯37度43.7分 東経141度41.9分"}},{options:{date:"2022/03/16 23:36:33",magnitude:7.4,mag:7,center:[37.699709982,141.618210533],depth: 57,maxIntensity:"6強",place:"福島県沖",name:"北緯37度41.8分 東経141度37.3分"}},{options:{date:"2022/06/19 15:08:08",magnitude:5.4,mag:5,center:[37.517986841,137.271913157],depth: 13,maxIntensity:"5弱",place:"石川県能登地方",name:"北緯37度30.9分"}},{options:{date:"2023/05/05 14:42:04",magnitude:6.5,mag:6,center:[37.541318171,137.300243029],depth: 12,maxIntensity:"5強",place:"能登半島沖",name:"北緯37度32.3分"}},{options:{date:"2024/01/01 16:10:23",magnitude:7.6,mag:7,center:[37.497988893,137.266914493],depth: 16,maxIntensity:"7",place:"石川県能登地方 令和6年(2024年)能登半島沖地震",name:"北緯37度29.7分 東経137度16.2分"}},{options:{date:"2024/01/01 16:12:17",magnitude:5.7,mag:5,center:[37.158014574,136.655314240],depth:  9,maxIntensity:"5強",place:"能登半島沖",name:"北緯37度09.3分"}},{options:{date:"2024/04/17 23:14:49",magnitude:6.6,mag:6,center:[33.203363339,132.405849253],depth: 39,maxIntensity:"6弱",place:"豊後水道",name:"北緯33度12.0分 東経132度24.5分"}},{options:{date:"2024/08/08 16:42:56",magnitude:7.1,mag:7,center:[31.740174511,131.719307045],depth: 31,maxIntensity:"6弱",place:"日向灘",name:"北緯31度44.2分 東経131度43.3分"}},{options:{date:"2025/07/03 16:13:01",magnitude:5.5,mag:5,center:[29.360390631,129.519599310],depth: 20,maxIntensity:"6弱",place:"トカラ列島近海",name:"北緯29度21.4分 東経129度31.3分"}},{options:{date:"2025/12/08 23:15:10",magnitude:7.5,mag:7,center:[40.969372209,142.283005065],depth: 54,maxIntensity:"6強",place:"青森県東方沖",name:"北緯40度58.0分東経142度17.2分"}},{options:{date:"2026/07/28 16:27:15",magnitude:7.1,mag:7,center:[32.628394623,130.676019089],depth: 16,maxIntensity:"7",place:"熊本県熊本地方 令和8年（2026年）熊本地震",name:"北緯32度37.5分東経130度40.7分"}},]};
+    </script>
+    <script src='https://gbank.gsj.jp/activefault/js/ja/search/kishindan_segment/13/afmap.js'></script>
+
+    
+          <!-- js section ( contents.js.ja.kishindan_segment ) start. -->
+    <script src='https://maps.google.com/maps/api/js?sensor=false&amp;region=jp&amp;language=ja&amp;client=gme-nationalinstitute1&amp;channel=activefault&amp;key=AIzaSyBzV0szsFSc8WOh3yVoRDBM-_RU_jSOzDQ'></script>
+
+<script src='https://gbank.gsj.jp/activefault/GMAP/common.js?v=20180202073850'></script>
+<script src='https://gbank.gsj.jp/activefault/GMAP/googlemap_kmz.js?v=20190709014346'></script>
+<script src='https://gbank.gsj.jp/activefault/GMAP/aist_activefault.js?v=20180726020920'></script>
+<script src='https://gbank.gsj.jp/activefault/GMAP/gjapanesemap.js?v=20180202073850'></script>
+
+<script src='https://gbank.gsj.jp/activefault/js/search.js'></script>
+<script src='https://gbank.gsj.jp/activefault/js/ja/kishindan_segment/afmapLegends.js'></script>
+    <!-- js section ( contents.js.ja.kishindan_segment ) end. -->
+  
+  <script>
+    glinked(2);
+  </script>
+  </body>
+
+</html>

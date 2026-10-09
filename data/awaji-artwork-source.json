@@ -1,0 +1,43 @@
+{
+  "id": "awaji-kuniumi",
+  "checked": "2026-10-09",
+  "artwork": {
+    "path": "art/awaji-kuniumi.webp",
+    "method": "OpenAI built-in ImageGen; WebP encoding of generated PNG",
+    "illustrative": true,
+    "description": "Myth-inspired traditional Japanese painting map. Approximate placement only; not a surveyed coastline or an archaeological reconstruction.",
+    "bounds": [
+      [
+        34.12,
+        134.59
+      ],
+      [
+        34.665,
+        135.095
+      ]
+    ],
+    "prompt": "Use case: historical-scene. Asset type: illustrated map for an interactive Kobe history atlas. Create an exquisite old Japanese painting style MAP of Awaji Island, Japan: north-up, recognizable elongated island oriented northeast to southwest, narrow northern tip at top-right and wider mountainous southern half at bottom-left. Entire island visible surrounded by pale sea; faint partial Kobe/Honshu coast near the top-right and Shikoku coast near bottom-left edge only. Bird's-eye map composition, softly inked coastline, layered green-grey mountain ridges, miniature historical Japanese landscape details, delicate wave brushwork. Traditional sumi ink and restrained mineral pigments on warm ivory washi, subtle gold accents in the sea, authentic hand-painted scroll feeling, not a modern satellite image. Tall portrait composition with ample sea margins. No labels, no lettering, no seals, no modern roads, no bridges, no text. This is a myth-inspired illustrative map, not an archaeological reconstruction. Clouds will be drawn separately by the website, so do not cover the island with clouds."
+  },
+  "sources": [
+    {
+      "title": "Awaji Island Tourist Association: Onokoro Shrine and land-creation narrative",
+      "url": "https://www.awajishima-kanko.jp/manual/detail.html?bid=104",
+      "supports": "Sea stirred with spear; droplets form Onogoro; Awaji then born first of Japan’s islands."
+    },
+    {
+      "title": "Honshu–Shikoku Bridge Expressway: Akashi Kaikyo Bridge",
+      "url": "https://www.jb-honshi.co.jp/english/bridgeworld/bridge.html",
+      "supports": "Kobe–Awaji crossing, completed April 1998; Honshu–Shikoku transport link."
+    },
+    {
+      "title": "MLIT: Akashi Kaikyo National Government Park",
+      "url": "https://www.kkr.mlit.go.jp/akashi/akashikaikyo-park.html",
+      "supports": "Two park districts in Kobe and Awaji City; rural conservation and seaside recreation roles."
+    },
+    {
+      "title": "City of Kobe: regional cooperation",
+      "url": "https://www.city.kobe.lg.jp/a89138/shise/kekaku/kikakuchosekyoku/bunken/kouiki.html",
+      "supports": "2019 agreement with Awaji, Sumoto and Minamiawaji cities for tourism, food and regional exchange."
+    }
+  ]
+}

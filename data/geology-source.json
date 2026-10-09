@@ -1,0 +1,28 @@
+{
+  "retrieved": "2026-10-09",
+  "chapterId": "formation",
+  "datePolicy": "Approximate geological ages, not exact calendar years. The sea-level chronology is a rounded regional account; the 2013 paper reports radiocarbon ages, not a precise local Kobe shoreline reconstruction. Uplift was gradual, not a single earthquake. Present terrain remains the background.",
+  "sources": [
+    {
+      "url": "https://www.city.kobe.lg.jp/documents/58912/senryaku.pdf",
+      "supports": "Rokko granite about 70 Ma; Kobe Group 37–31 Ma; glossary."
+    },
+    {
+      "url": "https://gbank.gsj.jp/WaterEnvironmentMap/contents/osaka/Doc/html/main_document.htm",
+      "supports": "Appendix A.1: basin subsidence from about 3.5 Ma; fault activity; Rokko uplift from about 1 Ma."
+    },
+    {
+      "url": "https://www.kkr.mlit.go.jp/rokko/rokko/history.php",
+      "supports": "Rokko uplift and basin subsidence; granite fracture and weathering."
+    },
+    {
+      "url": "https://www.city.osaka.lg.jp/seisakukikakushitsu/page/0000010244.html",
+      "supports": "Last-glacial dry land and subsequent marine transgression."
+    },
+    {
+      "url": "https://www.jstage.jst.go.jp/article/jaqua/52/3/52_53/_article/-char/ja/",
+      "supports": "Masuda & Itomoto, 2013: marine entry approximately 9,850 BP; highstand about 6,000 BP."
+    }
+  ],
+  "notes": "Ongoing sediment transport and valley/coast shaping are a plain-language synthesis of weathering, streams and basin sedimentation. These processes overlap in time."
+}

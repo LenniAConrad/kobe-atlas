@@ -1,0 +1,12 @@
+{
+  "retrieved": "2026-10-09",
+  "geological": "GSJ Seamless V2, regional 1:200,000 map, 2025-07-18 source readme",
+  "active": "AIST public trace_gbank_j.kmz; internal label 150219-2. Not represented as a 2026 survey.",
+  "processing": "Clipped to 134.8,34.45,135.6,35; original line vertices retained within clip. Geological faults are not classified as inactive.",
+  "limitations": "Generalized fault positions may differ by hundreds of metres. Absence of a mapped fault is not absence of hazard. No earthquake probability or shaking model inferred.",
+  "sources": [
+    "https://gsj-seamless.jp/seamless/use.html",
+    "https://gbank.gsj.jp/activefault/attention.html",
+    "https://gbank.gsj.jp/activefault/DATA/layers/trace_gbank_j.kmz"
+  ]
+}
