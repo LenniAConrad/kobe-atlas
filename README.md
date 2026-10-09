@@ -1,4 +1,6 @@
-# Kobe atlas
+# Thor’s Kobe Spatial Atlas
+
+Created by 赵常许 Thor (T Matsui).
 
 Interactive maps of Kobe’s history, geology and urban planning.
 
