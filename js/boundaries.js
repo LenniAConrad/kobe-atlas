@@ -1,5 +1,5 @@
-import {getLanguage} from './language.js?v=20261009l';
-import {esc} from './ui.js?v=20261009l';
+import {getLanguage} from './language.js?v=20261009o';
+import {esc} from './ui.js?v=20261009o';
 export function boundaryLayer(data,layer,pane) {
   const L=window.L,group=L.layerGroup(),language={EN:'en',JP:'ja',CN:'zh-CN'}[getLanguage()];
   const style=f=>({pane,color:layer.color||'#6d3db0',weight:f.properties.kind==='city'?3.5:1.8,fill:false,opacity:1});

@@ -1,5 +1,5 @@
-import {esc} from './ui.js?v=20261009l';
-import {getLanguage} from './language.js?v=20261009l';
+import {esc} from './ui.js?v=20261009o';
+import {getLanguage} from './language.js?v=20261009o';
 export function faultLayer(data,layer,pane){
  const lang=getLanguage(),w=(en,jp,cn)=>({EN:en,JP:jp,CN:cn}[lang]);
  return L.geoJSON(data,{pane,style:f=>({color:layer.color,weight:3,dashArray:f.properties.Legend_E?.includes('concealed')?'6 5':null}),onEachFeature:(f,l)=>{

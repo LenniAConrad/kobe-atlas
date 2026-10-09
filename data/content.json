@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "revision": 34,
+  "revision": 36,
   "settings": {
-    "title": "Kobe",
-    "subtitle": "Spatial atlas",
+    "title": "Thor’s Kobe",
+    "subtitle": "Spatial Atlas",
     "center": [
       34.688,
       135.187
@@ -42,14 +42,15 @@
     "playbackDuration": 10,
     "translations": {
       "JP": {
-        "title": "神戸",
+        "title": "Thorの神戸",
         "subtitle": "空間アトラス"
       },
       "CN": {
-        "title": "神户",
+        "title": "Thor的神户",
         "subtitle": "空间地图集"
       }
-    }
+    },
+    "creator": "赵常许 Thor (T Matsui)"
   },
   "chapters": [
     {
@@ -63,7 +64,7 @@
       "body": "In the Kuniumi myth, Izanagi and Izanami stir the sea with a spear. Drops form Onogoro Island; from there they give birth to Japan’s islands, beginning with Awaji. This is a creation story, without a historical date.\n\nToday, Awaji is Kobe’s neighbour across the Akashi Strait. The bridge opened in 1998, linking Kobe to the island and the road to Shikoku. Planning also crosses the water: Akashi Kaikyo National Government Park has districts in both Kobe and Awaji, pairing conserved rural landscapes with seaside recreation. Kobe and Awaji’s three cities cooperate on tourism, food and regional exchange.\n\nDrag to explore. The painting is an illustration, not a historical map.",
       "duration": 10,
       "hold": 2,
-      "fade": 2,
+      "fade": 4,
       "sourceNote": "Awaji Island Tourist Association; Honshu–Shikoku Bridge Expressway; MLIT; City of Kobe. Artwork generated for this atlas.",
       "camera": {
         "bounds": [
@@ -124,7 +125,7 @@
       "body": "Drag the map to explore the mountains and bay. It shows today’s terrain. Dates below are approximate.\n\n70 million years ago — Magma cooled underground, forming much of Rokko’s granite.\n\n37–31 million years ago — Mud, sand and volcanic ash formed the Kobe Group rocks north of the mountains.\n\n3.5–3 million years ago — The Osaka basin began sinking and collecting sediment. This low area would later hold the bay.\n\nAbout 1 million years ago — Fault movement pushed Rokko upward while the Osaka basin sank. Low hills became mountains.\n\nAbout 20,000 years ago — Ice-age sea levels were much lower. Osaka Bay was largely dry land.\n\nAbout 10,000 years ago — Rising seas flooded the low basin again as the climate warmed.\n\nAbout 6,000 years ago — Seas reached a high point, spreading farther inland than today.\n\nOngoing — Weathering breaks down granite; streams carry sand and gravel downhill, shaping valleys and the coast.",
       "duration": 10,
       "hold": 2,
-      "fade": 2,
+      "fade": 4,
       "sourceNote": "Kobe City · MLIT Rokko Sabo · Geological Survey of Japan · Masuda & Itomoto (2013). Sources & versions has the full references.",
       "camera": null,
       "translations": {
@@ -155,7 +156,7 @@
       "body": "Before Kobe became a city, shrines, tombs and the harbour tied this coast to Japan’s political centres. Hyogo-tsu traded by sea; Fukuhara briefly housed the court, and battles brought national conflict here. In the Edo period, coastal shipping and Nada’s sake industry grew.\n\nThe opening date, 201, is Ikuta Shrine’s founding tradition. It is not a verified settlement date.",
       "duration": 10,
       "hold": 2,
-      "fade": 2,
+      "fade": 4,
       "sourceNote": "Ikuta Shrine: ikutajinja.or.jp/history · Kobe City: port opening history · Inō scan supplied with project",
       "camera": null,
       "translations": {
@@ -186,7 +187,7 @@
       "body": "Kobe opened to foreign trade in 1868 as Japan entered the Meiji era. Trading firms and the foreign settlement made it an international gateway. New streets, the Ikuta River diversion and rail to Osaka reshaped a growing port town.",
       "duration": 10,
       "hold": 2,
-      "fade": 2,
+      "fade": 4,
       "sourceNote": "Japanese Map Warper · map 47",
       "camera": null,
       "translations": {
@@ -217,7 +218,7 @@
       "body": "Kobe became a municipality in 1889 while Japan industrialised. Port works, canals and river engineering supported a larger city. The old Minatogawa channel became urban land, and Shinkaichi grew into a busy entertainment district.",
       "duration": 10,
       "hold": 2,
-      "fade": 2,
+      "fade": 4,
       "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html",
       "camera": null,
       "translations": {
@@ -248,7 +249,7 @@
       "body": "Kobe linked Japan to overseas trade and migration. Shipbuilding and other industries expanded, especially around the First World War. Growth also exposed social tensions: the 1918 rice riots brought unrest to the trading city.",
       "duration": 10,
       "hold": 2,
-      "fade": 2,
+      "fade": 4,
       "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html",
       "camera": null,
       "translations": {
@@ -279,7 +280,7 @@
       "body": "Kobe remained an industrial and trading city through economic instability and Japan’s move toward war. Homes and factories filled the narrow coastal plain. The 1938 flood showed the danger of rivers descending from Rokko; wartime bombing followed in 1945.",
       "duration": 10,
       "hold": 2,
-      "fade": 2,
+      "fade": 4,
       "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html",
       "camera": null,
       "translations": {
@@ -310,7 +311,7 @@
       "body": "After devastating air raids, Kobe rebuilt homes, factories and its port. Japan’s rapid growth then increased demand for housing and waterfront industry. The 1961 floods exposed hillside risks. In 1964, the Suma conveyor began moving excavated soil to a loading pier, with barges carrying it onward to reclamation sites.\n\nThe aerial basemap was photographed in 1961–1969; it does not show the whole period.",
       "duration": 10,
       "hold": 2,
-      "fade": 2,
+      "fade": 4,
       "sourceNote": "Geospatial Information Authority of Japan",
       "camera": null,
       "translations": {
@@ -341,7 +342,7 @@
       "body": "Kobe answered Japan’s rapid urban and trade growth by creating land on both sides of the city. Cutting hills made housing sites; soil travelled by conveyor to the shore and then by barge to reclamation areas. Port Island began in 1966 and Rokko Island in 1972. The landscape itself became part of the city’s development plan.",
       "duration": 10,
       "hold": 2,
-      "fade": 2,
+      "fade": 4,
       "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html",
       "camera": null,
       "translations": {
@@ -372,7 +373,7 @@
       "body": "Port Island made Kobe’s mountain-to-sea development visible at a city scale: housing on excavated hills, new port and city land offshore. Its first phase was completed in 1981. Portopia ’81 presented this new island city to visitors, while the Port Liner connected it to Sannomiya. Kobe promoted itself as more than a cargo port.",
       "duration": 10,
       "hold": 2,
-      "fade": 2,
+      "fade": 4,
       "sourceNote": "Geospatial Information Authority of Japan",
       "camera": null,
       "translations": {
@@ -403,7 +404,7 @@
       "body": "As Japan’s economy shifted toward services and consumption, Kobe opened more of its waterfront to public life. Meriken Park and Harborland added culture, shopping and leisure. Port Island’s second phase began, and Rokko Island’s reclamation finished in 1992. Industry, housing and recreation now shared the expanded coast.",
       "duration": 10,
       "hold": 2,
-      "fade": 2,
+      "fade": 4,
       "sourceNote": "Geospatial Information Authority of Japan",
       "camera": null,
       "translations": {
@@ -434,7 +435,7 @@
       "body": "The 1995 earthquake disrupted daily life, transport and the port. Reconstruction changed neighbourhoods and disaster planning; Luminarie became a place of remembrance. Kobe also pursued new regional connections through the Akashi Kaikyo Bridge and its airport, while a medical-industry cluster developed on Port Island.",
       "duration": 10,
       "hold": 2,
-      "fade": 2,
+      "fade": 4,
       "sourceNote": "Konjaku Map / GSI historical topographic sheets · ktgis.net/kjmapw/tilemapservice.html",
       "camera": null,
       "translations": {
@@ -465,7 +466,7 @@
       "body": "Kobe combines a working port with housing, research, tourism and public waterfronts. Planning now also addresses population decline and ageing, making daily services easier to reach and renewing existing neighbourhoods. The city’s older river routes, reclaimed coast and hillside housing remain visible beneath these changes.",
       "duration": 10,
       "hold": 2,
-      "fade": 2,
+      "fade": 4,
       "sourceNote": "Geospatial Information Authority of Japan",
       "camera": null,
       "translations": {
@@ -3982,7 +3983,7 @@
       "year": 1889,
       "dateLabel": "1889",
       "title": "Kobe becomes a city",
-      "body": "Municipal government began as the trading town grew. The highlight shows the central urban setting, not the legal boundary of the 1889 city.",
+      "body": "Kobe became an official city in 1889 as its port grew.",
       "location": "Central Kobe",
       "locationNote": "Illustrative area or route; not a surveyed historical boundary or disaster footprint.",
       "geometry": {
@@ -4023,14 +4024,14 @@
       "translations": {
         "JP": {
           "title": "神戸市の成立",
-          "body": "交易の町が成長する中、市政が始まりました。表示は中心市街地の概略で、1889年の行政境界ではありません。",
+          "body": "港の成長とともに、1889年に神戸市が誕生しました。",
           "dateLabel": "1889年",
           "location": "神戸中心部",
           "locationNote": "区域・経路は概略です。歴史的な境界や実際の被害範囲を示すものではありません。"
         },
         "CN": {
           "title": "神户市成立",
-          "body": "贸易城镇扩张过程中，市政建立。高亮为中心城区示意，并非1889年法定市界。",
+          "body": "随着港口发展，神户于1889年正式设市。",
           "dateLabel": "1889年",
           "location": "神户中心城区",
           "locationNote": "区域或路线为示意，并非测绘的历史边界或灾害影响范围。"
@@ -5749,5 +5750,5 @@
       }
     }
   ],
-  "updatedAt": "2026-10-09T08:24:31.365782+00:00"
+  "updatedAt": "2026-10-09T08:35:41.224428+00:00"
 }

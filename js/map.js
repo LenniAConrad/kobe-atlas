@@ -1,15 +1,15 @@
-import {waterLayer} from './water.js?v=20261009l';
-import {populationLayer} from './population.js?v=20261009l';
-import {faultLayer} from './faults.js?v=20261009l';
-import {zoningLayer} from './zoning.js?v=20261009l';
-import {transportLayer} from './transport.js?v=20261009l';
-import {boundaryLayer} from './boundaries.js?v=20261009l';
-import {MapContrast} from './contrast.js?v=20261009l';
-import {ChapterCamera} from './chapter-camera.js?v=20261009l';
-import {localize,translateText,translateDOM} from './language.js?v=20261009l';
-import {esc,prose} from './ui.js?v=20261009l';
-import {revealPosition} from './playback.js?v=20261009l';
-import {eventPopup,eventTooltip} from './events.js?v=20261009l';
+import {waterLayer} from './water.js?v=20261009o';
+import {populationLayer} from './population.js?v=20261009o';
+import {faultLayer} from './faults.js?v=20261009o';
+import {zoningLayer} from './zoning.js?v=20261009o';
+import {transportLayer} from './transport.js?v=20261009o';
+import {boundaryLayer} from './boundaries.js?v=20261009o';
+import {MapContrast} from './contrast.js?v=20261009o';
+import {ChapterCamera} from './chapter-camera.js?v=20261009o';
+import {localize,translateText,translateDOM} from './language.js?v=20261009o';
+import {esc,prose} from './ui.js?v=20261009o';
+import {revealPosition} from './playback.js?v=20261009o';
+import {eventPopup,eventTooltip} from './events.js?v=20261009o';
 const L=window.L;
 const datasets=new Map();
 const getData=url=>{if(!datasets.has(url))datasets.set(url,fetch(url).then(r=>{if(!r.ok)throw Error('Missing data: '+url);return r.json();}).catch(e=>{datasets.delete(url);throw e;}));return datasets.get(url);};
@@ -118,7 +118,7 @@ export class AtlasMap{
       const existing=this.featureInstances.get(f.id),entering=!existing||!this.map.hasLayer(existing);
       // Only the entrance has a short CSS fade. Crossfade opacity follows the
       // playback mix exactly, so annotations leave with their chapter map.
-      pane.style.transition=f.event&&playback.phase!=='fade'&&!matchMedia('(prefers-reduced-motion: reduce)').matches?'opacity 220ms ease-out':'none';
+      pane.style.transition=f.event&&playback.phase!=='fade'&&!matchMedia('(prefers-reduced-motion: reduce)').matches?'opacity 900ms ease-out':'none';
       pane.style.opacity=entering&&f.event?'0':String(alpha);pane.style.pointerEvents=alpha>.1?'auto':'none';
       if(!this.featureInstances.has(f.id)){
         const color=/^#[\da-f]{6}$/i.test(f.color)?f.color:'#b57932';

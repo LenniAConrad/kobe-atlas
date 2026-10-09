@@ -1,5 +1,5 @@
-import {localize,getLanguage} from './language.js?v=20261009l';
-import {esc,prose} from './ui.js?v=20261009l';
+import {localize,getLanguage} from './language.js?v=20261009o';
+import {esc,prose} from './ui.js?v=20261009o';
 export function transportLayer(data,layer,pane) {
   const L=window.L,lang=getLanguage(),word=(en,jp,cn)=>({EN:en,JP:jp,CN:cn}[lang]);
   const filtered={...data,features:data.features.filter(f=>!layer.filterField||String(f.properties[layer.filterField])===String(layer.filterValue))};

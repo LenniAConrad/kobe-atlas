@@ -1,5 +1,5 @@
-import {getLanguage,localize} from './language.js?v=20261009l';
-import {esc,prose} from './ui.js?v=20261009l';
+import {getLanguage,localize} from './language.js?v=20261009o';
+import {esc,prose} from './ui.js?v=20261009o';
 
 const word=(en,jp,cn)=>({EN:en,JP:jp,CN:cn}[getLanguage()]);
 const safeLink=url=>/^https:\/\//.test(url||'')?url:null;

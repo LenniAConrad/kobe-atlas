@@ -1,5 +1,5 @@
-import {esc} from './ui.js?v=20261009l';
-import {getLanguage,localize} from './language.js?v=20261009l';
+import {esc} from './ui.js?v=20261009o';
+import {getLanguage,localize} from './language.js?v=20261009o';
 export const densityClasses=[[4000,'#ffffb2','0–3,999'],[8000,'#fecc5c','4,000–7,999'],[12000,'#fd8d3c','8,000–11,999'],[16000,'#f03b20','12,000–15,999'],[Infinity,'#bd0026','16,000+']];
 export function populationLayer(data,layer,pane){
  const lang=getLanguage(),w=(en,jp,cn)=>({EN:en,JP:jp,CN:cn}[lang]);

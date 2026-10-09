@@ -1,4 +1,4 @@
-import {getLanguage} from './language.js?v=20261009l';
+import {getLanguage} from './language.js?v=20261009o';
 
 // This painted map is illustrative. Its bounds locate Awaji for the introduction;
 // they are not a surveyed historical coastline or an archaeological reconstruction.

@@ -1,5 +1,5 @@
-import {getLanguage} from './language.js?v=20261009l';
-import {esc} from './ui.js?v=20261009l';
+import {getLanguage} from './language.js?v=20261009o';
+import {esc} from './ui.js?v=20261009o';
 export function zoningLayer(data,layer,pane){
  const lang=getLanguage(),word=(en,jp,cn)=>({EN:en,JP:jp,CN:cn}[lang]);
  return window.L.geoJSON(data,{pane,filter:f=>String(f.properties.YoutoCode)===String(layer.filterValue),style:{color:layer.color,weight:.7,fillColor:layer.color,fillOpacity:.48},onEachFeature:(f,l)=>{
