@@ -1,4 +1,5 @@
 import {waterLayer} from './water.js?v=20261009p';
+import {nushimaLayer} from './nushima.js?v=20261020';
 import {populationLayer} from './population.js?v=20261009p';
 import {faultLayer} from './faults.js?v=20261009p';
 import {zoningLayer} from './zoning.js?v=20261009p';
@@ -13,6 +14,17 @@ import {eventPopup,eventTooltip} from './events.js?v=20261009p';
 const L=window.L;
 const datasets=new Map();
 const getData=url=>{if(!datasets.has(url))datasets.set(url,fetch(url).then(r=>{if(!r.ok)throw Error('Missing data: '+url);return r.json();}).catch(e=>{datasets.delete(url);throw e;}));return datasets.get(url);};
+function remoteImage(url,signal){
+  return new Promise((resolve,reject)=>{
+    const image=new Image();
+    const cleanup=()=>{clearTimeout(timer);signal?.removeEventListener('abort',abort);image.onload=image.onerror=null;};
+    const abort=()=>{cleanup();image.src='';reject(new DOMException('Tile cancelled','AbortError'));};
+    const timer=setTimeout(abort,15000);
+    image.onload=()=>{cleanup();resolve(image);};image.onerror=()=>{cleanup();reject(Error('Tile unavailable'));};
+    if(signal?.aborted){abort();return;}
+    signal?.addEventListener('abort',abort,{once:true});image.src=url;
+  });
+}
 class TileQueue{
   constructor(){this.active=0;this.waiting=[];}
   run(task,signal){return new Promise((resolve,reject)=>{this.waiting.push({task,signal,resolve,reject});this.pump();});}
@@ -27,8 +39,8 @@ export class AtlasMap{
     this.contrast=new MapContrast(this.map);this.applySettings();this.chapterCamera=new ChapterCamera(this.map,doc.settings);
   }
   applySettings(){const s=this.doc.settings,camera=this.chapterCamera?.extendedCamera;this.map.setMinZoom(camera?.minZoom??s.minZoom);this.map.setMaxZoom(s.maxZoom);this.map.setMaxBounds(camera?.navigationBounds??s.bounds);}
-  update(doc){this.generation++;for(const layer of this.instances.values())this.map.removeLayer(layer);for(const f of this.featureInstances.values())this.map.removeLayer(f);this.instances.clear();this.featureInstances.clear();this.doc=doc;this.applySettings();}
-  pageContext(page){const p=this.doc.pages.find(p=>p.id===page);if(p?.navigationBounds){this.map.setMinZoom(p.minZoom??10);this.map.setMaxBounds(p.navigationBounds);}else this.applySettings();}
+  update(doc){const center=this.map.getCenter(),zoom=this.map.getZoom();this.generation++;for(const layer of this.instances.values())this.map.removeLayer(layer);for(const f of this.featureInstances.values())this.map.removeLayer(f);this.instances.clear();this.featureInstances.clear();this.doc=doc;this.pageContext(this.page??'home');this.map.setView(center,zoom,{animate:false});}
+  pageContext(page){this.page=page;const p=this.doc.pages.find(p=>p.id===page);if(p?.navigationBounds){this.map.setMinZoom(p.minZoom??10);this.map.setMaxZoom(p.maxZoom??this.doc.settings.maxZoom);this.map.setMaxBounds(p.navigationBounds);}else this.applySettings();}
   tileBounds(){const bounds=L.latLngBounds(this.doc.settings.bounds);for(const c of this.doc.chapters)if(c.camera?.navigationBounds)bounds.extend(c.camera.navigationBounds);for(const p of this.doc.pages)if(p.navigationBounds)bounds.extend(p.navigationBounds);return bounds;}
   setOffline(value){this.offline=value;for(const l of this.instances.values())if(l.redraw)l.redraw();}
   pane(id,index){let p=this.map.getPane('atlas-'+id);if(!p)p=this.map.createPane('atlas-'+id);p.style.zIndex=String(index);return p;}
@@ -42,14 +54,14 @@ export class AtlasMap{
     if(!(this.repo.cache[layer.id]?.count>0)){
       if(this.offline)return null;
       const url=layer.url.replace('{z}',z).replace('{x}',x).replace('{-y}',2**z-1-y).replace('{y}',y);
-      try{const image=await new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src=url;});return {image,z};}catch{return null;}
+      try{const image=await remoteImage(url,signal);return {image,z};}catch{return null;}
     }
     for(let pz=z;pz>=Math.max(0,z-8);pz--){
       const d=z-pz;const r=await fetch(`tiles/${layer.id}/${pz}/${x>>d}/${y>>d}.tile`,{signal});
       if(r.ok&&!(r.headers.get('Content-Type')||'').includes('text/')){try{return {image:await createImageBitmap(await r.blob()),z:pz};}catch{}}
       if(pz===z&&!this.offline){
         const url=layer.url.replace('{z}',z).replace('{x}',x).replace('{-y}',2**z-1-y).replace('{y}',y);
-        try{const image=await new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src=url;});return {image,z};}catch{}
+        try{const image=await remoteImage(url,signal);return {image,z};}catch{}
       }
     }
     return null;
@@ -57,28 +69,29 @@ export class AtlasMap{
   raster(layer,index){const self=this;
     const Tile=L.GridLayer.extend({
       createTile(coords,done){const canvas=document.createElement('canvas');canvas.width=canvas.height=256;const ctrl=new AbortController();canvas._abort=()=>ctrl.abort();
-        const center=self.map.unproject([coords.x*256+128,coords.y*256+128],coords.z);const aoi=L.latLngBounds(self.doc.settings.aoi);
+        const center=self.map.unproject([coords.x*256+128,coords.y*256+128],coords.z);const aoi=L.latLngBounds(layer.detailBounds??self.doc.settings.aoi);
         const maxZ=aoi.contains(center)?layer.maxNativeZoom:self.doc.settings.contextMaxZoom;
         const z=Math.min(coords.z,maxZ??18),d=coords.z-z,x=coords.x>>d,y=coords.y>>d;
         self.tileQueue.run(()=>self.tileImage(layer,z,x,y,ctrl.signal),ctrl.signal).then(result=>{
           if(result){const delta=coords.z-result.z;const factor=2**delta;const size=256/factor;const sx=((coords.x%factor)+factor)%factor*size;const sy=((coords.y%factor)+factor)%factor*size;canvas.getContext('2d').drawImage(result.image,sx,sy,size,size,0,0,256,256);if(result.image.close)result.image.close();}
+          if(!ctrl.signal.aborted)self.map.fire('atlas-tile-status',{layerId:layer.id,loaded:!!result});
           done(null,canvas);
         }).catch(()=>done(null,canvas));return canvas;
       }
     });
-    const grid=new Tile({pane:'atlas-'+layer.id,tileSize:256,noWrap:true,bounds:this.tileBounds(),updateWhenIdle:true,keepBuffer:1,maxZoom:19});
+    const grid=new Tile({pane:'atlas-'+layer.id,tileSize:256,noWrap:true,bounds:layer.bounds??this.tileBounds(),updateWhenIdle:true,keepBuffer:1,minZoom:layer.minNativeZoom??0,maxNativeZoom:layer.maxNativeZoom??18,maxZoom:22});
     grid.on('tileunload',e=>e.tile._abort?.());return grid;
   }
   async ensure(layer,index){
     if(this.instances.has(layer.id))return;
-    const pane=this.pane(layer.id,layer.renderer==='water'?(layer.id==='supply-areas'?380:layer.id==='dams'||layer.id==='water-plants'?460:410):layer.id.startsWith('rail-')?420:layer.renderer==='population'?390:layer.overlay?350+index:layer.renderer==='faults'?430:layer.renderer==='boundaries'?440:layer.renderer==='transport'?(layer.id==='airports'||layer.id==='ferry-terminals'?470:420):200+index);pane.style.opacity='0';let instance;
+    const pane=this.pane(layer.id,layer.zIndex??(layer.renderer==='water'?(layer.id==='supply-areas'?380:layer.id==='dams'||layer.id==='water-plants'?460:410):layer.id.startsWith('rail-')?420:layer.renderer==='population'?390:layer.overlay?350+index:layer.renderer==='faults'?430:layer.renderer==='boundaries'?440:layer.renderer==='transport'?(layer.id==='airports'||layer.id==='ferry-terminals'?470:420):200+index));pane.style.opacity='0';let instance;
     if(layer.type==='raster')instance=this.raster(layer,index);
     else if(layer.type==='image')instance=L.imageOverlay(layer.url,layer.bounds,{pane:'atlas-'+layer.id,interactive:false});
     else if(layer.type==='geojson'){
       const gen=this.generation;this.instances.set(layer.id,L.layerGroup());
       try{
         const data=await getData(layer.url);if(gen!==this.generation)return;
-        instance=layer.renderer==='water'?waterLayer(data,layer,'atlas-'+layer.id):layer.renderer==='population'?populationLayer(data,layer,'atlas-'+layer.id):layer.renderer==='faults'?faultLayer(data,layer,'atlas-'+layer.id):layer.renderer==='zoning'?zoningLayer(data,layer,'atlas-'+layer.id):layer.renderer==='transport'?transportLayer(data,layer,'atlas-'+layer.id):layer.renderer==='boundaries'?boundaryLayer(data,layer,'atlas-'+layer.id):L.geoJSON(data,{pane:'atlas-'+layer.id,filter:f=>!layer.filterField||String(f.properties[layer.filterField])===String(layer.filterValue),style:()=>({color:layer.color,weight:layer.weight??3,opacity:1,fillOpacity:.18}),pointToLayer:(f,ll)=>L.circleMarker(ll,{pane:'atlas-'+layer.id,radius:4,color:layer.color,fillColor:layer.color,fillOpacity:.8}),onEachFeature:(f,l)=>{
+        instance=layer.renderer==='nushima'?nushimaLayer(data,layer,'atlas-'+layer.id):layer.renderer==='water'?waterLayer(data,layer,'atlas-'+layer.id):layer.renderer==='population'?populationLayer(data,layer,'atlas-'+layer.id):layer.renderer==='faults'?faultLayer(data,layer,'atlas-'+layer.id):layer.renderer==='zoning'?zoningLayer(data,layer,'atlas-'+layer.id):layer.renderer==='transport'?transportLayer(data,layer,'atlas-'+layer.id):layer.renderer==='boundaries'?boundaryLayer(data,layer,'atlas-'+layer.id):L.geoJSON(data,{pane:'atlas-'+layer.id,filter:f=>!layer.filterField||String(f.properties[layer.filterField])===String(layer.filterValue),style:()=>({color:layer.color,weight:layer.weight??3,opacity:1,fillOpacity:.18}),pointToLayer:(f,ll)=>L.circleMarker(ll,{pane:'atlas-'+layer.id,radius:4,color:layer.color,fillColor:layer.color,fillOpacity:.8}),onEachFeature:(f,l)=>{
           const p=f.properties||{};const title=p.N02_005||p.N02_003||p.name||layer.name;
           const pairs=[['Line',p.N02_003],['Operator',p.N02_004],['Category',p.operatorCategory],['Source code',p.N02_002]].filter(([,v])=>v);
           l.bindTooltip(String(title));l.bindPopup(popup(title,pairs.map(([k,v])=>k+': '+v).join('\n'),layer.credit),{autoPan:false,maxWidth:320});
@@ -101,7 +114,7 @@ export class AtlasMap{
       const instance=this.instances.get(l.id);const pane=this.map.getPane('atlas-'+l.id);
       if(pane){pane.style.opacity=String(alpha);pane.style.pointerEvents=alpha>.01?'auto':'none';}
       if(instance){if(needed&&!this.map.hasLayer(instance))instance.addTo(this.map);else if(!needed&&this.map.hasLayer(instance))this.map.removeLayer(instance);}
-      if(alpha>.01&&l.credit)credits.push(l.credit);
+      if(alpha>.01&&l.credit)credits.push(l.mapCredit||l.credit);
     });
     const enabled=this.doc.layers.find(l=>l.type==='chapter');const showChapter=enabled?visibility(enabled)>0:true;
     const activeFeatures=new Set();

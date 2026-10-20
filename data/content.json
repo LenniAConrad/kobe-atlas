@@ -50,7 +50,8 @@
         "subtitle": "空间地图集"
       }
     },
-    "creator": "赵常许 Thor (T Matsui)"
+    "creator": "赵常许 Thor (T Matsui)",
+    "startPage": "nushima"
   },
   "chapters": [
     {
@@ -506,6 +507,60 @@
       },
       "body": "",
       "hidden": false
+    },
+    {
+      "id": "nushima",
+      "name": "Nushima Island",
+      "icon": "pin",
+      "description": "Nushima · 沼島",
+      "body": "Explore the island off southern Awaji. Drag to pan, scroll or pinch to zoom, or use + / −. The target button frames the whole island. Collapse this description or the Layers drawer to clear the view.",
+      "defaultLayers": [
+        "nushima-seamlessphoto"
+      ],
+      "overviewBounds": [
+        [
+          34.1545,
+          134.8095
+        ],
+        [
+          34.181,
+          134.833
+        ]
+      ],
+      "navigationBounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "minZoom": 8,
+      "maxZoom": 20,
+      "sources": [
+        {
+          "title": "GSI Maps",
+          "url": "https://maps.gsi.go.jp/#15/34.167/134.823/"
+        },
+        {
+          "title": "MLIT National Land Numerical Information",
+          "url": "https://nlftp.mlit.go.jp/ksj/"
+        }
+      ],
+      "translations": {
+        "JP": {
+          "name": "沼島",
+          "description": "沼島 · 淡路島の南",
+          "body": "ドラッグで移動、スクロール・ピンチまたは＋／−で拡大縮小できます。照準ボタンで島全体を表示します。説明とレイヤーパネルは折りたためます。"
+        },
+        "CN": {
+          "name": "沼岛",
+          "description": "沼岛 · 淡路岛以南",
+          "body": "拖动平移，滚轮、双指或＋／−缩放。点击瞄准按钮显示全岛。可折叠说明和图层面板以扩大视野。"
+        }
+      }
     },
     {
       "id": "general",
@@ -2791,6 +2846,1988 @@
           "name": "历史地图·1993–1997"
         }
       }
+    },
+    {
+      "id": "nushima-std",
+      "name": "Standard map · roads, buildings & contours",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 18,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Maps & imagery",
+      "zIndex": 200,
+      "description": "Current GSI cartography. Buildings, roads and contours are part of the raster map.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Official legend (PDF)",
+          "url": "https://cyberjapandata.gsi.go.jp/legend/std_25000_legend.pdf"
+        }
+      ]
+    },
+    {
+      "id": "nushima-pale",
+      "name": "Pale map",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 18,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Maps & imagery",
+      "zIndex": 201,
+      "description": "A light cartographic background.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-blank",
+      "name": "Outline map",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/blank/{z}/{x}/{y}.png",
+      "minNativeZoom": 5,
+      "maxNativeZoom": 14,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Maps & imagery",
+      "zIndex": 202,
+      "description": "Simplified background, enlarged beyond native zoom 14.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-seamlessphoto",
+      "name": "Latest seamless aerial imagery",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 18,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Maps & imagery",
+      "zIndex": 203,
+      "description": "Best available GSI mosaic; photography dates vary. Native zoom 18 is about 0.5 metres per screen pixel here, not a claim about survey accuracy.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-airphoto",
+      "name": "Survey aerial photography · 2004 onward",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/airphoto/{z}/{x}/{y}.png",
+      "minNativeZoom": 14,
+      "maxNativeZoom": 18,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Maps & imagery",
+      "zIndex": 204,
+      "description": "GSI survey photography mosaic. May contain seams and gaps; the catalogue start year is not the date of every image.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-gazo1",
+      "name": "Historical aerial · 1974–1978",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/gazo1/{z}/{x}/{y}.jpg",
+      "minNativeZoom": 10,
+      "maxNativeZoom": 17,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Maps & imagery",
+      "zIndex": 205,
+      "description": "Historical National Land Image Information photographs.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-nendophoto2020",
+      "name": "Annual aerial · FY2020",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2020/{z}/{x}/{y}.png",
+      "minNativeZoom": 14,
+      "maxNativeZoom": 18,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Maps & imagery",
+      "zIndex": 206,
+      "description": "Photography grouped by the fiscal year 2020.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-nendophoto2021",
+      "name": "Annual aerial · FY2021 (partial)",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2021/{z}/{x}/{y}.png",
+      "minNativeZoom": 14,
+      "maxNativeZoom": 18,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Maps & imagery",
+      "zIndex": 207,
+      "description": "Partial coverage. Use over the seamless mosaic to fill gaps.",
+      "coverage": "Island envelope: 4/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-relief",
+      "name": "Elevation colours",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png",
+      "minNativeZoom": 5,
+      "maxNativeZoom": 15,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 208,
+      "description": "Elevation tint and relief. Marine areas created using Japan Coast Guard Hydrographic and Oceanographic Department materials.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI) · Marine areas: Japan Coast Guard Hydrographic and Oceanographic Department",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-hillshademap",
+      "name": "Hillshade",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/hillshademap/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 16,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 209,
+      "description": "Relief derived from GSI DEM5A, DEM5B and DEM10B as available; not a uniform-resolution survey.",
+      "coverage": "Island envelope: 4/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-slopemap",
+      "name": "Slope shading",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/slopemap/{z}/{x}/{y}.png",
+      "minNativeZoom": 3,
+      "maxNativeZoom": 15,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 210,
+      "description": "Darker shades indicate steeper terrain; DEM-derived.",
+      "coverage": "Island envelope: 4/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-slopezone1map",
+      "name": "Slope classes",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/slopezone1map/{z}/{x}/{y}.png",
+      "minNativeZoom": 3,
+      "maxNativeZoom": 15,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 211,
+      "description": "GSI slope classification (avalanche-related product). Describes slopes, not an island-specific avalanche forecast.",
+      "coverage": "Island envelope: 4/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-sekishoku",
+      "name": "Red relief",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/sekishoku/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 14,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 212,
+      "description": "Red terrain relief from the 10 m elevation model.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-anaglyphmap_color",
+      "name": "Stereo terrain · colour",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/anaglyphmap_color/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 16,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 213,
+      "description": "DEM-derived anaglyph for red/cyan stereo glasses.",
+      "coverage": "Island envelope: 4/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-anaglyphmap_gray",
+      "name": "Stereo terrain · greyscale",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/anaglyphmap_gray/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 16,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 214,
+      "description": "DEM-derived anaglyph for red/cyan stereo glasses.",
+      "coverage": "Island envelope: 4/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-lcm25k_2012",
+      "name": "Land-condition classification",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/lcm25k_2012/{z}/{x}/{y}.png",
+      "minNativeZoom": 10,
+      "maxNativeZoom": 16,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 215,
+      "description": "Digital Map 25000 land-condition classification. The tile identifier is not a current survey date.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Official legend (PDF)",
+          "url": "https://cyberjapandata.gsi.go.jp/legend/lcm25k_2012/lc_legend.pdf"
+        }
+      ]
+    },
+    {
+      "id": "nushima-ccm2",
+      "name": "Coastal land & seabed conditions · pre-1989",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/ccm2/{z}/{x}/{y}.png",
+      "minNativeZoom": 14,
+      "maxNativeZoom": 16,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 216,
+      "description": "Historical coastal survey sheets, including seabed contours. Not a navigation chart.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Official legend (PDF)",
+          "url": "https://cyberjapandata.gsi.go.jp/legend/CCM1_hanrei.pdf"
+        }
+      ]
+    },
+    {
+      "id": "nushima-afm",
+      "name": "Active-fault survey map",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png",
+      "minNativeZoom": 11,
+      "maxNativeZoom": 16,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 217,
+      "description": "GSI 1:25,000 active-fault survey sheets. A sheet covering an area does not imply a fault at every location.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Official legend (PDF)",
+          "url": "https://www.gsi.go.jp/common/000084060.pdf"
+        }
+      ]
+    },
+    {
+      "id": "nushima-swale",
+      "name": "Meiji-era low wetlands",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/swale/{z}/{x}/{y}.png",
+      "minNativeZoom": 10,
+      "maxNativeZoom": 16,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 218,
+      "description": "Historical low-wetland classification; not current flood depth.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Official legend (PDF)",
+          "url": "https://cyberjapandata.gsi.go.jp/legend/lw_legend.pdf"
+        }
+      ]
+    },
+    {
+      "id": "nushima-04_tsunami_newlegend_data",
+      "name": "Tsunami inundation depth",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_data/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 17,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 0.72,
+      "color": "#bd7344",
+      "group": "MLIT / GSI · Hazard portal",
+      "zIndex": 419,
+      "description": "Hyogo Prefecture tsunami inundation scenarios, distributed by the joint MLIT/GSI Hazard Map Portal. Blank tiles can mean missing coverage.",
+      "coverage": "Island envelope: 4/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Hyogo Prefecture · MLIT/GSI Hazard Map Portal",
+      "license": "Hazard Map Portal terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://disaportal.gsi.go.jp/hazardmap/copyright/opendata.html"
+        }
+      ],
+      "legend": "https://disaportal.gsi.go.jp/hazardmap/copyright/img/shinsui_legend3.png"
+    },
+    {
+      "id": "nushima-03_hightide_l2_shinsuishin_data",
+      "name": "Storm-surge inundation depth",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_data/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 17,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 0.72,
+      "color": "#bd7344",
+      "group": "MLIT / GSI · Hazard portal",
+      "zIndex": 420,
+      "description": "Hyogo Prefecture storm-surge inundation scenarios. Blank tiles do not establish safety.",
+      "coverage": "Island envelope: 4/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Hyogo Prefecture · MLIT/GSI Hazard Map Portal",
+      "license": "Hazard Map Portal terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://disaportal.gsi.go.jp/hazardmap/copyright/opendata.html"
+        }
+      ],
+      "legend": "https://disaportal.gsi.go.jp/hazardmap/copyright/img/shinsui_legend3.png"
+    },
+    {
+      "id": "nushima-05_dosekiryukeikaikuiki",
+      "name": "Sediment warnings · debris flow",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 17,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 0.72,
+      "color": "#bd7344",
+      "group": "MLIT / GSI · Hazard portal",
+      "zIndex": 421,
+      "description": "Hyogo Prefecture designated sediment-disaster warning and special-warning areas for debris flows.",
+      "coverage": "Island envelope: 2/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Hyogo Prefecture · MLIT/GSI Hazard Map Portal",
+      "license": "Hazard Map Portal terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://disaportal.gsi.go.jp/hazardmap/copyright/opendata.html"
+        }
+      ],
+      "legend": "https://disaportal.gsi.go.jp/hazardmap/copyright/img/keikai_dosekiryu.png"
+    },
+    {
+      "id": "nushima-05_kyukeishakeikaikuiki",
+      "name": "Sediment warnings · steep-slope collapse",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 17,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 0.72,
+      "color": "#bd7344",
+      "group": "MLIT / GSI · Hazard portal",
+      "zIndex": 422,
+      "description": "Hyogo Prefecture designated warning and special-warning areas for steep-slope collapse.",
+      "coverage": "Island envelope: 2/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Hyogo Prefecture · MLIT/GSI Hazard Map Portal",
+      "license": "Hazard Map Portal terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://disaportal.gsi.go.jp/hazardmap/copyright/opendata.html"
+        }
+      ],
+      "legend": "https://disaportal.gsi.go.jp/hazardmap/copyright/img/keikai_kyukeisya.png"
+    },
+    {
+      "id": "nushima-c09-c09-06_fishingportboundary",
+      "name": "Fishing-port boundary · 2006",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/c09-c09-06_fishingportboundary.geojson",
+      "opacity": 1,
+      "fillOpacity": 0,
+      "color": "#e59c45",
+      "weight": 2,
+      "group": "MLIT · Coast, transport & facilities",
+      "zIndex": 430,
+      "description": "Nushima fishing-port inventory and boundary; historical designation data.",
+      "coverage": "1 features in the Nushima extract. Data: 2006.",
+      "credit": "MLIT National Land Numerical Information · C09",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "MLIT non-commercial terms",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-C09.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-c23-c23-06_28-g_coastline",
+      "name": "Coastline · 2006",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/c23-c23-06_28-g_coastline.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#57d3cb",
+      "weight": 2,
+      "group": "MLIT · Coast, transport & facilities",
+      "zIndex": 430,
+      "description": "Historical MLIT shoreline segments. Not a current surveyed coastline.",
+      "coverage": "60 features in the Nushima extract. Data: 2006.",
+      "credit": "MLIT National Land Numerical Information · C23",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "MLIT non-commercial terms",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-C23.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-n09-n09-12_l",
+      "name": "Ferry connection · 2012",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/n09-n09-12_l.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#e36f52",
+      "weight": 2,
+      "group": "MLIT · Coast, transport & facilities",
+      "zIndex": 430,
+      "description": "Historical Nushima–Habu passenger route inventory. Not a sailing schedule or navigational route.",
+      "coverage": "1 features in the Nushima extract. Data: 2012.",
+      "credit": "MLIT National Land Numerical Information · N09",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "MLIT non-commercial terms",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N09.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-a10-2015-a001280020160211",
+      "name": "Natural park area · 2015",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/a10-2015-a001280020160211.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#6aa86b",
+      "weight": 2,
+      "group": "MLIT · Land use & boundaries",
+      "zIndex": 430,
+      "description": "Land-use basic-plan natural park areas. Original feature fiscal years are preserved; this is the 2015 dataset release.",
+      "coverage": "5 features in the Nushima extract. Data: FY2015.",
+      "credit": "MLIT National Land Numerical Information · A10-2015",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0 (Hyogo)",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A10-2015.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-a10-2015-a001280020160212",
+      "name": "Natural park special area · 2015",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/a10-2015-a001280020160212.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#6aa86b",
+      "weight": 2,
+      "group": "MLIT · Land use & boundaries",
+      "zIndex": 430,
+      "description": "Land-use basic-plan natural park areas. Original feature fiscal years are preserved; this is the 2015 dataset release.",
+      "coverage": "5 features in the Nushima extract. Data: FY2015.",
+      "credit": "MLIT National Land Numerical Information · A10-2015",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0 (Hyogo)",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A10-2015.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-a13-2015-a001280020160207",
+      "name": "Forest planning area · 2015",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/a13-2015-a001280020160207.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#33794d",
+      "weight": 2,
+      "group": "MLIT · Land use & boundaries",
+      "zIndex": 430,
+      "description": "Land-use basic-plan forest areas, preserving original feature fiscal years.",
+      "coverage": "1 features in the Nushima extract. Data: FY2015.",
+      "credit": "MLIT National Land Numerical Information · A13-2015",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0 (Hyogo)",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A13-2015.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-a13-2015-a001280020160209",
+      "name": "Regional private forest · 2015",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/a13-2015-a001280020160209.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#33794d",
+      "weight": 2,
+      "group": "MLIT · Land use & boundaries",
+      "zIndex": 430,
+      "description": "Land-use basic-plan forest areas, preserving original feature fiscal years.",
+      "coverage": "1 features in the Nushima extract. Data: FY2015.",
+      "credit": "MLIT National Land Numerical Information · A13-2015",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0 (Hyogo)",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A13-2015.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-a13-2015-a001280020160210",
+      "name": "Protection forest · 2015",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/a13-2015-a001280020160210.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#33794d",
+      "weight": 2,
+      "group": "MLIT · Land use & boundaries",
+      "zIndex": 430,
+      "description": "Land-use basic-plan forest areas, preserving original feature fiscal years.",
+      "coverage": "1 features in the Nushima extract. Data: FY2015.",
+      "credit": "MLIT National Land Numerical Information · A13-2015",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0 (Hyogo)",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A13-2015.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-a19-2017-a19-17_28",
+      "name": "Remote-island development area · 2017",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/a19-2017-a19-17_28.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#e1a561",
+      "weight": 2,
+      "group": "MLIT · Land use & boundaries",
+      "zIndex": 430,
+      "description": "Nushima area designated under the remote-island development programme.",
+      "coverage": "1 features in the Nushima extract. Data: 2017.",
+      "credit": "MLIT National Land Numerical Information · A19-2017",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "MLIT terms (commercial use permitted)",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A19-2017.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-a27-2023-a27-23_28",
+      "name": "Elementary school district · 2023",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/a27-2023-a27-23_28.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#6b75be",
+      "weight": 2,
+      "group": "MLIT · Land use & boundaries",
+      "zIndex": 430,
+      "description": "School catchment polygon for Nushima Elementary School.",
+      "coverage": "1 features in the Nushima extract. Data: FY2023.",
+      "credit": "MLIT National Land Numerical Information · A27-2023",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0 (Hyogo)",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A27-2023.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-a32-2023-a32-23_28",
+      "name": "Junior-high school district · 2023",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/a32-2023-a32-23_28.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#916ac4",
+      "weight": 2,
+      "group": "MLIT · Land use & boundaries",
+      "zIndex": 430,
+      "description": "School catchment polygon for Nushima Junior High School.",
+      "coverage": "1 features in the Nushima extract. Data: FY2023.",
+      "credit": "MLIT National Land Numerical Information · A32-2023",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0 (Hyogo)",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A32-2023.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-n03-2026-n03-20260101_28",
+      "name": "Administrative island boundary · 2026",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/n03-2026-n03-20260101_28.geojson",
+      "opacity": 1,
+      "fillOpacity": 0,
+      "color": "#f0c45c",
+      "weight": 2,
+      "group": "MLIT · Land use & boundaries",
+      "zIndex": 430,
+      "description": "Minamiawaji administrative polygons, clipped to the island envelope. Includes offshore rocks.",
+      "coverage": "64 features in the Nushima extract. Data: 2026-01-01.",
+      "credit": "MLIT National Land Numerical Information · N03-2026",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2026.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-l03-b-2021-l03-b-21_5134-0500",
+      "name": "Forest · 100 m · 2021",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/l03-b-2021-l03-b-21_5134.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#4e8d58",
+      "weight": 2,
+      "group": "MLIT · Land use · FY2021",
+      "zIndex": 430,
+      "description": "Satellite-interpreted land use in approximately 100 m cells. Not parcel boundaries. Open-sea cells omitted.",
+      "coverage": "250 features in the Nushima extract. Data: FY2021.",
+      "credit": "MLIT National Land Numerical Information · L03-b-2021",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L03-b-2021.html"
+        }
+      ],
+      "filterField": "L03b_002",
+      "filterValue": "0500",
+      "legendItems": [
+        {
+          "color": "#4e8d58",
+          "label": "Forest"
+        }
+      ]
+    },
+    {
+      "id": "nushima-l03-b-2021-l03-b-21_5134-0600",
+      "name": "Wasteland · 100 m · 2021",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/l03-b-2021-l03-b-21_5134.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#b4ac82",
+      "weight": 2,
+      "group": "MLIT · Land use · FY2021",
+      "zIndex": 430,
+      "description": "Satellite-interpreted land use in approximately 100 m cells. Not parcel boundaries. Open-sea cells omitted.",
+      "coverage": "250 features in the Nushima extract. Data: FY2021.",
+      "credit": "MLIT National Land Numerical Information · L03-b-2021",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L03-b-2021.html"
+        }
+      ],
+      "filterField": "L03b_002",
+      "filterValue": "0600",
+      "legendItems": [
+        {
+          "color": "#b4ac82",
+          "label": "Wasteland"
+        }
+      ]
+    },
+    {
+      "id": "nushima-l03-b-2021-l03-b-21_5134-0700",
+      "name": "Buildings · 100 m · 2021",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/l03-b-2021-l03-b-21_5134.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#dc806f",
+      "weight": 2,
+      "group": "MLIT · Land use · FY2021",
+      "zIndex": 430,
+      "description": "Satellite-interpreted land use in approximately 100 m cells. Not parcel boundaries. Open-sea cells omitted.",
+      "coverage": "250 features in the Nushima extract. Data: FY2021.",
+      "credit": "MLIT National Land Numerical Information · L03-b-2021",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L03-b-2021.html"
+        }
+      ],
+      "filterField": "L03b_002",
+      "filterValue": "0700",
+      "legendItems": [
+        {
+          "color": "#dc806f",
+          "label": "Buildings"
+        }
+      ]
+    },
+    {
+      "id": "nushima-l03-b-2021-l03-b-21_5134-1000",
+      "name": "Other land · 100 m · 2021",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/l03-b-2021-l03-b-21_5134.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#cab7a2",
+      "weight": 2,
+      "group": "MLIT · Land use · FY2021",
+      "zIndex": 430,
+      "description": "Satellite-interpreted land use in approximately 100 m cells. Not parcel boundaries. Open-sea cells omitted.",
+      "coverage": "250 features in the Nushima extract. Data: FY2021.",
+      "credit": "MLIT National Land Numerical Information · L03-b-2021",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L03-b-2021.html"
+        }
+      ],
+      "filterField": "L03b_002",
+      "filterValue": "1000",
+      "legendItems": [
+        {
+          "color": "#cab7a2",
+          "label": "Other land"
+        }
+      ]
+    },
+    {
+      "id": "nushima-l03-b-2021-l03-b-21_5134-1400",
+      "name": "Beach · 100 m · 2021",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/l03-b-2021-l03-b-21_5134.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#eedb9b",
+      "weight": 2,
+      "group": "MLIT · Land use · FY2021",
+      "zIndex": 430,
+      "description": "Satellite-interpreted land use in approximately 100 m cells. Not parcel boundaries. Open-sea cells omitted.",
+      "coverage": "250 features in the Nushima extract. Data: FY2021.",
+      "credit": "MLIT National Land Numerical Information · L03-b-2021",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L03-b-2021.html"
+        }
+      ],
+      "filterField": "L03b_002",
+      "filterValue": "1400",
+      "legendItems": [
+        {
+          "color": "#eedb9b",
+          "label": "Beach"
+        }
+      ]
+    },
+    {
+      "id": "nushima-maff-fishing-communities",
+      "name": "Fishing communities · MAFF · 2023",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "interaction": "fishing-community",
+      "url": "data/nushima/maff-fishing-communities-2023.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.24,
+      "weight": 2,
+      "color": "#ed9a45",
+      "group": "MAFF · Fishing communities",
+      "zIndex": 445,
+      "description": "2023 Fisheries Census boundaries. Four named communities (東泊, 北, 中, 南) and the separate その他地域 (other area) category. Hover or focus a shape for its community, district, municipality and census code; click or tap for details. Statistical community areas, not fishing rights or marine fishing grounds. Processed from MAFF source data.",
+      "coverage": "Nushima district 261, Minamiawaji, Hyogo. 6 source polygons grouped by official KEY into 5 shapes.",
+      "credit": "MAFF · 2023 Fisheries Census · processed by Kobe Atlas",
+      "license": "MAFF website terms / Public Data License 1.0",
+      "sources": [
+        {
+          "title": "MAFF fishing-community boundaries",
+          "url": "https://www.maff.go.jp/j/tokei/census/fc/database/mapdata/index.html"
+        },
+        {
+          "title": "Original Hyogo shapefile ZIP",
+          "url": "https://www.maff.go.jp/j/tokei/census/fc/database/mapdata/MB0001_2023_28.zip"
+        },
+        {
+          "title": "MAFF reuse terms",
+          "url": "https://www.maff.go.jp/j/use/link.html"
+        }
+      ],
+      "legendItems": [
+        {
+          "color": "#ed9a45",
+          "label": "東泊"
+        },
+        {
+          "color": "#5bb7de",
+          "label": "北"
+        },
+        {
+          "color": "#d07dbd",
+          "label": "中"
+        },
+        {
+          "color": "#a5c965",
+          "label": "南"
+        },
+        {
+          "color": "#9b9fa6",
+          "label": "その他地域 · Other area"
+        }
+      ],
+      "translations": {
+        "JP": {
+          "name": "漁業集落境界・農林水産省・2023年"
+        },
+        "CN": {
+          "name": "渔业社区边界 · 农林水产省 · 2023年"
+        }
+      }
+    },
+    {
+      "id": "nushima-c09-c09-06_fishingport",
+      "name": "Fishing-port location · 2006",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/c09-c09-06_fishingport.geojson",
+      "opacity": 1,
+      "fillOpacity": 0,
+      "color": "#e59c45",
+      "weight": 2,
+      "group": "MLIT · Coast, transport & facilities",
+      "zIndex": 460,
+      "description": "Nushima fishing-port inventory and boundary; historical designation data.",
+      "coverage": "1 features in the Nushima extract. Data: 2006.",
+      "credit": "MLIT National Land Numerical Information · C09",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "MLIT non-commercial terms",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-C09.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-n09-n09-12_p",
+      "name": "Ferry terminal · 2012",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/n09-n09-12_p.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#e36f52",
+      "weight": 2,
+      "group": "MLIT · Coast, transport & facilities",
+      "zIndex": 460,
+      "description": "Historical Nushima–Habu passenger route inventory. Not a sailing schedule or navigational route.",
+      "coverage": "1 features in the Nushima extract. Data: 2012.",
+      "credit": "MLIT National Land Numerical Information · N09",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "MLIT non-commercial terms",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N09.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-p04-2020-p04-20_28",
+      "name": "Medical facilities · 2020",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/p04-2020-p04-20_28.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#db527a",
+      "weight": 2,
+      "group": "MLIT · Coast, transport & facilities",
+      "zIndex": 460,
+      "description": "Historical facility inventory; verify current services directly with the facility.",
+      "coverage": "2 features in the Nushima extract. Data: 2020.",
+      "credit": "MLIT National Land Numerical Information · P04-2020",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P04-2020.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-p20-p20-12_28",
+      "name": "Legacy evacuation facilities · 2012",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/p20-p20-12_28.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#8a7a5c",
+      "weight": 2,
+      "group": "MLIT · Coast, transport & facilities",
+      "zIndex": 460,
+      "description": "Historical facility inventory only. Use the separately listed GSI designated sites and check current Minamiawaji instructions.",
+      "coverage": "2 features in the Nushima extract. Data: 2012.",
+      "credit": "MLIT National Land Numerical Information · P20",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "MLIT non-commercial terms",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P20.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-p29-2023-p29-23_28",
+      "name": "Schools · 2023",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/p29-2023-p29-23_28.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#346edb",
+      "weight": 2,
+      "group": "MLIT · Coast, transport & facilities",
+      "zIndex": 460,
+      "description": "MLIT school locations. Dataset year, not a guarantee of current operation.",
+      "coverage": "2 features in the Nushima extract. Data: FY2023.",
+      "credit": "MLIT National Land Numerical Information · P29-2023",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P29-2023.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-skhb01",
+      "name": "Emergency sites · flood",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/skhb01.geojson",
+      "opacity": 1,
+      "color": "#187fba",
+      "group": "GSI / Minamiawaji · Evacuation",
+      "zIndex": 470,
+      "description": "Municipal designations distributed by GSI. Snapshot retrieved 2026-10-20; may not be current or complete. Hazard-specific emergency sites differ from evacuation shelters. Read site remarks (including required floors) and confirm with Minamiawaji.",
+      "coverage": "2 designated sites in the island envelope.",
+      "credit": "Minamiawaji City · GSI designated evacuation sites",
+      "license": "GSI terms and evacuation-site usage notes",
+      "sources": [
+        {
+          "title": "Official definitions & usage notes",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Source GeoJSON tile",
+          "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb01/10/895/408.geojson"
+        }
+      ]
+    },
+    {
+      "id": "nushima-skhb02",
+      "name": "Emergency sites · sediment disasters",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/skhb02.geojson",
+      "opacity": 1,
+      "color": "#187fba",
+      "group": "GSI / Minamiawaji · Evacuation",
+      "zIndex": 470,
+      "description": "Municipal designations distributed by GSI. Snapshot retrieved 2026-10-20; may not be current or complete. Hazard-specific emergency sites differ from evacuation shelters. Read site remarks (including required floors) and confirm with Minamiawaji.",
+      "coverage": "2 designated sites in the island envelope.",
+      "credit": "Minamiawaji City · GSI designated evacuation sites",
+      "license": "GSI terms and evacuation-site usage notes",
+      "sources": [
+        {
+          "title": "Official definitions & usage notes",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Source GeoJSON tile",
+          "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb02/10/895/408.geojson"
+        }
+      ]
+    },
+    {
+      "id": "nushima-skhb03",
+      "name": "Emergency sites · storm surge",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/skhb03.geojson",
+      "opacity": 1,
+      "color": "#187fba",
+      "group": "GSI / Minamiawaji · Evacuation",
+      "zIndex": 470,
+      "description": "Municipal designations distributed by GSI. Snapshot retrieved 2026-10-20; may not be current or complete. Hazard-specific emergency sites differ from evacuation shelters. Read site remarks (including required floors) and confirm with Minamiawaji.",
+      "coverage": "2 designated sites in the island envelope.",
+      "credit": "Minamiawaji City · GSI designated evacuation sites",
+      "license": "GSI terms and evacuation-site usage notes",
+      "sources": [
+        {
+          "title": "Official definitions & usage notes",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Source GeoJSON tile",
+          "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb03/10/895/408.geojson"
+        }
+      ]
+    },
+    {
+      "id": "nushima-skhb04",
+      "name": "Emergency sites · earthquake",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/skhb04.geojson",
+      "opacity": 1,
+      "color": "#187fba",
+      "group": "GSI / Minamiawaji · Evacuation",
+      "zIndex": 470,
+      "description": "Municipal designations distributed by GSI. Snapshot retrieved 2026-10-20; may not be current or complete. Hazard-specific emergency sites differ from evacuation shelters. Read site remarks (including required floors) and confirm with Minamiawaji.",
+      "coverage": "1 designated sites in the island envelope.",
+      "credit": "Minamiawaji City · GSI designated evacuation sites",
+      "license": "GSI terms and evacuation-site usage notes",
+      "sources": [
+        {
+          "title": "Official definitions & usage notes",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Source GeoJSON tile",
+          "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb04/10/895/408.geojson"
+        }
+      ]
+    },
+    {
+      "id": "nushima-skhb05",
+      "name": "Emergency sites · tsunami",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/skhb05.geojson",
+      "opacity": 1,
+      "color": "#187fba",
+      "group": "GSI / Minamiawaji · Evacuation",
+      "zIndex": 470,
+      "description": "Municipal designations distributed by GSI. Snapshot retrieved 2026-10-20; may not be current or complete. Hazard-specific emergency sites differ from evacuation shelters. Read site remarks (including required floors) and confirm with Minamiawaji.",
+      "coverage": "1 designated sites in the island envelope.",
+      "credit": "Minamiawaji City · GSI designated evacuation sites",
+      "license": "GSI terms and evacuation-site usage notes",
+      "sources": [
+        {
+          "title": "Official definitions & usage notes",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Source GeoJSON tile",
+          "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb05/10/895/408.geojson"
+        }
+      ]
+    },
+    {
+      "id": "nushima-skhb06",
+      "name": "Emergency sites · major fire",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/skhb06.geojson",
+      "opacity": 1,
+      "color": "#187fba",
+      "group": "GSI / Minamiawaji · Evacuation",
+      "zIndex": 470,
+      "description": "Municipal designations distributed by GSI. Snapshot retrieved 2026-10-20; may not be current or complete. Hazard-specific emergency sites differ from evacuation shelters. Read site remarks (including required floors) and confirm with Minamiawaji.",
+      "coverage": "3 designated sites in the island envelope.",
+      "credit": "Minamiawaji City · GSI designated evacuation sites",
+      "license": "GSI terms and evacuation-site usage notes",
+      "sources": [
+        {
+          "title": "Official definitions & usage notes",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Source GeoJSON tile",
+          "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb06/10/895/408.geojson"
+        }
+      ]
+    },
+    {
+      "id": "nushima-skhb07",
+      "name": "Emergency sites · inland flooding",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/skhb07.geojson",
+      "opacity": 1,
+      "color": "#187fba",
+      "group": "GSI / Minamiawaji · Evacuation",
+      "zIndex": 470,
+      "description": "Municipal designations distributed by GSI. Snapshot retrieved 2026-10-20; may not be current or complete. Hazard-specific emergency sites differ from evacuation shelters. Read site remarks (including required floors) and confirm with Minamiawaji.",
+      "coverage": "2 designated sites in the island envelope.",
+      "credit": "Minamiawaji City · GSI designated evacuation sites",
+      "license": "GSI terms and evacuation-site usage notes",
+      "sources": [
+        {
+          "title": "Official definitions & usage notes",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Source GeoJSON tile",
+          "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb07/10/895/408.geojson"
+        }
+      ]
+    },
+    {
+      "id": "nushima-sih",
+      "name": "Designated evacuation shelters",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/sih.geojson",
+      "opacity": 1,
+      "color": "#187fba",
+      "group": "GSI / Minamiawaji · Evacuation",
+      "zIndex": 470,
+      "description": "Municipal designations distributed by GSI. Snapshot retrieved 2026-10-20; may not be current or complete. Hazard-specific emergency sites differ from evacuation shelters. Read site remarks (including required floors) and confirm with Minamiawaji.",
+      "coverage": "3 designated sites in the island envelope.",
+      "credit": "Minamiawaji City · GSI designated evacuation sites",
+      "license": "GSI terms and evacuation-site usage notes",
+      "sources": [
+        {
+          "title": "Official definitions & usage notes",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Source GeoJSON tile",
+          "url": "https://cyberjapandata.gsi.go.jp/xyz/sih/10/895/408.geojson"
+        }
+      ]
     }
   ],
   "features": [

@@ -1,0 +1,6137 @@
+{
+  "checkedAt": "2026-10-20",
+  "scope": "Nushima island envelope [134.805,34.15,134.84,34.185]. Catalogued GSI maps, imagery, terrain, land conditions, hazard portal and evacuation sites; 16 relevant MLIT national-land dataset families were inspected. This is a dated coverage audit, not a claim that every government dataset or historical edition has been exhausted. MAFF 2023 Fisheries Census community boundaries were additionally imported for official Nushima district 261.",
+  "layerCount": 54,
+  "maff": {
+    "publisher": "Ministry of Agriculture, Forestry and Fisheries (MAFF), Statistics Department",
+    "dataset": "2023 Fisheries Census fishing-community boundaries (漁業集落境界)",
+    "dataYear": 2023,
+    "sourcePageUpdated": "2025-11-04",
+    "retrievedAt": "2026-10-20",
+    "sourcePage": "https://www.maff.go.jp/j/tokei/census/fc/database/mapdata/index.html",
+    "archiveUrl": "https://www.maff.go.jp/j/tokei/census/fc/database/mapdata/MB0001_2023_28.zip",
+    "archiveSha256": "37edd8808290f84b6d6af812d59dca7716a246f117f160301ef6d7185f8417a1",
+    "sourceCRS": "EPSG:6668",
+    "outputCRS": "EPSG:4326",
+    "encoding": "CP932",
+    "sourceFeatureCount": 284,
+    "selectedSourceFeatures": 6,
+    "namedCommunityCount": 4,
+    "outputFeatureCount": 5,
+    "selection": {
+      "PREF": "28",
+      "CITY": "224",
+      "GAREA": "261"
+    },
+    "processing": "Selected official Nushima district by attributes; transformed JGD2011 to WGS84; repaired geometry; grouped the two other-area records by official KEY into one multipart feature. Preserved source attributes. No clipping, simplification or invented boundaries. Added display names, census year, category labels and colours.",
+    "licence": "MAFF website terms (Public Data License 1.0); attribution and disclosure of processing",
+    "licenceUrl": "https://www.maff.go.jp/j/use/link.html",
+    "attribution": "Processed from MAFF 2023 Fisheries Census fishing-community boundaries (農林水産省ウェブサイトを加工して作成).",
+    "communities": [
+      {
+        "KEY": "28224261001",
+        "PREF": "28",
+        "CITY": "224",
+        "GAREA": "261",
+        "GCOM": "001",
+        "PREF_NAME": "兵庫県",
+        "CITY_NAME": "南あわじ市",
+        "GAREA_NAME": "沼島",
+        "GCOM_NAME": "東泊",
+        "name": "東泊 · 沼島",
+        "censusYear": 2023,
+        "color": "#ed9a45",
+        "category": "Fishing community"
+      },
+      {
+        "KEY": "28224261002",
+        "PREF": "28",
+        "CITY": "224",
+        "GAREA": "261",
+        "GCOM": "002",
+        "PREF_NAME": "兵庫県",
+        "CITY_NAME": "南あわじ市",
+        "GAREA_NAME": "沼島",
+        "GCOM_NAME": "北",
+        "name": "北 · 沼島",
+        "censusYear": 2023,
+        "color": "#5bb7de",
+        "category": "Fishing community"
+      },
+      {
+        "KEY": "28224261003",
+        "PREF": "28",
+        "CITY": "224",
+        "GAREA": "261",
+        "GCOM": "003",
+        "PREF_NAME": "兵庫県",
+        "CITY_NAME": "南あわじ市",
+        "GAREA_NAME": "沼島",
+        "GCOM_NAME": "中",
+        "name": "中 · 沼島",
+        "censusYear": 2023,
+        "color": "#d07dbd",
+        "category": "Fishing community"
+      },
+      {
+        "KEY": "28224261004",
+        "PREF": "28",
+        "CITY": "224",
+        "GAREA": "261",
+        "GCOM": "004",
+        "PREF_NAME": "兵庫県",
+        "CITY_NAME": "南あわじ市",
+        "GAREA_NAME": "沼島",
+        "GCOM_NAME": "南",
+        "name": "南 · 沼島",
+        "censusYear": 2023,
+        "color": "#a5c965",
+        "category": "Fishing community"
+      },
+      {
+        "KEY": "28224261999",
+        "PREF": "28",
+        "CITY": "224",
+        "GAREA": "261",
+        "GCOM": "999",
+        "PREF_NAME": "兵庫県",
+        "CITY_NAME": "南あわじ市",
+        "GAREA_NAME": "沼島",
+        "GCOM_NAME": "その他地域",
+        "name": "その他地域 · 沼島",
+        "censusYear": 2023,
+        "color": "#9b9fa6",
+        "category": "Other area (not a named fishing community)"
+      }
+    ]
+  },
+  "rasterCoverageMethod": "HTTP status and nontransparent image pixels for every z14 tile intersecting the island envelope; a successful tile is not a guarantee that every point is covered. Visually inspected the imagery and thematic samples.",
+  "rasterCoverage": [
+    {
+      "id": "std",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 17
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 2592
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 1247
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 1
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 1380
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 235
+        }
+      ]
+    },
+    {
+      "id": "pale",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 17
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 888
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 391
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 1
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 514
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 114
+        }
+      ]
+    },
+    {
+      "id": "english",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/english/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "blank",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/blank/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 1
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 188
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 185
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 1
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 178
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 109
+        }
+      ]
+    },
+    {
+      "id": "seamlessphoto",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 447
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 9686
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 5195
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 480
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 5730
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 1102
+        }
+      ]
+    },
+    {
+      "id": "ort",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "airphoto",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/airphoto/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 7996
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 28398
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 23252
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 5718
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 22621
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 8191
+        }
+      ]
+    },
+    {
+      "id": "gazo1",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/gazo1/{z}/{x}/{y}.jpg",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 566
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 17395
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 10730
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 1585
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 16121
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 4622
+        }
+      ]
+    },
+    {
+      "id": "gazo2",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/gazo2/{z}/{x}/{y}.jpg",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "gazo3",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/gazo3/{z}/{x}/{y}.jpg",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "gazo4",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/gazo4/{z}/{x}/{y}.jpg",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "ort_old10",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/ort_old10/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "ort_USA10",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/ort_USA10/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "relief",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 18
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 13384
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 7755
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 13
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 9006
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 603
+        }
+      ]
+    },
+    {
+      "id": "hillshademap",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/hillshademap/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 200,
+          "nonempty": false,
+          "colors": 1
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 705
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 500
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 200,
+          "nonempty": false,
+          "colors": 1
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 482
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 184
+        }
+      ]
+    },
+    {
+      "id": "slopemap",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/slopemap/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 170
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 191
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 174
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 137
+        }
+      ]
+    },
+    {
+      "id": "slopezone1map",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/slopezone1map/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 4
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 4
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 4
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 4
+        }
+      ]
+    },
+    {
+      "id": "sekishoku",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/sekishoku/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 1
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 7699
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 4665
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 1
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 5677
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 309
+        }
+      ]
+    },
+    {
+      "id": "anaglyphmap_color",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/anaglyphmap_color/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 200,
+          "nonempty": false,
+          "colors": 1
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 18128
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 9417
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 200,
+          "nonempty": false,
+          "colors": 1
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 11607
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 676
+        }
+      ]
+    },
+    {
+      "id": "anaglyphmap_gray",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/anaglyphmap_gray/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 200,
+          "nonempty": false,
+          "colors": 1
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 11229
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 6999
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 200,
+          "nonempty": false,
+          "colors": 1
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 8624
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 466
+        }
+      ]
+    },
+    {
+      "id": "lcm25k",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/lcm25k/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "lcm25k_2012",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/lcm25k_2012/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 9
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 2468
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 1281
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 223
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 1569
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 425
+        }
+      ]
+    },
+    {
+      "id": "ccm1",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/ccm1/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "ccm2",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/ccm2/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 25055
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 44212
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 27531
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 8740
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 35354
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 15005
+        }
+      ]
+    },
+    {
+      "id": "afm",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 244
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 7426
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 2725
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 144
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 3748
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 901
+        }
+      ]
+    },
+    {
+      "id": "swale",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/swale/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 1
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 423
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 202
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 1
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 197
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 70
+        }
+      ]
+    },
+    {
+      "id": "lcmfc2",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "experimental_landformclassification",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "experimental_landformclassification2",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification2/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2007",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2007/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2008",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2008/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2009",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2009/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2010",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2010/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2011",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2011/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2012",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2012/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2013",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2013/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2014",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2014/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2015",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2015/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2016",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2016/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2017",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2017/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2018",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2018/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2019",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2019/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2020",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2020/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 1488
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 13547
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 7298
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 1366
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 6032
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 1266
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2021",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2021/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 10648
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 5690
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 5920
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 508
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2022",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2022/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2023",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2023/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2024",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2024/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2025",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2025/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "04_tsunami_newlegend_data",
+      "url": "https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_data/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 7
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 7
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 7
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 7
+        }
+      ]
+    },
+    {
+      "id": "03_hightide_l2_shinsuishin_data",
+      "url": "https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_data/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 6
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 6
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 6
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 6
+        }
+      ]
+    },
+    {
+      "id": "05_dosekiryukeikaikuiki",
+      "url": "https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 146
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 81
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "05_kyukeishakeikaikuiki",
+      "url": "https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 378
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 200,
+          "nonempty": true,
+          "colors": 39
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "05_jisuberikeikaikuiki",
+      "url": "https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "01_flood_l2_shinsuishin_data",
+      "url": "https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_data/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "01_flood_l1_shinsuishin_newlegend_data",
+      "url": "https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_data/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    },
+    {
+      "id": "nendophoto2026",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2026/{z}/{x}/{y}.png",
+      "samples": [
+        {
+          "tile": [
+            14,
+            14327,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14327,
+            6536
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6534
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6535
+          ],
+          "status": 404
+        },
+        {
+          "tile": [
+            14,
+            14328,
+            6536
+          ],
+          "status": 404
+        }
+      ]
+    }
+  ],
+  "gsiEvacuationCoverage": [
+    {
+      "id": "skhb01",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb01/10/895/408.geojson",
+      "count": 2,
+      "status": 200
+    },
+    {
+      "id": "skhb02",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb02/10/895/408.geojson",
+      "count": 2,
+      "status": 200
+    },
+    {
+      "id": "skhb03",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb03/10/895/408.geojson",
+      "count": 2,
+      "status": 200
+    },
+    {
+      "id": "skhb04",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb04/10/895/408.geojson",
+      "count": 1,
+      "status": 200
+    },
+    {
+      "id": "skhb05",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb05/10/895/408.geojson",
+      "count": 1,
+      "status": 200
+    },
+    {
+      "id": "skhb06",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb06/10/895/408.geojson",
+      "count": 3,
+      "status": 200
+    },
+    {
+      "id": "skhb07",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb07/10/895/408.geojson",
+      "count": 2,
+      "status": 200
+    },
+    {
+      "id": "skhb08",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb08/10/895/408.geojson",
+      "count": 0,
+      "status": 404
+    },
+    {
+      "id": "sih",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/sih/10/895/408.geojson",
+      "count": 3,
+      "status": 200
+    },
+    {
+      "id": "sfh",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/sfh/10/895/408.geojson",
+      "count": 0,
+      "status": 200
+    }
+  ],
+  "mlitCatalog": [
+    {
+      "id": "N03-2026",
+      "page": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2026.html",
+      "downloads": [
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2025/N03-20250101_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2024/N03-20240101_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2023/N03-20230101_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2022/N03-20220101_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2021/N03-20210101_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2020/N03-20200101_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2019/N03-190101_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2018/N03-180101_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2017/N03-170101_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2016/N03-160101_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2015/N03-150101_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2014/N03-140401_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2025/N03-20250101_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2024/N03-20240101_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2023/N03-20230101_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2022/N03-20220101_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2021/N03-20210101_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2020/N03-20200101_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2019/N03-190101_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2018/N03-180101_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2017/N03-170101_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2016/N03-160101_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2015/N03-150101_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2014/N03-140401_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2013/N03-130401_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2012/N03-120401_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2011/N03-120331_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2010/N03-110331_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2010/N03-101001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2009/N03-100329_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2008/N03-090320_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2007/N03-071001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2007/N03-070401_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2006/N03-06_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2005/N03-05_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2000/N03-001001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-1995/N03-951001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-1985/N03-851001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-1980/N03-801001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-1975/N03-751001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-1970/N03-701001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-1965/N03-651001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-1960/N03-601001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-1955/N03-551001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-1950/N03-501001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-1920/N03-200101_28_GML.zip"
+      ],
+      "selectedDownload": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_28_GML.zip"
+    },
+    {
+      "id": "L03-b-2021",
+      "page": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L03-b-2021.html",
+      "downloads": [
+        "https://nlftp.mlit.go.jp/ksj/gml/data/L03-b/L03-b-21/L03-b-21_5134-jgd2011_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/L03-b/L03-b-21/L03-b-21_5134-tky_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/L03-b/L03-b-16/L03-b-16_5134-jgd_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/L03-b/L03-b-16/L03-b-16_5134-tky_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/L03-b/L03-b-14/L03-b-14_5134-jgd_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/L03-b/L03-b-14/L03-b-14_5134-tky_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/L03-b/L03-b-09/L03-b-09_5134-jgd_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/L03-b/L03-b-09/L03-b-09_5134-tky_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/L03-b/L03-b-06/L03-b-06_5134-jgd_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/L03-b/L03-b-06/L03-b-06_5134_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/L03-b/L03-b-97/L03-b-97_5134_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/L03-b/L03-b-91/L03-b-91_5134_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/L03-b/L03-b-87/L03-b-87_5134_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/L03-b/L03-b-76/L03-b-76_5134_GML.zip"
+      ],
+      "selectedDownload": "https://nlftp.mlit.go.jp/ksj/gml/data/L03-b/L03-b-21/L03-b-21_5134-jgd2011_GML.zip"
+    },
+    {
+      "id": "P29-2023",
+      "page": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P29-2023.html",
+      "downloads": [
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P29/P29-23/P29-23_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P29/P29-21/P29-21_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P29/P29-13/P29-13.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P29/P29-23/P29-23_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P29/P29-21/P29-21_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P29/P29-13/P29-13_28.zip"
+      ],
+      "selectedDownload": "https://nlftp.mlit.go.jp/ksj/gml/data/P29/P29-23/P29-23_28_GML.zip"
+    },
+    {
+      "id": "P04-2020",
+      "page": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P04-2020.html",
+      "downloads": [
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P04/P04-10/P04-10_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P04/P04-14/P04-14_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P04/P04-20/P04-20_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P04/P04-14/P04-14_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P04/P04-20/P04-20_GML.zip"
+      ],
+      "selectedDownload": "https://nlftp.mlit.go.jp/ksj/gml/data/P04/P04-20/P04-20_28_GML.zip"
+    },
+    {
+      "id": "P14-2023",
+      "page": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P14-2023.html",
+      "downloads": [
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P14/P14-23/P14-23_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P14/P14-23/P14-23_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P14/P14-21/P14-21_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P14/P14-15/P14-15_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P14/P14-11/P14-11_28_GML.zip"
+      ],
+      "selectedDownload": "https://nlftp.mlit.go.jp/ksj/gml/data/P14/P14-23/P14-23_28_GML.zip"
+    },
+    {
+      "id": "A27-2023",
+      "page": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A27-2023.html",
+      "downloads": [
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A27/A27-23/A27-23_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A27/A27-23/A27-23_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A27/A27-21/A27-21_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A27/A27-16/A27-16_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A27/A27-10/A27-10_28_GML.zip"
+      ],
+      "selectedDownload": "https://nlftp.mlit.go.jp/ksj/gml/data/A27/A27-23/A27-23_28_GML.zip"
+    },
+    {
+      "id": "A32-2023",
+      "page": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A32-2023.html",
+      "downloads": [
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A32/A32-23/A32-23_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A32/A32-23/A32-23_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A32/A32-21/A32-21_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A32/A32-16/A32-16_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A32/A32-13/A32-13_28_GML.zip"
+      ],
+      "selectedDownload": "https://nlftp.mlit.go.jp/ksj/gml/data/A32/A32-23/A32-23_28_GML.zip"
+    },
+    {
+      "id": "A13-2015",
+      "page": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A13-2015.html",
+      "downloads": [
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A13/A13-06/A13-06_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A13/A13-11/A13-11_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A13/A13-15/A13-15_28_GML.zip"
+      ],
+      "selectedDownload": "https://nlftp.mlit.go.jp/ksj/gml/data/A13/A13-15/A13-15_28_GML.zip"
+    },
+    {
+      "id": "A10-2015",
+      "page": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A10-2015.html",
+      "downloads": [
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A10/A10-06/A10-06_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A10/A10-10/A10-10_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A10/A10-11/A10-11_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A10/A10-15/A10-15_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A10/A10-10/A10-10_GML.zip"
+      ],
+      "selectedDownload": "https://nlftp.mlit.go.jp/ksj/gml/data/A10/A10-15/A10-15_28_GML.zip"
+    },
+    {
+      "id": "A19-2017",
+      "page": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A19-2017.html",
+      "downloads": [
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A19/A19-55/A19-551001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A19/A19-60/A19-601001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A19/A19-65/A19-651001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A19/A19-70/A19-701001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A19/A19-75/A19-751001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A19/A19-80/A19-801001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A19/A19-85/A19-851001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A19/A19-90/A19-901001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A19/A19-95/A19-951001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A19/A19-00/A19-001001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A19/A19-05/A19-051001_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A19/A19-07/A19-070402_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/A19/A19-17/A19-17_28_GML.zip"
+      ],
+      "selectedDownload": "https://nlftp.mlit.go.jp/ksj/gml/data/A19/A19-17/A19-17_28_GML.zip"
+    },
+    {
+      "id": "C23",
+      "page": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-C23.html",
+      "downloads": [
+        "https://nlftp.mlit.go.jp/ksj/gml/data/C23/C23-06/C23-06_28_GML.zip"
+      ],
+      "selectedDownload": "https://nlftp.mlit.go.jp/ksj/gml/data/C23/C23-06/C23-06_28_GML.zip"
+    },
+    {
+      "id": "C09",
+      "page": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-C09.html",
+      "downloads": [
+        "https://nlftp.mlit.go.jp/ksj/gml/data/C09/C09-06/C09-06_GML.zip"
+      ],
+      "selectedDownload": "https://nlftp.mlit.go.jp/ksj/gml/data/C09/C09-06/C09-06_GML.zip"
+    },
+    {
+      "id": "C02-2014",
+      "page": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-C02-2014.html",
+      "downloads": [
+        "https://nlftp.mlit.go.jp/ksj/gml/data/C02/C02-06/C02-06_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/C02/C02-08/C02-08_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/C02/C02-14/C02-14_GML.zip"
+      ],
+      "selectedDownload": "https://nlftp.mlit.go.jp/ksj/gml/data/C02/C02-14/C02-14_GML.zip"
+    },
+    {
+      "id": "N09",
+      "page": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N09.html",
+      "downloads": [
+        "https://nlftp.mlit.go.jp/ksj/gml/data/N09/N09-12/N09-12_GML.zip"
+      ],
+      "selectedDownload": "https://nlftp.mlit.go.jp/ksj/gml/data/N09/N09-12/N09-12_GML.zip"
+    },
+    {
+      "id": "P20",
+      "page": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P20.html",
+      "downloads": [
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P20/P20-12/P20-12_28_GML.zip"
+      ],
+      "selectedDownload": "https://nlftp.mlit.go.jp/ksj/gml/data/P20/P20-12/P20-12_28_GML.zip"
+    },
+    {
+      "id": "P11-2022",
+      "page": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P11-2022.html",
+      "downloads": [
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P11/P11-22/P11-22_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P11/P11-22/P11-22_SHP.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P11/P11-22/P11-22_28_GML.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P11/P11-22/P11-22_28_SHP.zip",
+        "https://nlftp.mlit.go.jp/ksj/gml/data/P11/P11-10/P11-10_28_GML.zip"
+      ],
+      "selectedDownload": "https://nlftp.mlit.go.jp/ksj/gml/data/P11/P11-22/P11-22_28_SHP.zip"
+    }
+  ],
+  "processing": {
+    "clipBounds": [
+      134.805,
+      34.15,
+      134.84,
+      34.185
+    ],
+    "method": "Transform from source CRS to EPSG:4326; repair invalid geometry; intersect island envelope; preserve source attributes; round to 7 decimals. N09 retains full routes whose attributes name Nushima. Sea class 1500 excluded from land-use display. No geometry simplification.",
+    "inputs": [
+      {
+        "dataset": "A10-2015",
+        "input": "A10-2015/a001280020160211.shp",
+        "sha256": "ceca5efd23eff6a54b30fd9f164d9277f472467c69f8b52bb9decde2eb194171",
+        "crs": "EPSG:4612",
+        "sourceFeatureCount": 387,
+        "retainedFeatureCount": 5,
+        "file": "data/nushima/a10-2015-a001280020160211.geojson"
+      },
+      {
+        "dataset": "A10-2015",
+        "input": "A10-2015/a001280020160212.shp",
+        "sha256": "fe27fab93ef613a3e89ccef012a3237c4ae77a195eca9a03ba59afafea2b2fd4",
+        "crs": "EPSG:4612",
+        "sourceFeatureCount": 528,
+        "retainedFeatureCount": 5,
+        "file": "data/nushima/a10-2015-a001280020160212.geojson"
+      },
+      {
+        "dataset": "A10-2015",
+        "input": "A10-2015/a001280020160213.shp",
+        "sha256": "a9a4bf1653f5355969c10c428a5b543b5a214a86548e186922c077baa64a513a",
+        "crs": "EPSG:4612",
+        "sourceFeatureCount": 162,
+        "retainedFeatureCount": 0,
+        "file": null
+      },
+      {
+        "dataset": "A13-2015",
+        "input": "A13-2015/a001280020160207.shp",
+        "sha256": "5744b4690bf18ae7b7c03d725e296f6528314dc1ba348901255161a244937fe9",
+        "crs": "EPSG:4612",
+        "sourceFeatureCount": 1906,
+        "retainedFeatureCount": 1,
+        "file": "data/nushima/a13-2015-a001280020160207.geojson"
+      },
+      {
+        "dataset": "A13-2015",
+        "input": "A13-2015/a001280020160208.shp",
+        "sha256": "6b5d5d4350cdb1ff651d636ca79618f9ec205cb1f40ae307735236aea76b4b36",
+        "crs": "EPSG:4612",
+        "sourceFeatureCount": 195,
+        "retainedFeatureCount": 0,
+        "file": null
+      },
+      {
+        "dataset": "A13-2015",
+        "input": "A13-2015/a001280020160209.shp",
+        "sha256": "c5314d4a7ef30e102e1d35836fa80483788a853d636aff6d879e7094fb7d2fb4",
+        "crs": "EPSG:4612",
+        "sourceFeatureCount": 2004,
+        "retainedFeatureCount": 1,
+        "file": "data/nushima/a13-2015-a001280020160209.geojson"
+      },
+      {
+        "dataset": "A13-2015",
+        "input": "A13-2015/a001280020160210.shp",
+        "sha256": "2ae8afe5fc5aa2f9a72921965265a399446439e5c90b71b17a389a04a8f2bea0",
+        "crs": "EPSG:4612",
+        "sourceFeatureCount": 3027,
+        "retainedFeatureCount": 1,
+        "file": "data/nushima/a13-2015-a001280020160210.geojson"
+      },
+      {
+        "dataset": "A19-2017",
+        "input": "A19-2017/A19-17_28_GML/A19-17_28.shp",
+        "sha256": "d396ec5c2e0c37cc73d7a48f5524cbf821ed4375a0d544069bea5f8e831666ca",
+        "crs": "EPSG:6668",
+        "sourceFeatureCount": 5,
+        "retainedFeatureCount": 1,
+        "file": "data/nushima/a19-2017-a19-17_28.geojson"
+      },
+      {
+        "dataset": "A27-2023",
+        "input": "A27-2023/A27-23_28.shp",
+        "sha256": "b2088bd92759cd8f45d7b7c74ed468278dae7e903b7144dbddf4089c8c3292b5",
+        "crs": "EPSG:6668",
+        "sourceFeatureCount": 618,
+        "retainedFeatureCount": 1,
+        "file": "data/nushima/a27-2023-a27-23_28.geojson"
+      },
+      {
+        "dataset": "A32-2023",
+        "input": "A32-2023/A32-23_28.shp",
+        "sha256": "c85049592576ba96235a12d71e1c83ad49dd9360b97a611f3e5c8856c8fa217b",
+        "crs": "EPSG:6668",
+        "sourceFeatureCount": 281,
+        "retainedFeatureCount": 1,
+        "file": "data/nushima/a32-2023-a32-23_28.geojson"
+      },
+      {
+        "dataset": "C02-2014",
+        "input": "C02-2014/C02-14_GML/C02-14-g_HarborDistrictBoundary.shp",
+        "sha256": "9d127a410851ca80f94f2d57a04473766b05ca5222499c1ac4e828a2ae7a9b1a",
+        "crs": "EPSG:4612",
+        "sourceFeatureCount": 1441,
+        "retainedFeatureCount": 0,
+        "file": null
+      },
+      {
+        "dataset": "C02-2014",
+        "input": "C02-2014/C02-14_GML/C02-14-g_PortAndHarbor.shp",
+        "sha256": "0186c00463256339ecd9502e93abef459ad2c8b0f73ad367b0090d206c26baea",
+        "crs": "EPSG:4612",
+        "sourceFeatureCount": 994,
+        "retainedFeatureCount": 0,
+        "file": null
+      },
+      {
+        "dataset": "C02-2014",
+        "input": "C02-2014/C02-14_GML/C02-14-g_PortDistrictBoundary.shp",
+        "sha256": "7cf9eceac57fbbb7e0dc0b558d4a54339b01c8ba0dee150c7520a83ff65df3af",
+        "crs": "EPSG:4612",
+        "sourceFeatureCount": 520,
+        "retainedFeatureCount": 0,
+        "file": null
+      },
+      {
+        "dataset": "C09",
+        "input": "C09/C09-06_FishingPort.shp",
+        "sha256": "edfce686988cd3e740eeb597e59f8e3ce8959febd4576f7b76f53afbc7d8dedd",
+        "crs": "EPSG:4612",
+        "sourceFeatureCount": 2931,
+        "retainedFeatureCount": 1,
+        "file": "data/nushima/c09-c09-06_fishingport.geojson"
+      },
+      {
+        "dataset": "C09",
+        "input": "C09/C09-06_FishingPortBoundary.shp",
+        "sha256": "a35b6e609fc2a8061127e2deedc2e6f22b8c7f63ec4e1d034ce930a84845dcd8",
+        "crs": "EPSG:4612",
+        "sourceFeatureCount": 3292,
+        "retainedFeatureCount": 1,
+        "file": "data/nushima/c09-c09-06_fishingportboundary.geojson"
+      },
+      {
+        "dataset": "C23",
+        "input": "C23/C23-06_28-g_Coastline.shp",
+        "sha256": "cc2910e0a82bc9655dee9412d21426f8f1f2b02d632c2c5be652d4995a7ab2dd",
+        "crs": "EPSG:4612",
+        "sourceFeatureCount": 1285,
+        "retainedFeatureCount": 60,
+        "file": "data/nushima/c23-c23-06_28-g_coastline.geojson"
+      },
+      {
+        "dataset": "L03-b-2021",
+        "input": "L03-b-2021/L03-b-21_5134.shp",
+        "sha256": "690a997d4ba14035a08e369391d829635991b4affb2ea887fdaeb2d2ea1c219c",
+        "crs": "EPSG:6668",
+        "sourceFeatureCount": 520000,
+        "retainedFeatureCount": 250,
+        "file": "data/nushima/l03-b-2021-l03-b-21_5134.geojson"
+      },
+      {
+        "dataset": "N03-2026",
+        "input": "N03-2026/N03-20260101_28.shp",
+        "sha256": "32cb80e5c04fb8c4b5a3eead41dd3cd2b3d6fc9e8fe1b3f1bd9a03548bf00916",
+        "crs": "EPSG:6668",
+        "sourceFeatureCount": 2166,
+        "retainedFeatureCount": 64,
+        "file": "data/nushima/n03-2026-n03-20260101_28.geojson"
+      },
+      {
+        "dataset": "N09",
+        "input": "N09/N09-12_l.shp",
+        "sha256": "439ba3bced3b7c08701bff4e2ec0d4a5e2029e673b84114147107682d7634064",
+        "crs": "EPSG:4612",
+        "sourceFeatureCount": 856,
+        "retainedFeatureCount": 1,
+        "file": "data/nushima/n09-n09-12_l.geojson"
+      },
+      {
+        "dataset": "N09",
+        "input": "N09/N09-12_p.shp",
+        "sha256": "1f266c794a25df8ac0f7b7a043c7e56cee2b1a04fc8ebf23e31e8f509fec4a51",
+        "crs": "EPSG:4612",
+        "sourceFeatureCount": 850,
+        "retainedFeatureCount": 1,
+        "file": "data/nushima/n09-n09-12_p.geojson"
+      },
+      {
+        "dataset": "P04-2020",
+        "input": "P04-2020/P04-20_28_GML/P04-20_28.shp",
+        "sha256": "e19e5599ede15362ddf2af3d1c5cf27b749a11e26da5cb31dfcf6b9a44c0cd6e",
+        "crs": "EPSG:6668",
+        "sourceFeatureCount": 8576,
+        "retainedFeatureCount": 2,
+        "file": "data/nushima/p04-2020-p04-20_28.geojson"
+      },
+      {
+        "dataset": "P11-2022",
+        "input": "P11-2022/P11-22_28_SHP/P11-22_28.shp",
+        "sha256": "c57be8790a6f046b2d8beebd4b0c0ce5804e2d325f2bc1a458c745488bedf94b",
+        "crs": "EPSG:6668",
+        "sourceFeatureCount": 10376,
+        "retainedFeatureCount": 0,
+        "file": null
+      },
+      {
+        "dataset": "P14-2023",
+        "input": "P14-2023/P14-23_28_GML/SHP/P14-23_28.shp",
+        "sha256": "613025e4e67aff0c09f191bbb90a3678fd700abbd759c6d7635aea601106648a",
+        "crs": "EPSG:6668",
+        "sourceFeatureCount": 11731,
+        "retainedFeatureCount": 0,
+        "file": null
+      },
+      {
+        "dataset": "P20",
+        "input": "P20/P20-12_28.shp",
+        "sha256": "bfed99a0473bfd5d0e361b9d3981d740057a18632df74421c6e10c9c3b61a235",
+        "crs": "EPSG:4612",
+        "sourceFeatureCount": 4172,
+        "retainedFeatureCount": 2,
+        "file": "data/nushima/p20-p20-12_28.geojson"
+      },
+      {
+        "dataset": "P29-2023",
+        "input": "P29-2023/P29-23_28_GML/P29-23_28.shp",
+        "sha256": "ed66bff1ea3347dbcc2d12f71706f31f2852a50d32fc5bb07f3a34213aeefc53",
+        "crs": "EPSG:6668",
+        "sourceFeatureCount": 2621,
+        "retainedFeatureCount": 2,
+        "file": "data/nushima/p29-2023-p29-23_28.geojson"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "id": "nushima-std",
+      "name": "Standard map · roads, buildings & contours",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 18,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Maps & imagery",
+      "zIndex": 200,
+      "description": "Current GSI cartography. Buildings, roads and contours are part of the raster map.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Official legend (PDF)",
+          "url": "https://cyberjapandata.gsi.go.jp/legend/std_25000_legend.pdf"
+        }
+      ]
+    },
+    {
+      "id": "nushima-pale",
+      "name": "Pale map",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 18,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Maps & imagery",
+      "zIndex": 201,
+      "description": "A light cartographic background.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-blank",
+      "name": "Outline map",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/blank/{z}/{x}/{y}.png",
+      "minNativeZoom": 5,
+      "maxNativeZoom": 14,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Maps & imagery",
+      "zIndex": 202,
+      "description": "Simplified background, enlarged beyond native zoom 14.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-seamlessphoto",
+      "name": "Latest seamless aerial imagery",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 18,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Maps & imagery",
+      "zIndex": 203,
+      "description": "Best available GSI mosaic; photography dates vary. Native zoom 18 is about 0.5 metres per screen pixel here, not a claim about survey accuracy.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-airphoto",
+      "name": "Survey aerial photography · 2004 onward",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/airphoto/{z}/{x}/{y}.png",
+      "minNativeZoom": 14,
+      "maxNativeZoom": 18,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Maps & imagery",
+      "zIndex": 204,
+      "description": "GSI survey photography mosaic. May contain seams and gaps; the catalogue start year is not the date of every image.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-gazo1",
+      "name": "Historical aerial · 1974–1978",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/gazo1/{z}/{x}/{y}.jpg",
+      "minNativeZoom": 10,
+      "maxNativeZoom": 17,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Maps & imagery",
+      "zIndex": 205,
+      "description": "Historical National Land Image Information photographs.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-nendophoto2020",
+      "name": "Annual aerial · FY2020",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2020/{z}/{x}/{y}.png",
+      "minNativeZoom": 14,
+      "maxNativeZoom": 18,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Maps & imagery",
+      "zIndex": 206,
+      "description": "Photography grouped by the fiscal year 2020.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-nendophoto2021",
+      "name": "Annual aerial · FY2021 (partial)",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2021/{z}/{x}/{y}.png",
+      "minNativeZoom": 14,
+      "maxNativeZoom": 18,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Maps & imagery",
+      "zIndex": 207,
+      "description": "Partial coverage. Use over the seamless mosaic to fill gaps.",
+      "coverage": "Island envelope: 4/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-relief",
+      "name": "Elevation colours",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png",
+      "minNativeZoom": 5,
+      "maxNativeZoom": 15,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 208,
+      "description": "Elevation tint and relief. Marine areas created using Japan Coast Guard Hydrographic and Oceanographic Department materials.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI) · Marine areas: Japan Coast Guard Hydrographic and Oceanographic Department",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-hillshademap",
+      "name": "Hillshade",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/hillshademap/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 16,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 209,
+      "description": "Relief derived from GSI DEM5A, DEM5B and DEM10B as available; not a uniform-resolution survey.",
+      "coverage": "Island envelope: 4/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-slopemap",
+      "name": "Slope shading",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/slopemap/{z}/{x}/{y}.png",
+      "minNativeZoom": 3,
+      "maxNativeZoom": 15,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 210,
+      "description": "Darker shades indicate steeper terrain; DEM-derived.",
+      "coverage": "Island envelope: 4/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-slopezone1map",
+      "name": "Slope classes",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/slopezone1map/{z}/{x}/{y}.png",
+      "minNativeZoom": 3,
+      "maxNativeZoom": 15,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 211,
+      "description": "GSI slope classification (avalanche-related product). Describes slopes, not an island-specific avalanche forecast.",
+      "coverage": "Island envelope: 4/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-sekishoku",
+      "name": "Red relief",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/sekishoku/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 14,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 212,
+      "description": "Red terrain relief from the 10 m elevation model.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-anaglyphmap_color",
+      "name": "Stereo terrain · colour",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/anaglyphmap_color/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 16,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 213,
+      "description": "DEM-derived anaglyph for red/cyan stereo glasses.",
+      "coverage": "Island envelope: 4/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-anaglyphmap_gray",
+      "name": "Stereo terrain · greyscale",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/anaglyphmap_gray/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 16,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 214,
+      "description": "DEM-derived anaglyph for red/cyan stereo glasses.",
+      "coverage": "Island envelope: 4/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-lcm25k_2012",
+      "name": "Land-condition classification",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/lcm25k_2012/{z}/{x}/{y}.png",
+      "minNativeZoom": 10,
+      "maxNativeZoom": 16,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 215,
+      "description": "Digital Map 25000 land-condition classification. The tile identifier is not a current survey date.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Official legend (PDF)",
+          "url": "https://cyberjapandata.gsi.go.jp/legend/lcm25k_2012/lc_legend.pdf"
+        }
+      ]
+    },
+    {
+      "id": "nushima-ccm2",
+      "name": "Coastal land & seabed conditions · pre-1989",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/ccm2/{z}/{x}/{y}.png",
+      "minNativeZoom": 14,
+      "maxNativeZoom": 16,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 216,
+      "description": "Historical coastal survey sheets, including seabed contours. Not a navigation chart.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Official legend (PDF)",
+          "url": "https://cyberjapandata.gsi.go.jp/legend/CCM1_hanrei.pdf"
+        }
+      ]
+    },
+    {
+      "id": "nushima-afm",
+      "name": "Active-fault survey map",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png",
+      "minNativeZoom": 11,
+      "maxNativeZoom": 16,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 217,
+      "description": "GSI 1:25,000 active-fault survey sheets. A sheet covering an area does not imply a fault at every location.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Official legend (PDF)",
+          "url": "https://www.gsi.go.jp/common/000084060.pdf"
+        }
+      ]
+    },
+    {
+      "id": "nushima-swale",
+      "name": "Meiji-era low wetlands",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/swale/{z}/{x}/{y}.png",
+      "minNativeZoom": 10,
+      "maxNativeZoom": 16,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 1,
+      "color": "#356b43",
+      "group": "GSI · Terrain & land",
+      "zIndex": 218,
+      "description": "Historical low-wetland classification; not current flood depth.",
+      "coverage": "Island envelope: 6/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Geospatial Information Authority of Japan (GSI)",
+      "license": "GSI content terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Official legend (PDF)",
+          "url": "https://cyberjapandata.gsi.go.jp/legend/lw_legend.pdf"
+        }
+      ]
+    },
+    {
+      "id": "nushima-04_tsunami_newlegend_data",
+      "name": "Tsunami inundation depth",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_data/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 17,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 0.72,
+      "color": "#bd7344",
+      "group": "MLIT / GSI · Hazard portal",
+      "zIndex": 419,
+      "description": "Hyogo Prefecture tsunami inundation scenarios, distributed by the joint MLIT/GSI Hazard Map Portal. Blank tiles can mean missing coverage.",
+      "coverage": "Island envelope: 4/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Hyogo Prefecture · MLIT/GSI Hazard Map Portal",
+      "license": "Hazard Map Portal terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://disaportal.gsi.go.jp/hazardmap/copyright/opendata.html"
+        }
+      ],
+      "legend": "https://disaportal.gsi.go.jp/hazardmap/copyright/img/shinsui_legend3.png"
+    },
+    {
+      "id": "nushima-03_hightide_l2_shinsuishin_data",
+      "name": "Storm-surge inundation depth",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_data/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 17,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 0.72,
+      "color": "#bd7344",
+      "group": "MLIT / GSI · Hazard portal",
+      "zIndex": 420,
+      "description": "Hyogo Prefecture storm-surge inundation scenarios. Blank tiles do not establish safety.",
+      "coverage": "Island envelope: 4/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Hyogo Prefecture · MLIT/GSI Hazard Map Portal",
+      "license": "Hazard Map Portal terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://disaportal.gsi.go.jp/hazardmap/copyright/opendata.html"
+        }
+      ],
+      "legend": "https://disaportal.gsi.go.jp/hazardmap/copyright/img/shinsui_legend3.png"
+    },
+    {
+      "id": "nushima-05_dosekiryukeikaikuiki",
+      "name": "Sediment warnings · debris flow",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 17,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 0.72,
+      "color": "#bd7344",
+      "group": "MLIT / GSI · Hazard portal",
+      "zIndex": 421,
+      "description": "Hyogo Prefecture designated sediment-disaster warning and special-warning areas for debris flows.",
+      "coverage": "Island envelope: 2/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Hyogo Prefecture · MLIT/GSI Hazard Map Portal",
+      "license": "Hazard Map Portal terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://disaportal.gsi.go.jp/hazardmap/copyright/opendata.html"
+        }
+      ],
+      "legend": "https://disaportal.gsi.go.jp/hazardmap/copyright/img/keikai_dosekiryu.png"
+    },
+    {
+      "id": "nushima-05_kyukeishakeikaikuiki",
+      "name": "Sediment warnings · steep-slope collapse",
+      "pages": [
+        "nushima"
+      ],
+      "type": "raster",
+      "url": "https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki/{z}/{x}/{y}.png",
+      "minNativeZoom": 2,
+      "maxNativeZoom": 17,
+      "detailBounds": [
+        [
+          34.1,
+          134.75
+        ],
+        [
+          34.25,
+          134.9
+        ]
+      ],
+      "bounds": [
+        [
+          32,
+          132
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      "opacity": 0.72,
+      "color": "#bd7344",
+      "group": "MLIT / GSI · Hazard portal",
+      "zIndex": 422,
+      "description": "Hyogo Prefecture designated warning and special-warning areas for steep-slope collapse.",
+      "coverage": "Island envelope: 2/6 sampled z14 tiles contain pixels; checked 2026-10-20. Coverage may be partial.",
+      "credit": "Hyogo Prefecture · MLIT/GSI Hazard Map Portal",
+      "license": "Hazard Map Portal terms",
+      "sources": [
+        {
+          "title": "Official catalogue & legends",
+          "url": "https://disaportal.gsi.go.jp/hazardmap/copyright/opendata.html"
+        }
+      ],
+      "legend": "https://disaportal.gsi.go.jp/hazardmap/copyright/img/keikai_kyukeisya.png"
+    },
+    {
+      "id": "nushima-c09-c09-06_fishingportboundary",
+      "name": "Fishing-port boundary · 2006",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/c09-c09-06_fishingportboundary.geojson",
+      "opacity": 1,
+      "fillOpacity": 0,
+      "color": "#e59c45",
+      "weight": 2,
+      "group": "MLIT · Coast, transport & facilities",
+      "zIndex": 430,
+      "description": "Nushima fishing-port inventory and boundary; historical designation data.",
+      "coverage": "1 features in the Nushima extract. Data: 2006.",
+      "credit": "MLIT National Land Numerical Information · C09",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "MLIT non-commercial terms",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-C09.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-c23-c23-06_28-g_coastline",
+      "name": "Coastline · 2006",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/c23-c23-06_28-g_coastline.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#57d3cb",
+      "weight": 2,
+      "group": "MLIT · Coast, transport & facilities",
+      "zIndex": 430,
+      "description": "Historical MLIT shoreline segments. Not a current surveyed coastline.",
+      "coverage": "60 features in the Nushima extract. Data: 2006.",
+      "credit": "MLIT National Land Numerical Information · C23",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "MLIT non-commercial terms",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-C23.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-n09-n09-12_l",
+      "name": "Ferry connection · 2012",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/n09-n09-12_l.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#e36f52",
+      "weight": 2,
+      "group": "MLIT · Coast, transport & facilities",
+      "zIndex": 430,
+      "description": "Historical Nushima–Habu passenger route inventory. Not a sailing schedule or navigational route.",
+      "coverage": "1 features in the Nushima extract. Data: 2012.",
+      "credit": "MLIT National Land Numerical Information · N09",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "MLIT non-commercial terms",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N09.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-a10-2015-a001280020160211",
+      "name": "Natural park area · 2015",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/a10-2015-a001280020160211.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#6aa86b",
+      "weight": 2,
+      "group": "MLIT · Land use & boundaries",
+      "zIndex": 430,
+      "description": "Land-use basic-plan natural park areas. Original feature fiscal years are preserved; this is the 2015 dataset release.",
+      "coverage": "5 features in the Nushima extract. Data: FY2015.",
+      "credit": "MLIT National Land Numerical Information · A10-2015",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0 (Hyogo)",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A10-2015.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-a10-2015-a001280020160212",
+      "name": "Natural park special area · 2015",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/a10-2015-a001280020160212.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#6aa86b",
+      "weight": 2,
+      "group": "MLIT · Land use & boundaries",
+      "zIndex": 430,
+      "description": "Land-use basic-plan natural park areas. Original feature fiscal years are preserved; this is the 2015 dataset release.",
+      "coverage": "5 features in the Nushima extract. Data: FY2015.",
+      "credit": "MLIT National Land Numerical Information · A10-2015",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0 (Hyogo)",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A10-2015.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-a13-2015-a001280020160207",
+      "name": "Forest planning area · 2015",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/a13-2015-a001280020160207.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#33794d",
+      "weight": 2,
+      "group": "MLIT · Land use & boundaries",
+      "zIndex": 430,
+      "description": "Land-use basic-plan forest areas, preserving original feature fiscal years.",
+      "coverage": "1 features in the Nushima extract. Data: FY2015.",
+      "credit": "MLIT National Land Numerical Information · A13-2015",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0 (Hyogo)",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A13-2015.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-a13-2015-a001280020160209",
+      "name": "Regional private forest · 2015",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/a13-2015-a001280020160209.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#33794d",
+      "weight": 2,
+      "group": "MLIT · Land use & boundaries",
+      "zIndex": 430,
+      "description": "Land-use basic-plan forest areas, preserving original feature fiscal years.",
+      "coverage": "1 features in the Nushima extract. Data: FY2015.",
+      "credit": "MLIT National Land Numerical Information · A13-2015",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0 (Hyogo)",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A13-2015.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-a13-2015-a001280020160210",
+      "name": "Protection forest · 2015",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/a13-2015-a001280020160210.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#33794d",
+      "weight": 2,
+      "group": "MLIT · Land use & boundaries",
+      "zIndex": 430,
+      "description": "Land-use basic-plan forest areas, preserving original feature fiscal years.",
+      "coverage": "1 features in the Nushima extract. Data: FY2015.",
+      "credit": "MLIT National Land Numerical Information · A13-2015",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0 (Hyogo)",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A13-2015.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-a19-2017-a19-17_28",
+      "name": "Remote-island development area · 2017",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/a19-2017-a19-17_28.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#e1a561",
+      "weight": 2,
+      "group": "MLIT · Land use & boundaries",
+      "zIndex": 430,
+      "description": "Nushima area designated under the remote-island development programme.",
+      "coverage": "1 features in the Nushima extract. Data: 2017.",
+      "credit": "MLIT National Land Numerical Information · A19-2017",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "MLIT terms (commercial use permitted)",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A19-2017.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-a27-2023-a27-23_28",
+      "name": "Elementary school district · 2023",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/a27-2023-a27-23_28.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#6b75be",
+      "weight": 2,
+      "group": "MLIT · Land use & boundaries",
+      "zIndex": 430,
+      "description": "School catchment polygon for Nushima Elementary School.",
+      "coverage": "1 features in the Nushima extract. Data: FY2023.",
+      "credit": "MLIT National Land Numerical Information · A27-2023",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0 (Hyogo)",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A27-2023.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-a32-2023-a32-23_28",
+      "name": "Junior-high school district · 2023",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/a32-2023-a32-23_28.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#916ac4",
+      "weight": 2,
+      "group": "MLIT · Land use & boundaries",
+      "zIndex": 430,
+      "description": "School catchment polygon for Nushima Junior High School.",
+      "coverage": "1 features in the Nushima extract. Data: FY2023.",
+      "credit": "MLIT National Land Numerical Information · A32-2023",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0 (Hyogo)",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A32-2023.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-n03-2026-n03-20260101_28",
+      "name": "Administrative island boundary · 2026",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/n03-2026-n03-20260101_28.geojson",
+      "opacity": 1,
+      "fillOpacity": 0,
+      "color": "#f0c45c",
+      "weight": 2,
+      "group": "MLIT · Land use & boundaries",
+      "zIndex": 430,
+      "description": "Minamiawaji administrative polygons, clipped to the island envelope. Includes offshore rocks.",
+      "coverage": "64 features in the Nushima extract. Data: 2026-01-01.",
+      "credit": "MLIT National Land Numerical Information · N03-2026",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2026.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-l03-b-2021-l03-b-21_5134-0500",
+      "name": "Forest · 100 m · 2021",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/l03-b-2021-l03-b-21_5134.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#4e8d58",
+      "weight": 2,
+      "group": "MLIT · Land use · FY2021",
+      "zIndex": 430,
+      "description": "Satellite-interpreted land use in approximately 100 m cells. Not parcel boundaries. Open-sea cells omitted.",
+      "coverage": "250 features in the Nushima extract. Data: FY2021.",
+      "credit": "MLIT National Land Numerical Information · L03-b-2021",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L03-b-2021.html"
+        }
+      ],
+      "filterField": "L03b_002",
+      "filterValue": "0500",
+      "legendItems": [
+        {
+          "color": "#4e8d58",
+          "label": "Forest"
+        }
+      ]
+    },
+    {
+      "id": "nushima-l03-b-2021-l03-b-21_5134-0600",
+      "name": "Wasteland · 100 m · 2021",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/l03-b-2021-l03-b-21_5134.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#b4ac82",
+      "weight": 2,
+      "group": "MLIT · Land use · FY2021",
+      "zIndex": 430,
+      "description": "Satellite-interpreted land use in approximately 100 m cells. Not parcel boundaries. Open-sea cells omitted.",
+      "coverage": "250 features in the Nushima extract. Data: FY2021.",
+      "credit": "MLIT National Land Numerical Information · L03-b-2021",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L03-b-2021.html"
+        }
+      ],
+      "filterField": "L03b_002",
+      "filterValue": "0600",
+      "legendItems": [
+        {
+          "color": "#b4ac82",
+          "label": "Wasteland"
+        }
+      ]
+    },
+    {
+      "id": "nushima-l03-b-2021-l03-b-21_5134-0700",
+      "name": "Buildings · 100 m · 2021",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/l03-b-2021-l03-b-21_5134.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#dc806f",
+      "weight": 2,
+      "group": "MLIT · Land use · FY2021",
+      "zIndex": 430,
+      "description": "Satellite-interpreted land use in approximately 100 m cells. Not parcel boundaries. Open-sea cells omitted.",
+      "coverage": "250 features in the Nushima extract. Data: FY2021.",
+      "credit": "MLIT National Land Numerical Information · L03-b-2021",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L03-b-2021.html"
+        }
+      ],
+      "filterField": "L03b_002",
+      "filterValue": "0700",
+      "legendItems": [
+        {
+          "color": "#dc806f",
+          "label": "Buildings"
+        }
+      ]
+    },
+    {
+      "id": "nushima-l03-b-2021-l03-b-21_5134-1000",
+      "name": "Other land · 100 m · 2021",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/l03-b-2021-l03-b-21_5134.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#cab7a2",
+      "weight": 2,
+      "group": "MLIT · Land use · FY2021",
+      "zIndex": 430,
+      "description": "Satellite-interpreted land use in approximately 100 m cells. Not parcel boundaries. Open-sea cells omitted.",
+      "coverage": "250 features in the Nushima extract. Data: FY2021.",
+      "credit": "MLIT National Land Numerical Information · L03-b-2021",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L03-b-2021.html"
+        }
+      ],
+      "filterField": "L03b_002",
+      "filterValue": "1000",
+      "legendItems": [
+        {
+          "color": "#cab7a2",
+          "label": "Other land"
+        }
+      ]
+    },
+    {
+      "id": "nushima-l03-b-2021-l03-b-21_5134-1400",
+      "name": "Beach · 100 m · 2021",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/l03-b-2021-l03-b-21_5134.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#eedb9b",
+      "weight": 2,
+      "group": "MLIT · Land use · FY2021",
+      "zIndex": 430,
+      "description": "Satellite-interpreted land use in approximately 100 m cells. Not parcel boundaries. Open-sea cells omitted.",
+      "coverage": "250 features in the Nushima extract. Data: FY2021.",
+      "credit": "MLIT National Land Numerical Information · L03-b-2021",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L03-b-2021.html"
+        }
+      ],
+      "filterField": "L03b_002",
+      "filterValue": "1400",
+      "legendItems": [
+        {
+          "color": "#eedb9b",
+          "label": "Beach"
+        }
+      ]
+    },
+    {
+      "id": "nushima-maff-fishing-communities",
+      "name": "Fishing communities · MAFF · 2023",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "interaction": "fishing-community",
+      "url": "data/nushima/maff-fishing-communities-2023.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.24,
+      "weight": 2,
+      "color": "#ed9a45",
+      "group": "MAFF · Fishing communities",
+      "zIndex": 445,
+      "description": "2023 Fisheries Census boundaries. Four named communities (東泊, 北, 中, 南) and the separate その他地域 (other area) category. Hover or focus a shape for its community, district, municipality and census code; click or tap for details. Statistical community areas, not fishing rights or marine fishing grounds. Processed from MAFF source data.",
+      "coverage": "Nushima district 261, Minamiawaji, Hyogo. 6 source polygons grouped by official KEY into 5 shapes.",
+      "credit": "MAFF · 2023 Fisheries Census · processed by Kobe Atlas",
+      "license": "MAFF website terms / Public Data License 1.0",
+      "sources": [
+        {
+          "title": "MAFF fishing-community boundaries",
+          "url": "https://www.maff.go.jp/j/tokei/census/fc/database/mapdata/index.html"
+        },
+        {
+          "title": "Original Hyogo shapefile ZIP",
+          "url": "https://www.maff.go.jp/j/tokei/census/fc/database/mapdata/MB0001_2023_28.zip"
+        },
+        {
+          "title": "MAFF reuse terms",
+          "url": "https://www.maff.go.jp/j/use/link.html"
+        }
+      ],
+      "legendItems": [
+        {
+          "color": "#ed9a45",
+          "label": "東泊"
+        },
+        {
+          "color": "#5bb7de",
+          "label": "北"
+        },
+        {
+          "color": "#d07dbd",
+          "label": "中"
+        },
+        {
+          "color": "#a5c965",
+          "label": "南"
+        },
+        {
+          "color": "#9b9fa6",
+          "label": "その他地域 · Other area"
+        }
+      ],
+      "translations": {
+        "JP": {
+          "name": "漁業集落境界・農林水産省・2023年"
+        },
+        "CN": {
+          "name": "渔业社区边界 · 农林水产省 · 2023年"
+        }
+      }
+    },
+    {
+      "id": "nushima-c09-c09-06_fishingport",
+      "name": "Fishing-port location · 2006",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/c09-c09-06_fishingport.geojson",
+      "opacity": 1,
+      "fillOpacity": 0,
+      "color": "#e59c45",
+      "weight": 2,
+      "group": "MLIT · Coast, transport & facilities",
+      "zIndex": 460,
+      "description": "Nushima fishing-port inventory and boundary; historical designation data.",
+      "coverage": "1 features in the Nushima extract. Data: 2006.",
+      "credit": "MLIT National Land Numerical Information · C09",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "MLIT non-commercial terms",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-C09.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-n09-n09-12_p",
+      "name": "Ferry terminal · 2012",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/n09-n09-12_p.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#e36f52",
+      "weight": 2,
+      "group": "MLIT · Coast, transport & facilities",
+      "zIndex": 460,
+      "description": "Historical Nushima–Habu passenger route inventory. Not a sailing schedule or navigational route.",
+      "coverage": "1 features in the Nushima extract. Data: 2012.",
+      "credit": "MLIT National Land Numerical Information · N09",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "MLIT non-commercial terms",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N09.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-p04-2020-p04-20_28",
+      "name": "Medical facilities · 2020",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/p04-2020-p04-20_28.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#db527a",
+      "weight": 2,
+      "group": "MLIT · Coast, transport & facilities",
+      "zIndex": 460,
+      "description": "Historical facility inventory; verify current services directly with the facility.",
+      "coverage": "2 features in the Nushima extract. Data: 2020.",
+      "credit": "MLIT National Land Numerical Information · P04-2020",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P04-2020.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-p20-p20-12_28",
+      "name": "Legacy evacuation facilities · 2012",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/p20-p20-12_28.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#8a7a5c",
+      "weight": 2,
+      "group": "MLIT · Coast, transport & facilities",
+      "zIndex": 460,
+      "description": "Historical facility inventory only. Use the separately listed GSI designated sites and check current Minamiawaji instructions.",
+      "coverage": "2 features in the Nushima extract. Data: 2012.",
+      "credit": "MLIT National Land Numerical Information · P20",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "MLIT non-commercial terms",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P20.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-p29-2023-p29-23_28",
+      "name": "Schools · 2023",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/p29-2023-p29-23_28.geojson",
+      "opacity": 1,
+      "fillOpacity": 0.28,
+      "color": "#346edb",
+      "weight": 2,
+      "group": "MLIT · Coast, transport & facilities",
+      "zIndex": 460,
+      "description": "MLIT school locations. Dataset year, not a guarantee of current operation.",
+      "coverage": "2 features in the Nushima extract. Data: FY2023.",
+      "credit": "MLIT National Land Numerical Information · P29-2023",
+      "mapCredit": "MLIT National Land Numerical Information",
+      "license": "CC BY 4.0",
+      "sources": [
+        {
+          "title": "Dataset, attributes & licence",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P29-2023.html"
+        }
+      ]
+    },
+    {
+      "id": "nushima-skhb01",
+      "name": "Emergency sites · flood",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/skhb01.geojson",
+      "opacity": 1,
+      "color": "#187fba",
+      "group": "GSI / Minamiawaji · Evacuation",
+      "zIndex": 470,
+      "description": "Municipal designations distributed by GSI. Snapshot retrieved 2026-10-20; may not be current or complete. Hazard-specific emergency sites differ from evacuation shelters. Read site remarks (including required floors) and confirm with Minamiawaji.",
+      "coverage": "2 designated sites in the island envelope.",
+      "credit": "Minamiawaji City · GSI designated evacuation sites",
+      "license": "GSI terms and evacuation-site usage notes",
+      "sources": [
+        {
+          "title": "Official definitions & usage notes",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Source GeoJSON tile",
+          "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb01/10/895/408.geojson"
+        }
+      ]
+    },
+    {
+      "id": "nushima-skhb02",
+      "name": "Emergency sites · sediment disasters",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/skhb02.geojson",
+      "opacity": 1,
+      "color": "#187fba",
+      "group": "GSI / Minamiawaji · Evacuation",
+      "zIndex": 470,
+      "description": "Municipal designations distributed by GSI. Snapshot retrieved 2026-10-20; may not be current or complete. Hazard-specific emergency sites differ from evacuation shelters. Read site remarks (including required floors) and confirm with Minamiawaji.",
+      "coverage": "2 designated sites in the island envelope.",
+      "credit": "Minamiawaji City · GSI designated evacuation sites",
+      "license": "GSI terms and evacuation-site usage notes",
+      "sources": [
+        {
+          "title": "Official definitions & usage notes",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Source GeoJSON tile",
+          "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb02/10/895/408.geojson"
+        }
+      ]
+    },
+    {
+      "id": "nushima-skhb03",
+      "name": "Emergency sites · storm surge",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/skhb03.geojson",
+      "opacity": 1,
+      "color": "#187fba",
+      "group": "GSI / Minamiawaji · Evacuation",
+      "zIndex": 470,
+      "description": "Municipal designations distributed by GSI. Snapshot retrieved 2026-10-20; may not be current or complete. Hazard-specific emergency sites differ from evacuation shelters. Read site remarks (including required floors) and confirm with Minamiawaji.",
+      "coverage": "2 designated sites in the island envelope.",
+      "credit": "Minamiawaji City · GSI designated evacuation sites",
+      "license": "GSI terms and evacuation-site usage notes",
+      "sources": [
+        {
+          "title": "Official definitions & usage notes",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Source GeoJSON tile",
+          "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb03/10/895/408.geojson"
+        }
+      ]
+    },
+    {
+      "id": "nushima-skhb04",
+      "name": "Emergency sites · earthquake",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/skhb04.geojson",
+      "opacity": 1,
+      "color": "#187fba",
+      "group": "GSI / Minamiawaji · Evacuation",
+      "zIndex": 470,
+      "description": "Municipal designations distributed by GSI. Snapshot retrieved 2026-10-20; may not be current or complete. Hazard-specific emergency sites differ from evacuation shelters. Read site remarks (including required floors) and confirm with Minamiawaji.",
+      "coverage": "1 designated sites in the island envelope.",
+      "credit": "Minamiawaji City · GSI designated evacuation sites",
+      "license": "GSI terms and evacuation-site usage notes",
+      "sources": [
+        {
+          "title": "Official definitions & usage notes",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Source GeoJSON tile",
+          "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb04/10/895/408.geojson"
+        }
+      ]
+    },
+    {
+      "id": "nushima-skhb05",
+      "name": "Emergency sites · tsunami",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/skhb05.geojson",
+      "opacity": 1,
+      "color": "#187fba",
+      "group": "GSI / Minamiawaji · Evacuation",
+      "zIndex": 470,
+      "description": "Municipal designations distributed by GSI. Snapshot retrieved 2026-10-20; may not be current or complete. Hazard-specific emergency sites differ from evacuation shelters. Read site remarks (including required floors) and confirm with Minamiawaji.",
+      "coverage": "1 designated sites in the island envelope.",
+      "credit": "Minamiawaji City · GSI designated evacuation sites",
+      "license": "GSI terms and evacuation-site usage notes",
+      "sources": [
+        {
+          "title": "Official definitions & usage notes",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Source GeoJSON tile",
+          "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb05/10/895/408.geojson"
+        }
+      ]
+    },
+    {
+      "id": "nushima-skhb06",
+      "name": "Emergency sites · major fire",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/skhb06.geojson",
+      "opacity": 1,
+      "color": "#187fba",
+      "group": "GSI / Minamiawaji · Evacuation",
+      "zIndex": 470,
+      "description": "Municipal designations distributed by GSI. Snapshot retrieved 2026-10-20; may not be current or complete. Hazard-specific emergency sites differ from evacuation shelters. Read site remarks (including required floors) and confirm with Minamiawaji.",
+      "coverage": "3 designated sites in the island envelope.",
+      "credit": "Minamiawaji City · GSI designated evacuation sites",
+      "license": "GSI terms and evacuation-site usage notes",
+      "sources": [
+        {
+          "title": "Official definitions & usage notes",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Source GeoJSON tile",
+          "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb06/10/895/408.geojson"
+        }
+      ]
+    },
+    {
+      "id": "nushima-skhb07",
+      "name": "Emergency sites · inland flooding",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/skhb07.geojson",
+      "opacity": 1,
+      "color": "#187fba",
+      "group": "GSI / Minamiawaji · Evacuation",
+      "zIndex": 470,
+      "description": "Municipal designations distributed by GSI. Snapshot retrieved 2026-10-20; may not be current or complete. Hazard-specific emergency sites differ from evacuation shelters. Read site remarks (including required floors) and confirm with Minamiawaji.",
+      "coverage": "2 designated sites in the island envelope.",
+      "credit": "Minamiawaji City · GSI designated evacuation sites",
+      "license": "GSI terms and evacuation-site usage notes",
+      "sources": [
+        {
+          "title": "Official definitions & usage notes",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Source GeoJSON tile",
+          "url": "https://cyberjapandata.gsi.go.jp/xyz/skhb07/10/895/408.geojson"
+        }
+      ]
+    },
+    {
+      "id": "nushima-sih",
+      "name": "Designated evacuation shelters",
+      "pages": [
+        "nushima"
+      ],
+      "type": "geojson",
+      "renderer": "nushima",
+      "url": "data/nushima/sih.geojson",
+      "opacity": 1,
+      "color": "#187fba",
+      "group": "GSI / Minamiawaji · Evacuation",
+      "zIndex": 470,
+      "description": "Municipal designations distributed by GSI. Snapshot retrieved 2026-10-20; may not be current or complete. Hazard-specific emergency sites differ from evacuation shelters. Read site remarks (including required floors) and confirm with Minamiawaji.",
+      "coverage": "3 designated sites in the island envelope.",
+      "credit": "Minamiawaji City · GSI designated evacuation sites",
+      "license": "GSI terms and evacuation-site usage notes",
+      "sources": [
+        {
+          "title": "Official definitions & usage notes",
+          "url": "https://maps.gsi.go.jp/development/ichiran.html"
+        },
+        {
+          "title": "Source GeoJSON tile",
+          "url": "https://cyberjapandata.gsi.go.jp/xyz/sih/10/895/408.geojson"
+        }
+      ]
+    }
+  ],
+  "unavailableNotes": [
+    "GSI English basemap, orthophoto (ort), 1961–1969 / 1945–1950 imagery, gazo2–4, annual imagery except 2020/2021, initial land-condition map and flood-control landform tiles had no nonempty samples in this envelope.",
+    "River flood and landslide warning (jisuberi) tiles had no nonempty samples. This is not evidence of no hazard.",
+    "MLIT medical/school/transport records retain their publication years and are not live service directories.",
+    "MLIT C02 harbour, P14 welfare and any other zero-feature extracts remain documented in the processing audit rather than appearing as empty switches.",
+    "GSI relief marine data uses Japan Coast Guard Hydrographic and Oceanographic Department materials.",
+    "MLIT C23, C09, N09 and P20 are supplied under non-commercial terms; attribution and restrictions remain attached to each layer."
+  ],
+  "nativeZoomChecks": [
+    {
+      "id": "nushima-std",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/std/18/229245/104570.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-pale",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/pale/18/229245/104570.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-blank",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/blank/14/14327/6535.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-seamlessphoto",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/18/229245/104570.jpg",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-airphoto",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/airphoto/18/229245/104570.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-gazo1",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/gazo1/17/114622/52285.jpg",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-nendophoto2020",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2020/18/229245/104570.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-nendophoto2021",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/nendophoto2021/18/229245/104570.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-relief",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/relief/15/28655/13071.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-hillshademap",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/hillshademap/16/57311/26142.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-slopemap",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/slopemap/15/28655/13071.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-slopezone1map",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/slopezone1map/15/28655/13071.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-sekishoku",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/sekishoku/14/14327/6535.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-anaglyphmap_color",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/anaglyphmap_color/16/57311/26142.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-anaglyphmap_gray",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/anaglyphmap_gray/16/57311/26142.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-lcm25k_2012",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/lcm25k_2012/16/57311/26142.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-ccm2",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/ccm2/16/57311/26142.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-afm",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/afm/16/57311/26142.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-swale",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/swale/16/57311/26142.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-04_tsunami_newlegend_data",
+      "url": "https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_data/17/114622/52285.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-03_hightide_l2_shinsuishin_data",
+      "url": "https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_data/17/114622/52285.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-05_dosekiryukeikaikuiki",
+      "url": "https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki/17/114622/52285.png",
+      "status": 404,
+      "size": null,
+      "nonempty": false
+    },
+    {
+      "id": "nushima-05_kyukeishakeikaikuiki",
+      "url": "https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki/17/114622/52285.png",
+      "status": 200,
+      "size": [
+        256,
+        256
+      ],
+      "nonempty": true
+    },
+    {
+      "id": "nushima-05_dosekiryukeikaikuiki",
+      "url": "https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki/17/114623/52284.png",
+      "status": 200,
+      "sampleMethod": "Tile containing a nontransparent published z14 hazard pixel",
+      "nonempty": true
+    }
+  ],
+  "nativeZoomCheckMethod": "Checked maximum native zoom at 134.821E, 34.168N; debris-flow coverage additionally verified at a nontransparent z14 hazard pixel. HTTP/image checks do not establish complete spatial coverage."
+}

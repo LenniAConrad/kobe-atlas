@@ -1,0 +1,50 @@
+/* Keep the island in the unobscured viewport, with a docked layer drawer. */
+#page-nav{overflow-y:auto;min-height:0;scrollbar-width:thin;flex:1}
+.map-heading{pointer-events:auto}
+.map-heading>summary{cursor:pointer;font-size:.8rem;font-weight:650}
+.map-heading[open]>summary{margin-bottom:8px}
+.subject-panel>summary{cursor:pointer;font-size:1.15rem;font-weight:650;line-height:1.4}
+.subject-panel[open]>summary{margin-bottom:16px}
+.subject-panel:not([open]){padding:13px 18px;width:auto;max-width:350px}
+.nushima-view #map{left:68px;right:360px}
+.nushima-view.layers-hidden #map{right:0}
+.nushima-view .map-heading{top:20px;left:90px;padding:11px 16px;max-width:260px}
+.nushima-view #layer-panel{width:320px;top:20px;right:20px;height:calc(100dvh - 40px)}
+.nushima-view #layer-panel.collapsed{height:auto;width:170px}
+.nushima-view .map-tools{right:375px;bottom:75px}
+.nushima-view.layers-hidden .map-tools{right:20px}
+.nushima-view #subject-panel{left:90px;bottom:40px;max-height:45dvh}
+.nushima-view #layer-list{padding-bottom:20px}
+#nushima-layer-search{margin:12px 18px 2px;width:calc(100% - 36px);flex:none}
+.nushima-layer-status{font-size:.7rem;color:#946523;margin:5px 0 0 22px}
+.nushima-layer-status:empty{display:none}
+.nushima-layer-details{margin:7px 0 0 22px;font-size:.73rem;line-height:1.5}
+.nushima-layer-details summary{cursor:pointer;color:var(--muted)}
+.nushima-layer-details p{margin-top:8px}
+.nushima-layer-details img{width:100%;height:auto;background:white;margin-top:8px}
+.nushima-legend{list-style:none;padding:0;display:grid;gap:4px}
+.nushima-legend i{display:inline-block;width:12px;height:12px;margin-right:7px;border:1px solid #657b7b}
+.nushima-toolbar{display:flex;align-items:center;gap:12px;margin-bottom:15px;font-size:.75rem}
+.nushima-notes{font-size:.8rem;line-height:1.6}
+.nushima-notes p{margin-top:12px}
+.feature-popup dl{font-size:.72rem;overflow-wrap:anywhere}
+.feature-popup dd{margin:0 0 5px}
+.fishing-community-tooltip{width:270px;max-width:calc(100vw - 80px);white-space:normal;padding:13px 16px;pointer-events:none}
+.fishing-community-info strong{display:block;font-size:1rem;margin-bottom:6px}
+.fishing-community-info small{display:block;font-size:.7rem;color:var(--muted)}
+.fishing-community-info dl{display:grid;grid-template-columns:95px 1fr;gap:5px 10px;font-size:.75rem;margin:10px 0}
+.fishing-community-info dt{color:var(--muted)}
+.fishing-community-info dd{margin:0}
+.layer-panel.collapsed #layers-collapse svg{transform:rotate(180deg)}
+@media(max-width:700px){
+  .nushima-view #map{left:54px;right:0}
+  .nushima-view .map-heading{left:66px;top:12px;max-width:calc(100vw - 265px);padding:10px}
+  .nushima-view #layer-panel{top:60px;right:10px;width:min(310px,calc(100vw - 80px));height:calc(100dvh - 155px)}
+  .nushima-view #layer-panel.collapsed{top:12px;width:160px}
+  .nushima-view #subject-panel{left:66px;bottom:30px;right:55px;width:auto;max-height:40dvh}
+  .nushima-view .map-tools,.nushima-view.layers-hidden .map-tools{right:10px;bottom:90px}
+  .nushima-view #layer-panel:not(.collapsed)~.map-tools{z-index:601}
+}
+@media(max-height:600px) and (min-width:701px){
+  .nushima-view #subject-panel{max-height:60dvh}
+}

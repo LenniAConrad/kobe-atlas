@@ -1,0 +1,236 @@
+{
+  "clipBounds": [
+    134.805,
+    34.15,
+    134.84,
+    34.185
+  ],
+  "method": "Transform from source CRS to EPSG:4326; repair invalid geometry; intersect island envelope; preserve source attributes; round to 7 decimals. N09 retains full routes whose attributes name Nushima. Sea class 1500 excluded from land-use display. No geometry simplification.",
+  "inputs": [
+    {
+      "dataset": "A10-2015",
+      "input": "A10-2015/a001280020160211.shp",
+      "sha256": "ceca5efd23eff6a54b30fd9f164d9277f472467c69f8b52bb9decde2eb194171",
+      "crs": "EPSG:4612",
+      "sourceFeatureCount": 387,
+      "retainedFeatureCount": 5,
+      "file": "data/nushima/a10-2015-a001280020160211.geojson"
+    },
+    {
+      "dataset": "A10-2015",
+      "input": "A10-2015/a001280020160212.shp",
+      "sha256": "fe27fab93ef613a3e89ccef012a3237c4ae77a195eca9a03ba59afafea2b2fd4",
+      "crs": "EPSG:4612",
+      "sourceFeatureCount": 528,
+      "retainedFeatureCount": 5,
+      "file": "data/nushima/a10-2015-a001280020160212.geojson"
+    },
+    {
+      "dataset": "A10-2015",
+      "input": "A10-2015/a001280020160213.shp",
+      "sha256": "a9a4bf1653f5355969c10c428a5b543b5a214a86548e186922c077baa64a513a",
+      "crs": "EPSG:4612",
+      "sourceFeatureCount": 162,
+      "retainedFeatureCount": 0,
+      "file": null
+    },
+    {
+      "dataset": "A13-2015",
+      "input": "A13-2015/a001280020160207.shp",
+      "sha256": "5744b4690bf18ae7b7c03d725e296f6528314dc1ba348901255161a244937fe9",
+      "crs": "EPSG:4612",
+      "sourceFeatureCount": 1906,
+      "retainedFeatureCount": 1,
+      "file": "data/nushima/a13-2015-a001280020160207.geojson"
+    },
+    {
+      "dataset": "A13-2015",
+      "input": "A13-2015/a001280020160208.shp",
+      "sha256": "6b5d5d4350cdb1ff651d636ca79618f9ec205cb1f40ae307735236aea76b4b36",
+      "crs": "EPSG:4612",
+      "sourceFeatureCount": 195,
+      "retainedFeatureCount": 0,
+      "file": null
+    },
+    {
+      "dataset": "A13-2015",
+      "input": "A13-2015/a001280020160209.shp",
+      "sha256": "c5314d4a7ef30e102e1d35836fa80483788a853d636aff6d879e7094fb7d2fb4",
+      "crs": "EPSG:4612",
+      "sourceFeatureCount": 2004,
+      "retainedFeatureCount": 1,
+      "file": "data/nushima/a13-2015-a001280020160209.geojson"
+    },
+    {
+      "dataset": "A13-2015",
+      "input": "A13-2015/a001280020160210.shp",
+      "sha256": "2ae8afe5fc5aa2f9a72921965265a399446439e5c90b71b17a389a04a8f2bea0",
+      "crs": "EPSG:4612",
+      "sourceFeatureCount": 3027,
+      "retainedFeatureCount": 1,
+      "file": "data/nushima/a13-2015-a001280020160210.geojson"
+    },
+    {
+      "dataset": "A19-2017",
+      "input": "A19-2017/A19-17_28_GML/A19-17_28.shp",
+      "sha256": "d396ec5c2e0c37cc73d7a48f5524cbf821ed4375a0d544069bea5f8e831666ca",
+      "crs": "EPSG:6668",
+      "sourceFeatureCount": 5,
+      "retainedFeatureCount": 1,
+      "file": "data/nushima/a19-2017-a19-17_28.geojson"
+    },
+    {
+      "dataset": "A27-2023",
+      "input": "A27-2023/A27-23_28.shp",
+      "sha256": "b2088bd92759cd8f45d7b7c74ed468278dae7e903b7144dbddf4089c8c3292b5",
+      "crs": "EPSG:6668",
+      "sourceFeatureCount": 618,
+      "retainedFeatureCount": 1,
+      "file": "data/nushima/a27-2023-a27-23_28.geojson"
+    },
+    {
+      "dataset": "A32-2023",
+      "input": "A32-2023/A32-23_28.shp",
+      "sha256": "c85049592576ba96235a12d71e1c83ad49dd9360b97a611f3e5c8856c8fa217b",
+      "crs": "EPSG:6668",
+      "sourceFeatureCount": 281,
+      "retainedFeatureCount": 1,
+      "file": "data/nushima/a32-2023-a32-23_28.geojson"
+    },
+    {
+      "dataset": "C02-2014",
+      "input": "C02-2014/C02-14_GML/C02-14-g_HarborDistrictBoundary.shp",
+      "sha256": "9d127a410851ca80f94f2d57a04473766b05ca5222499c1ac4e828a2ae7a9b1a",
+      "crs": "EPSG:4612",
+      "sourceFeatureCount": 1441,
+      "retainedFeatureCount": 0,
+      "file": null
+    },
+    {
+      "dataset": "C02-2014",
+      "input": "C02-2014/C02-14_GML/C02-14-g_PortAndHarbor.shp",
+      "sha256": "0186c00463256339ecd9502e93abef459ad2c8b0f73ad367b0090d206c26baea",
+      "crs": "EPSG:4612",
+      "sourceFeatureCount": 994,
+      "retainedFeatureCount": 0,
+      "file": null
+    },
+    {
+      "dataset": "C02-2014",
+      "input": "C02-2014/C02-14_GML/C02-14-g_PortDistrictBoundary.shp",
+      "sha256": "7cf9eceac57fbbb7e0dc0b558d4a54339b01c8ba0dee150c7520a83ff65df3af",
+      "crs": "EPSG:4612",
+      "sourceFeatureCount": 520,
+      "retainedFeatureCount": 0,
+      "file": null
+    },
+    {
+      "dataset": "C09",
+      "input": "C09/C09-06_FishingPort.shp",
+      "sha256": "edfce686988cd3e740eeb597e59f8e3ce8959febd4576f7b76f53afbc7d8dedd",
+      "crs": "EPSG:4612",
+      "sourceFeatureCount": 2931,
+      "retainedFeatureCount": 1,
+      "file": "data/nushima/c09-c09-06_fishingport.geojson"
+    },
+    {
+      "dataset": "C09",
+      "input": "C09/C09-06_FishingPortBoundary.shp",
+      "sha256": "a35b6e609fc2a8061127e2deedc2e6f22b8c7f63ec4e1d034ce930a84845dcd8",
+      "crs": "EPSG:4612",
+      "sourceFeatureCount": 3292,
+      "retainedFeatureCount": 1,
+      "file": "data/nushima/c09-c09-06_fishingportboundary.geojson"
+    },
+    {
+      "dataset": "C23",
+      "input": "C23/C23-06_28-g_Coastline.shp",
+      "sha256": "cc2910e0a82bc9655dee9412d21426f8f1f2b02d632c2c5be652d4995a7ab2dd",
+      "crs": "EPSG:4612",
+      "sourceFeatureCount": 1285,
+      "retainedFeatureCount": 60,
+      "file": "data/nushima/c23-c23-06_28-g_coastline.geojson"
+    },
+    {
+      "dataset": "L03-b-2021",
+      "input": "L03-b-2021/L03-b-21_5134.shp",
+      "sha256": "690a997d4ba14035a08e369391d829635991b4affb2ea887fdaeb2d2ea1c219c",
+      "crs": "EPSG:6668",
+      "sourceFeatureCount": 520000,
+      "retainedFeatureCount": 250,
+      "file": "data/nushima/l03-b-2021-l03-b-21_5134.geojson"
+    },
+    {
+      "dataset": "N03-2026",
+      "input": "N03-2026/N03-20260101_28.shp",
+      "sha256": "32cb80e5c04fb8c4b5a3eead41dd3cd2b3d6fc9e8fe1b3f1bd9a03548bf00916",
+      "crs": "EPSG:6668",
+      "sourceFeatureCount": 2166,
+      "retainedFeatureCount": 64,
+      "file": "data/nushima/n03-2026-n03-20260101_28.geojson"
+    },
+    {
+      "dataset": "N09",
+      "input": "N09/N09-12_l.shp",
+      "sha256": "439ba3bced3b7c08701bff4e2ec0d4a5e2029e673b84114147107682d7634064",
+      "crs": "EPSG:4612",
+      "sourceFeatureCount": 856,
+      "retainedFeatureCount": 1,
+      "file": "data/nushima/n09-n09-12_l.geojson"
+    },
+    {
+      "dataset": "N09",
+      "input": "N09/N09-12_p.shp",
+      "sha256": "1f266c794a25df8ac0f7b7a043c7e56cee2b1a04fc8ebf23e31e8f509fec4a51",
+      "crs": "EPSG:4612",
+      "sourceFeatureCount": 850,
+      "retainedFeatureCount": 1,
+      "file": "data/nushima/n09-n09-12_p.geojson"
+    },
+    {
+      "dataset": "P04-2020",
+      "input": "P04-2020/P04-20_28_GML/P04-20_28.shp",
+      "sha256": "e19e5599ede15362ddf2af3d1c5cf27b749a11e26da5cb31dfcf6b9a44c0cd6e",
+      "crs": "EPSG:6668",
+      "sourceFeatureCount": 8576,
+      "retainedFeatureCount": 2,
+      "file": "data/nushima/p04-2020-p04-20_28.geojson"
+    },
+    {
+      "dataset": "P11-2022",
+      "input": "P11-2022/P11-22_28_SHP/P11-22_28.shp",
+      "sha256": "c57be8790a6f046b2d8beebd4b0c0ce5804e2d325f2bc1a458c745488bedf94b",
+      "crs": "EPSG:6668",
+      "sourceFeatureCount": 10376,
+      "retainedFeatureCount": 0,
+      "file": null
+    },
+    {
+      "dataset": "P14-2023",
+      "input": "P14-2023/P14-23_28_GML/SHP/P14-23_28.shp",
+      "sha256": "613025e4e67aff0c09f191bbb90a3678fd700abbd759c6d7635aea601106648a",
+      "crs": "EPSG:6668",
+      "sourceFeatureCount": 11731,
+      "retainedFeatureCount": 0,
+      "file": null
+    },
+    {
+      "dataset": "P20",
+      "input": "P20/P20-12_28.shp",
+      "sha256": "bfed99a0473bfd5d0e361b9d3981d740057a18632df74421c6e10c9c3b61a235",
+      "crs": "EPSG:4612",
+      "sourceFeatureCount": 4172,
+      "retainedFeatureCount": 2,
+      "file": "data/nushima/p20-p20-12_28.geojson"
+    },
+    {
+      "dataset": "P29-2023",
+      "input": "P29-2023/P29-23_28_GML/P29-23_28.shp",
+      "sha256": "ed66bff1ea3347dbcc2d12f71706f31f2852a50d32fc5bb07f3a34213aeefc53",
+      "crs": "EPSG:6668",
+      "sourceFeatureCount": 2621,
+      "retainedFeatureCount": 2,
+      "file": "data/nushima/p29-2023-p29-23_28.geojson"
+    }
+  ]
+}
